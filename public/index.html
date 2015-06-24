@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Rackspace Developer Documentation</title>
     <link rel="stylesheet" href="/src/css/main.css">
 </head>
 <body>
@@ -34,5 +34,69 @@
             <p class="tagline">Let’s build something great together!</p>
         </div>
     </header>
+    <section class="docs-content">
+        <nav class="section-nav">
+            <a href="" class="github-link">Edit On Github</a>
+        </nav>
+        <article class="docs-narrative">
+            <h1>Quickstart for Cloud Servers</h1>
+            <div class="revision-date">Revised On: <time datetime="2015-06-05">6/5/15</time></div>
+            <ul class="tags">
+                <li><a href="">Tag One</a></li>
+                <li><a href="">Tag Two</a></li>
+                <li><a href="">Tag Three</a></li>
+            </ul>
+            <div class="docs-body">
+                <p>Rackspace Cloud Servers allows you to allocate and deallocate compute resources. It is based on OpenStack Compute (Nova), a community-led open-source platform.</p>
+                <h3>Concepts</h3>
+                <p>To use this service effectively, you should understand how these key ideas are used in this context:</p>
+                <ul>
+                    <li><strong>Server:</strong> A computer that provides explicit services to the client software running on that system. A server is a virtual machine (VM) instance in the Cloud Servers environment. To create a server, you must specify a name, flavor reference, and image reference.</li>
+                    <li><strong>Image:</strong> The type of operating system you want to use. You can choose from pre-defined images or create your own custom images.</li>
+                    <li><strong>Flavor:</strong> A resource configuration for a server. Each flavor is a unique combination of disk, memory, vCPUs, and network bandwidth. You can choose from pre-defined flavors.</li>
+                    <li><strong>Network: </strong> The virtual space where your servers live. Rackspace has two default networks: PublicNet, which is the Internet; ServiceNet, which is our internal network. Although you can create as many isolated networks as you want, the default configuration is for servers to be connected to both PublicNet (for public Internet connectivity) and ServiceNet (for internal connectivity with your other servers).</li>
+                </ul>
+                <h3>Authentication</h3>
+                <p>To use this service you have to authenticate first. To do this, you will need your Rackspace username and API key. Your username is the one you use to login to the Cloud Control Panel at <a href="" class="external">http://mycloud.rackspace.com/</a>.</p>
+                <p>To find your API key, first navigate to the Cloud Control Panel, then click on your <strong>username</strong> at the top right corner, and then finally click on Account Settings. You will be taken to a page that shows your settings. Under Login Details, you can show or reset your <strong>API key</strong>.</p>
+                <p>You may specify a default region as well. Here is a list of available regions:</p>
+                <ul>
+                    <li>DFW (Dallas-Fort Worth, TX, US)</li>
+                    <li>HKG (Hong Kong, China)</li>
+                    <li>IAD (Blacksburg, VA, US)</li>
+                    <li>LON (London, England)</li>
+                    <li>SYD (Sydney, Australia)</li>
+                </ul>
+            </div>
+        </article>
+        <aside class="docs-code">
+            <div class="docs-code-body">
+                <h3>Section One Code</h3>
+                <pre><code>
+import (
+  "github.com/rackspace/gophercloud"
+  "github.com/rackspace/gophercloud/rackspace"
+  "github.com/rackspace/gophercloud/rackspace/compute/v2/images"
+  "github.com/rackspace/gophercloud/rackspace/compute/v2/flavors"
+  "github.com/rackspace/gophercloud/rackspace/compute/v2/servers"
+  "github.com/rackspace/gophercloud/rackspace/compute/v2/keypairs"
+
+  oskeypairs "github.com/rackspace/gophercloud/openstack/compute/v2/extensions/keypairs"
+)
+
+ao := gophercloud.AuthOptions{
+  Username: "{username}",
+  APIKey: "{apiKey}",
+}
+provider, err := rackspace.AuthenticatedClient(ao)
+
+serviceClient, err := rackspace.NewComputeV2(provider, gophercloud.EndpointOpts{
+  Region: "{region}",
+})
+                </code></pre>
+            </div>
+
+        </aside>
+    </section>
 </body>
 </html>
