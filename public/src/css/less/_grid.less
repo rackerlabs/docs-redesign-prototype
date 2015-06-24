@@ -1,0 +1,42 @@
+@grid-gutter-width: 20px;
+
+.grid(@gutter-width) {
+    display: inline-block;
+    width: ~"calc(100% + "@gutter-width~")";
+    margin-right: -0.25em;
+    margin-left: (@gutter-width * -1);
+    vertical-align: top;
+
+    [class*="col-"] {
+        background: rgba(0, 80, 255, 0.08);
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        display: inline-block;
+        margin-right: -0.255rem;
+        vertical-align: top;
+        word-spacing: 0;
+    }
+}
+
+.grid-unit(@fraction) {
+    margin-left: @gutter-width;
+    width: ~"calc("(percentage(@fraction)) ~" - " @gutter-width~")";
+}
+
+.grid-unit-centered(@fraction) {
+    .grid-unit(@fraction);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX((@gutter-width / 2));
+}
+
+.build-grid(@max, @gutter: 0px, @counter: 1) when (@counter <= @max) {
+    @gutter-width: @gutter;
+
+    .col-@{counter}-of-@{max} {
+        .grid-unit(@counter/@max);
+    }
+
+    .build-grid(@max, @gutter, (@counter + 1));
+}

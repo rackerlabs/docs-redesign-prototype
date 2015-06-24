@@ -1,0 +1,17 @@
+{
+  "name": "docs-redesign-prototype",
+  "version": "0.1.0",
+  "homepage": "https://github.com/rackerlabs/docs-redesign-prototype",
+  "authors": [
+    "Keith Bartholomew <keith.bartholomew@rackspace.com>"
+  ],
+  "description": "A working HTML prototype for the redesign of the Rackspace Developer Documentation",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
