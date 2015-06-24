@@ -1,0 +1,90 @@
+.site-header {
+    .header-links {
+        background: black;
+        color: white;
+        font-size: 11px;
+        text-transform: uppercase;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .header-links-container {
+            .centered-container(960px);
+        }
+
+        .text-link {
+            display: inline-block;
+            line-height: 34px;
+        }
+    }
+
+    .header-nav {
+        background: fadeout(white, 45%);
+        z-index: 2;
+
+        .header-nav-container {
+            .centered-container(960px);
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                list-style-type: none;
+
+                a {
+                    .open-sans('bold');
+                    color: @text-color;
+                    display: inline-block;
+                    line-height: 60px;
+                    padding: 0 2em;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    .transition(background 0.1s ease-in-out);
+
+                    &:hover {
+                        background: fadeout(white, 50%);
+                    }
+                }
+
+                &:first-child a {
+                    padding-left: 0;
+                }
+            }
+        }
+
+
+    }
+
+    .header-headline {
+        background: url(../img/fpo-code-editor.jpg) 50% 0% no-repeat;
+        background-size: cover;
+        margin-top: -60px;
+        padding: 120px 60px 60px 60px;
+        z-index: 1;
+
+        h1 {
+            .open-sans('light');
+            line-height: 1;
+            text-transform: uppercase;
+            margin-bottom: 0;
+
+            .headline-accent {
+                .open-sans('bold');
+                font-size: 28px;
+                display: inline-block;
+                width: 100%;
+            }
+        }
+
+        .tagline {
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+    }
+
+}

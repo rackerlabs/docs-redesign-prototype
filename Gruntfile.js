@@ -24,6 +24,10 @@ module.exports = function (grunt) {
             dev: {
                 files: {
                     'public/src/css/main.css': ['public/src/css/less/main.less']
+                },
+                options: {
+                    strictMath: true,
+                    dumpLineNumbers: 'comments'
                 }
             }
         },

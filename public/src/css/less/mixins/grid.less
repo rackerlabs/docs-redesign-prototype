@@ -1,25 +1,19 @@
 @grid-gutter-width: 20px;
 
 .grid(@gutter-width) {
-    display: inline-block;
+    display: block;
     width: ~"calc(100% + "@gutter-width~")";
-    margin-right: -0.25em;
     margin-left: (@gutter-width * -1);
     vertical-align: top;
-
-    [class*="col-"] {
-        background: rgba(0, 80, 255, 0.08);
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        display: inline-block;
-        margin-right: -0.255rem;
-        vertical-align: top;
-        word-spacing: 0;
-    }
 }
 
 .grid-unit(@fraction) {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
     margin-left: @gutter-width;
+    vertical-align: top;
     width: ~"calc("(percentage(@fraction)) ~" - " @gutter-width~")";
 }
 

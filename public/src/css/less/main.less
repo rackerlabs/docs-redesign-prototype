@@ -1,32 +1,23 @@
-@import "_grid";
+@import "variables";
+@import "reset";
+@import "mixins";
 
-
-body, html {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-}
+@import "typography";
+@import "modules/site-header";
 
 .grid {
     @gutter-width: 20px;
+
     .grid(@gutter-width);
     .build-grid(1, @gutter-width);
     .build-grid(2, @gutter-width);
     .build-grid(3, @gutter-width);
     .build-grid(4, @gutter-width);
     .build-grid(5, @gutter-width);
+    .build-grid(6, @gutter-width);
     .build-grid(12, @gutter-width);
 
     .col-center {
         .grid-unit-centered(1/2);
-    }
-}
-
-.grid.example {
-    [class*="col-"] {
-        min-height: 40px;
-        margin-top: 20px;
     }
 }
