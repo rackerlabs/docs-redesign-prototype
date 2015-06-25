@@ -1,15 +1,16 @@
 .docs-content {
-    background: #ffffff; /* Old browsers */
-    background: -moz-linear-gradient(left,  white 0%, white 58.333332%, @code-background 58.333333%, @code-background 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,white), color-stop(58.333332%,white), color-stop(58.333333%,@code-background), color-stop(100%,@code-background)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  white 0%,white 58.333332%,@code-background 58.333333%,@code-background 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  white 0%,white 58.333332%,@code-background 58.333333%,@code-background 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  white 0%,white 58.333332%,@code-background 58.333333%,@code-background 100%); /* IE10+ */
-    background: linear-gradient(to right,  white 0%,white 58.333332%,@code-background 58.333333%,@code-background 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='@code-background',GradientType=1 ); /* IE6-9 */
-
     @gutter-width: 0px;
     .grid(@gutter-width);
+
+    h1 {
+        color: tint(@text-color, 20%);
+    }
+
+    h2, h3 {
+        border-bottom: solid 1px fadeout(black, 70%);
+        line-height: 2;
+        margin-bottom: 15px;
+    }
 
     .section-nav {
         .grid-unit(1/6);
@@ -23,14 +24,53 @@
 
     .docs-code {
         .grid-unit(5/12);
+        background: @code-background;
+
+        .code-language-list {
+            .grid(0px);
+            background: @code-background-accent;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            li {
+                .grid-unit(1/5);
+                line-height: 35px;
+                overflow: hidden;
+
+                a {
+                    background: transparent;
+                    color: fadeout(white, 20%);
+                    display: block;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    .transition(background 0.1s ease-in-out);
+
+                    &:hover {
+                        background: tint(@code-background-accent, 5%);
+                    }
+
+                    &.active span {
+                        .open-sans('bold');
+                        border-bottom: solid 2px @link-color;
+                        color: white;
+                    }
+                }
+
+                @media (min-width: 1400px) {
+                    .grid-unit(1/9);
+                }
+            }
+        }
 
         .docs-code-body {
+            color: white;
             padding: 10px 35px 0 35px;
 
             h3 {
-                border-bottom: solid 1px fadeout(black, 80%);
+                border-bottom: solid 1px fadeout(@code-white, 70%);
                 color: white;
-                line-height: 2.25;
+                line-height: 2;
             }
 
             pre, code {

@@ -27,10 +27,10 @@
             </nav>
         </div>
         <div class="header-headline">
-            <h1>
+            <h2>
                 <span class="headline-accent">Rackspace</span>
                 Developers Documentation
-            </h1>
+            </h2>
             <p class="tagline">Let’s build something great together!</p>
         </div>
     </header>
@@ -56,7 +56,7 @@
                     <li><strong>Flavor:</strong> A resource configuration for a server. Each flavor is a unique combination of disk, memory, vCPUs, and network bandwidth. You can choose from pre-defined flavors.</li>
                     <li><strong>Network: </strong> The virtual space where your servers live. Rackspace has two default networks: PublicNet, which is the Internet; ServiceNet, which is our internal network. Although you can create as many isolated networks as you want, the default configuration is for servers to be connected to both PublicNet (for public Internet connectivity) and ServiceNet (for internal connectivity with your other servers).</li>
                 </ul>
-                <h3>Authentication</h3>
+                <h3 data-code-sample="authentication">Authentication</h3>
                 <p>To use this service you have to authenticate first. To do this, you will need your Rackspace username and API key. Your username is the one you use to login to the Cloud Control Panel at <a href="" class="external">http://mycloud.rackspace.com/</a>.</p>
                 <p>To find your API key, first navigate to the Cloud Control Panel, then click on your <strong>username</strong> at the top right corner, and then finally click on Account Settings. You will be taken to a page that shows your settings. Under Login Details, you can show or reset your <strong>API key</strong>.</p>
                 <p>You may specify a default region as well. Here is a list of available regions:</p>
@@ -67,36 +67,118 @@
                     <li>LON (London, England)</li>
                     <li>SYD (Sydney, Australia)</li>
                 </ul>
+                <p>Some users have access to another region in ORD (Chicago, IL). New users will not have this region.</p>
+                <p>Once you have these pieces of information, you can pass them into the SDK by replacing <strong>{username}</strong>, <strong>{apiKey}</strong>, and <strong>{region}</strong> with your info:</p>
+                <h3>Use the API</h3>
+                <p>Some of the basic operations you can perform with this API are described below.</p>
+
+                <h4>Set up your first server</h4>
+                <p>Once you’ve finished your initial setup, you can begin the process of creating your first server.</p>
+                <p>To do this, you need to decide which <strong>Image</strong> and <strong>Flavor</strong> you want to use.</p>
+
+                <h5 data-code-sample="choose-operating-system">Choose operating system</h5>
+                <p>An image, or operating system, forms the basis of your server. Each image has a unique ID, which is used to retrieve more details from the API. If you already know the ID, you can retrieve more details about the image:</p>
+                <p>Alternatively, you can traverse through the list of images:</p>
+                <p>Once you’ve found the appropriate operating system and its ID, you can move on to picking your hardware.</p>
+
+                <h5 data-code-sample="choose-flavor">Choose Hardware Configuration</h5>
+                <p>Flavors, or hardware configurations, dictate how powerful your servers are. Like images, each flavor has its own UUID. If you already know which flavor to use, you can retrieve its details:</p>
+                <p></p>
+                <h5 data-code-sample="create-server">Build Server</h5>
+                <p>Now that you have an image ID and flavor ID, you can create your server:</p>
+                <p>This is an asynchronous operation, meaning that it will <em>not</em> block your request while the build process runs. It will provision your VM behind the scenes. When the build completes, it places your server in an ACTIVE state. At this point, the server is available for you to use.</p>
+                <p>Some SDKs allow you to check on the status of the build:</p>
             </div>
         </article>
         <aside class="docs-code">
+            <ul class="code-language-list">
+                <li><a href="" data-language-selector="cli"><span>CLI</span></a></li>
+                <li><a href="" data-language-selector="curl"><span>cURL</span></a></li>
+                <li><a href="" data-language-selector="go" class="active"><span>Go</span></a></li>
+                <li><a href="" data-language-selector="java"><span>Java</span></a></li>
+                <li><a href="" data-language-selector="cs"><span>.NET</span></a></li>
+                <li><a href="" data-language-selector="node"><span>Node.js</span></a></li>
+                <li><a href="" data-language-selector="php"><span>PHP</span></a></li>
+                <li><a href="" data-language-selector="python"><span>Python</span></a></li>
+                <li><a href="" data-language-selector="ruby"><span>Ruby</span></a></li>
+            </ul>
             <div class="docs-code-body">
-                <h3>Section One Code</h3>
-                <pre><code>
-import (
-  "github.com/rackspace/gophercloud"
-  "github.com/rackspace/gophercloud/rackspace"
-  "github.com/rackspace/gophercloud/rackspace/compute/v2/images"
-  "github.com/rackspace/gophercloud/rackspace/compute/v2/flavors"
-  "github.com/rackspace/gophercloud/rackspace/compute/v2/servers"
-  "github.com/rackspace/gophercloud/rackspace/compute/v2/keypairs"
+                <section data-code-sample="authentication">
+                    <h3>Authentication</h3>
+                    <div class="highlight-go">
+                        <div class="highlight">
+<pre><span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;github.com/rackspace/gophercloud&quot;</span>
+    <span class="s">&quot;github.com/rackspace/gophercloud/rackspace&quot;</span>
+    <span class="s">&quot;github.com/rackspace/gophercloud/rackspace/compute/v2/images&quot;</span>
+    <span class="s">&quot;github.com/rackspace/gophercloud/rackspace/compute/v2/flavors&quot;</span>
+    <span class="s">&quot;github.com/rackspace/gophercloud/rackspace/compute/v2/servers&quot;</span>
+    <span class="s">&quot;github.com/rackspace/gophercloud/rackspace/compute/v2/keypairs&quot;</span>
 
-  oskeypairs "github.com/rackspace/gophercloud/openstack/compute/v2/extensions/keypairs"
-)
+    <span class="nx">oskeypairs</span> <span class="s">&quot;github.com/rackspace/gophercloud/openstack/compute/v2/extensions/keypairs&quot;</span>
+<span class="p">)</span>
 
-ao := gophercloud.AuthOptions{
-  Username: "{username}",
-  APIKey: "{apiKey}",
-}
-provider, err := rackspace.AuthenticatedClient(ao)
+<span class="nx">ao</span> <span class="o">:=</span> <span class="nx">gophercloud</span><span class="p">.</span><span class="nx">AuthOptions</span><span class="p">{</span>
+    <span class="nx">Username</span><span class="p">:</span> <span class="s">&quot;{username}&quot;</span><span class="p">,</span>
+    <span class="nx">APIKey</span><span class="p">:</span> <span class="s">&quot;{apiKey}&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="nx">provider</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">rackspace</span><span class="p">.</span><span class="nx">AuthenticatedClient</span><span class="p">(</span><span class="nx">ao</span><span class="p">)</span>
 
-serviceClient, err := rackspace.NewComputeV2(provider, gophercloud.EndpointOpts{
-  Region: "{region}",
-})
-                </code></pre>
+<span class="nx">serviceClient</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">rackspace</span><span class="p">.</span><span class="nx">NewComputeV2</span><span class="p">(</span><span class="nx">provider</span><span class="p">,</span> <span class="nx">gophercloud</span><span class="p">.</span><span class="nx">EndpointOpts</span><span class="p">{</span>
+    <span class="nx">Region</span><span class="p">:</span> <span class="s">&quot;{region}&quot;</span><span class="p">,</span>
+<span class="p">})</span></pre>
+                        </div>
+                    </div>
+                </section>
+                <section data-code-sample="choose-operating-system">
+                    <h5>Choose Operating System</h5>
+                    <div class="highlight-go" style="display: block;"><div class="highlight"><pre><span class="nx">image</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">images</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="nx">serviceClient</span><span class="p">,</span> <span class="s">"{imageId}"</span><span class="p">).</span><span class="nx">Extract</span><span class="p">()</span>
+                    </pre></div>
+                    </div>
+                    <div class="highlight-go" style="display: block;">
+                        <div class="highlight">
+<pre><span class="nx">err</span> <span class="o">:=</span> <span class="nx">images</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">serviceClient</span><span class="p">).</span><span class="nx">EachPage</span><span class="p">(</span><span class="kd">func</span> <span class="p">(</span><span class="nx">page</span> <span class="nx">pagination</span><span class="p">.</span><span class="nx">Page</span><span class="p">)</span> <span class="p">(</span><span class="kt">bool</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">images</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">images</span><span class="p">.</span><span class="nx">ExtractImages</span><span class="p">(</span><span class="nx">page</span><span class="p">)</span>
+    <span class="c1">// Use the page of []images.Image</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">nil</span>
+<span class="p">}</span></pre>
+                        </div>
+                    </div>
+                </section>
+                <section data-code-sample="choose-flavor">
+                    <h5>Choose Hardware Configuration</h5>
+                    <div class="highlight-go" style="display: block;"><div class="highlight">
+<pre><span class="nx">flavor</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">flavors</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="nx">serviceClient</span><span class="p">,</span> <span class="s">"{flavorId}"</span><span class="p">).</span><span class="nx">Extract</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-go" style="display: block;"><div class="highlight">
+<pre><span class="nx">err</span> <span class="o">:=</span> <span class="nx">flavors</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">serviceClient</span><span class="p">).</span><span class="nx">EachPage</span><span class="p">(</span><span class="kd">func</span> <span class="p">(</span><span class="nx">page</span> <span class="nx">pagination</span><span class="p">.</span><span class="nx">Page</span><span class="p">)</span> <span class="p">(</span><span class="kt">bool</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">flavors</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">flavors</span><span class="p">.</span><span class="nx">ExtractFlavors</span><span class="p">(</span><span class="nx">page</span><span class="p">)</span>
+  <span class="c1">// Use the page of []flavors.Flavor</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">nil</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+                </section>
+                <section data-code-sample="create-server">
+                    <h5>Build Server</h5>
+                    <div class="highlight-go" style="display: block;"><div class="highlight">
+<pre><span class="nx">server</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">servers</span><span class="p">.</span><span class="nx">Create</span><span class="p">(</span><span class="nx">serviceClient</span><span class="p">,</span> <span class="nx">servers</span><span class="p">.</span><span class="nx">CreateOpts</span><span class="p">{</span>
+  <span class="nx">Name</span><span class="p">:</span>      <span class="s">"My new server"</span><span class="p">,</span>
+  <span class="nx">ImageRef</span><span class="p">:</span>  <span class="nx">image</span><span class="p">.</span><span class="nx">ID</span><span class="p">,</span>
+  <span class="nx">FlavorRef</span><span class="p">:</span> <span class="nx">flavor</span><span class="p">.</span><span class="nx">ID</span><span class="p">,</span>
+<span class="p">}).</span><span class="nx">Extract</span><span class="p">()</span>
+</pre></div>
+</div>
+                    <div class="highlight-go" style="display: block;"><div class="highlight">
+<pre><span class="nx">err</span> <span class="o">:=</span> <span class="nx">servers</span><span class="p">.</span><span class="nx">WaitForStatus</span><span class="p">(</span><span class="nx">serviceClient</span><span class="p">,</span> <span class="nx">server</span><span class="p">.</span><span class="nx">ID</span><span class="p">,</span> <span class="s">"ACTIVE"</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>
+</pre></div>
+                    </div>
+                </section>
             </div>
-
         </aside>
     </section>
+    <script src="/dist/js/main.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
 </body>
 </html>

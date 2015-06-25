@@ -1,3 +1,4 @@
 node_modules
+public/dist
 public/**/*.css
 .DS_Store
