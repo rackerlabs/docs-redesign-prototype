@@ -11,12 +11,58 @@
         }
 
         .header-links-container {
+            @gutter-width: 0px;
+            .grid(@gutter-width);
             .centered-container(960px);
+
+            .phone-chat-links, .portal-links {
+                .grid-unit(1/2);
+            }
+
+            .portal-links {
+                text-align: right;
+            }
+        }
+
+        .btn-link {
+            background: shade(white, 13%);
+            border-radius: 3px;
+            color: black;
+            display: inline-block;
+            line-height: 24px;
+            margin: 0 -0.25em 0 10px;
+            padding: 0 0.75em;
+            .transition(background 0.1s ease-in-out);
+
+            &:hover {
+                background: white;
+            }
         }
 
         .text-link {
             display: inline-block;
             line-height: 34px;
+            margin-right: -0.25em;
+
+            & + .text-link {
+                margin-left: 6px;
+                padding-left: 8px;
+
+                &:before {
+                    background: white;
+                    content: '';
+                    display: block;
+                    height: 12px;
+                    left: 0;
+                    position: absolute;
+                    top: 11px;
+                    width: 1px;
+                }
+            }
+
+            a:hover {
+                color: tint(@link-color, 30%);
+            }
         }
     }
 

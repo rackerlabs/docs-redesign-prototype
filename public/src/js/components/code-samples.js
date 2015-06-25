@@ -23,9 +23,6 @@ CodeSamples.prototype.positionElements = function () {
         var referenceFromTop = $(element).offset().top - $(this.options.referenceParent).offset().top;
         var targetFromTop = $(targetElement).offset().top - $(this.options.targetParent).offset().top;
 
-        console.log(referenceFromTop);
-        console.log(targetFromTop);
-
         $(targetElement).css({
             marginTop: Math.max(0, referenceFromTop - targetFromTop)
         });

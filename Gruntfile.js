@@ -24,7 +24,6 @@ module.exports = function (grunt) {
                     base: 'public',
                     hostname: '*',
                     keepalive: true,
-                    open: true,
                     port: 3000,
                     useAvailablePort: true
                 }
