@@ -40,7 +40,11 @@
             <p class="tagline">Let’s build something great together!</p>
         </div>
     </header>
-    <section class="docs-content">
+    <section class="docs-body">
+        <div class="background">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
         <nav class="section-nav">
             <a href="" class="github-link"><span class="icon fa fa-github"></span>Edit On Github</a>
             <ul>
@@ -71,59 +75,7 @@
             </ul>
             <div class="nav-bobber active"></div>
         </nav>
-        <article class="docs-narrative">
-            <h1>Quickstart for Cloud Servers</h1>
-            <div class="revision-date">Revised On: <time datetime="2015-06-05">6/5/15</time></div>
-            <ul class="tags">
-                <li><a href="">Tag One</a></li>
-                <li><a href="">Tag Two</a></li>
-                <li><a href="">Tag Three</a></li>
-            </ul>
-            <div class="docs-body">
-                <p>Rackspace Cloud Servers allows you to allocate and deallocate compute resources. It is based on OpenStack Compute (Nova), a community-led open-source platform.</p>
-                <h3>Concepts</h3>
-                <p>To use this service effectively, you should understand how these key ideas are used in this context:</p>
-                <ul>
-                    <li><strong>Server:</strong> A computer that provides explicit services to the client software running on that system. A server is a virtual machine (VM) instance in the Cloud Servers environment. To create a server, you must specify a name, flavor reference, and image reference.</li>
-                    <li><strong>Image:</strong> The type of operating system you want to use. You can choose from pre-defined images or create your own custom images.</li>
-                    <li><strong>Flavor:</strong> A resource configuration for a server. Each flavor is a unique combination of disk, memory, vCPUs, and network bandwidth. You can choose from pre-defined flavors.</li>
-                    <li><strong>Network: </strong> The virtual space where your servers live. Rackspace has two default networks: PublicNet, which is the Internet; ServiceNet, which is our internal network. Although you can create as many isolated networks as you want, the default configuration is for servers to be connected to both PublicNet (for public Internet connectivity) and ServiceNet (for internal connectivity with your other servers).</li>
-                </ul>
-                <h3 data-code-sample="authentication">Authentication</h3>
-                <p>To use this service you have to authenticate first. To do this, you will need your Rackspace username and API key. Your username is the one you use to login to the Cloud Control Panel at <a href="" class="external">http://mycloud.rackspace.com/</a>.</p>
-                <p>To find your API key, first navigate to the Cloud Control Panel, then click on your <strong>username</strong> at the top right corner, and then finally click on Account Settings. You will be taken to a page that shows your settings. Under Login Details, you can show or reset your <strong>API key</strong>.</p>
-                <p>You may specify a default region as well. Here is a list of available regions:</p>
-                <ul>
-                    <li>DFW (Dallas-Fort Worth, TX, US)</li>
-                    <li>HKG (Hong Kong, China)</li>
-                    <li>IAD (Blacksburg, VA, US)</li>
-                    <li>LON (London, England)</li>
-                    <li>SYD (Sydney, Australia)</li>
-                </ul>
-                <p>Some users have access to another region in ORD (Chicago, IL). New users will not have this region.</p>
-                <p>Once you have these pieces of information, you can pass them into the SDK by replacing <strong>{username}</strong>, <strong>{apiKey}</strong>, and <strong>{region}</strong> with your info:</p>
-                <h3>Use the API</h3>
-                <p>Some of the basic operations you can perform with this API are described below.</p>
-
-                <h4>Set up your first server</h4>
-                <p>Once you’ve finished your initial setup, you can begin the process of creating your first server.</p>
-                <p>To do this, you need to decide which <strong>Image</strong> and <strong>Flavor</strong> you want to use.</p>
-
-                <h5 data-code-sample="choose-operating-system">Choose operating system</h5>
-                <p>An image, or operating system, forms the basis of your server. Each image has a unique ID, which is used to retrieve more details from the API. If you already know the ID, you can retrieve more details about the image:</p>
-                <p>Alternatively, you can traverse through the list of images:</p>
-                <p>Once you’ve found the appropriate operating system and its ID, you can move on to picking your hardware.</p>
-
-                <h5 data-code-sample="choose-flavor">Choose Hardware Configuration</h5>
-                <p>Flavors, or hardware configurations, dictate how powerful your servers are. Like images, each flavor has its own UUID. If you already know which flavor to use, you can retrieve its details:</p>
-                <p></p>
-                <h5 data-code-sample="create-server">Build Server</h5>
-                <p>Now that you have an image ID and flavor ID, you can create your server:</p>
-                <p>This is an asynchronous operation, meaning that it will <em>not</em> block your request while the build process runs. It will provision your VM behind the scenes. When the build completes, it places your server in an ACTIVE state. At this point, the server is available for you to use.</p>
-                <p>Some SDKs allow you to check on the status of the build:</p>
-            </div>
-        </article>
-        <aside class="docs-code">
+        <article class="docs-content">
             <ul class="code-language-list">
                 <li><a href="" data-language-selector="cli"><span>CLI</span></a></li>
                 <li><a href="" data-language-selector="curl"><span>cURL</span></a></li>
@@ -135,8 +87,45 @@
                 <li><a href="" data-language-selector="python"><span>Python</span></a></li>
                 <li><a href="" data-language-selector="ruby"><span>Ruby</span></a></li>
             </ul>
-            <div class="docs-code-body">
-                <section data-code-sample="authentication">
+            <header class="docs-intro">
+                <h1>Quickstart for Cloud Servers</h1>
+                <div class="revision-date">Revised On: <time datetime="2015-06-05">6/5/15</time></div>
+                <ul class="tags">
+                    <li><a href="">Tag One</a></li>
+                    <li><a href="">Tag Two</a></li>
+                    <li><a href="">Tag Three</a></li>
+                </ul>
+            </header>
+            <section class="docs-section">
+                <div class="description">
+                    <p>Rackspace Cloud Servers allows you to allocate and deallocate compute resources. It is based on OpenStack Compute (Nova), a community-led open-source platform.</p>
+                    <h3>Concepts</h3>
+                    <p>To use this service effectively, you should understand how these key ideas are used in this context:</p>
+                    <ul>
+                        <li><strong>Server:</strong> A computer that provides explicit services to the client software running on that system. A server is a virtual machine (VM) instance in the Cloud Servers environment. To create a server, you must specify a name, flavor reference, and image reference.</li>
+                        <li><strong>Image:</strong> The type of operating system you want to use. You can choose from pre-defined images or create your own custom images.</li>
+                        <li><strong>Flavor:</strong> A resource configuration for a server. Each flavor is a unique combination of disk, memory, vCPUs, and network bandwidth. You can choose from pre-defined flavors.</li>
+                        <li><strong>Network: </strong> The virtual space where your servers live. Rackspace has two default networks: PublicNet, which is the Internet; ServiceNet, which is our internal network. Although you can create as many isolated networks as you want, the default configuration is for servers to be connected to both PublicNet (for public Internet connectivity) and ServiceNet (for internal connectivity with your other servers).</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="docs-section">
+                <div class="description">
+                    <h3 data-code-sample="authentication">Authentication</h3>
+                    <p>To use this service you have to authenticate first. To do this, you will need your Rackspace username and API key. Your username is the one you use to login to the Cloud Control Panel at <a href="" class="external">http://mycloud.rackspace.com/</a>.</p>
+                    <p>To find your API key, first navigate to the Cloud Control Panel, then click on your <strong>username</strong> at the top right corner, and then finally click on Account Settings. You will be taken to a page that shows your settings. Under Login Details, you can show or reset your <strong>API key</strong>.</p>
+                    <p>You may specify a default region as well. Here is a list of available regions:</p>
+                    <ul>
+                        <li>DFW (Dallas-Fort Worth, TX, US)</li>
+                        <li>HKG (Hong Kong, China)</li>
+                        <li>IAD (Blacksburg, VA, US)</li>
+                        <li>LON (London, England)</li>
+                        <li>SYD (Sydney, Australia)</li>
+                    </ul>
+                    <p>Some users have access to another region in ORD (Chicago, IL). New users will not have this region.</p>
+                    <p>Once you have these pieces of information, you can pass them into the SDK by replacing <strong>{username}</strong>, <strong>{apiKey}</strong>, and <strong>{region}</strong> with your info:</p>
+                </div>
+                <div class="code">
                     <h3>Authentication</h3>
                     <div class="highlight-go">
                         <div class="highlight">
@@ -152,18 +141,36 @@
 <span class="p">)</span>
 
 <span class="nx">ao</span> <span class="o">:=</span> <span class="nx">gophercloud</span><span class="p">.</span><span class="nx">AuthOptions</span><span class="p">{</span>
-    <span class="nx">Username</span><span class="p">:</span> <span class="s">&quot;{username}&quot;</span><span class="p">,</span>
-    <span class="nx">APIKey</span><span class="p">:</span> <span class="s">&quot;{apiKey}&quot;</span><span class="p">,</span>
+<span class="nx">Username</span><span class="p">:</span> <span class="s">&quot;{username}&quot;</span><span class="p">,</span>
+<span class="nx">APIKey</span><span class="p">:</span> <span class="s">&quot;{apiKey}&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 <span class="nx">provider</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">rackspace</span><span class="p">.</span><span class="nx">AuthenticatedClient</span><span class="p">(</span><span class="nx">ao</span><span class="p">)</span>
 
 <span class="nx">serviceClient</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">rackspace</span><span class="p">.</span><span class="nx">NewComputeV2</span><span class="p">(</span><span class="nx">provider</span><span class="p">,</span> <span class="nx">gophercloud</span><span class="p">.</span><span class="nx">EndpointOpts</span><span class="p">{</span>
-    <span class="nx">Region</span><span class="p">:</span> <span class="s">&quot;{region}&quot;</span><span class="p">,</span>
+<span class="nx">Region</span><span class="p">:</span> <span class="s">&quot;{region}&quot;</span><span class="p">,</span>
 <span class="p">})</span></pre>
                         </div>
                     </div>
-                </section>
-                <section data-code-sample="choose-operating-system">
+                </div>
+            </section>
+            <section class="docs-section">
+                <div class="description">
+                    <h3>Use the API</h3>
+                    <p>Some of the basic operations you can perform with this API are described below.</p>
+
+                    <h4>Set up your first server</h4>
+                    <p>Once you’ve finished your initial setup, you can begin the process of creating your first server.</p>
+                    <p>To do this, you need to decide which <strong>Image</strong> and <strong>Flavor</strong> you want to use.</p>
+                </div>
+            </section>
+            <section class="docs-section">
+                <div class="description">
+                    <h5 data-code-sample="choose-operating-system">Choose operating system</h5>
+                    <p>An image, or operating system, forms the basis of your server. Each image has a unique ID, which is used to retrieve more details from the API. If you already know the ID, you can retrieve more details about the image:</p>
+                    <p>Alternatively, you can traverse through the list of images:</p>
+                    <p>Once you’ve found the appropriate operating system and its ID, you can move on to picking your hardware.</p>
+                </div>
+                <div class="code">
                     <h5>Choose Operating System</h5>
                     <div class="highlight-go" style="display: block;"><div class="highlight"><pre><span class="nx">image</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">images</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="nx">serviceClient</span><span class="p">,</span> <span class="s">"{imageId}"</span><span class="p">).</span><span class="nx">Extract</span><span class="p">()</span>
                     </pre></div>
@@ -177,8 +184,14 @@
 <span class="p">}</span></pre>
                         </div>
                     </div>
-                </section>
-                <section data-code-sample="choose-flavor">
+                </div>
+            </section>
+            <section class="docs-section">
+                <div class="description">
+                    <h5 data-code-sample="choose-flavor">Choose Hardware Configuration</h5>
+                    <p>Flavors, or hardware configurations, dictate how powerful your servers are. Like images, each flavor has its own UUID. If you already know which flavor to use, you can retrieve its details:</p>
+                </div>
+                <div class="code">
                     <h5>Choose Hardware Configuration</h5>
                     <div class="highlight-go" style="display: block;"><div class="highlight">
 <pre><span class="nx">flavor</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">flavors</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="nx">serviceClient</span><span class="p">,</span> <span class="s">"{flavorId}"</span><span class="p">).</span><span class="nx">Extract</span><span class="p">()</span>
@@ -192,8 +205,16 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-                </section>
-                <section data-code-sample="create-server">
+                </div>
+            </section>
+            <section class="docs-section">
+                <div class="description">
+                    <h5 data-code-sample="create-server">Build Server</h5>
+                    <p>Now that you have an image ID and flavor ID, you can create your server:</p>
+                    <p>This is an asynchronous operation, meaning that it will <em>not</em> block your request while the build process runs. It will provision your VM behind the scenes. When the build completes, it places your server in an ACTIVE state. At this point, the server is available for you to use.</p>
+                    <p>Some SDKs allow you to check on the status of the build:</p>
+                </div>
+                <div class="code">
                     <h5>Build Server</h5>
                     <div class="highlight-go" style="display: block;"><div class="highlight">
 <pre><span class="nx">server</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">servers</span><span class="p">.</span><span class="nx">Create</span><span class="p">(</span><span class="nx">serviceClient</span><span class="p">,</span> <span class="nx">servers</span><span class="p">.</span><span class="nx">CreateOpts</span><span class="p">{</span>
@@ -207,9 +228,10 @@
 <pre><span class="nx">err</span> <span class="o">:=</span> <span class="nx">servers</span><span class="p">.</span><span class="nx">WaitForStatus</span><span class="p">(</span><span class="nx">serviceClient</span><span class="p">,</span> <span class="nx">server</span><span class="p">.</span><span class="nx">ID</span><span class="p">,</span> <span class="s">"ACTIVE"</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>
 </pre></div>
                     </div>
-                </section>
-            </div>
-        </aside>
+                </div>
+
+            </section>
+        </article>
     </section>
     <script src="/dist/js/main.js"></script>
     <script src="//localhost:35729/livereload.js"></script>
