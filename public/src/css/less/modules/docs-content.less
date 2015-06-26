@@ -44,10 +44,21 @@
     }
 
     .docs-content {
-        .grid-unit(10/12);
+        .grid-unit(12/12);
+        padding: 35px;
+        .transition(transform 0.2s ease-in-out);
 
         .docs-section:first-of-type {
             padding-top: 5px;
+        }
+
+        @media (min-width: 769px) {
+            .grid-unit(10/12);
+            padding: 35px 20px 0 20px;
+        }
+
+        @media (min-width: 1025px) {
+            padding: 5px 0 0 0;
         }
     }
 
@@ -84,5 +95,12 @@
                 }
             }
         }
+    }
+}
+
+.show-section-nav {
+    .docs-content {
+        .transform(translate(0, 0));
+        .transform(translate3d(16.66667%, 0, 0));
     }
 }

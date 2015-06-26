@@ -1,16 +1,45 @@
 .docs-section-nav {
     .grid-unit(1/6, 0px);
-    padding: 15px 20px 0 35px;
+    padding: 15px 15px 0 15px;
+    position: absolute;
+    .transform(translate(-100%, 0));
+    .transform(translate3d(-100%, 0, 0));
+    .transition(transform 0.2s ease-in-out);
+    z-index: 2;
+
+    .section-nav-toggle {
+        .fa-icon();
+        background: @rax-blue;
+        color: @code-white;
+        display: block;
+        height: 35px;
+        line-height: 35px;
+        position: absolute;
+        right: -35px;
+        text-align: center;
+        top: 35px;
+        width: 35px;
+
+        &:before {
+            content: @fa-var-ellipsis-v;
+        }
+
+        @media (min-width: 769px) {
+            display: none;
+        }
+    }
 
     .github-link {
-        display: inline-block;
+        display: block;
         margin-bottom: 50px;
+        text-align: center;
 
         .icon {
             color: @text-color;
-            display: inline-block;
-            font-size: 26px;
+            display: block;
+            font-size: 36px;
             margin-right: 8px;
+            text-align: center;
             vertical-align: middle;
             .transition(color 0.1s ease-in-out);
         }
@@ -20,6 +49,16 @@
         &:hover {
             .icon {
                 color: @link-color-hover;
+            }
+        }
+
+        @media (min-width: 1150px) {
+            text-align: left;
+
+            .icon {
+                display: inline-block;
+                font-size: 26px;
+                text-align: left;
             }
         }
     }
@@ -98,5 +137,22 @@
             top: 543px;
             width: 13px;
         }
+    }
+
+    @media (min-width: 769px) {
+        position: relative;
+        .transform(translate(0, 0));
+        .transform(translate3d(0, 0, 0));
+    }
+
+    @media (min-width: 1025px) {
+        padding: 15px 20px 0 35px;
+    }
+}
+
+.show-section-nav {
+    .docs-section-nav {
+        .transform(translate(0, 0));
+        .transform(translate3d(0, 0, 0));
     }
 }

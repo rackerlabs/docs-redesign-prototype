@@ -116,16 +116,24 @@
 
         h2 {
             .open-sans('light');
+            background: fadeout(white, 45%);
+            display: inline-block;
             font-size: 35px;
             line-height: 1;
             text-transform: uppercase;
             margin-bottom: 0;
+            padding: 5px;
+            width: auto;
 
             .headline-accent {
                 .open-sans('bold');
                 font-size: 28px;
-                display: inline-block;
-                width: 100%;
+                display: block;
+            }
+
+            @media (min-width: 1250px) {
+                background: transparent;
+                padding: 0;
             }
         }
 

@@ -4,22 +4,13 @@
     width: 100%;
 
     .description {
-        padding-right: 35px;
-
         @media (min-width: 1025px) {
             float: left;
+            padding-right: 35px;
             width: 50%;
         }
     }
     .code {
-        color: white;
-        padding: 0 35px;
-
-        h3 {
-            border-bottom: solid 1px fadeout(@code-white, 70%);
-            color: white;
-            line-height: 2;
-        }
 
         pre, code {
             color: @code-white;
@@ -31,7 +22,15 @@
         }
 
         @media (min-width: 1025px) {
+            color: white;
             margin-left: 50%;
+            padding: 0 35px;
+
+            h3 {
+                border-bottom: solid 1px fadeout(@code-white, 70%);
+                color: white;
+                line-height: 2;
+            }
         }
     }
 }
