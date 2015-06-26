@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/rackerlabs/docs-redesign-prototype#readme",
   "dependencies": {
+    "angular": "^1.4.1",
     "grunt": "^0.4.5",
     "grunt-browserify": "^3.8.0",
     "grunt-concurrent": "^2.0.0",

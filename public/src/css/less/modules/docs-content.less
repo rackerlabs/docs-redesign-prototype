@@ -4,6 +4,7 @@
 
     h1 {
         color: tint(@text-color, 20%);
+        line-height: 1.1;
     }
 
     h2, h3 {
@@ -20,119 +21,33 @@
         width: 100%;
 
         .left {
-            .grid-unit(7/12);
+            .grid-unit(1/1);
             background: white;
             height: 100%;
         }
         .right {
-            .grid-unit(5/12);
-            background: @code-background;
-            height: 100%;
-        }
-    }
-
-    .section-nav {
-        .grid-unit(1/6);
-        padding: 15px 0 0 35px;
-
-        .github-link {
-
-            .icon {
-                color: @text-color;
-                display: inline-block;
-                font-size: 26px;
-                margin-right: 8px;
-                vertical-align: middle;
-                .transition(color 0.1s ease-in-out);
-            }
-            .roboto-slab();
-            text-decoration: none;
-
-            &:hover {
-                .icon {
-                    color: @link-color-hover;
-                }
-            }
-        }
-
-        & > ul {
-            margin: 50px 0 0 0;
-            padding: 0;
-            list-style-type: none;
-
-            & > li {
-                & > a {
-                    .roboto-slab();
-                    border-radius: 3px;
-                    color: tint(@text-color, 20%);
-                    font-size: 16px;
-                    padding: 0.4em;
-                    text-decoration: none;
-                    .transition(color 0.1s ease-in-out);
-
-                    &:hover {
-                        color: @link-color;
-                    }
-                }
-
-                & + li {
-                    margin-top: 10px;
-                }
-
-                &.active > a {
-                    background: @link-color;
-                    color: white;
-                }
-
-                & > ul {
-                    border-left: solid 1px shade(white, 30%);
-                    list-style-type: none;
-                    margin: 20px 0 20px 5px;
-                    padding: 0 0 0 10px;
-
-                    li {
-                        line-height: 1;
-
-                        a {
-                            color: @text-color;
-                            line-height: 1;
-                            text-decoration: none;
-
-                            &:hover {
-                                color: @link-color;
-                            }
-                        }
-
-                        &.active a {
-                            .open-sans('bold');
-                        }
-
-                        & + li {
-                            margin-top: 10px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .nav-bobber {
             display: none;
+        }
 
-            &.active {
-                background: @rax-yellow;
-                border-radius: 50%;
-                display: block;
-                height: 13px;
-                left: 34px;
-                position: absolute;
-                top: 543px;
-                width: 13px;
+        @media (min-width: 1025px) {
+            .left {
+                .grid-unit(7/12);
+            }
+
+            .right {
+                .grid-unit(5/12);
+                background: @code-background;
+                height: 100%;
             }
         }
     }
 
     .docs-content {
         .grid-unit(10/12);
+
+        .docs-section:first-of-type {
+            padding-top: 5px;
+        }
     }
 
     .docs-intro {
@@ -166,78 +81,6 @@
                     margin-left: 0.5em;
                     padding-left: ~"calc(0.5em + 1px)";
                 }
-            }
-        }
-    }
-
-    .docs-section {
-        .clearfix();
-        display: block;
-        width: 100%;
-
-        .description {
-            float: left;
-            padding-right: 35px;
-            width: 50%;
-        }
-        .code {
-            color: white;
-            margin-left: 50%;
-            padding: 0 35px;
-
-            h3 {
-                border-bottom: solid 1px fadeout(@code-white, 70%);
-                color: white;
-                line-height: 2;
-            }
-
-            pre, code {
-                color: @code-white;
-            }
-
-            pre {
-                overflow-x: scroll;
-                overflow-y: hidden;
-            }
-        }
-    }
-
-    .code-language-list {
-        .grid(0px);
-        background: @code-background-accent;
-        margin: 0 0 0 50%;
-        padding: 0;
-        position: absolute;
-        text-align: center;
-        width: 50%;
-        z-index: 2;
-
-        li {
-            .grid-unit(1/5);
-            line-height: 35px;
-            overflow: hidden;
-
-            a {
-                background: transparent;
-                color: fadeout(white, 20%);
-                display: block;
-                text-transform: uppercase;
-                text-decoration: none;
-                .transition(background 0.1s ease-in-out);
-
-                &:hover {
-                    background: tint(@code-background-accent, 5%);
-                }
-
-                &.active span {
-                    .open-sans('bold');
-                    border-bottom: solid 2px @link-color;
-                    color: white;
-                }
-            }
-
-            @media (min-width: 1400px) {
-                .grid-unit(1/9);
             }
         }
     }

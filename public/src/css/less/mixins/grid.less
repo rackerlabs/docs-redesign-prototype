@@ -1,13 +1,11 @@
-@grid-gutter-width: 20px;
-
-.grid(@gutter-width) {
+.grid(@gutter-width: @gutter-width) {
     display: block;
     width: ~"calc(100% + "@gutter-width~")";
     margin-left: (@gutter-width * -1);
     vertical-align: top;
 }
 
-.grid-unit(@fraction) {
+.grid-unit(@fraction, @gutter-width: @gutter-width) {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     display: inline-block;
@@ -17,7 +15,7 @@
     width: ~"calc("(percentage(@fraction)) ~" - " @gutter-width~")";
 }
 
-.grid-unit-centered(@fraction) {
+.grid-unit-centered(@fraction, @gutter-width: @gutter-width) {
     .grid-unit(@fraction);
     display: block;
     margin-left: auto;
