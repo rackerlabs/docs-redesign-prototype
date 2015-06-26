@@ -8,6 +8,11 @@ module.exports = function (grunt) {
                 options: {
                     watch: true
                 }
+            },
+            build: {
+                files: {
+                    'public/dist/js/main.js': ['public/src/js/main.js']
+                }
             }
         },
         concurrent: {
@@ -29,6 +34,20 @@ module.exports = function (grunt) {
                 }
             }
         },
+        copy: {
+            fonts: {
+                cwd: 'public/src/',
+                expand: true,
+                src: 'fonts/**/*',
+                dest: 'public/dist/'
+            },
+            images: {
+                cwd: 'public/src/',
+                expand: true,
+                src: 'img/**/*',
+                dest: 'public/dist/'
+            }
+        },
         less: {
             dev: {
                 files: {
@@ -36,6 +55,15 @@ module.exports = function (grunt) {
                 },
                 options: {
                     dumpLineNumbers: 'comments',
+                    paths: ['public/components'],
+                    strictMath: true,
+                }
+            },
+            build: {
+                files: {
+                    'public/dist/css/main.css': ['public/src/css/less/main.less']
+                },
+                options: {
                     paths: ['public/components'],
                     strictMath: true,
                 }
@@ -63,9 +91,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('serve', ['connect:server']);
     grunt.registerTask('dev', ['concurrent:dev']);
+    grunt.registerTask('build', ['less:build', 'browserify:dev', 'copy:images', 'copy:fonts']);
 };
