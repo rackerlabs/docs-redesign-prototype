@@ -37516,12 +37516,50 @@ var moduleName = 'drc.app';
 module.exports = moduleName;
 
 angular.module(moduleName, [
-    require('./components/sticky')
+    require('./components/sticky'),
+    require('./components/section-nav-toggle')
 ]);
 
 angular.bootstrap(document, [moduleName]);
 
-},{"./components/sticky":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/sticky.js","angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/sticky.js":[function(require,module,exports){
+},{"./components/section-nav-toggle":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/section-nav-toggle.js","./components/sticky":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/sticky.js","angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/section-nav-toggle.js":[function(require,module,exports){
+var angular = require('angular');
+var $ = require('jquery');
+
+var moduleName = 'drc.components.section-nav-toggle';
+module.exports = moduleName;
+
+angular.module(moduleName, [])
+.directive('drcSectionNavToggle', function () {
+    return {
+        restrict: 'A',
+        link: function ($scope, $element, $attrs) {
+            $element = $($element);
+
+            var ACTIVE_CLASS = 'show-section-nav';
+            var parentElement = $element.closest($attrs.parent);
+            var isNavShown = false;
+
+            var toggleNav = function () {
+                if(isNavShown) {
+                    parentElement.addClass(ACTIVE_CLASS);
+                }
+                else {
+                    parentElement.removeClass(ACTIVE_CLASS);
+                }
+            };
+
+            toggleNav();
+
+            $element.on('click', '.section-nav-toggle', function (e) {
+                isNavShown = !isNavShown;
+                toggleNav();
+            });
+        }
+    };
+});
+
+},{"angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js","jquery":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/jquery/dist/jquery.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/sticky.js":[function(require,module,exports){
 var angular = require('angular');
 var $ = require('jquery');
 
