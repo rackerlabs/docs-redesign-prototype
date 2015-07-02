@@ -46,11 +46,23 @@
 
     @media (min-width: 769px) {
         border-bottom-left-radius: 4px;
+
+        &.sticky {
+            @sticky-width: (9 / 12 * 100);
+            .sticky();
+            top: 0;
+            width: ~"@{sticky-width}%";
+        }
     }
 
     @media (min-width: 1025px) {
         border-bottom-left-radius: 0;
         position: absolute;
         width: 50%;
+
+        &.sticky {
+            @sticky-width: (5 / 12 * 100);
+            width: ~"@{sticky-width}%";
+        }
     }
 }

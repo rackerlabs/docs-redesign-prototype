@@ -1,5 +1,5 @@
 .docs-section-nav {
-    .grid-unit(1/6, 0px);
+    .grid-unit(1/4, 0px);
     padding: 15px 15px 0 15px;
     position: absolute;
     .transform(translate(-100%, 0));
@@ -64,9 +64,11 @@
     }
 
     & > ul {
-        margin: 0;
-        padding: 0;
         list-style-type: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        width: 100%;
 
         & > li {
             & > a {
@@ -122,6 +124,22 @@
                 }
             }
         }
+
+        @media (min-width: 769px) {
+            &.sticky {
+                @sticky-width: (1 / 4 * 100);
+                .sticky();
+                top: 0;
+                width: ~"calc(@{sticky-width}% - 30px)";
+            }
+        }
+
+        @media (min-width: 1025px) {
+            &.sticky {
+                @sticky-width: (1 / 6 * 100);
+                width: ~"calc(@{sticky-width}% - 55px)";
+            }
+        }
     }
 
     .nav-bobber {
@@ -141,11 +159,11 @@
 
     @media (min-width: 769px) {
         position: relative;
-        .transform(translate(0, 0));
-        .transform(translate3d(0, 0, 0));
+        .transform(none);
     }
 
     @media (min-width: 1025px) {
+        .grid-unit(1/6, 0px);
         padding: 15px 20px 0 35px;
     }
 }

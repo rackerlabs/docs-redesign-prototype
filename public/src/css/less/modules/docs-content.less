@@ -2,6 +2,7 @@
     @gutter-width: 0px;
     .grid(@gutter-width);
     font-size: 15px;
+    padding-bottom: 35px;
 
     h1 {
         color: tint(@text-color, 20%);
@@ -53,11 +54,12 @@
         }
 
         @media (min-width: 769px) {
-            .grid-unit(10/12);
+            .grid-unit(9/12);
             padding: 35px 20px 0 20px;
         }
 
         @media (min-width: 1025px) {
+            .grid-unit(10/12);
             padding: 5px 0 0 0;
         }
     }

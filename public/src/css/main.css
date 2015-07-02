@@ -138,21 +138,22 @@ table {
   font-family: 'open-sans-light';
   font-style: normal;
   font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  src: url('http://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff') format('woff'), url('http://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
   font-family: 'open-sans-light-italic';
   font-style: italic;
   font-weight: 300;
-  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(http://fonts.gstatic.com/s/opensans/v13/PRmiXeptR36kaC0GEAetxtTIkQYohD4BpHvJ3NvbHoA.woff2) format('woff2');
+  src: url('http://fonts.gstatic.com/s/opensans/v13/PRmiXeptR36kaC0GEAetxvR_54zmj3SbGZQh3vCOwvY.woff') format('woff'), url('http://fonts.gstatic.com/s/opensans/v13/PRmiXeptR36kaC0GEAetxtTIkQYohD4BpHvJ3NvbHoA.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
   font-family: 'open-sans-regular';
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  src: url('http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3fY6323mHUZFJMgTvxaG2iE.eot');
+  src: url('http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff') format('woff'), url('http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
@@ -166,33 +167,34 @@ table {
   font-family: 'open-sans-bold';
   font-style: normal;
   font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  src: url('http://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff') format('woff'), url('http://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzBampu5_7CjHW5spxoeN3Vs.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
   font-family: 'open-sans-bold-italic';
   font-style: italic;
   font-weight: 700;
-  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(http://fonts.gstatic.com/s/opensans/v13/PRmiXeptR36kaC0GEAetxv79_ZuUxCigM2DespTnFaw.woff2) format('woff2');
+  src: url('http://fonts.gstatic.com/s/opensans/v13/PRmiXeptR36kaC0GEAetxhbnBKKEOwRKgsHDreGcocg.woff') format('woff'), url('http://fonts.gstatic.com/s/opensans/v13/PRmiXeptR36kaC0GEAetxv79_ZuUxCigM2DespTnFaw.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
   font-family: 'roboto-slab-regular';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(http://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37Zogp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
+  src: url('http://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZmfQcKutQXcIrRfyR5jdjY8.eot');
+  src: url('http://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZrrIa-7acMAeDBVuclsi6Gc.woff') format('woff'), url('http://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37Zogp9Q8gbYrhqGlRav_IXfk.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
   font-family: 'roboto-slab-bold';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(http://fonts.gstatic.com/s/robotoslab/v6/dazS1PrQQuCxC3iOAJFEJf79_ZuUxCigM2DespTnFaw.woff2) format('woff2');
+  src: url('http://fonts.gstatic.com/s/robotoslab/v6/dazS1PrQQuCxC3iOAJFEJRbnBKKEOwRKgsHDreGcocg.woff') format('woff'), url('http://fonts.gstatic.com/s/robotoslab/v6/dazS1PrQQuCxC3iOAJFEJf79_ZuUxCigM2DespTnFaw.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
   font-family: 'source-code-regular';
-  src: url('../fonts/sourcecodepro-regular-webfont.woff2') format('woff2');
+  src: url('../fonts/sourcecodepro-regular-webfont.woff') format('woff'), url('../fonts/sourcecodepro-regular-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -204,8 +206,8 @@ table {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/components/fontawesome/fonts/fontawesome-webfont.eot?v=4.3.0');
-  src: url('/components/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('/components/fontawesome/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('/components/fontawesome/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('/components/fontawesome/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('/components/fontawesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  src: url('../../components/fontawesome/fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('../../components/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../../components/fontawesome/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../../components/fontawesome/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../../components/fontawesome/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../../components/fontawesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2550,10 +2552,11 @@ table {
   content: "\f23a";
 }
 /* line 1, public/src/css/less/components/code-language-list.less */
-.code-language-list {
+.language-selector {
   display: block;
   width: calc(100% +  0px );
   margin-left: 0px;
+  overflow: hidden;
   vertical-align: top;
   background: #4c5360;
   margin: 0;
@@ -2561,23 +2564,24 @@ table {
   position: absolute;
   right: 0;
   text-align: center;
-  width: 50%;
+  top: 0;
+  width: 100%;
   z-index: 2;
 }
-/* line 13, public/src/css/less/components/code-language-list.less */
-.code-language-list li {
+/* line 14, public/src/css/less/components/code-language-list.less */
+.language-selector li {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   display: inline-block;
   margin-right: -0.26rem;
   margin-left: 0px;
   vertical-align: top;
-  width: calc( 20%  -  0px );
+  width: calc( 11.11111111%  -  0px );
   line-height: 35px;
   overflow: hidden;
 }
-/* line 18, public/src/css/less/components/code-language-list.less */
-.code-language-list li a {
+/* line 19, public/src/css/less/components/code-language-list.less */
+.language-selector li a {
   background: transparent;
   color: rgba(255, 255, 255, 0.8);
   display: block;
@@ -2587,21 +2591,33 @@ table {
   -ms-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
 }
-/* line 26, public/src/css/less/components/code-language-list.less */
-.code-language-list li a:hover {
+/* line 27, public/src/css/less/components/code-language-list.less */
+.language-selector li a:hover {
   background: #555c68;
 }
-/* line 30, public/src/css/less/components/code-language-list.less */
-.code-language-list li a.active span {
+/* line 31, public/src/css/less/components/code-language-list.less */
+.language-selector li a.active span {
   font-family: 'open-sans-bold', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   border-bottom: solid 2px #3498db;
   color: white;
 }
+@media (min-width: 1025px) {
+  /* line 38, public/src/css/less/components/code-language-list.less */
+  .language-selector li {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 0px;
+    vertical-align: top;
+    width: calc( 20%  -  0px );
+  }
+}
 @media (min-width: 1400px) {
-  /* line 37, public/src/css/less/components/code-language-list.less */
-  .code-language-list li {
+  /* line 42, public/src/css/less/components/code-language-list.less */
+  .language-selector li {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     display: inline-block;
@@ -2609,6 +2625,33 @@ table {
     margin-left: 0px;
     vertical-align: top;
     width: calc( 11.11111111%  -  0px );
+  }
+}
+@media (min-width: 769px) {
+  /* line 47, public/src/css/less/components/code-language-list.less */
+  .language-selector {
+    border-bottom-left-radius: 4px;
+  }
+  /* line 50, public/src/css/less/components/code-language-list.less */
+  .language-selector.sticky {
+    position: fixed;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    top: 0;
+    width: 75%;
+  }
+}
+@media (min-width: 1025px) {
+  /* line 58, public/src/css/less/components/code-language-list.less */
+  .language-selector {
+    border-bottom-left-radius: 0;
+    position: absolute;
+    width: 50%;
+  }
+  /* line 63, public/src/css/less/components/code-language-list.less */
+  .language-selector.sticky {
+    width: 41.66666666666667%;
   }
 }
 /* line 1, public/src/css/less/components/docs-section.less */
@@ -2626,42 +2669,52 @@ table {
 .docs-section:after {
   clear: both;
 }
-/* line 6, public/src/css/less/components/docs-section.less */
-.docs-section .description {
-  padding-right: 35px;
-}
 @media (min-width: 1025px) {
-  /* line 9, public/src/css/less/components/docs-section.less */
+  /* line 7, public/src/css/less/components/docs-section.less */
   .docs-section .description {
     float: left;
+    padding-right: 35px;
     width: 50%;
   }
 }
-/* line 14, public/src/css/less/components/docs-section.less */
-.docs-section .code {
-  color: white;
-  padding: 0 35px;
-}
-/* line 18, public/src/css/less/components/docs-section.less */
-.docs-section .code h3 {
-  border-bottom: solid 1px rgba(224, 224, 215, 0.3);
-  color: white;
-  line-height: 2;
-}
-/* line 24, public/src/css/less/components/docs-section.less */
+/* line 15, public/src/css/less/components/docs-section.less */
 .docs-section .code pre,
 .docs-section .code code {
   color: #e0e0d7;
 }
-/* line 28, public/src/css/less/components/docs-section.less */
+/* line 19, public/src/css/less/components/docs-section.less */
 .docs-section .code pre {
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
+  padding-bottom: 0.5em;
+}
+/* line 24, public/src/css/less/components/docs-section.less */
+.docs-section .code pre::-webkit-scrollbar {
+  background: transparent;
+  height: 10px;
+  width: 10px;
+}
+/* line 30, public/src/css/less/components/docs-section.less */
+.docs-section .code pre::-webkit-scrollbar-track:horizontal {
+  background: transparent;
+}
+/* line 34, public/src/css/less/components/docs-section.less */
+.docs-section .code pre::-webkit-scrollbar-thumb:horizontal {
+  background: #5e6470;
+  border-radius: 10px;
 }
 @media (min-width: 1025px) {
-  /* line 33, public/src/css/less/components/docs-section.less */
+  /* line 40, public/src/css/less/components/docs-section.less */
   .docs-section .code {
+    color: white;
     margin-left: 50%;
+    padding: 0 35px;
+  }
+  /* line 45, public/src/css/less/components/docs-section.less */
+  .docs-section .code h3 {
+    border-bottom: solid 1px rgba(224, 224, 215, 0.3);
+    color: white;
+    line-height: 2;
   }
 }
 /* line 1, public/src/css/less/components/docs-section-nav.less */
@@ -2672,40 +2725,97 @@ table {
   margin-right: -0.26rem;
   margin-left: 0px;
   vertical-align: top;
-  width: calc( 16.66666667%  -  0px );
-  padding: 15px 20px 0 35px;
+  width: calc( 25%  -  0px );
+  padding: 15px 15px 0 15px;
+  position: absolute;
+  -webkit-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -webkit-transition: transform 0.2s ease-in-out;
+  -ms-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  z-index: 2;
 }
-/* line 5, public/src/css/less/components/docs-section-nav.less */
-.docs-section-nav .github-link {
+/* line 10, public/src/css/less/components/docs-section-nav.less */
+.docs-section-nav .section-nav-toggle {
   display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  background: #3498db;
+  color: #e0e0d7;
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  position: absolute;
+  right: -35px;
+  text-align: center;
+  top: 35px;
+  width: 35px;
+}
+/* line 23, public/src/css/less/components/docs-section-nav.less */
+.docs-section-nav .section-nav-toggle:before {
+  content: "\f142";
+}
+@media (min-width: 769px) {
+  /* line 27, public/src/css/less/components/docs-section-nav.less */
+  .docs-section-nav .section-nav-toggle {
+    display: none;
+  }
+}
+/* line 32, public/src/css/less/components/docs-section-nav.less */
+.docs-section-nav .github-link {
+  display: block;
   margin-bottom: 50px;
+  text-align: center;
   font-family: 'roboto-slab-regular', Georgia, serif;
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
 }
-/* line 9, public/src/css/less/components/docs-section-nav.less */
+/* line 37, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav .github-link .icon {
   color: #404040;
-  display: inline-block;
-  font-size: 26px;
+  display: block;
+  font-size: 36px;
   margin-right: 8px;
+  text-align: center;
   vertical-align: middle;
   -webkit-transition: color 0.1s ease-in-out;
   -ms-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out;
 }
-/* line 21, public/src/css/less/components/docs-section-nav.less */
+/* line 50, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav .github-link:hover .icon {
   color: #2f89c5;
 }
-/* line 27, public/src/css/less/components/docs-section-nav.less */
-.docs-section-nav > ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+@media (min-width: 1150px) {
+  /* line 55, public/src/css/less/components/docs-section-nav.less */
+  .docs-section-nav .github-link {
+    text-align: left;
+  }
+  /* line 58, public/src/css/less/components/docs-section-nav.less */
+  .docs-section-nav .github-link .icon {
+    display: inline-block;
+    font-size: 26px;
+    text-align: left;
+  }
 }
-/* line 33, public/src/css/less/components/docs-section-nav.less */
+/* line 66, public/src/css/less/components/docs-section-nav.less */
+.docs-section-nav > ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+/* line 74, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li > a {
   font-family: 'roboto-slab-regular', Georgia, serif;
   font-style: normal;
@@ -2720,55 +2830,72 @@ table {
   -ms-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out;
 }
-/* line 43, public/src/css/less/components/docs-section-nav.less */
+/* line 84, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li > a:hover {
   color: #3498db;
 }
-/* line 48, public/src/css/less/components/docs-section-nav.less */
+/* line 89, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li + li {
   margin-top: 0px;
 }
-/* line 52, public/src/css/less/components/docs-section-nav.less */
+/* line 93, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li.active > a {
   background: #3498db;
   color: white;
 }
-/* line 57, public/src/css/less/components/docs-section-nav.less */
+/* line 98, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li > ul {
   border-left: solid 1px #b3b3b3;
   list-style-type: none;
   margin: 20px 0 20px 5px;
   padding: 0 0 0 10px;
 }
-/* line 63, public/src/css/less/components/docs-section-nav.less */
+/* line 104, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li > ul li {
   line-height: 1;
 }
-/* line 66, public/src/css/less/components/docs-section-nav.less */
+/* line 107, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li > ul li a {
   color: #404040;
   line-height: 1;
   text-decoration: none;
 }
-/* line 71, public/src/css/less/components/docs-section-nav.less */
+/* line 112, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li > ul li a:hover {
   color: #3498db;
 }
-/* line 76, public/src/css/less/components/docs-section-nav.less */
+/* line 117, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li > ul li.active a {
   font-family: 'open-sans-bold', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
 }
-/* line 80, public/src/css/less/components/docs-section-nav.less */
+/* line 121, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li > ul li + li {
   margin-top: 10px;
 }
-/* line 88, public/src/css/less/components/docs-section-nav.less */
+@media (min-width: 769px) {
+  /* line 129, public/src/css/less/components/docs-section-nav.less */
+  .docs-section-nav > ul.sticky {
+    position: fixed;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    top: 0;
+    width: calc(25% - 30px);
+  }
+}
+@media (min-width: 1025px) {
+  /* line 138, public/src/css/less/components/docs-section-nav.less */
+  .docs-section-nav > ul.sticky {
+    width: calc(16.666666666666664% - 55px);
+  }
+}
+/* line 145, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav .nav-bobber {
   display: none;
 }
-/* line 91, public/src/css/less/components/docs-section-nav.less */
+/* line 148, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav .nav-bobber.active {
   background: #efc75e;
   border-radius: 50%;
@@ -2778,6 +2905,37 @@ table {
   position: absolute;
   top: 543px;
   width: 13px;
+}
+@media (min-width: 769px) {
+  /* line 160, public/src/css/less/components/docs-section-nav.less */
+  .docs-section-nav {
+    position: relative;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+@media (min-width: 1025px) {
+  /* line 165, public/src/css/less/components/docs-section-nav.less */
+  .docs-section-nav {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 0px;
+    vertical-align: top;
+    width: calc( 16.66666667%  -  0px );
+    padding: 15px 20px 0 35px;
+  }
+}
+/* line 172, public/src/css/less/components/docs-section-nav.less */
+.show-section-nav .docs-section-nav {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 /* .highlight .hll { background-color: #333333 } */
 /* line 3, public/src/css/less/components/highlight.less */
@@ -3247,6 +3405,7 @@ code {
   display: block;
   width: calc(100% +  0px );
   margin-left: 0px;
+  overflow: hidden;
   vertical-align: top;
   margin-left: auto;
   margin-right: auto;
@@ -3370,46 +3529,64 @@ code {
   font-family: 'open-sans-light', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
+  background: rgba(255, 255, 255, 0.55);
+  display: inline-block;
   font-size: 35px;
   line-height: 1;
   text-transform: uppercase;
   margin-bottom: 0;
+  padding: 5px;
+  width: auto;
 }
-/* line 124, public/src/css/less/modules/site-header.less */
+/* line 128, public/src/css/less/modules/site-header.less */
 .site-header .header-headline h2 .headline-accent {
   font-family: 'open-sans-bold', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
-  display: inline-block;
-  width: 100%;
+  display: block;
 }
-/* line 132, public/src/css/less/modules/site-header.less */
+@media (min-width: 1250px) {
+  /* line 134, public/src/css/less/modules/site-header.less */
+  .site-header .header-headline h2 {
+    background: transparent;
+    padding: 0;
+  }
+}
+/* line 140, public/src/css/less/modules/site-header.less */
 .site-header .header-headline .tagline {
   font-size: 15px;
   text-transform: uppercase;
+}
+/* line 1, public/src/css/less/modules/site-footer.less */
+.site-footer {
+  background: black;
+  color: white;
+  height: 300px;
 }
 /* line 1, public/src/css/less/modules/docs-content.less */
 .docs-body {
   display: block;
   width: calc(100% +  0px );
   margin-left: 0px;
+  overflow: hidden;
   vertical-align: top;
   font-size: 15px;
+  padding-bottom: 35px;
 }
-/* line 6, public/src/css/less/modules/docs-content.less */
+/* line 7, public/src/css/less/modules/docs-content.less */
 .docs-body h1 {
   color: #666666;
   line-height: 1.1;
 }
-/* line 11, public/src/css/less/modules/docs-content.less */
+/* line 12, public/src/css/less/modules/docs-content.less */
 .docs-body h2,
 .docs-body h3 {
   border-bottom: solid 1px rgba(0, 0, 0, 0.3);
   line-height: 2;
   margin-bottom: 15px;
 }
-/* line 17, public/src/css/less/modules/docs-content.less */
+/* line 18, public/src/css/less/modules/docs-content.less */
 .docs-body .background {
   height: 100%;
   left: 0;
@@ -3417,7 +3594,7 @@ code {
   top: 0;
   width: 100%;
 }
-/* line 24, public/src/css/less/modules/docs-content.less */
+/* line 25, public/src/css/less/modules/docs-content.less */
 .docs-body .background .left {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3429,12 +3606,12 @@ code {
   background: white;
   height: 100%;
 }
-/* line 29, public/src/css/less/modules/docs-content.less */
+/* line 30, public/src/css/less/modules/docs-content.less */
 .docs-body .background .right {
   display: none;
 }
 @media (min-width: 1025px) {
-  /* line 34, public/src/css/less/modules/docs-content.less */
+  /* line 35, public/src/css/less/modules/docs-content.less */
   .docs-body .background .left {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -3444,7 +3621,7 @@ code {
     vertical-align: top;
     width: calc( 58.33333333%  -  0px );
   }
-  /* line 38, public/src/css/less/modules/docs-content.less */
+  /* line 39, public/src/css/less/modules/docs-content.less */
   .docs-body .background .right {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -3457,7 +3634,7 @@ code {
     height: 100%;
   }
 }
-/* line 46, public/src/css/less/modules/docs-content.less */
+/* line 47, public/src/css/less/modules/docs-content.less */
 .docs-body .docs-content {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3465,48 +3642,87 @@ code {
   margin-right: -0.26rem;
   margin-left: 0px;
   vertical-align: top;
-  width: calc( 83.33333333%  -  0px );
+  width: calc( 100%  -  0px );
+  padding: 35px;
+  -webkit-transition: transform 0.2s ease-in-out;
+  -ms-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
-/* line 49, public/src/css/less/modules/docs-content.less */
+/* line 52, public/src/css/less/modules/docs-content.less */
 .docs-body .docs-content .docs-section:first-of-type {
   padding-top: 5px;
 }
-/* line 54, public/src/css/less/modules/docs-content.less */
+@media (min-width: 769px) {
+  /* line 56, public/src/css/less/modules/docs-content.less */
+  .docs-body .docs-content {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 0px;
+    vertical-align: top;
+    width: calc( 75%  -  0px );
+    padding: 35px 20px 0 20px;
+  }
+}
+@media (min-width: 1025px) {
+  /* line 61, public/src/css/less/modules/docs-content.less */
+  .docs-body .docs-content {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 0px;
+    vertical-align: top;
+    width: calc( 83.33333333%  -  0px );
+    padding: 5px 0 0 0;
+  }
+}
+/* line 67, public/src/css/less/modules/docs-content.less */
 .docs-body .docs-intro {
   margin-bottom: 2em;
 }
-/* line 57, public/src/css/less/modules/docs-content.less */
+/* line 70, public/src/css/less/modules/docs-content.less */
 .docs-body .docs-intro .revision-date {
   font-family: 'roboto-slab-regular', Georgia, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
 }
-/* line 62, public/src/css/less/modules/docs-content.less */
+/* line 75, public/src/css/less/modules/docs-content.less */
 .docs-body .docs-intro .tags {
   font-size: 12px;
   margin: 10px 0 0 0;
   padding: 0;
 }
-/* line 67, public/src/css/less/modules/docs-content.less */
+/* line 80, public/src/css/less/modules/docs-content.less */
 .docs-body .docs-intro .tags li {
   display: inline-block;
   list-style-type: none;
 }
-/* line 71, public/src/css/less/modules/docs-content.less */
+/* line 84, public/src/css/less/modules/docs-content.less */
 .docs-body .docs-intro .tags li a {
   font-family: 'roboto-slab-regular', Georgia, serif;
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
 }
-/* line 75, public/src/css/less/modules/docs-content.less */
+/* line 88, public/src/css/less/modules/docs-content.less */
 .docs-body .docs-intro .tags li a:hover {
   text-decoration: underline;
 }
-/* line 80, public/src/css/less/modules/docs-content.less */
+/* line 93, public/src/css/less/modules/docs-content.less */
 .docs-body .docs-intro .tags li + li {
   border-left: solid 1px #cccccc;
   margin-left: 0.5em;
   padding-left: calc(0.5em + 1px);
+}
+/* line 104, public/src/css/less/modules/docs-content.less */
+.show-section-nav .docs-content {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transform: translate3d(16.66667%, 0, 0);
+  -ms-transform: translate3d(16.66667%, 0, 0);
+  transform: translate3d(16.66667%, 0, 0);
 }
