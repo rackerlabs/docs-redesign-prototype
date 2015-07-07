@@ -32,7 +32,7 @@ angular.module(moduleName, [])
             listenersAdded = true;
         },
         scrollListener: function (e) {
-            var viewThreshold = parseInt($(window).height() * 0.8);
+            var viewThreshold = parseInt($(window).height() * 0.6);
             closestMilestone = {
                 position: -Infinity,
                 element: null
