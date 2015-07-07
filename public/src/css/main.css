@@ -178,18 +178,31 @@ table {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
-  font-family: 'roboto-slab-regular';
+  font-family: 'titillium-regular';
   font-style: normal;
   font-weight: 400;
-  src: url('http://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZmfQcKutQXcIrRfyR5jdjY8.eot');
-  src: url('http://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZrrIa-7acMAeDBVuclsi6Gc.woff') format('woff'), url('http://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37Zogp9Q8gbYrhqGlRav_IXfk.woff2') format('woff2');
+  src: url('http://fonts.gstatic.com/s/titilliumweb/v4/7XUFZ5tgS-tD6QamInJTcZ_o9VAbKgK36i-4snuAuCM.woff') format('woff'), url('http://fonts.gstatic.com/s/titilliumweb/v4/7XUFZ5tgS-tD6QamInJTceHuglUR2dhBxWD-q_ehMME.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
-  font-family: 'roboto-slab-bold';
+  font-family: 'titillium-bold';
   font-style: normal;
   font-weight: 700;
-  src: url('http://fonts.gstatic.com/s/robotoslab/v6/dazS1PrQQuCxC3iOAJFEJRbnBKKEOwRKgsHDreGcocg.woff') format('woff'), url('http://fonts.gstatic.com/s/robotoslab/v6/dazS1PrQQuCxC3iOAJFEJf79_ZuUxCigM2DespTnFaw.woff2') format('woff2');
+  src: url('http://fonts.gstatic.com/s/titilliumweb/v4/anMUvcNT0H1YN4FII8wpr_5rZpfU3XI-FvUPGDRT0xY.woff') format('woff'), url('http://fonts.gstatic.com/s/titilliumweb/v4/anMUvcNT0H1YN4FII8wpr8hG3LOB74UqS1hPmWaAxzQ.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'titillium-regular-italic';
+  font-style: italic;
+  font-weight: 400;
+  src: url('http://fonts.gstatic.com/s/titilliumweb/v4/r9OmwyQxrgzUAhaLET_KO8-iP4m4uFrmmLLVBqy34EU.woff') format('woff'), url('http://fonts.gstatic.com/s/titilliumweb/v4/r9OmwyQxrgzUAhaLET_KO04Sq3N3sm-tF9FpL8sHob4.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'titillium-bold-italic';
+  font-style: italic;
+  font-weight: 700;
+  src: url('http://fonts.gstatic.com/s/titilliumweb/v4/RZunN20OBmkvrU7sA4GPPpe8VrfdPPeK1ViGigzR2tQ.woff') format('woff'), url('http://fonts.gstatic.com/s/titilliumweb/v4/RZunN20OBmkvrU7sA4GPPipre1WS4Xml-pRMufJH74k.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
@@ -2679,39 +2692,46 @@ table {
   }
 }
 /* line 15, public/src/css/less/components/docs-section.less */
+.docs-section .code hr {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  height: 1px;
+  margin: 1em 0;
+}
+/* line 23, public/src/css/less/components/docs-section.less */
 .docs-section .code pre,
 .docs-section .code code {
   color: #e0e0d7;
 }
-/* line 19, public/src/css/less/components/docs-section.less */
+/* line 27, public/src/css/less/components/docs-section.less */
 .docs-section .code pre {
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 0.5em;
 }
-/* line 24, public/src/css/less/components/docs-section.less */
+/* line 32, public/src/css/less/components/docs-section.less */
 .docs-section .code pre::-webkit-scrollbar {
   background: transparent;
   height: 10px;
   width: 10px;
 }
-/* line 30, public/src/css/less/components/docs-section.less */
+/* line 38, public/src/css/less/components/docs-section.less */
 .docs-section .code pre::-webkit-scrollbar-track:horizontal {
   background: transparent;
 }
-/* line 34, public/src/css/less/components/docs-section.less */
+/* line 42, public/src/css/less/components/docs-section.less */
 .docs-section .code pre::-webkit-scrollbar-thumb:horizontal {
   background: #5e6470;
   border-radius: 10px;
 }
 @media (min-width: 1025px) {
-  /* line 40, public/src/css/less/components/docs-section.less */
+  /* line 48, public/src/css/less/components/docs-section.less */
   .docs-section .code {
     color: white;
     margin-left: 50%;
     padding: 0 35px;
   }
-  /* line 45, public/src/css/less/components/docs-section.less */
+  /* line 53, public/src/css/less/components/docs-section.less */
   .docs-section .code h3 {
     border-bottom: solid 1px rgba(224, 224, 215, 0.3);
     color: white;
@@ -2775,7 +2795,7 @@ table {
   display: block;
   margin-bottom: 50px;
   text-align: center;
-  font-family: 'roboto-slab-regular', Georgia, serif;
+  font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
@@ -2818,7 +2838,7 @@ table {
 }
 /* line 74, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li > a {
-  font-family: 'roboto-slab-regular', Georgia, serif;
+  font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   border-radius: 3px;
@@ -3346,7 +3366,7 @@ p {
 /* line 43, public/src/css/less/typography.less */
 h1,
 .h1 {
-  font-family: 'roboto-slab-regular', Georgia, serif;
+  font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 35px;
@@ -3354,7 +3374,7 @@ h1,
 /* line 48, public/src/css/less/typography.less */
 h2,
 .h2 {
-  font-family: 'roboto-slab-regular', Georgia, serif;
+  font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -3362,7 +3382,7 @@ h2,
 /* line 53, public/src/css/less/typography.less */
 h3,
 .h3 {
-  font-family: 'roboto-slab-regular', Georgia, serif;
+  font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -3370,7 +3390,7 @@ h3,
 /* line 58, public/src/css/less/typography.less */
 h4,
 .h4 {
-  font-family: 'roboto-slab-regular', Georgia, serif;
+  font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -3378,7 +3398,7 @@ h4,
 /* line 63, public/src/css/less/typography.less */
 h5,
 .h5 {
-  font-family: 'roboto-slab-bold', Georgia, serif;
+  font-family: 'titillium-bold', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -3707,7 +3727,7 @@ code {
 }
 /* line 70, public/src/css/less/modules/docs-content.less */
 .docs-body .docs-intro .revision-date {
-  font-family: 'roboto-slab-regular', Georgia, serif;
+  font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -3725,7 +3745,7 @@ code {
 }
 /* line 84, public/src/css/less/modules/docs-content.less */
 .docs-body .docs-intro .tags li a {
-  font-family: 'roboto-slab-regular', Georgia, serif;
+  font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
