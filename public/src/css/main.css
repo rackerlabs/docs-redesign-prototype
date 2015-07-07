@@ -2602,9 +2602,10 @@ table {
   font-weight: normal;
   border-bottom: solid 2px #3498db;
   color: white;
+  letter-spacing: -0.04em;
 }
 @media (min-width: 1025px) {
-  /* line 38, public/src/css/less/components/code-language-list.less */
+  /* line 39, public/src/css/less/components/code-language-list.less */
   .language-selector li {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -2616,7 +2617,7 @@ table {
   }
 }
 @media (min-width: 1400px) {
-  /* line 42, public/src/css/less/components/code-language-list.less */
+  /* line 43, public/src/css/less/components/code-language-list.less */
   .language-selector li {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -2628,11 +2629,11 @@ table {
   }
 }
 @media (min-width: 769px) {
-  /* line 47, public/src/css/less/components/code-language-list.less */
+  /* line 48, public/src/css/less/components/code-language-list.less */
   .language-selector {
     border-bottom-left-radius: 4px;
   }
-  /* line 50, public/src/css/less/components/code-language-list.less */
+  /* line 51, public/src/css/less/components/code-language-list.less */
   .language-selector.sticky {
     position: fixed;
     -webkit-transform: translateZ(0);
@@ -2643,13 +2644,13 @@ table {
   }
 }
 @media (min-width: 1025px) {
-  /* line 58, public/src/css/less/components/code-language-list.less */
+  /* line 59, public/src/css/less/components/code-language-list.less */
   .language-selector {
     border-bottom-left-radius: 0;
     position: absolute;
     width: 50%;
   }
-  /* line 63, public/src/css/less/components/code-language-list.less */
+  /* line 64, public/src/css/less/components/code-language-list.less */
   .language-selector.sticky {
     width: 41.66666666666667%;
   }
@@ -2847,7 +2848,7 @@ table {
 .docs-section-nav > ul > li > ul {
   border-left: solid 1px #b3b3b3;
   list-style-type: none;
-  margin: 20px 0 20px 5px;
+  margin: 20px 0 20px 7px;
   padding: 0 0 0 10px;
 }
 /* line 104, public/src/css/less/components/docs-section-nav.less */
@@ -2865,17 +2866,45 @@ table {
   color: #3498db;
 }
 /* line 117, public/src/css/less/components/docs-section-nav.less */
+.docs-section-nav > ul > li > ul li:before {
+  background: #efc75e;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 13px;
+  left: -17px;
+  position: absolute;
+  top: 1px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: transform 0.1s ease-in;
+  -ms-transition: transform 0.1s ease-in;
+  transition: transform 0.1s ease-in;
+  width: 13px;
+}
+/* line 131, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li > ul li.active a {
   font-family: 'open-sans-bold', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
+  letter-spacing: -0.04em;
 }
-/* line 121, public/src/css/less/components/docs-section-nav.less */
+/* line 136, public/src/css/less/components/docs-section-nav.less */
+.docs-section-nav > ul > li > ul li.active:before {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: transform 0.1s 0.1s ease-out;
+  -ms-transition: transform 0.1s 0.1s ease-out;
+  transition: transform 0.1s 0.1s ease-out;
+}
+/* line 141, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav > ul > li > ul li + li {
   margin-top: 10px;
 }
 @media (min-width: 769px) {
-  /* line 129, public/src/css/less/components/docs-section-nav.less */
+  /* line 149, public/src/css/less/components/docs-section-nav.less */
   .docs-section-nav > ul.sticky {
     position: fixed;
     -webkit-transform: translateZ(0);
@@ -2886,28 +2915,13 @@ table {
   }
 }
 @media (min-width: 1025px) {
-  /* line 138, public/src/css/less/components/docs-section-nav.less */
+  /* line 158, public/src/css/less/components/docs-section-nav.less */
   .docs-section-nav > ul.sticky {
     width: calc(16.666666666666664% - 55px);
   }
 }
-/* line 145, public/src/css/less/components/docs-section-nav.less */
-.docs-section-nav .nav-bobber {
-  display: none;
-}
-/* line 148, public/src/css/less/components/docs-section-nav.less */
-.docs-section-nav .nav-bobber.active {
-  background: #efc75e;
-  border-radius: 50%;
-  display: block;
-  height: 13px;
-  left: 34px;
-  position: absolute;
-  top: 543px;
-  width: 13px;
-}
 @media (min-width: 769px) {
-  /* line 160, public/src/css/less/components/docs-section-nav.less */
+  /* line 165, public/src/css/less/components/docs-section-nav.less */
   .docs-section-nav {
     position: relative;
     -webkit-transform: none;
@@ -2916,7 +2930,7 @@ table {
   }
 }
 @media (min-width: 1025px) {
-  /* line 165, public/src/css/less/components/docs-section-nav.less */
+  /* line 170, public/src/css/less/components/docs-section-nav.less */
   .docs-section-nav {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -2928,7 +2942,7 @@ table {
     padding: 15px 20px 0 35px;
   }
 }
-/* line 172, public/src/css/less/components/docs-section-nav.less */
+/* line 177, public/src/css/less/components/docs-section-nav.less */
 .show-section-nav .docs-section-nav {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -3516,7 +3530,16 @@ code {
 .site-header .header-nav ul li:first-child a {
   /* padding-left: 0; */
 }
-/* line 110, public/src/css/less/modules/site-header.less */
+/* line 106, public/src/css/less/modules/site-header.less */
+.site-header .header-nav ul .logo a img {
+  display: inline-block;
+  height: auto;
+  vertical-align: top;
+  margin: 8px 0 0 0;
+  padding: 0;
+  width: 140px;
+}
+/* line 119, public/src/css/less/modules/site-header.less */
 .site-header .header-headline {
   background: url(../img/fpo-code-editor.jpg) 50% 0% no-repeat;
   background-size: cover;
@@ -3524,7 +3547,7 @@ code {
   padding: 120px 60px 60px 60px;
   z-index: 1;
 }
-/* line 117, public/src/css/less/modules/site-header.less */
+/* line 126, public/src/css/less/modules/site-header.less */
 .site-header .header-headline h2 {
   font-family: 'open-sans-light', arial, sans-serif;
   font-style: normal;
@@ -3538,7 +3561,7 @@ code {
   padding: 5px;
   width: auto;
 }
-/* line 128, public/src/css/less/modules/site-header.less */
+/* line 137, public/src/css/less/modules/site-header.less */
 .site-header .header-headline h2 .headline-accent {
   font-family: 'open-sans-bold', arial, sans-serif;
   font-style: normal;
@@ -3547,13 +3570,13 @@ code {
   display: block;
 }
 @media (min-width: 1250px) {
-  /* line 134, public/src/css/less/modules/site-header.less */
+  /* line 143, public/src/css/less/modules/site-header.less */
   .site-header .header-headline h2 {
     background: transparent;
     padding: 0;
   }
 }
-/* line 140, public/src/css/less/modules/site-header.less */
+/* line 149, public/src/css/less/modules/site-header.less */
 .site-header .header-headline .tagline {
   font-size: 15px;
   text-transform: uppercase;

@@ -2037,6 +2037,7 @@ table {
   font-weight: normal;
   border-bottom: solid 2px #3498db;
   color: white;
+  letter-spacing: -0.04em;
 }
 @media (min-width: 1025px) {
   .language-selector li {
@@ -2821,6 +2822,14 @@ code {
 }
 .site-header .header-nav ul li:first-child a {
   /* padding-left: 0; */
+}
+.site-header .header-nav ul .logo a img {
+  display: inline-block;
+  height: auto;
+  vertical-align: top;
+  margin: 8px 0 0 0;
+  padding: 0;
+  width: 140px;
 }
 .site-header .header-headline {
   background: url(../img/fpo-code-editor.jpg) 50% 0% no-repeat;
