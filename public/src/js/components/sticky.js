@@ -1,8 +1,9 @@
 // This is the bootstrap affix plugin, modified to be a requireJS-friendly
 // Angular directive.
 
-var angular = require('angular');
 var $ = require('jquery');
+var angular = require('angular');
+
 
 var moduleName = 'drc.components.sticky';
 module.exports = moduleName;

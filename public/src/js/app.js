@@ -4,6 +4,7 @@ var moduleName = 'drc.app';
 module.exports = moduleName;
 
 angular.module(moduleName, [
+    require('./components/scroll-indicator'),
     require('./components/sticky'),
     require('./components/section-nav-toggle')
 ]);
