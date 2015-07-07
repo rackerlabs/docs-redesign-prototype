@@ -1,26 +1,26 @@
 var $ = require('jquery');
 var angular = require('angular');
 
-var moduleName = 'drc.components.language-selector';
+var moduleName = 'drc.components.code-sample';
 module.exports = moduleName;
 
 angular.module(moduleName, [])
-.directive('drcLanguageSelector', function ($rootScope, activeLanguage) {
+.directive('drcCodeSample', function ($rootScope, activeLanguage) {
     return {
         scope: {},
         controller: function ($scope, $element, $attrs) {
             $element = $($element);
 
             $scope.isActiveLanguage = function () {
-                return activeLanguage.get() === $attrs.drcLanguageSelector;
+                return activeLanguage.get() === $attrs.drcCodeSample;
             };
 
             $scope.setActiveClass = function () {
                 if($scope.isActiveLanguage()) {
-                    $element.addClass('active');
+                    $element.removeClass('ng-hide');
                 }
                 else {
-                    $element.removeClass('active');
+                    $element.addClass('ng-hide');
                 }
             };
 
@@ -28,9 +28,6 @@ angular.module(moduleName, [])
         },
         link: function ($scope, $element, $attrs) {
             $scope.setActiveClass();
-            $element.on('click', function () {
-                activeLanguage.set($attrs.drcLanguageSelector);
-            });
         }
     };
 });

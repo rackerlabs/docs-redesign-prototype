@@ -4,9 +4,12 @@ var moduleName = 'drc.app';
 module.exports = moduleName;
 
 angular.module(moduleName, [
+    require('./services/active-language'),
+    require('./components/code-sample'),
+    require('./components/language-selector'),
     require('./components/scroll-indicator'),
-    require('./components/sticky'),
-    require('./components/section-nav-toggle')
+    require('./components/section-nav-toggle'),
+    require('./components/sticky')
 ]);
 
 angular.bootstrap(document, [moduleName]);

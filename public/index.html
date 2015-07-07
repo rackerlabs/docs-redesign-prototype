@@ -78,15 +78,15 @@
         </nav>
         <article class="docs-content">
             <ul class="language-selector" data-drc-sticky data-offset-top="322.5">
-                <li><a href="" data-language-selector="cli"><span>CLI</span></a></li>
-                <li><a href="" data-language-selector="curl"><span>cURL</span></a></li>
-                <li><a href="" data-language-selector="go" class="active"><span>Go</span></a></li>
-                <li><a href="" data-language-selector="java"><span>Java</span></a></li>
-                <li><a href="" data-language-selector="cs"><span>.NET</span></a></li>
-                <li><a href="" data-language-selector="node"><span>Node.js</span></a></li>
-                <li><a href="" data-language-selector="php"><span>PHP</span></a></li>
-                <li><a href="" data-language-selector="python"><span>Python</span></a></li>
-                <li><a href="" data-language-selector="ruby"><span>Ruby</span></a></li>
+                <li><a href="" data-drc-language-selector="cli"><span>CLI</span></a></li>
+                <li><a href="" data-drc-language-selector="curl"><span>cURL</span></a></li>
+                <li><a href="" data-drc-language-selector="go"><span>Go</span></a></li>
+                <li><a href="" data-drc-language-selector="java"><span>Java</span></a></li>
+                <li><a href="" data-drc-language-selector="cs"><span>.NET</span></a></li>
+                <li><a href="" data-drc-language-selector="node"><span>Node.js</span></a></li>
+                <li><a href="" data-drc-language-selector="php"><span>PHP</span></a></li>
+                <li><a href="" data-drc-language-selector="python"><span>Python</span></a></li>
+                <li><a href="" data-drc-language-selector="ruby"><span>Ruby</span></a></li>
             </ul>
             <header class="docs-section docs-intro">
                 <div class="description">
@@ -130,7 +130,7 @@
                 </div>
                 <div class="code">
                     <h2>Authentication</h2>
-                    <div class="highlight-go">
+                    <div data-drc-code-sample="go">
                         <div class="highlight">
 <pre><span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;github.com/rackspace/gophercloud&quot;</span>
@@ -153,6 +153,17 @@
 <span class="nx">Region</span><span class="p">:</span> <span class="s">&quot;{region}&quot;</span><span class="p">,</span>
 <span class="p">})</span></pre>
                         </div>
+                    </div>
+                    <div data-drc-code-sample="node"><div class="highlight"><pre><span class="nx">pkgcloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'pkgcloud'</span><span class="p">);</span>
+
+<span class="c1">// Each client is bound to a specific service and provider.</span>
+<span class="kd">var</span> <span class="nx">client</span> <span class="o">=</span> <span class="nx">pkgcloud</span><span class="p">.</span><span class="nx">compute</span><span class="p">.</span><span class="nx">createClient</span><span class="p">({</span>
+  <span class="nx">provider</span><span class="o">:</span> <span class="s1">'rackspace'</span><span class="p">,</span>
+  <span class="nx">username</span><span class="o">:</span> <span class="s1">'{username}'</span><span class="p">,</span>
+  <span class="nx">apiKey</span><span class="o">:</span> <span class="s1">'{apiKey}'</span><span class="p">,</span>
+  <span class="nx">region</span><span class="o">:</span> <span class="s1">'{region}'</span>
+<span class="p">});</span>
+</pre></div>
                     </div>
                 </div>
             </section>
