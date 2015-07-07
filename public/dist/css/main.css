@@ -2250,7 +2250,7 @@ table {
 .docs-section-nav > ul > li > ul {
   border-left: solid 1px #b3b3b3;
   list-style-type: none;
-  margin: 20px 0 20px 5px;
+  margin: 20px 0 20px 7px;
   padding: 0 0 0 10px;
 }
 .docs-section-nav > ul > li > ul li {
@@ -2264,10 +2264,36 @@ table {
 .docs-section-nav > ul > li > ul li a:hover {
   color: #3498db;
 }
+.docs-section-nav > ul > li > ul li:before {
+  background: #efc75e;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 13px;
+  left: -17px;
+  position: absolute;
+  top: 1px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: transform 0.1s ease-in;
+  -ms-transition: transform 0.1s ease-in;
+  transition: transform 0.1s ease-in;
+  width: 13px;
+}
 .docs-section-nav > ul > li > ul li.active a {
   font-family: 'open-sans-bold', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
+  letter-spacing: -0.04em;
+}
+.docs-section-nav > ul > li > ul li.active:before {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: transform 0.1s 0.1s ease-out;
+  -ms-transition: transform 0.1s 0.1s ease-out;
+  transition: transform 0.1s 0.1s ease-out;
 }
 .docs-section-nav > ul > li > ul li + li {
   margin-top: 10px;
@@ -2286,19 +2312,6 @@ table {
   .docs-section-nav > ul.sticky {
     width: calc(16.666666666666664% - 55px);
   }
-}
-.docs-section-nav .nav-bobber {
-  display: none;
-}
-.docs-section-nav .nav-bobber.active {
-  background: #efc75e;
-  border-radius: 50%;
-  display: block;
-  height: 13px;
-  left: 34px;
-  position: absolute;
-  top: 543px;
-  width: 13px;
 }
 @media (min-width: 769px) {
   .docs-section-nav {

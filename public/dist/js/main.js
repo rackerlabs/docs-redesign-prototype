@@ -37516,13 +37516,171 @@ var moduleName = 'drc.app';
 module.exports = moduleName;
 
 angular.module(moduleName, [
-    require('./components/sticky'),
-    require('./components/section-nav-toggle')
+    require('./services/active-language'),
+    require('./components/code-sample'),
+    require('./components/language-selector'),
+    require('./components/scroll-indicator'),
+    require('./components/section-nav-toggle'),
+    require('./components/sticky')
 ]);
 
 angular.bootstrap(document, [moduleName]);
 
-},{"./components/section-nav-toggle":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/section-nav-toggle.js","./components/sticky":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/sticky.js","angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/section-nav-toggle.js":[function(require,module,exports){
+},{"./components/code-sample":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js","./components/language-selector":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/language-selector.js","./components/scroll-indicator":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/scroll-indicator.js","./components/section-nav-toggle":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/section-nav-toggle.js","./components/sticky":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/sticky.js","./services/active-language":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/services/active-language.js","angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js":[function(require,module,exports){
+var $ = require('jquery');
+var angular = require('angular');
+
+var moduleName = 'drc.components.code-sample';
+module.exports = moduleName;
+
+angular.module(moduleName, [])
+.directive('drcCodeSample', function ($rootScope, activeLanguage) {
+    return {
+        scope: {},
+        controller: function ($scope, $element, $attrs) {
+            $element = $($element);
+
+            $scope.isActiveLanguage = function () {
+                return activeLanguage.get() === $attrs.drcCodeSample;
+            };
+
+            $scope.setActiveClass = function () {
+                if($scope.isActiveLanguage()) {
+                    $element.removeClass('ng-hide');
+                }
+                else {
+                    $element.addClass('ng-hide');
+                }
+            };
+
+            $rootScope.$on(activeLanguage.changeEventName, $scope.setActiveClass);
+        },
+        link: function ($scope, $element, $attrs) {
+            $scope.setActiveClass();
+        }
+    };
+});
+
+},{"angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js","jquery":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/jquery/dist/jquery.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/language-selector.js":[function(require,module,exports){
+var $ = require('jquery');
+var angular = require('angular');
+
+var moduleName = 'drc.components.language-selector';
+module.exports = moduleName;
+
+angular.module(moduleName, [])
+.directive('drcLanguageSelector', function ($rootScope, activeLanguage) {
+    return {
+        scope: {},
+        controller: function ($scope, $element, $attrs) {
+            $element = $($element);
+
+            $scope.isActiveLanguage = function () {
+                return activeLanguage.get() === $attrs.drcLanguageSelector;
+            };
+
+            $scope.setActiveClass = function () {
+                if($scope.isActiveLanguage()) {
+                    $element.addClass('active');
+                }
+                else {
+                    $element.removeClass('active');
+                }
+            };
+
+            $rootScope.$on(activeLanguage.changeEventName, $scope.setActiveClass);
+        },
+        link: function ($scope, $element, $attrs) {
+            $scope.setActiveClass();
+            $element.on('click', function () {
+                activeLanguage.set($attrs.drcLanguageSelector);
+            });
+        }
+    };
+});
+
+},{"angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js","jquery":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/jquery/dist/jquery.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/scroll-indicator.js":[function(require,module,exports){
+var $ = require('jquery');
+var angular = require('angular');
+
+var moduleName = 'drc.components.scroll-indicator';
+module.exports = moduleName;
+
+var INDICATOR_CHANGE_EVENT = 'drcScrollIndicatorChange';
+
+angular.module(moduleName, [])
+.factory('scrollIndicator', function ($rootScope) {
+    var listenersAdded = false;
+    var indicators, milestones, activeMilestone;
+
+
+    return {
+        init: function () {
+            indicators = $('[data-drc-scroll-indicator]');
+            milestones = $('[data-drc-scroll-milestone]');
+
+            activeMilestone = indicators[0].getAttribute('data-drc-scroll-indicator');
+            $rootScope.$broadcast(INDICATOR_CHANGE_EVENT, activeMilestone);
+
+            this.addListeners();
+        },
+        addListeners: function () {
+            if(listenersAdded) {
+                return;
+            }
+
+            $(window).on('scroll.scrollIndicator resize.scrollIndicator', this.scrollListener.bind(this));
+
+            listenersAdded = true;
+        },
+        scrollListener: function (e) {
+            var viewThreshold = parseInt($(window).height() * 0.8);
+            closestMilestone = {
+                position: -Infinity,
+                element: null
+            };
+
+            milestones.each((function (index, element) {
+                var fromThreshold = element.getBoundingClientRect().top - viewThreshold;
+
+                if(fromThreshold < 0 && fromThreshold > closestMilestone.position) {
+                    closestMilestone.position = fromThreshold;
+                    closestMilestone.element = element;
+                }
+            }).bind(this));
+
+            if(
+                closestMilestone.element.getAttribute('data-drc-scroll-milestone') !==
+                activeMilestone
+            ) {
+                activeMilestone = closestMilestone.element.getAttribute('data-drc-scroll-milestone');
+                $rootScope.$broadcast(INDICATOR_CHANGE_EVENT, activeMilestone);
+            }
+
+        }
+    };
+})
+.directive('drcScrollIndicator', function ($rootScope, scrollIndicator) {
+    return {
+        controller: function ($scope, $element, $attrs) {
+            $element = $($element);
+
+            $rootScope.$on('drcScrollIndicatorChange', function (event, data) {
+                if(data === $attrs.drcScrollIndicator) {
+                    $element.addClass('active');
+                }
+                else {
+                    $element.removeClass('active');
+                }
+            });
+        },
+        link: function ($scope, $element, $attrs) {
+            scrollIndicator.init();
+        }
+    };
+});
+
+},{"angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js","jquery":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/jquery/dist/jquery.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/section-nav-toggle.js":[function(require,module,exports){
 var angular = require('angular');
 var $ = require('jquery');
 
@@ -37563,8 +37721,9 @@ angular.module(moduleName, [])
 // This is the bootstrap affix plugin, modified to be a requireJS-friendly
 // Angular directive.
 
-var angular = require('angular');
 var $ = require('jquery');
+var angular = require('angular');
+
 
 var moduleName = 'drc.components.sticky';
 module.exports = moduleName;
@@ -37680,4 +37839,31 @@ angular.module(moduleName, [])
 },{"angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js","jquery":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/jquery/dist/jquery.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/main.js":[function(require,module,exports){
 var app = require('./app');
 
-},{"./app":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/app.js"}]},{},["/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/main.js"]);
+},{"./app":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/app.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/services/active-language.js":[function(require,module,exports){
+var angular = require('angular');
+
+var moduleName = 'drc.services.active-language';
+module.exports = moduleName;
+
+var LANGUAGE_KEY = 'drc.preferredLanguage';
+var LANGUAGE_CHANGE_EVENT = 'drcLanguageChange';
+
+angular.module(moduleName, [])
+.factory('activeLanguage', function ($rootScope) {
+    if(! localStorage.getItem(LANGUAGE_KEY)) {
+        localStorage.setItem(LANGUAGE_KEY, 'cli');
+    }
+
+    return {
+        set: function (value) {
+            localStorage.setItem(LANGUAGE_KEY, value);
+            $rootScope.$broadcast(LANGUAGE_CHANGE_EVENT, value);
+        },
+        get: function () {
+            return localStorage.getItem(LANGUAGE_KEY);
+        },
+        changeEventName: LANGUAGE_CHANGE_EVENT
+    };
+});
+
+},{"angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js"}]},{},["/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/main.js"]);
