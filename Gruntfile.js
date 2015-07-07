@@ -96,6 +96,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('serve', ['connect:server']);
-    grunt.registerTask('dev', ['concurrent:dev']);
+    grunt.registerTask('dev', ['less:dev', 'browserify:dev', 'concurrent:dev']);
     grunt.registerTask('build', ['less:build', 'browserify:dev', 'copy:images', 'copy:fonts']);
 };

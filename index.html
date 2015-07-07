@@ -46,7 +46,7 @@
             <div class="left"></div>
             <div class="right"></div>
         </div>
-        <nav class="docs-section-nav" data-drc-section-nav-toggle data-parent=".docs-body">
+        <nav class="docs-section-nav" data-drc-section-nav-toggle data-parent=".docs-body" data-drc-nav-bobber>
             <a href="" class="github-link"><span class="icon fa fa-github"></span>Edit On Github</a>
             <ul data-drc-sticky data-offset-top="413.5" data-offset-bottom="335">
                 <li>
@@ -66,28 +66,27 @@
                 <li class="active">
                     <a href="">Cloud Servers</a>
                     <ul>
-                        <li class="active"><a href="">Concepts</a></li>
-                        <li><a href="">Authentication</a></li>
-                        <li><a href="">Use the API</a></li>
-                        <li><a href="">More Information</a></li>
+                        <li data-drc-scroll-indicator="concepts"><a href="">Concepts</a></li>
+                        <li data-drc-scroll-indicator="authentication"><a href="">Authentication</a></li>
+                        <li data-drc-scroll-indicator="use-the-api"><a href="">Use the API</a></li>
+                        <li data-drc-scroll-indicator="more-information"><a href="">More Information</a></li>
                     </ul>
                 </li>
                 <li><a href="">Orchestration</a></li>
             </ul>
-            <div class="nav-bobber"></div>
             <div class="section-nav-toggle"></div>
         </nav>
         <article class="docs-content">
             <ul class="language-selector" data-drc-sticky data-offset-top="322.5">
-                <li><a href="" data-language-selector="cli"><span>CLI</span></a></li>
-                <li><a href="" data-language-selector="curl"><span>cURL</span></a></li>
-                <li><a href="" data-language-selector="go" class="active"><span>Go</span></a></li>
-                <li><a href="" data-language-selector="java"><span>Java</span></a></li>
-                <li><a href="" data-language-selector="cs"><span>.NET</span></a></li>
-                <li><a href="" data-language-selector="node"><span>Node.js</span></a></li>
-                <li><a href="" data-language-selector="php"><span>PHP</span></a></li>
-                <li><a href="" data-language-selector="python"><span>Python</span></a></li>
-                <li><a href="" data-language-selector="ruby"><span>Ruby</span></a></li>
+                <li><a href="" data-drc-language-selector="cli"><span>CLI</span></a></li>
+                <li><a href="" data-drc-language-selector="curl"><span>cURL</span></a></li>
+                <li><a href="" data-drc-language-selector="go"><span>Go</span></a></li>
+                <li><a href="" data-drc-language-selector="java"><span>Java</span></a></li>
+                <li><a href="" data-drc-language-selector="cs"><span>.NET</span></a></li>
+                <li><a href="" data-drc-language-selector="node"><span>Node.js</span></a></li>
+                <li><a href="" data-drc-language-selector="php"><span>PHP</span></a></li>
+                <li><a href="" data-drc-language-selector="python"><span>Python</span></a></li>
+                <li><a href="" data-drc-language-selector="ruby"><span>Ruby</span></a></li>
             </ul>
             <header class="docs-section docs-intro">
                 <div class="description">
@@ -103,7 +102,7 @@
             <section class="docs-section">
                 <div class="description">
                     <p>Rackspace Cloud Servers allows you to allocate and deallocate compute resources. It is based on OpenStack Compute (Nova), a community-led open-source platform.</p>
-                    <h2>Concepts</h2>
+                    <h2 data-drc-scroll-milestone="concepts">Concepts</h2>
                     <p>To use this service effectively, you should understand how these key ideas are used in this context:</p>
                     <ul>
                         <li><strong>Server:</strong> A computer that provides explicit services to the client software running on that system. A server is a virtual machine (VM) instance in the Cloud Servers environment. To create a server, you must specify a name, flavor reference, and image reference.</li>
@@ -115,7 +114,7 @@
             </section>
             <section class="docs-section">
                 <div class="description">
-                    <h2>Authentication</h2>
+                    <h2 data-drc-scroll-milestone="authentication">Authentication</h2>
                     <p>To use this service you have to authenticate first. To do this, you will need your Rackspace username and API key. Your username is the one you use to login to the Cloud Control Panel at <a href="" class="external">http://mycloud.rackspace.com/</a>.</p>
                     <p>To find your API key, first navigate to the Cloud Control Panel, then click on your <strong>username</strong> at the top right corner, and then finally click on Account Settings. You will be taken to a page that shows your settings. Under Login Details, you can show or reset your <strong>API key</strong>.</p>
                     <p>You may specify a default region as well. Here is a list of available regions:</p>
@@ -131,7 +130,7 @@
                 </div>
                 <div class="code">
                     <h2>Authentication</h2>
-                    <div class="highlight-go">
+                    <div data-drc-code-sample="go">
                         <div class="highlight">
 <pre><span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;github.com/rackspace/gophercloud&quot;</span>
@@ -155,11 +154,22 @@
 <span class="p">})</span></pre>
                         </div>
                     </div>
+                    <div data-drc-code-sample="node"><div class="highlight"><pre><span class="nx">pkgcloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'pkgcloud'</span><span class="p">);</span>
+
+<span class="c1">// Each client is bound to a specific service and provider.</span>
+<span class="kd">var</span> <span class="nx">client</span> <span class="o">=</span> <span class="nx">pkgcloud</span><span class="p">.</span><span class="nx">compute</span><span class="p">.</span><span class="nx">createClient</span><span class="p">({</span>
+  <span class="nx">provider</span><span class="o">:</span> <span class="s1">'rackspace'</span><span class="p">,</span>
+  <span class="nx">username</span><span class="o">:</span> <span class="s1">'{username}'</span><span class="p">,</span>
+  <span class="nx">apiKey</span><span class="o">:</span> <span class="s1">'{apiKey}'</span><span class="p">,</span>
+  <span class="nx">region</span><span class="o">:</span> <span class="s1">'{region}'</span>
+<span class="p">});</span>
+</pre></div>
+                    </div>
                 </div>
             </section>
             <section class="docs-section">
                 <div class="description">
-                    <h2>Use the API</h2>
+                    <h2 data-drc-scroll-milestone="use-the-api">Use the API</h2>
                     <p>Some of the basic operations you can perform with this API are described below.</p>
 
                     <h3>Set up your first server</h3>
@@ -304,7 +314,7 @@
             </section>
             <section class="docs-section">
                 <div class="description">
-                    <h2>More Information</h2>
+                    <h2 data-drc-scroll-milestone="more-information">More Information</h2>
                     <p>This Quickstart is intentionally very brief, demonstrating only a few basic operations. If you want to know more, these are some good places to continue exploring:</p>
                     <ul>
                         <li><a href="http://developer.rackspace.com/" class="link external">http://developer.rackspace.com/</a> links to all our Software Development Kits. It also offers developer-focused support resources such as our IRC channel.</li>
