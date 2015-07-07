@@ -58,25 +58,45 @@
 }
 
 @font-face {
-  font-family: 'roboto-slab-regular';
+  font-family: 'titillium-regular';
   font-style: normal;
   font-weight: 400;
-  src: url('http://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZmfQcKutQXcIrRfyR5jdjY8.eot');
   src:
-      url('http://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZrrIa-7acMAeDBVuclsi6Gc.woff') format('woff'),
-      url('http://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37Zogp9Q8gbYrhqGlRav_IXfk.woff2') format('woff2');
+      url('http://fonts.gstatic.com/s/titilliumweb/v4/7XUFZ5tgS-tD6QamInJTcZ_o9VAbKgK36i-4snuAuCM.woff') format('woff'),
+      url('http://fonts.gstatic.com/s/titilliumweb/v4/7XUFZ5tgS-tD6QamInJTceHuglUR2dhBxWD-q_ehMME.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
 @font-face {
-  font-family: 'roboto-slab-bold';
+  font-family: 'titillium-bold';
   font-style: normal;
   font-weight: 700;
   src:
-      url('http://fonts.gstatic.com/s/robotoslab/v6/dazS1PrQQuCxC3iOAJFEJRbnBKKEOwRKgsHDreGcocg.woff') format('woff'),
-      url('http://fonts.gstatic.com/s/robotoslab/v6/dazS1PrQQuCxC3iOAJFEJf79_ZuUxCigM2DespTnFaw.woff2') format('woff2');
+      url('http://fonts.gstatic.com/s/titilliumweb/v4/anMUvcNT0H1YN4FII8wpr_5rZpfU3XI-FvUPGDRT0xY.woff') format('woff'),
+      url('http://fonts.gstatic.com/s/titilliumweb/v4/anMUvcNT0H1YN4FII8wpr8hG3LOB74UqS1hPmWaAxzQ.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+
+@font-face {
+  font-family: 'titillium-regular-italic';
+  font-style: italic;
+  font-weight: 400;
+  src:
+      url('http://fonts.gstatic.com/s/titilliumweb/v4/r9OmwyQxrgzUAhaLET_KO8-iP4m4uFrmmLLVBqy34EU.woff') format('woff'),
+      url('http://fonts.gstatic.com/s/titilliumweb/v4/r9OmwyQxrgzUAhaLET_KO04Sq3N3sm-tF9FpL8sHob4.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'titillium-bold-italic';
+  font-style: italic;
+  font-weight: 700;
+  src:
+      url('http://fonts.gstatic.com/s/titilliumweb/v4/RZunN20OBmkvrU7sA4GPPpe8VrfdPPeK1ViGigzR2tQ.woff') format('woff'),
+      url('http://fonts.gstatic.com/s/titilliumweb/v4/RZunN20OBmkvrU7sA4GPPipre1WS4Xml-pRMufJH74k.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
 
 @font-face {
   font-family: 'source-code-regular';
@@ -101,10 +121,17 @@
     }
 }
 
-.roboto-slab(@weight: 'regular') {
-    font-family: 'roboto-slab-@{weight}', Georgia, serif;
-    font-style: normal;
-    font-weight: normal;
+.titillium(@weight: 'regular', @style: '') {
+    & when (@style = '') {
+        font-family: 'titillium-@{weight}', arial, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+    }
+    & when (@style = 'italic') {
+        font-family: 'titillium-@{weight}-italic', arial, sans-serif;
+        font-style: italic;
+        font-weight: normal;
+    }
 }
 
 .source-code() {
