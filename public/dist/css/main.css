@@ -2890,7 +2890,124 @@ code {
 .site-footer {
   background: black;
   color: white;
-  height: 300px;
+  padding: 20px 0;
+}
+.site-footer h5 {
+  font-family: 'titillium-regular', arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.site-footer a {
+  color: white;
+  font-size: 12px;
+  line-height: 2;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+.site-footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.site-footer .footer-container {
+  max-width: 960px;
+  display: block;
+  width: calc(100% +  20px );
+  margin-left: -20px;
+  overflow: hidden;
+  vertical-align: top;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+.site-footer .about-links,
+.site-footer .blog-links,
+.site-footer .support-links {
+  display: none;
+}
+.site-footer .other-links h5,
+.site-footer .other-links ul {
+  display: none;
+}
+.site-footer .other-links .copyright {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
+@media (min-width: 551px) {
+  .site-footer {
+    padding: 40px 0;
+  }
+  .site-footer .about-links,
+  .site-footer .blog-links,
+  .site-footer .support-links,
+  .site-footer .other-links {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 20px;
+    vertical-align: top;
+    width: calc( 50%  -  20px );
+    margin-bottom: 40px;
+  }
+  .site-footer .about-links ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 0px;
+    vertical-align: top;
+    width: calc( 50%  -  0px );
+  }
+  .site-footer .other-links h5,
+  .site-footer .other-links ul {
+    display: block;
+  }
+  .site-footer .other-links .copyright {
+    display: inline-block;
+    margin-top: 40px;
+  }
+}
+@media (min-width: 901px) {
+  .site-footer .about-links,
+  .site-footer .blog-links,
+  .site-footer .support-links,
+  .site-footer .other-links {
+    margin-bottom: 0;
+  }
+  .site-footer .about-links {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 20px;
+    vertical-align: top;
+    width: calc( 41.66666667%  -  20px );
+  }
+  .site-footer .blog-links,
+  .site-footer .support-links {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 20px;
+    vertical-align: top;
+    width: calc( 16.66666667%  -  20px );
+  }
+  .site-footer .other-links {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 20px;
+    vertical-align: top;
+    width: calc( 25%  -  20px );
+  }
 }
 .docs-body {
   display: block;
