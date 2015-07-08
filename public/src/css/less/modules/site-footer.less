@@ -1,5 +1,98 @@
 .site-footer {
     background: black;
     color: white;
-    height: 300px;
+    padding: 20px 0;
+
+    h5 {
+        .titillium();
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    a {
+        color: white;
+        font-size: 12px;
+        line-height: 2;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    @gutter-width: 20px;
+    .footer-container {
+        .centered-container(960px);
+        .grid();
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .about-links, .blog-links, .support-links {
+        display: none;
+    }
+
+    .other-links {
+        h5, ul {
+            display: none;
+        }
+
+        .copyright {
+            display: block;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 551px) {
+        padding: 40px 0;
+
+        .about-links, .blog-links, .support-links, .other-links {
+            .grid-unit(1/2);
+            margin-bottom: 40px;
+        }
+
+        .about-links {
+            ul {
+                .grid-unit(1/2, 0px);
+            }
+        }
+
+        .other-links {
+            h5, ul {
+                display: block;
+            }
+
+            .copyright {
+                display: inline-block;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    @media (min-width: 901px) {
+        .about-links, .blog-links, .support-links, .other-links {
+            margin-bottom: 0;
+        }
+
+        .about-links {
+            .grid-unit(5/12);
+        }
+
+        .blog-links, .support-links {
+            .grid-unit(2/12);
+        }
+
+        .other-links {
+            .grid-unit(3/12);
+        }
+    }
 }

@@ -66,10 +66,10 @@
                 <li class="active">
                     <a href="">Cloud Servers</a>
                     <ul>
-                        <li data-drc-scroll-indicator="concepts"><a href="">Concepts</a></li>
-                        <li data-drc-scroll-indicator="authentication"><a href="">Authentication</a></li>
-                        <li data-drc-scroll-indicator="use-the-api"><a href="">Use the API</a></li>
-                        <li data-drc-scroll-indicator="more-information"><a href="">More Information</a></li>
+                        <li data-drc-scroll-indicator="concepts"><a href="#concepts">Concepts</a></li>
+                        <li data-drc-scroll-indicator="authentication"><a href="#authentication">Authentication</a></li>
+                        <li data-drc-scroll-indicator="use-the-api"><a href="#use-the-api">Use the API</a></li>
+                        <li data-drc-scroll-indicator="more-information"><a href="#more-information">More Information</a></li>
                     </ul>
                 </li>
                 <li><a href="">Orchestration</a></li>
@@ -102,7 +102,7 @@
             <section class="docs-section">
                 <div class="description">
                     <p>Rackspace Cloud Servers allows you to allocate and deallocate compute resources. It is based on OpenStack Compute (Nova), a community-led open-source platform.</p>
-                    <h2 data-drc-scroll-milestone="concepts">Concepts</h2>
+                    <h2 data-drc-scroll-milestone="concepts" id="concepts">Concepts</h2>
                     <p>To use this service effectively, you should understand how these key ideas are used in this context:</p>
                     <ul>
                         <li><strong>Server:</strong> A computer that provides explicit services to the client software running on that system. A server is a virtual machine (VM) instance in the Cloud Servers environment. To create a server, you must specify a name, flavor reference, and image reference.</li>
@@ -114,7 +114,7 @@
             </section>
             <section class="docs-section">
                 <div class="description">
-                    <h2 data-drc-scroll-milestone="authentication">Authentication</h2>
+                    <h2 data-drc-scroll-milestone="authentication" id="authentication">Authentication</h2>
                     <p>To use this service you have to authenticate first. To do this, you will need your Rackspace username and API key. Your username is the one you use to login to the Cloud Control Panel at <a href="" class="external">http://mycloud.rackspace.com/</a>.</p>
                     <p>To find your API key, first navigate to the Cloud Control Panel, then click on your <strong>username</strong> at the top right corner, and then finally click on Account Settings. You will be taken to a page that shows your settings. Under Login Details, you can show or reset your <strong>API key</strong>.</p>
                     <p>You may specify a default region as well. Here is a list of available regions:</p>
@@ -228,7 +228,7 @@ curl -s https://identity.api.rackspacecloud.com/v2.0/tokens -X POST <span class=
             </section>
             <section class="docs-section">
                 <div class="description">
-                    <h2 data-drc-scroll-milestone="use-the-api">Use the API</h2>
+                    <h2 data-drc-scroll-milestone="use-the-api" id="use-the-api">Use the API</h2>
                     <p>Some of the basic operations you can perform with this API are described below.</p>
 
                     <h3>Set up your first server</h3>
@@ -795,7 +795,7 @@ curl -X GET <span class="nv">$ENDPOINT</span>/servers/<span class="nv">$SERVER_I
             </section>
             <section class="docs-section">
                 <div class="description">
-                    <h2 data-drc-scroll-milestone="more-information">More Information</h2>
+                    <h2 data-drc-scroll-milestone="more-information" id="more-information">More Information</h2>
                     <p>This Quickstart is intentionally very brief, demonstrating only a few basic operations. If you want to know more, these are some good places to continue exploring:</p>
                     <ul>
                         <li><a href="http://developer.rackspace.com/" class="link external">http://developer.rackspace.com/</a> links to all our Software Development Kits. It also offers developer-focused support resources such as our IRC channel.</li>
@@ -808,7 +808,52 @@ curl -X GET <span class="nv">$ENDPOINT</span>/servers/<span class="nv">$SERVER_I
     </section>
     <footer class="site-footer">
         <div class="footer-container">
-
+          <div class="about-links">
+            <h5>About Rackspace</h5>
+            <ul>
+              <li><a href="">Our Story</a></li>
+              <li><a href="">Leadership</a></li>
+              <li><a href="">Events</a></li>
+              <li><a href="">Programs</a></li>
+              <li><a href="">Investors</a></li>
+              <li><a href="">Legal</a></li>
+            </ul>
+            <ul>
+              <li><a href="">News</a></li>
+              <li><a href="">Responsibility</a></li>
+              <li><a href="">Rack Gives Back</a></li>
+              <li><a href="">Careers</a></li>
+              <li><a href="">Contact Information</a></li>
+            </ul>
+          </div>
+          <div class="blog-links">
+            <h5>Blogs</h5>
+            <ul>
+              <li><a href="">The Rackspace Blog</a></li>
+              <li><a href="">Developer Blog</a></li>
+            </ul>
+          </div>
+          <div class="support-links">
+            <h5>Support</h5>
+            <ul>
+              <li><a href="">Knowledge Center</a></li>
+              <li><a href="">Support Forums</a></li>
+              <li><a href="">API Documentation</a></li>
+              <li><a href="">Support Home</a></li>
+              <li><a href="">Developer Center</a></li>
+            </ul>
+          </div>
+          <div class="other-links">
+            <h5>Change Your Region: </h5>
+            <ul>
+              <li><a href="">Privacy Statement</a></li>
+              <li><a href="">Website Terms</a></li>
+              <li><a href="">Trademarks</a></li>
+              <li><a href="">Sitemap</a></li>
+              <li><a href="">Feedback</a></li>
+            </ul>
+            <span class="copyright">&copy;2015 Rackspace US, Inc.</span>
+          </div>
         </div>
     </footer>
     <script src="public/dist/js/main.js"></script>
