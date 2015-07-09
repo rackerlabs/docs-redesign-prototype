@@ -2268,7 +2268,7 @@ table {
   color: white;
 }
 .docs-section-nav > ul > li > ul {
-  border-left: solid 1px #b3b3b3;
+  border-left: dotted 1px #b3b3b3;
   list-style-type: none;
   margin: 20px 0 20px 7px;
   padding: 0 0 0 10px;
@@ -2851,7 +2851,7 @@ code {
   width: 140px;
 }
 .site-header .header-headline {
-  background: url(../img/fpo-code-editor.jpg) 50% 0% no-repeat;
+  background: url(../img/docs-banner.jpg) 50% 0% no-repeat;
   background-size: cover;
   margin-top: -60px;
   padding: 120px 60px 60px 60px;
@@ -2969,6 +2969,7 @@ code {
     display: block;
   }
   .site-footer .other-links .copyright {
+    font-size: 12px;
     display: inline-block;
     margin-top: 40px;
   }
@@ -3024,7 +3025,7 @@ code {
 }
 .docs-body h2,
 .docs-body h3 {
-  border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+  border-bottom: dotted 1px rgba(0, 0, 0, 0.3);
   line-height: 2;
   margin-bottom: 15px;
 }
