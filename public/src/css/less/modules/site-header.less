@@ -1,4 +1,5 @@
 .site-header {
+    
     .header-links {
         background: black;
         color: white;
@@ -20,29 +21,66 @@
             }
 
             .portal-links {
+                margin-bottom: 0;
                 text-align: right;
             }
         }
 
         .btn-link {
-            background: shade(white, 13%);
-            border-radius: 3px;
-            color: black;
+            
+            position: relative;
             display: inline-block;
-            line-height: 24px;
-            margin: 0 -0.25em 0 10px;
-            padding: 0 0.75em;
-            .transition(background 0.1s ease-in-out);
-
-            &:hover {
-                background: white;
+            
+            &.sign-up {margin-left: 10px;}
+            
+            span {
+                background: shade(white, 13%);
+                border-radius: 3px;
+                color: black;
+                display: inline-block;
+                line-height: 24px;
+                margin: 0 0 0 5px;
+                padding: 0 0.75em;
+                cursor: pointer;
+                .transition(background 0.1s ease-in-out);                
             }
+            
+            ul {
+                display: none;
+                position: absolute;
+                right: -2px;
+                cursor: pointer;
+                background: shade(white, 13%);
+                border-top: 1px solid black;
+                border-radius: 3px;
+                padding-bottom: 0px;
+            }
+
+            &:hover ul {
+                
+                display: block;
+                
+                li {display: block;}
+                
+                li:hover {
+                    background: #737373;
+                    border-radius: 3px; 
+                }
+
+                a {
+                    color: #fff;
+                    display: block;
+                    padding: 3px 6px;
+                    text-decoration: none;
+                    white-space: nowrap
+                }                
+            }
+            
         }
 
         .text-link {
             display: inline-block;
             line-height: 34px;
-            margin-right: -0.25em;
 
             & + .text-link {
                 margin-left: 6px;
