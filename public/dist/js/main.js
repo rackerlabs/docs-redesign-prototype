@@ -37518,6 +37518,7 @@ module.exports = moduleName;
 angular.module(moduleName, [
     require('./services/active-language'),
     require('./components/code-sample'),
+    require('./components/copy-code-sample'),
     require('./components/flex-height'),
     require('./components/language-selector'),
     require('./components/scroll-indicator'),
@@ -37529,7 +37530,7 @@ angular.bootstrap(document, [moduleName]);
 
 window.sectionNav = document.querySelector('.docs-section-nav ul');
 
-},{"./components/code-sample":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js","./components/flex-height":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/flex-height.js","./components/language-selector":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/language-selector.js","./components/scroll-indicator":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/scroll-indicator.js","./components/section-nav-toggle":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/section-nav-toggle.js","./components/sticky":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/sticky.js","./services/active-language":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/services/active-language.js","angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js":[function(require,module,exports){
+},{"./components/code-sample":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js","./components/copy-code-sample":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/copy-code-sample.js","./components/flex-height":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/flex-height.js","./components/language-selector":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/language-selector.js","./components/scroll-indicator":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/scroll-indicator.js","./components/section-nav-toggle":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/section-nav-toggle.js","./components/sticky":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/sticky.js","./services/active-language":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/services/active-language.js","angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js":[function(require,module,exports){
 var $ = require('jquery');
 var angular = require('angular');
 
@@ -37560,6 +37561,29 @@ angular.module(moduleName, [])
         },
         link: function ($scope, $element, $attrs) {
             $scope.setActiveClass();
+        }
+    };
+});
+
+},{"angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js","jquery":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/jquery/dist/jquery.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/copy-code-sample.js":[function(require,module,exports){
+// This is the bootstrap affix plugin, modified to be a requireJS-friendly
+// Angular directive.
+
+var $ = require('jquery');
+var angular = require('angular');
+
+var moduleName = 'drc.components.copy-code-sample';
+module.exports = moduleName;
+
+angular.module(moduleName, [])
+.directive('drcCopyCodeSample', function () {
+    return {
+        link: function ($scope, $element, $attrs) {
+            $element = $($element);
+
+            $element.on('click', function (e) {
+                e.preventDefault();
+            });
         }
     };
 });

@@ -2112,6 +2112,76 @@ table {
     width: 50%;
   }
 }
+.docs-section .description h1 .headerlink,
+.docs-section .description h2 .headerlink,
+.docs-section .description h3 .headerlink,
+.docs-section .description h4 .headerlink,
+.docs-section .description h5 .headerlink,
+.docs-section .description h6 .headerlink {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  bottom: 7px;
+  display: inline-block;
+  left: -15px;
+  opacity: 0;
+  position: absolute;
+  text-indent: -999px;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -ms-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+  width: 15px;
+}
+.docs-section .description h1 .headerlink.pull-left,
+.docs-section .description h2 .headerlink.pull-left,
+.docs-section .description h3 .headerlink.pull-left,
+.docs-section .description h4 .headerlink.pull-left,
+.docs-section .description h5 .headerlink.pull-left,
+.docs-section .description h6 .headerlink.pull-left {
+  margin-right: .3em;
+}
+.docs-section .description h1 .headerlink.pull-right,
+.docs-section .description h2 .headerlink.pull-right,
+.docs-section .description h3 .headerlink.pull-right,
+.docs-section .description h4 .headerlink.pull-right,
+.docs-section .description h5 .headerlink.pull-right,
+.docs-section .description h6 .headerlink.pull-right {
+  margin-left: .3em;
+}
+.docs-section .description h1 .headerlink:before,
+.docs-section .description h2 .headerlink:before,
+.docs-section .description h3 .headerlink:before,
+.docs-section .description h4 .headerlink:before,
+.docs-section .description h5 .headerlink:before,
+.docs-section .description h6 .headerlink:before {
+  content: "\f0c1";
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  text-indent: 0;
+  top: 0;
+}
+.docs-section .description h1:hover .headerlink,
+.docs-section .description h2:hover .headerlink,
+.docs-section .description h3:hover .headerlink,
+.docs-section .description h4:hover .headerlink,
+.docs-section .description h5:hover .headerlink,
+.docs-section .description h6:hover .headerlink {
+  opacity: 1;
+}
+.docs-section .code h2 .copy-link,
+.docs-section .code h3 .copy-link,
+.docs-section .code h4 .copy-link,
+.docs-section .code h5 .copy-link {
+  display: inline-block;
+  height: 1em;
+  position: absolute;
+  right: 0;
+  width: 1em;
+}
 .docs-section .code hr {
   background: rgba(255, 255, 255, 0.2);
   border: none;
