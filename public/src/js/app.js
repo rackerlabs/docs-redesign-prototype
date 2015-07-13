@@ -6,6 +6,7 @@ module.exports = moduleName;
 angular.module(moduleName, [
     require('./services/active-language'),
     require('./components/code-sample'),
+    require('./components/copy-code-sample'),
     require('./components/flex-height'),
     require('./components/language-selector'),
     require('./components/scroll-indicator'),
