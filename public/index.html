@@ -44,36 +44,46 @@
     <section class="docs-body">
         <div class="background">
             <div class="left"></div>
+            <div class="center"></div>
             <div class="right"></div>
         </div>
-        <nav class="docs-section-nav" data-drc-section-nav-toggle data-parent=".docs-body" data-drc-nav-bobber>
-            <a href="https://github.com/rackerlabs/docs-quickstart/edit/master/cloud-servers/getting-started/index.rst" target="_blank" class="github-link"><span class="icon fa fa-github"></span>Edit On Github</a>
-            <ul data-drc-sticky data-offset-top="413.5" data-offset-bottom="335">
-                <li>
-                    <a href="" class="active-section">Auto Scale</a>
-                </li>
-                <li><a href="">CDN</a></li>
-                <li><a href="">Cloud Block Storage</a></li>
-                <li><a href="">Cloud Databases</a></li>
-                <li><a href="">Cloud DNS</a></li>
-                <li><a href="">Cloud Files</a></li>
-                <li><a href="">Cloud Identity</a></li>
-                <li><a href="">Cloud Images</a></li>
-                <li><a href="">Cloud Load Balancers</a></li>
-                <li><a href="">Cloud Monitoring</a></li>
-                <li><a href="">Cloud Networks</a></li>
-                <li><a href="">Cloud Queues</a></li>
-                <li class="active">
-                    <a href="">Cloud Servers</a>
-                    <ul>
-                        <li data-drc-scroll-indicator="concepts"><a href="#concepts">Concepts</a></li>
-                        <li data-drc-scroll-indicator="authentication"><a href="#authentication">Authentication</a></li>
-                        <li data-drc-scroll-indicator="use-the-api"><a href="#use-the-api">Use the API</a></li>
-                        <li data-drc-scroll-indicator="more-information"><a href="#more-information">More Information</a></li>
-                    </ul>
-                </li>
-                <li><a href="">Orchestration</a></li>
-            </ul>
+        <nav class="docs-section-nav" data-drc-section-nav-toggle data-parent=".docs-body">
+            <div class="section-nav-container" data-drc-sticky data-offset-top="331" data-drc-flex-height data-flex-bottom="302">
+                <a href="https://github.com/rackerlabs/docs-quickstart/edit/master/cloud-servers/getting-started/index.rst" target="_blank" class="github-link"><span class="icon fa fa-github"></span>Edit On Github</a>
+                <ul>
+                    <li class="active">
+                        <a href="">Cloud Servers</a>
+                        <ul>
+                            <li data-drc-scroll-indicator="concepts"><a href="#concepts">Concepts</a></li>
+                            <li data-drc-scroll-indicator="authentication"><a href="#authentication">Authentication</a></li>
+                            <li data-drc-scroll-indicator="use-the-api">
+                                <a href="#use-the-api">Use the API</a>
+                                <ul>
+                                    <li data-drc-scroll-indicator="set-up-your-first-server"><a href="#set-up-your-first-server">Set up your first server</a></li>
+                                    <li data-drc-scroll-indicator="delete-server"><a href="#delete-server">Delete Server</a></li>
+                                    <li data-drc-scroll-indicator="manage-keypairs"><a href="#manage-keypairs">Manage keypairs</a></li>
+                                </ul>
+                            </li>
+                            <li data-drc-scroll-indicator="more-information"><a href="#more-information">More Information</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                            <li><a href="">Extra Links</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <div class="section-nav-toggle"></div>
         </nav>
         <article class="docs-content">
@@ -231,7 +241,7 @@ curl -s https://identity.api.rackspacecloud.com/v2.0/tokens -X POST <span class=
                     <h2 data-drc-scroll-milestone="use-the-api" id="use-the-api">Use the API</h2>
                     <p>Some of the basic operations you can perform with this API are described below.</p>
 
-                    <h3>Set up your first server</h3>
+                    <h3 data-drc-scroll-milestone="set-up-your-first-server" id="set-up-your-first-server">Set up your first server</h3>
                     <p>Once you’ve finished your initial setup, you can begin the process of creating your first server.</p>
                     <p>To do this, you need to decide which <strong>Image</strong> and <strong>Flavor</strong> you want to use.</p>
                 </div>
@@ -523,7 +533,7 @@ curl -X GET <span class="nv">$ENDPOINT</span>/servers/<span class="nv">$SERVER_I
             </section>
             <section class="docs-section">
                 <div class="description">
-                    <h3>Delete Server</h3>
+                    <h3 data-drc-scroll-milestone="delete-server" id="delete-server">Delete Server</h3>
                     <p>
                         To permanently delete a server:
                     </p>
@@ -565,7 +575,7 @@ curl -X GET <span class="nv">$ENDPOINT</span>/servers/<span class="nv">$SERVER_I
             </section>
             <section class="docs-section">
                 <div class="description">
-                    <h3>Manage Keypairs</h3>
+                    <h3 data-drc-scroll-milestone="manage-keypairs" id="manage-keypairs">Manage Keypairs</h3>
                     <p>By default, servers use password-based authentication. When a server is created, the HTTP response contains a root password that is required for all subsequent SSH connections. You do have the option, however, of using keypairs instead.</p>
                     <h4>Register Keypair</h4>
                     <p>To use keypair-based authentication, the API needs to know about it. You have two options: upload your existing key, or have the API create a new one for you. We’ll cover both.</p>

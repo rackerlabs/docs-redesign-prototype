@@ -47,6 +47,10 @@ angular.module(moduleName, [])
                 }
             }).bind(this));
 
+            if(!closestMilestone.element) {
+                return;
+            }
+
             if(
                 closestMilestone.element.getAttribute('data-drc-scroll-milestone') !==
                 activeMilestone
