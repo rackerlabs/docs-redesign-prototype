@@ -70,6 +70,7 @@ angular.module(moduleName, [])
             $rootScope.$on('drcScrollIndicatorChange', function (event, data) {
                 if(data === $attrs.drcScrollIndicator) {
                     $element.addClass('active');
+                    $element.parents('li').addClass('active');
                 }
                 else {
                     $element.removeClass('active');

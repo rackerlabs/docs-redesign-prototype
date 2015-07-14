@@ -102,14 +102,14 @@
         & > li {
             & > a {
                 .titillium();
+                background: transparent;
                 border-radius: 1px;
                 color: tint(@text-color, 20%);
-                color: @code-white;
                 display: inline-block;
                 font-size: 16px;
                 padding: 0.4em;
                 text-decoration: none;
-                .transition(color 0.1s ease-in-out);
+                .transition(~"background 0.1s ease-in-out, color 0.1s ease-in-out");
 
                 &:hover {
                     color: @link-color;
