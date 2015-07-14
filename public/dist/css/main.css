@@ -2352,16 +2352,16 @@ table {
   font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
+  background: transparent;
   border-radius: 1px;
   color: #666666;
-  color: #e0e0d7;
   display: inline-block;
   font-size: 16px;
   padding: 0.4em;
   text-decoration: none;
-  -webkit-transition: color 0.1s ease-in-out;
-  -ms-transition: color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out;
+  -webkit-transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
+  -ms-transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 .section-nav-container > ul > li > a:hover {
   color: #3498db;
