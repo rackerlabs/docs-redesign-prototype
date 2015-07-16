@@ -2004,6 +2004,73 @@ table {
 .fa-medium:before {
   content: "\f23a";
 }
+.admonition {
+  background: #e6e6e6;
+  border-radius: 1px;
+  margin-bottom: 1.5em;
+  padding: 10px 10px 10px 50px;
+}
+.admonition:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: "\f05a";
+  font-size: 30px;
+  height: 30px;
+  left: 10px;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  width: 30px;
+}
+.admonition:before.pull-left {
+  margin-right: .3em;
+}
+.admonition:before.pull-right {
+  margin-left: .3em;
+}
+.admonition.note {
+  background: #3498db;
+  color: white;
+}
+.admonition.note:before {
+  content: "\f05a";
+}
+.admonition.tip {
+  background: #0dafcc;
+  color: white;
+}
+.admonition.tip:before {
+  content: "\f0eb";
+}
+.admonition.warning {
+  background: #efc75e;
+  box-shadow: inset 0px 0px 0px 1px #404040;
+  color: #404040;
+}
+.admonition.warning:before {
+  content: "\f071";
+}
+.admonition.danger {
+  background: #fa7464;
+  color: white;
+}
+.admonition.danger:before {
+  content: "\f057";
+}
+.admonition .admonition-title {
+  display: none;
+}
+.admonition * {
+  background: none;
+}
+.admonition :last-child {
+  margin-bottom: 0;
+}
 .language-selector {
   display: block;
   width: calc(100% +  0px );
@@ -2171,6 +2238,36 @@ table {
 .docs-section .description h5:hover .headerlink,
 .docs-section .description h6:hover .headerlink {
   opacity: 1;
+}
+.docs-section .description table {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+.docs-section .description table caption {
+  font-family: 'titillium-bold', arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+.docs-section .description table thead th {
+  font-family: 'open-sans-bold', arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  background: #d9d9d9;
+  font-size: 14px;
+  text-align: center;
+}
+.docs-section .description table tr td,
+.docs-section .description table tr th {
+  border: solid 1px #d9d9d9;
+  border-collapse: collapse;
+  padding: 0.5em;
+}
+.docs-section .description table tbody tr:nth-child(even) td,
+.docs-section .description table tbody tr:nth-child(even) th {
+  background: #f7f7f7;
 }
 .docs-section .code h2 .copy-link,
 .docs-section .code h3 .copy-link,
@@ -2816,10 +2913,18 @@ ul {
   margin-bottom: 1em;
 }
 code {
-  color: #ff6347;
+  background: #f2f2f2;
+  border-radius: 2px;
+  color: #1f5b83;
+  padding: 0 0.2em;
   font-family: 'source-code-regular', Monaco, 'Courier New', monospace;
   font-style: normal;
   font-weight: normal;
+}
+pre code {
+  background: none;
+  border-radius: 0;
+  padding: 0;
 }
 .site-header .header-links {
   background: black;
