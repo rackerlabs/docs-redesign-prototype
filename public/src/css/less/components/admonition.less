@@ -1,0 +1,67 @@
+.admonition {
+    background: shade(white, 10%);
+    border-radius: 1px;
+    margin-bottom: 1.5em;
+    padding: 10px 10px 10px 50px;
+
+    &:before {
+        .fa();
+        content: @fa-var-info-circle;
+        font-size: 30px;
+        height: 30px;
+        left: 10px;
+        position: absolute;
+        text-align: center;
+        top: 10px;
+        width: 30px;
+    }
+
+    &.note {
+        background: @alert-background-note;
+        color: white;
+
+        &:before {
+            content: @fa-var-info-circle;
+        }
+    }
+
+    &.tip {
+        background: @alert-background-tip;
+        color: white;
+
+        &:before {
+            content: @fa-var-lightbulb-o;
+        }
+    }
+
+    &.warning {
+        background: @alert-background-warning;
+        box-shadow: inset 0px 0px 0px 1px @text-color;
+        color: @text-color;
+
+        &:before {
+            content: @fa-var-exclamation-triangle;
+        }
+    }
+
+    &.danger {
+        background: @alert-background-danger;
+        color: white;
+
+        &:before {
+            content: @fa-var-times-circle;
+        }
+    }
+
+    .admonition-title {
+        display: none;
+    }
+
+    * {
+        background: none;
+    }
+
+    :last-child {
+        margin-bottom: 0;
+    }
+}
