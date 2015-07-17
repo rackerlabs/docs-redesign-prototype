@@ -2343,6 +2343,9 @@ table {
   height: 1px;
   margin: 1em 0;
 }
+.docs-section > .code .highlight {
+  padding: 1em 0;
+}
 .docs-section > .code pre,
 .docs-section > .code code {
   color: #e0e0d7;
@@ -2595,7 +2598,7 @@ table {
   font-style: normal;
   font-weight: normal;
   color: #ffffff ;
-  padding: 1em 0;
+  padding: 1em;
   margin-bottom: 1em;
   line-height: 1.1em;
   font-size: 1.0em;
