@@ -4,8 +4,29 @@
     width: 100%;
 
     a {
-        border-bottom: solid 1px @link-color;
+        display: inline-block;
+        position: relative;
         text-decoration: none;
+
+        &:after {
+            content: '';
+            display: block;
+            background: transparent;
+            bottom: -0.1em;
+            height: 1px;
+            position: absolute;
+            .transition(~"background 0.1s ease-in-out, bottom 0.1s ease-in-out");
+            width: 100%;
+        }
+
+        &:hover {
+            color: @link-color-hover;
+
+            &:after {
+                background: @link-color-hover;
+                bottom: 0.1em;
+            }
+        }
     }
 
     pre {
@@ -61,6 +82,10 @@
 
             &:hover .headerlink {
                 opacity: 1;
+
+                &:after {
+                    background: none;
+                }
             }
         }
 
