@@ -26,6 +26,7 @@
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-nunjucks-2-html": "^0.2.10",
     "highlight.js": "https://github.com/isagalaev/highlight.js.git#8.6",
     "jquery": "^2.1.4",
     "lodash": "^3.9.3"
