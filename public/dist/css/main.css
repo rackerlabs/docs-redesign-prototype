@@ -2182,8 +2182,28 @@ table {
   clear: both;
 }
 .docs-section a {
-  border-bottom: solid 1px #3498db;
+  display: inline-block;
+  position: relative;
   text-decoration: none;
+}
+.docs-section a:after {
+  content: '';
+  display: block;
+  background: transparent;
+  bottom: -0.1em;
+  height: 1px;
+  position: absolute;
+  -webkit-transition: background 0.1s ease-in-out, bottom 0.1s ease-in-out;
+  -ms-transition: background 0.1s ease-in-out, bottom 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out, bottom 0.1s ease-in-out;
+  width: 100%;
+}
+.docs-section a:hover {
+  color: #2f89c5;
+}
+.docs-section a:hover:after {
+  background: #2f89c5;
+  bottom: 0.1em;
 }
 .docs-section pre {
   overflow-x: auto;
@@ -2268,6 +2288,14 @@ table {
 .docs-section > .description h5:hover .headerlink,
 .docs-section > .description h6:hover .headerlink {
   opacity: 1;
+}
+.docs-section > .description h1:hover .headerlink:after,
+.docs-section > .description h2:hover .headerlink:after,
+.docs-section > .description h3:hover .headerlink:after,
+.docs-section > .description h4:hover .headerlink:after,
+.docs-section > .description h5:hover .headerlink:after,
+.docs-section > .description h6:hover .headerlink:after {
+  background: none;
 }
 .docs-section > .description table {
   margin-bottom: 1.5em;
@@ -2937,6 +2965,30 @@ pre code {
   background: none;
   border-radius: 0;
   padding: 0;
+}
+dl {
+  margin-bottom: 1.5em;
+}
+dl dt {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  margin-right: -0.26rem;
+  margin-left: 0px;
+  vertical-align: top;
+  width: calc( 25%  -  0px );
+  padding-right: 1em;
+  text-align: right;
+}
+dl dd {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  margin-right: -0.26rem;
+  margin-left: 0px;
+  vertical-align: top;
+  width: calc( 75%  -  0px );
+  margin-bottom: 1em;
 }
 .site-header .header-links {
   background: black;
