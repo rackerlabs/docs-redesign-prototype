@@ -30,13 +30,12 @@
         color: white;
 
         &:before {
-            content: @fa-var-lightbulb-o;
+            content: @fa-var-pencil;
         }
     }
 
     &.warning {
         background: @alert-background-warning;
-        box-shadow: inset 0px 0px 0px 1px @text-color;
         color: @text-color;
 
         &:before {
@@ -50,6 +49,20 @@
 
         &:before {
             content: @fa-var-times-circle;
+        }
+    }
+
+    &.tip, &.note, &.danger {
+        a {
+            color: white;
+            border-bottom: solid 1px white;
+        }
+    }
+
+    &.warning {
+        a {
+            color: @text-color;
+            border-bottom: solid 1px @text-color;
         }
     }
 
