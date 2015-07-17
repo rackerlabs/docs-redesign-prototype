@@ -37676,13 +37676,24 @@ var INDICATOR_CHANGE_EVENT = 'drcScrollIndicatorChange';
 angular.module(moduleName, [])
 .factory('scrollIndicator', function ($rootScope) {
     var listenersAdded = false;
-    var indicators, milestones, activeMilestone;
+    var options, indicators, milestones, activeMilestone;
 
 
     return {
-        init: function () {
+        init: function (initOptions) {
+            options = initOptions;
             indicators = $('[data-drc-scroll-indicator]');
-            milestones = $('[data-drc-scroll-milestone]');
+            potentialMilestones = $('['+ options.attribute +']');
+
+            milestones = [];
+
+            potentialMilestones.each(function () {
+                if($('[data-drc-scroll-indicator="' + this.getAttribute(options.attribute) + '"]').length !== 0) {
+                    milestones.push(this);
+                }
+            });
+
+            milestones = $(milestones);
 
             activeMilestone = indicators[0].getAttribute('data-drc-scroll-indicator');
             $rootScope.$broadcast(INDICATOR_CHANGE_EVENT, activeMilestone);
@@ -37719,10 +37730,10 @@ angular.module(moduleName, [])
             }
 
             if(
-                closestMilestone.element.getAttribute('data-drc-scroll-milestone') !==
+                closestMilestone.element.getAttribute(options.attribute) !==
                 activeMilestone
             ) {
-                activeMilestone = closestMilestone.element.getAttribute('data-drc-scroll-milestone');
+                activeMilestone = closestMilestone.element.getAttribute(options.attribute);
                 $rootScope.$broadcast(INDICATOR_CHANGE_EVENT, activeMilestone);
             }
 
@@ -37745,7 +37756,9 @@ angular.module(moduleName, [])
             });
         },
         link: function ($scope, $element, $attrs) {
-            scrollIndicator.init();
+            scrollIndicator.init({
+                attribute: $attrs.useAttribute || 'data-drc-scroll-milestone'
+            });
         }
     };
 });

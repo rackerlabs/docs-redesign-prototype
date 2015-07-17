@@ -83,6 +83,20 @@ module.exports = function (grunt) {
                         ext: '.html'
                     }
                 ]
+            },
+            build: {
+                options: {
+                    paths: 'public/src/html'
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'public/src/html',
+                        src: './*.html',
+                        dest: './',
+                        ext: '.html'
+                    }
+                ]
             }
         },
         watch: {
@@ -118,5 +132,5 @@ module.exports = function (grunt) {
 
     grunt.registerTask('serve', ['connect:server']);
     grunt.registerTask('dev', ['nunjucks:dev', 'less:dev', 'browserify:dev', 'concurrent:dev']);
-    grunt.registerTask('build', ['less:build', 'browserify:dev', 'copy:images', 'copy:fonts']);
+    grunt.registerTask('build', ['nunjucks:build', 'less:build', 'browserify:dev', 'copy:images', 'copy:fonts']);
 };
