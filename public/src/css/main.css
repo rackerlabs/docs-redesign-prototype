@@ -2773,39 +2773,62 @@ table {
 }
 /* line 6, public/src/css/less/components/docs-section.less */
 .docs-section a {
-  border-bottom: solid 1px #3498db;
+  display: inline-block;
+  position: relative;
   text-decoration: none;
 }
 /* line 11, public/src/css/less/components/docs-section.less */
+.docs-section a:after {
+  content: '';
+  display: block;
+  background: transparent;
+  bottom: -0.1em;
+  height: 1px;
+  position: absolute;
+  -webkit-transition: background 0.1s ease-in-out, bottom 0.1s ease-in-out;
+  -ms-transition: background 0.1s ease-in-out, bottom 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out, bottom 0.1s ease-in-out;
+  width: 100%;
+}
+/* line 22, public/src/css/less/components/docs-section.less */
+.docs-section a:hover {
+  color: #2f89c5;
+}
+/* line 25, public/src/css/less/components/docs-section.less */
+.docs-section a:hover:after {
+  background: #2f89c5;
+  bottom: 0.1em;
+}
+/* line 32, public/src/css/less/components/docs-section.less */
 .docs-section pre {
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 0.5em;
 }
-/* line 16, public/src/css/less/components/docs-section.less */
+/* line 37, public/src/css/less/components/docs-section.less */
 .docs-section pre::-webkit-scrollbar {
   background: transparent;
   height: 10px;
   width: 10px;
 }
-/* line 22, public/src/css/less/components/docs-section.less */
+/* line 43, public/src/css/less/components/docs-section.less */
 .docs-section pre::-webkit-scrollbar-track:horizontal {
   background: transparent;
 }
-/* line 26, public/src/css/less/components/docs-section.less */
+/* line 47, public/src/css/less/components/docs-section.less */
 .docs-section pre::-webkit-scrollbar-thumb:horizontal {
   background: #5e6470;
   border-radius: 10px;
 }
 @media (min-width: 1025px) {
-  /* line 33, public/src/css/less/components/docs-section.less */
+  /* line 54, public/src/css/less/components/docs-section.less */
   .docs-section > .description {
     float: left;
     padding-right: 35px;
     width: 50%;
   }
 }
-/* line 40, public/src/css/less/components/docs-section.less */
+/* line 61, public/src/css/less/components/docs-section.less */
 .docs-section > .description h1 .headerlink,
 .docs-section > .description h2 .headerlink,
 .docs-section > .description h3 .headerlink,
@@ -2847,7 +2870,7 @@ table {
 .docs-section > .description h6 .headerlink.pull-right {
   margin-left: .3em;
 }
-/* line 51, public/src/css/less/components/docs-section.less */
+/* line 72, public/src/css/less/components/docs-section.less */
 .docs-section > .description h1 .headerlink:before,
 .docs-section > .description h2 .headerlink:before,
 .docs-section > .description h3 .headerlink:before,
@@ -2861,7 +2884,7 @@ table {
   text-indent: 0;
   top: 0;
 }
-/* line 62, public/src/css/less/components/docs-section.less */
+/* line 83, public/src/css/less/components/docs-section.less */
 .docs-section > .description h1:hover .headerlink,
 .docs-section > .description h2:hover .headerlink,
 .docs-section > .description h3:hover .headerlink,
@@ -2870,7 +2893,16 @@ table {
 .docs-section > .description h6:hover .headerlink {
   opacity: 1;
 }
-/* line 67, public/src/css/less/components/docs-section.less */
+/* line 86, public/src/css/less/components/docs-section.less */
+.docs-section > .description h1:hover .headerlink:after,
+.docs-section > .description h2:hover .headerlink:after,
+.docs-section > .description h3:hover .headerlink:after,
+.docs-section > .description h4:hover .headerlink:after,
+.docs-section > .description h5:hover .headerlink:after,
+.docs-section > .description h6:hover .headerlink:after {
+  background: none;
+}
+/* line 92, public/src/css/less/components/docs-section.less */
 .docs-section > .description table {
   margin-bottom: 1.5em;
   max-width: 100%;
@@ -2905,7 +2937,7 @@ table {
 .docs-section > .description table tbody tr:nth-child(even) th {
   background: #f7f7f7;
 }
-/* line 75, public/src/css/less/components/docs-section.less */
+/* line 100, public/src/css/less/components/docs-section.less */
 .docs-section > .code h2 .copy-link,
 .docs-section > .code h3 .copy-link,
 .docs-section > .code h4 .copy-link,
@@ -2916,26 +2948,30 @@ table {
   right: 0;
   width: 1em;
 }
-/* line 84, public/src/css/less/components/docs-section.less */
+/* line 109, public/src/css/less/components/docs-section.less */
 .docs-section > .code hr {
   background: rgba(255, 255, 255, 0.2);
   border: none;
   height: 1px;
   margin: 1em 0;
 }
-/* line 92, public/src/css/less/components/docs-section.less */
+/* line 117, public/src/css/less/components/docs-section.less */
+.docs-section > .code .highlight {
+  padding: 1em 0;
+}
+/* line 121, public/src/css/less/components/docs-section.less */
 .docs-section > .code pre,
 .docs-section > .code code {
   color: #e0e0d7;
 }
 @media (min-width: 1025px) {
-  /* line 96, public/src/css/less/components/docs-section.less */
+  /* line 125, public/src/css/less/components/docs-section.less */
   .docs-section > .code {
     color: white;
     margin-left: 50%;
     padding: 0 35px;
   }
-  /* line 101, public/src/css/less/components/docs-section.less */
+  /* line 130, public/src/css/less/components/docs-section.less */
   .docs-section > .code h3 {
     border-bottom: solid 1px rgba(224, 224, 215, 0.3);
     color: white;
@@ -3211,7 +3247,7 @@ table {
   font-style: normal;
   font-weight: normal;
   color: #ffffff ;
-  padding: 1em 0;
+  padding: 1em;
   margin-bottom: 1em;
   line-height: 1.1em;
   font-size: 1.0em;
@@ -3661,6 +3697,33 @@ pre code {
   background: none;
   border-radius: 0;
   padding: 0;
+}
+/* line 94, public/src/css/less/typography.less */
+dl {
+  margin-bottom: 1.5em;
+}
+/* line 97, public/src/css/less/typography.less */
+dl dt {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  margin-right: -0.26rem;
+  margin-left: 0px;
+  vertical-align: top;
+  width: calc( 25%  -  0px );
+  padding-right: 1em;
+  text-align: right;
+}
+/* line 103, public/src/css/less/typography.less */
+dl dd {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  margin-right: -0.26rem;
+  margin-left: 0px;
+  vertical-align: top;
+  width: calc( 75%  -  0px );
+  margin-bottom: 1em;
 }
 /* line 2, public/src/css/less/modules/site-header.less */
 .site-header .header-links {
