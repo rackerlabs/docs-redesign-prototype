@@ -72,6 +72,7 @@ module.exports = function (grunt) {
         nunjucks: {
             dev: {
                 options: {
+                    data: {},
                     paths: 'public/src/html'
                 },
                 files: [
