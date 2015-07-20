@@ -2008,6 +2008,7 @@ table {
   background: #e6e6e6;
   border-radius: 1px;
   margin-bottom: 1.5em;
+  min-height: 48px;
   padding: 10px 10px 10px 50px;
 }
 .admonition:before {
@@ -2182,28 +2183,12 @@ table {
   clear: both;
 }
 .docs-section a {
-  display: inline-block;
+  display: inline;
   position: relative;
-  text-decoration: none;
-}
-.docs-section a:after {
-  content: '';
-  display: block;
-  background: transparent;
-  bottom: -0.1em;
-  height: 1px;
-  position: absolute;
-  -webkit-transition: background 0.1s ease-in-out, bottom 0.1s ease-in-out;
-  -ms-transition: background 0.1s ease-in-out, bottom 0.1s ease-in-out;
-  transition: background 0.1s ease-in-out, bottom 0.1s ease-in-out;
-  width: 100%;
+  text-decoration: underline;
 }
 .docs-section a:hover {
   color: #2f89c5;
-}
-.docs-section a:hover:after {
-  background: #2f89c5;
-  bottom: 0.1em;
 }
 .docs-section pre {
   overflow-x: auto;
@@ -2357,7 +2342,7 @@ table {
     padding: 0 35px;
   }
   .docs-section > .code h3 {
-    border-bottom: solid 1px rgba(224, 224, 215, 0.3);
+    border-bottom: dotted 1px rgba(224, 224, 215, 0.3);
     color: white;
     line-height: 2;
   }

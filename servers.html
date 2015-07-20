@@ -69,6 +69,20 @@
             <li data-drc-scroll-indicator="create-more-information"><a href="#create-more-information">More Information</a></li>
         </ul>
     </li>
+    <li data-drc-scroll-indicator="update-server">
+        <a href="#update-server">Update a Server</a>
+        <ul>
+            <li data-drc-scroll-indicator="update-api-request"><a href="#update-api-request">API Request</a></li>
+            <li data-drc-scroll-indicator="update-api-response"><a href="#update-api-response">API Response</a></li>
+        </ul>
+    </li>
+    <li data-drc-scroll-indicator="delete-server">
+        <a href="#delete-server">Delete a Server</a>
+        <ul>
+            <li data-drc-scroll-indicator="delete-api-request"><a href="#delete-api-request">API Request</a></li>
+            <li data-drc-scroll-indicator="delete-api-response"><a href="#delete-api-response">API Response</a></li>
+        </ul>
+    </li>
 </ul>
 
             </div>
@@ -111,15 +125,57 @@
 </section>
 <section class="docs-section">
     <div class="description">
-        <h3 id="list-api-request" data-drc-scroll-milestone="list-api-request">API Request</h3>
+        <h3 id="list-api-request" data-drc-scroll-milestone="list-api-request">
+            API Request
+            <a href="#list-api-request" class="headerlink">#</a>
+        </h3>
         <p>To retrieve a summary list of servers in a particular region, send a <code>GET</code> HTTP request to <code>/v2/{tenantId}/servers</code>, replacing <code>{tenantId}</code> with your <a href="">tenant ID</a>.</p>
         <p>To retrieve a detailed list of servers in a particular region, send a <code>GET</code> HTTP request to <code>/v2/{tenantId}/servers/detail</code>, replacing <code>{tenantId}</code> with your <a href="">tenant ID</a>.</p>
         <p>Various filters may be applied to either the summary or detailed lists by appending any of the following query string parameters to the request:</p>
 
-        <ul>
-            <li><code>image</code>: Only list servers with this image ID. For a list of images, see <a href="">Section 2.7.1, “List Images”</a>.</li>
-            <li><code></code></li>
-        </ul>
+        <table>
+            <caption>Filter Parameters</caption>
+            <thead>
+                <tr>
+                    <th>Parameter Key</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>image</code></td>
+                    <td>Only list servers with this image ID. For a list of images, see <a href="">Section 2.7.1, “List Images”</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>flavor</code></td>
+                    <td>Only list servers with this flavor ID. For a list of flavors, see <a href="">Section 2.6.1, “List Flavors”</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>name</code></td>
+                    <td>Only list servers with this name.</td>
+                </tr>
+                <tr>
+                    <td><code>status</code></td>
+                    <td>Only list servers with this status. See <a href="">Server Status Values</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>marker</code></td>
+                    <td>The ID of the last item in the previous page of entries. See <a href="">Section 1.6, “Paginated Collections”</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>limit</code></td>
+                    <td>The number of servers to show in a single page.</td>
+                </tr>
+                <tr>
+                    <td><code>changes-since</code></td>
+                    <td>Only show servers that have changed since this date/time. See <a href="">Section 1.7, “Efficient Polling with the <code>Changes-Since</code> Parameter”</a>.</td>
+                </tr>
+                <tr>
+                    <td><code>RAX-SI:image_schedule</code></td>
+                    <td>Whether scheduled images are enabled or not. If the value is the boolean keyword <code>TRUE</code>, the list contains all servers that have an image schedule resource set on them. If the value is the boolean keyword <code>FALSE</code>, the list contains all servers that do not have an image schedule. (This URI parameter is added by the Rackspace Scheduled Images API Extension. See <a href="">Section 3.5, “Scheduled Images Extension”</a>).</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="code">
         <h3>API Request</h3>
@@ -145,7 +201,206 @@ Accept: application/json
 </section>
 <section class="docs-section">
     <div class="description">
-        <h2 data-drc-scroll-milestone="create-server" id="create-server">Create a Server</h2>
+        <h3 data-drc-scroll-milestone="list-api-response" id="list-api-response">
+            API Response
+            <a href="#list-api-response" class="headerlink">#</a>
+        </h3>
+        <p>The API will respond with a JSON document that has a single property named <code>servers</code>. This property will contain an array of objects, each of which represents a single server.</p>
+    </div>
+    <div class="code">
+        <h3>API Response</h3>
+        <div class="highlight"><pre><span class="p">{</span>
+    <span class="nt">&quot;servers&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACTIVE&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-07-17T13:54:56Z&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;hostId&quot;</span><span class="p">:</span> <span class="s2">&quot;0b192345b527aa1d97ea4e989aeeff8582fd404e9c50f65b97a32834&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;addresses&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                        <span class="nt">&quot;addr&quot;</span><span class="p">:</span> <span class="s2">&quot;64.49.226.119&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                        <span class="nt">&quot;addr&quot;</span><span class="p">:</span> <span class="s2">&quot;2001:4800:7810:512:be76:4eff:fe04:f021&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;private&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                        <span class="nt">&quot;addr&quot;</span><span class="p">:</span> <span class="s2">&quot;10.181.1.71&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/v2/123456/servers/39e6d789-52be-448a-b949-9b6f4b5865e2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;self&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/123456/servers/39e6d789-52be-448a-b949-9b6f4b5865e2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;bookmark&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;key_name&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3afe97b2-26dc-49c5-a2cc-a2fc8d80c001&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/123456/images/3afe97b2-26dc-49c5-a2cc-a2fc8d80c001&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;bookmark&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;RAX-PUBLIC-IP-ZONE-ID:publicIPZoneId&quot;</span><span class="p">:</span> <span class="s2">&quot;695c1e46fe17571fe18fe724680b1ee21ecc3c9846561e7b00755941&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;OS-EXT-STS:task_state&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;OS-EXT-STS:vm_state&quot;</span><span class="p">:</span> <span class="s2">&quot;active&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;flavor&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/123456/flavors/2&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;bookmark&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;39e6d789-52be-448a-b949-9b6f4b5865e2&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;user_id&quot;</span><span class="p">:</span> <span class="s2">&quot;90422bda06e645b081afa9c96d6e6eea&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;test-server&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-07-17T13:50:51Z&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;tenant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;OS-DCF:diskConfig&quot;</span><span class="p">:</span> <span class="s2">&quot;AUTO&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;accessIPv4&quot;</span><span class="p">:</span> <span class="s2">&quot;64.49.226.119&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;accessIPv6&quot;</span><span class="p">:</span> <span class="s2">&quot;2001:4800:7810:512:be76:4eff:fe04:f021&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;progress&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="nt">&quot;OS-EXT-STS:power_state&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;config_drive&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+    </div>
+</section>
+<section class="docs-section">
+    <div class="description">
+        <p>Servers may have a variety of statuses during their lifecycle:</p>
+        <table>
+            <caption>Server Statuses</caption>
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>ACTIVE</code></td>
+                    <td>The server is active and ready to use.</td>
+                </tr>
+                <tr>
+                    <td><code>BUILD</code></td>
+                    <td>The server is being built.</td>
+                </tr>
+                <tr>
+                    <td><code>DELETED</code></td>
+                    <td>The server was deleted. The list servers API operation does not show servers with a status of DELETED. To list deleted servers, use the changes-since parameter. See Section 1.7, “Efficient Polling with the Changes-Since Parameter”.</td>
+                </tr>
+                <tr>
+                    <td><code>ERROR</code></td>
+                    <td>The requested operation failed and the server is in an error state.</td>
+                </tr>
+                <tr>
+                    <td><code>HARD_REBOOT</code></td>
+                    <td>The server is going through a hard reboot. A hard reboot power cycles your server, which performs an immediate shutdown and restart. See Section 2.4.2, “Reboot Server”.</td>
+                </tr>
+                <tr>
+                    <td><code>MIGRATING</code></td>
+                    <td>The server is being moved from one physical node to another physical node. Server migration is a Rackspace extension.</td>
+                </tr>
+                <tr>
+                    <td><code>PASSWORD</code></td>
+                    <td>The password for the server is being changed. See Section 2.4.1, “Change Administrator Password”.</td>
+                </tr>
+                <tr>
+                    <td><code>REBOOT</code></td>
+                    <td>The server is going through a soft reboot. During a soft reboot, the operating system is signaled to restart, which allows for a graceful shutdown and restart of all processes. See Section 2.4.2, “Reboot Server”.</td>
+                </tr>
+                <tr>
+                    <td><code>REBUILD</code></td>
+                    <td>The server is being rebuilt from an image. See Section 2.4.3, “Rebuild Server”.</td>
+                </tr>
+                <tr>
+                    <td><code>RESCUE</code></td>
+                    <td>The server is in rescue mode. Rescue mode is a Rackspace extension. See Section 3.3, “Rescue Mode Extension”.</td>
+                </tr>
+                <tr>
+                    <td><code>RESIZE</code></td>
+                    <td>The server is being resized and is inactive until the resize operation completes. See Section 2.4.4, “Resize Server”.</td>
+                </tr>
+                <tr>
+                    <td><code>REVERT_RESIZE</code></td>
+                    <td>A resized or migrated server is being reverted to its previous size. The destination server is being cleaned up and the original source server is restarting. For a server that was resized, see Section 2.4.4, “Resize Server”. Server migration is a Rackspace extension.</td>
+                </tr>
+                <tr>
+                    <td><code>SUSPENDED</code></td>
+                    <td>The server is inactive, either by request or necessity. Review support tickets or contact Rackspace support to determine why the server is in this state.</td>
+                </tr>
+                <tr>
+                    <td><code>UNKNOWN</code></td>
+                    <td>The server is in an unknown state. Contact Rackspace support.</td>
+                </tr>
+                <tr>
+                    <td><code>VERIFY_RESIZE</code></td>
+                    <td>The server is waiting for the resize operation to be confirmed so that the original server can be removed.</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>Error Response Codes</caption>
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>400</code></td>
+                    <td>Bad Request. Typically caused by a parameter of the wrong type.</td>
+                </tr>
+                <tr>
+                    <td><code>401</code></td>
+                    <td>Unauthorized. Typically caused by an invalid authentication token or tenant ID.</td>
+                </tr>
+                <tr>
+                    <td><code>403</code></td>
+                    <td>Forbidden.</td>
+                </tr>
+                <tr>
+                    <td><code>405</code></td>
+                    <td>Method Not Allowed. Caused by sending a request with an invalid HTTP verb. For listing servers, <code>GET</code> is the only valid request type.</td>
+                </tr>
+                <tr>
+                    <td><code>413</code></td>
+                    <td>Over Limit. You have exceeded your limit for API requests of this type.</td>
+                </tr>
+                <tr>
+                    <td><code>503</code></td>
+                    <td>Service Unavailable. An internal error is is preventing the API from serving requests.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="code"></div>
+</section>
+<section class="docs-section">
+    <div class="description">
+        <h2 data-drc-scroll-milestone="create-server" id="create-server">
+            Create a Server
+            <a href="#create-server" class="headerlink">#</a>
+        </h2>
         <p>This operation asynchronously provisions a new server. After submitting a JSON document with configuration details for the new server, the API will provide a progress URL that can be polled to monitor the server's creation status.</p>
     </div>
 </section>
@@ -257,9 +512,7 @@ Accept: application/json
             </pre>
         </div>
         <h5>Request Body</h5>
-        <div class="highlight">
-            <pre>
-<span class="p">{</span>
+        <div class="highlight"><pre><span class="p">{</span>
     <span class="nt">&quot;server&quot;</span> <span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;api-test-server-1&quot;</span><span class="p">,</span>
         <span class="nt">&quot;imageRef&quot;</span> <span class="p">:</span> <span class="s2">&quot;3afe97b2-26dc-49c5-a2cc-a2fc8d80c001&quot;</span><span class="p">,</span>
@@ -272,26 +525,26 @@ Accept: application/json
         <span class="p">},</span>
         <span class="nt">&quot;networks&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
-            <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;4ebd35cf-bfe7-4d93-b0d8-eb468ce2245a&quot;</span>
+                <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;4ebd35cf-bfe7-4d93-b0d8-eb468ce2245a&quot;</span>
             <span class="p">},</span>
             <span class="p">{</span>
-            <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span>
+                <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span>
             <span class="p">},</span>
             <span class="p">{</span>
-            <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;11111111-1111-1111-1111-111111111111&quot;</span>
-            <span class="p">}</span>
-            <span class="p">],</span>
-            <span class="nt">&quot;personality&quot;</span> <span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-            <span class="nt">&quot;path&quot;</span> <span class="p">:</span> <span class="s2">&quot;/etc/banner.txt&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;contents&quot;</span> <span class="p">:</span> <span class="s2">&quot;ICAgICAgDQoiQSBjbG91ZCBkb2VzIG5vdCBrbm93IHdoeSBpdCBtb3ZlcyBpbiBqdXN0IHN1Y2ggYSBkaXJlY3Rpb24gYW5kIGF0IHN1Y2ggYSBzcGVlZC4uLkl0IGZlZWxzIGFuIGltcHVsc2lvbi4uLnRoaXMgaXMgdGhlIHBsYWNlIHRvIGdvIG5vdy4gQnV0IHRoZSBza3kga25vd3MgdGhlIHJlYXNvbnMgYW5kIHRoZSBwYXR0ZXJucyBiZWhpbmQgYWxsIGNsb3VkcywgYW5kIHlvdSB3aWxsIGtub3csIHRvbywgd2hlbiB5b3UgbGlmdCB5b3Vyc2VsZiBoaWdoIGVub3VnaCB0byBzZWUgYmV5b25kIGhvcml6b25zLiINCg0KLVJpY2hhcmQgQmFjaA==&quot;</span>
+                <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;11111111-1111-1111-1111-111111111111&quot;</span>
             <span class="p">}</span>
         <span class="p">],</span>
-<span class="nt">&quot;config_drive&quot;</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="nt">&quot;personality&quot;</span> <span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;path&quot;</span> <span class="p">:</span> <span class="s2">&quot;/etc/banner.txt&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;contents&quot;</span> <span class="p">:</span> <span class="s2">&quot;ICAgICAgDQoiQSBjbG91ZCBkb2VzIG5vdCBrbm93IHdoeSBpdCBtb3ZlcyBpbiBqdXN0IHN1Y2ggYSBkaXJlY3Rpb24gYW5kIGF0IHN1Y2ggYSBzcGVlZC4uLkl0IGZlZWxzIGFuIGltcHVsc2lvbi4uLnRoaXMgaXMgdGhlIHBsYWNlIHRvIGdvIG5vdy4gQnV0IHRoZSBza3kga25vd3MgdGhlIHJlYXNvbnMgYW5kIHRoZSBwYXR0ZXJucyBiZWhpbmQgYWxsIGNsb3VkcywgYW5kIHlvdSB3aWxsIGtub3csIHRvbywgd2hlbiB5b3UgbGlmdCB5b3Vyc2VsZiBoaWdoIGVub3VnaCB0byBzZWUgYmV5b25kIGhvcml6b25zLiINCg0KLVJpY2hhcmQgQmFjaA==&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;config_drive&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
 <span class="p">}</span>
-<span class="p">}</span>
-            </pre>
-        </div>
+</pre></div>
+
     </div>
 </section>
 <section class="docs-section">
@@ -371,23 +624,24 @@ Location: https://dfw.servers.api.rackspacecloud.com/010101/servers/ed5c7754-29b
         </div>
         <h5>Response Body</h5>
         <div class="highlight"><pre><span class="p">{</span>
-<span class="nt">&quot;server&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;2f881cd9-44c5-4178-a176-1bc07eb1cfb9&quot;</span><span class="p">,</span>
-<span class="nt">&quot;adminPass&quot;</span><span class="p">:</span><span class="s2">&quot;PkJ68cNqoQP2&quot;</span><span class="p">,</span>
-<span class="nt">&quot;OS-DCF:diskConfig&quot;</span><span class="p">:</span><span class="s2">&quot;AUTO&quot;</span><span class="p">,</span>
-<span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="p">{</span>
-<span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/010101/servers/ed5c7754-29b6-45fa-96cb-ab64958c8c0a&quot;</span><span class="p">,</span>
-<span class="nt">&quot;rel&quot;</span><span class="p">:</span><span class="s2">&quot;self&quot;</span>
-<span class="p">},</span>
-<span class="p">{</span>
-<span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/010101/servers/ed5c7754-29b6-45fa-96cb-ab64958c8c0a&quot;</span><span class="p">,</span>
-<span class="nt">&quot;rel&quot;</span><span class="p">:</span><span class="s2">&quot;bookmark&quot;</span>
-<span class="p">}</span>
-<span class="p">]</span>
-<span class="p">}</span>
+    <span class="nt">&quot;server&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;2f881cd9-44c5-4178-a176-1bc07eb1cfb9&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;adminPass&quot;</span><span class="p">:</span><span class="s2">&quot;PkJ68cNqoQP2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;OS-DCF:diskConfig&quot;</span><span class="p">:</span><span class="s2">&quot;AUTO&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/010101/servers/ed5c7754-29b6-45fa-96cb-ab64958c8c0a&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;rel&quot;</span><span class="p">:</span><span class="s2">&quot;self&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/010101/servers/ed5c7754-29b6-45fa-96cb-ab64958c8c0a&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;rel&quot;</span><span class="p">:</span><span class="s2">&quot;bookmark&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+
 
     </div>
 </section>
@@ -420,56 +674,56 @@ Accept: application/json
         <h5>Response Body</h5>
         <div class="highlight">
             <pre><span class="p">{</span>
-<span class="nt">&quot;server&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;BUILD&quot;</span><span class="p">,</span>
-<span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-07-16T21:22:38Z&quot;</span><span class="p">,</span>
-<span class="nt">&quot;hostId&quot;</span><span class="p">:</span> <span class="s2">&quot;73f8f30edf612f5bd28637e3fab0edbcc3dd87faf1f3d81aa9c9f83b&quot;</span><span class="p">,</span>
-<span class="nt">&quot;addresses&quot;</span><span class="p">:</span> <span class="p">{},</span>
-<span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="p">{</span>
-<span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/v2/123456/servers/d54891dd-584f-43c4-9c7a-e95815392f7d&quot;</span><span class="p">,</span>
-<span class="nt">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;self&quot;</span>
-<span class="p">},</span>
-<span class="p">{</span>
-<span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/123456/servers/d54891dd-584f-43c4-9c7a-e95815392f7d&quot;</span><span class="p">,</span>
-<span class="nt">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;bookmark&quot;</span>
-<span class="p">}</span>
-<span class="p">],</span>
-<span class="nt">&quot;key_name&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-<span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3afe97b2-26dc-49c5-a2cc-a2fc8d80c001&quot;</span><span class="p">,</span>
-<span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="p">{</span>
-<span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/123456/images/3afe97b2-26dc-49c5-a2cc-a2fc8d80c001&quot;</span><span class="p">,</span>
-<span class="nt">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;bookmark&quot;</span>
-<span class="p">}</span>
-<span class="p">]</span>
-<span class="p">},</span>
-<span class="nt">&quot;RAX-PUBLIC-IP-ZONE-ID:publicIPZoneId&quot;</span><span class="p">:</span> <span class="s2">&quot;695c1e46fe17571fe18fe724680b1ee21ecc3c9846561e7b00755941&quot;</span><span class="p">,</span>
-<span class="nt">&quot;OS-EXT-STS:task_state&quot;</span><span class="p">:</span> <span class="s2">&quot;spawning&quot;</span><span class="p">,</span>
-<span class="nt">&quot;OS-EXT-STS:vm_state&quot;</span><span class="p">:</span> <span class="s2">&quot;building&quot;</span><span class="p">,</span>
-<span class="nt">&quot;flavor&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
-<span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="p">{</span>
-<span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/123456/flavors/2&quot;</span><span class="p">,</span>
-<span class="nt">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;bookmark&quot;</span>
-<span class="p">}</span>
-<span class="p">]</span>
-<span class="p">},</span>
-<span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d54891dd-584f-43c4-9c7a-e95815392f7d&quot;</span><span class="p">,</span>
-<span class="nt">&quot;user_id&quot;</span><span class="p">:</span> <span class="s2">&quot;904224da0696454081afa9c96d69699a&quot;</span><span class="p">,</span>
-<span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;api-test-server-1&quot;</span><span class="p">,</span>
-<span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-07-16T21:22:33Z&quot;</span><span class="p">,</span>
-<span class="nt">&quot;tenant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
-<span class="nt">&quot;OS-DCF:diskConfig&quot;</span><span class="p">:</span> <span class="s2">&quot;AUTO&quot;</span><span class="p">,</span>
-<span class="nt">&quot;accessIPv4&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="nt">&quot;accessIPv6&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="nt">&quot;progress&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
-<span class="nt">&quot;OS-EXT-STS:power_state&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-<span class="nt">&quot;config_drive&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{}</span>
-<span class="p">}</span>
+    <span class="nt">&quot;server&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;BUILD&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-07-16T21:22:38Z&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;hostId&quot;</span><span class="p">:</span> <span class="s2">&quot;73f8f30edf612f5bd28637e3fab0edbcc3dd87faf1f3d81aa9c9f83b&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;addresses&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/v2/123456/servers/d54891dd-584f-43c4-9c7a-e95815392f7d&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;self&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/123456/servers/d54891dd-584f-43c4-9c7a-e95815392f7d&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;bookmark&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;key_name&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3afe97b2-26dc-49c5-a2cc-a2fc8d80c001&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/123456/images/3afe97b2-26dc-49c5-a2cc-a2fc8d80c001&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;bookmark&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;RAX-PUBLIC-IP-ZONE-ID:publicIPZoneId&quot;</span><span class="p">:</span> <span class="s2">&quot;695c1e46fe17571fe18fe724680b1ee21ecc3c9846561e7b00755941&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;OS-EXT-STS:task_state&quot;</span><span class="p">:</span> <span class="s2">&quot;spawning&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;OS-EXT-STS:vm_state&quot;</span><span class="p">:</span> <span class="s2">&quot;building&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;flavor&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/123456/flavors/2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;rel&quot;</span><span class="p">:</span> <span class="s2">&quot;bookmark&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d54891dd-584f-43c4-9c7a-e95815392f7d&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;user_id&quot;</span><span class="p">:</span> <span class="s2">&quot;904224da0696454081afa9c96d69699a&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;api-test-server-1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-07-16T21:22:33Z&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tenant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;OS-DCF:diskConfig&quot;</span><span class="p">:</span> <span class="s2">&quot;AUTO&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;accessIPv4&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;accessIPv6&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;progress&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="nt">&quot;OS-EXT-STS:power_state&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;config_drive&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="p">}</span>
 <span class="p">}</span>
             </pre>
         </div>
@@ -483,6 +737,60 @@ Accept: application/json
         </h3>
         <p>You can get additional attributes by issuing a GET requests on the server. See <a href="">Section 2.1.4, “Get Server Details”</a>.</p>
         <p>See <a href="">Section 3.8, “Config Drive Extension”</a> for details about using config_drive when creating servers.</p>
+    </div>
+    <div class="code"></div>
+</section>
+<section class="docs-section">
+    <div class="description">
+        <h3 data-drc-scroll-milestone="update-server" id="update-server">
+            Update a Server
+            <a href="#update-server" class="headerlink">#</a>
+        </h3>
+    </div>
+    <div class="code"></div>
+</section>
+<section class="docs-section">
+    <div class="description">
+        <h4 id="update-api-request" data-drc-scroll-milestone="update-api-request">
+            API Request
+            <a href="#update-api-request" class="headerlink">#</a>
+        </h4>
+    </div>
+    <div class="code"></div>
+</section>
+<section class="docs-section">
+    <div class="description">
+        <h4 id="update-api-response" data-drc-scroll-milestone="update-api-response">
+            API Response
+            <a href="#update-api-response" class="headerlink">#</a>
+        </h4>
+    </div>
+    <div class="code"></div>
+</section>
+<section class="docs-section">
+    <div class="description">
+        <h3 data-drc-scroll-milestone="delete-server" id="delete-server">
+            Delete a Server
+            <a href="#delete-server" class="headerlink">#</a>
+        </h3>
+    </div>
+    <div class="code"></div>
+</section>
+<section class="docs-section">
+    <div class="description">
+        <h4 id="delete-api-request" data-drc-scroll-milestone="delete-api-request">
+            API Request
+            <a href="#delete-api-request" class="headerlink">#</a>
+        </h4>
+    </div>
+    <div class="code"></div>
+</section>
+<section class="docs-section">
+    <div class="description">
+        <h4 id="delete-api-response" data-drc-scroll-milestone="delete-api-response">
+            API Response
+            <a href="#delete-api-response" class="headerlink">#</a>
+        </h4>
     </div>
     <div class="code"></div>
 </section>
