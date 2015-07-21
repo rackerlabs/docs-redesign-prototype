@@ -3,27 +3,23 @@
 {% block leftNav %}
 <ul>
     <li data-drc-scroll-indicator="preface" data-use-attribute="id">
-        <a href="#preface">Preface</a>
+        <a href="#preface">Overview</a>
         <ul>
             <li data-drc-scroll-indicator="intended-audience" data-use-attribute="id"><a href="">Intended Audience</a></li>
+            <li data-drc-scroll-indicator="additional-resources" data-use-attribute="id"><a href="">Additional Resources</a></li>
             <li data-drc-scroll-indicator="rackspace-pricing-and-terms-of-service" data-use-attribute="id"><a href="">Rackspace pricing and terms of service</a></li>
         </ul>
     </li>
-    <li data-drc-scroll-indicator="overview" data-use-attribute="id">
-        <a href="#overview">Overview</a>
+    <li data-drc-scroll-indicator="concepts" data-use-attribute="id">
+        <a href="#overview">Concepts</a>
         <ul>
             <li data-drc-scroll-indicator="images" data-use-attribute="id"><a href="#images">Images</a></li>
-            <li data-drc-scroll-indicator="image-sharing" data-use-attribute="id"><a href="#image-sharing">Image Sharing</a></li>
-            <li data-drc-scroll-indicator="asynchronous-image-tasks" data-use-attribute="id"><a href="#asynchronous-image-tasks">Asynchronous Image Tasks</a></li>
-            <li data-drc-scroll-indicator="statuses" data-use-attribute="id"><a href="#statuses">Statuses</a></li>
-        </ul>
-    </li>
-    <li data-drc-scroll-indicator="concepts" data-use-attribute="id">
-        <a href="#concepts">Concepts</a>
-        <ul>
-            <li data-drc-scroll-indicator="image-entities" data-use-attribute="id"><a href="#">Image Entities</a></li>
+            <li data-drc-scroll-indicator="image-entities" data-use-attribute="id"><a href="#image-sharing">Image Entities</a></li>
             <li data-drc-scroll-indicator="image-identifiers" data-use-attribute="id"><a href="#">Image Identifiers</a></li>
             <li data-drc-scroll-indicator="common-image-properties" data-use-attribute="id"><a href="#">Common Image Properties</a></li>
+            <li data-drc-scroll-indicator="image-sharing" data-use-attribute="id"><a href="#">Image Sharing</a></li>
+            <li data-drc-scroll-indicator="asynchronous-image-tasks" data-use-attribute="id"><a href="#asynchronous-image-tasks">Asynchronous Image Tasks</a></li>
+            <li data-drc-scroll-indicator="statuses" data-use-attribute="id"><a href="#statuses">Statuses</a></li>
             <li data-drc-scroll-indicator="http-patch-method" data-use-attribute="id"><a href="#">HTTP PATCH Method</a></li>
         </ul>
     </li>
@@ -33,44 +29,55 @@
             <li data-drc-scroll-indicator="sending-api-requests-and-receiving-responses" data-use-attribute="id"><a href="">Sending API requests and receiving responses</a></li>
             <li data-drc-scroll-indicator="media-types" data-use-attribute="id"><a href="">Media Types</a></li>
             <li data-drc-scroll-indicator="json-schemas" data-use-attribute="id"><a href="">JSON Schemas</a></li>
-        </ul>
-    </li>
-    <li data-drc-scroll-indicator="how-curl-commands-work" data-use-attribute="id">
-        <a href="#how-curl-commands-work">How cURL Commands Work</a>
-        <ul>
+            <li data-drc-scroll-indicator="how-curl-commands-work" data-use-attribute="id"><a href="#how-curl-commands-work">How cURL Commands Work</a></li>
             <li data-drc-scroll-indicator="authenticate-through-the-rackspace-cloud-identity-service" data-use-attribute="id"><a href="">Authenticate through the Rackspace Cloud Identity Service</a></li>
             <li data-drc-scroll-indicator="role-based-access-control" data-use-attribute="id"><a href="">Role Based Access Control</a></li>
             <li data-drc-scroll-indicator="service-access-endpoints" data-use-attribute="id"><a href="">Service access endpoints</a></li>
         </ul>
     </li>
+    <li data-drc-scroll-indicator="api-operations" data-use-attribute="id">
+        <a href="#api-operations">API Operations</a>
+        <ul>
+            <li data-drc-scroll-indicator="list-images-1" data-use-attribute="id"><a href="#list-images-1">List Images</a></li>
+            <li data-drc-scroll-indicator="get-image-details-1" data-use-attribute="id"><a href="#get-image-details-1">Get Image Details</a></li>
+            <li data-drc-scroll-indicator="update-image-1" data-use-attribute="id"><a href="#update-image-1">Update Image</a></li>
+            <li data-drc-scroll-indicator="delete-image-1" data-use-attribute="id"><a href="#delete-image-1">Delete Image</a></li>
+            <li data-drc-scroll-indicator="get-image-member-details-1" data-use-attribute="id"><a href="#get-image-member-details-1">Get Image Member Details</a></li>
+            <li data-drc-scroll-indicator="create-image-member-1" data-use-attribute="id"><a href="#create-image-member-1">Create Image Member</a></li>
+            <li data-drc-scroll-indicator="delete-image-member-1" data-use-attribute="id"><a href="#delete-image-member-1">Delete Image Member</a></li>
+            <li data-drc-scroll-indicator="update-image-member-1" data-use-attribute="id"><a href="#update-image-member-1">Update Image Member</a></li>
+        </ul>
+    </li>
 </ul>
 {% endblock %}
 {% block content %}
-<ul class="language-selector" data-drc-sticky data-offset-top="322.5">
-    <li><a href="" data-drc-language-selector="cli"><span>CLI</span></a></li>
-    <li><a href="" data-drc-language-selector="curl"><span>cURL</span></a></li>
-    <li><a href="" data-drc-language-selector="go"><span>Go</span></a></li>
-    <li><a href="" data-drc-language-selector="java"><span>Java</span></a></li>
-    <li><a href="" data-drc-language-selector="cs"><span>.NET</span></a></li>
-    <li><a href="" data-drc-language-selector="node"><span>Node.js</span></a></li>
-    <li><a href="" data-drc-language-selector="php"><span>PHP</span></a></li>
-    <li><a href="" data-drc-language-selector="python"><span>Python</span></a></li>
-    <li><a href="" data-drc-language-selector="ruby"><span>Ruby</span></a></li>
-</ul>
-
-<header class="docs-intro" id="cloud-images">
-    <h1>Cloud Images<a class="headerlink" href="#cloud-images" title="Permalink to this headline">#</a></h1>
-</header>
 <section class="docs-section">
-    <div class="description">
-<div class="section" id="preface">
-<h2>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">#</a></h2>
-<p>The Rackspace Cloud Images service offers retrieval, storage, and metadata assignment for
-Rackspace Cloud Server images through a simple Representational State Transfer (REST)
-web service interface.</p>
-<p>We welcome feedback, comments, and bug reports. Log into the Rackspace
-customer portal at <a class="reference external" href="https://feedback.rackspace.com/">https://feedback.rackspace.com/</a>.</p>
 
+
+  <div class="section" id="cloud-images">
+<h1>Cloud Images<a class="headerlink" href="#cloud-images" title="Permalink to this headline">#</a></h1>
+<p>The Rackspace Cloud Images service enables developers to create and
+manipulate images, image members, and associated metadata through a
+simple Representational State Transfer (REST) web service interface.</p>
+<p>Cloud Images has the following expected benefits:</p>
+<ul class="simple">
+<li>You can import and export images across multiple sources: public cloud, private cloud,
+and sources external to Rackspace.<ul>
+<li>Images are portable, taking full advantage of the open cloud.</li>
+<li>Images are imported from a private cloud into the public cloud for cloud-bursting.</li>
+<li>Images created in the public cloud can be imported to a private cloud, or to
+another provider&#8217;s cloud, for redundancy and high availability.</li>
+</ul>
+</li>
+<li>Customers share images.<ul>
+<li>Users with multiple accounts share images among the accounts.</li>
+<li>Images are shared as an informal &#8220;image marketplace&#8221;.</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="overview">
+<span id="ci-dg-overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+</div>
 <div class="section" id="intended-audience">
 <h2>Intended Audience<a class="headerlink" href="#intended-audience" title="Permalink to this headline">#</a></h2>
 <p>This guide is intended to assist software developers who want to develop applications by
@@ -89,74 +96,38 @@ should also be familiar with the following technologies:</p>
 <li>JSON data serialization format</li>
 </ul>
 </div>
-<div class="section" id="rackspace-pricing-and-terms-of-service">
-<h2>Rackspace pricing and terms of service<a class="headerlink" href="#rackspace-pricing-and-terms-of-service" title="Permalink to this headline">#</a></h2>
-<p>Cloud Images is part of the Rackspace cloud and your use of the Cloud Images API will be
-billed according to the schedule at <a class="reference external" href="http://www.rackspace.com/cloud/images">http://www.rackspace.com/cloud/images</a>.</p>
-<p>Periodically review the Rackspace US Cloud Terms of Service and the Rackspace UK Cloud
-Terms of Service because they might be updated any time. These documents also include
-the Acceptable Use Policies.</p>
-</div>
-<div class="section" id="overview">
-<span id="ci-dg-overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-<p>The Rackspace Cloud Images service enables developers to create and
-manipulate images, image members, and associated metadata through a
-simple Representational State Transfer (REST) web service interface.</p>
+<div class="section" id="additional-resources">
+<h2>Additional resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">#</a></h2>
 <p>The <a class="reference external" href="http://www.rackspace.com/knowledge_center/article/cloud-images-frequently-asked-questions">Cloud Images
 FAQ</a>
 in the Knowledge Center provides more information about the Cloud Images
 service.</p>
-<p>Cloud Images brings access to the OpenStack Image Registry and Delivery Service directly
-to Rackspace open cloud customers, thereby providing services for discovering, registering,
-and retrieving virtual machine images (and their metadata) by using a RESTful API.</p>
-<p>Image <strong>sharing</strong> provides a mechanism for customers to give access to images in their account
-to other customers. Customer A initiates sharing with Customer B, and Customer B accepts
-the offer. The image is not copied into Customer B&#8217;s repository, but Customer B has access
-to the image in Customer A&#8217;s repository.</p>
-<p>Image <strong>import</strong> allows customers to import images into the Rackspace cloud. Customers
-upload the image to Cloud Files, and then they use the import feature to make it into a
-cloud image. Image <strong>export</strong> allows customers to copy images from Cloud Images into
-Cloud Files for future downloading.</p>
-<p>This chapter describes what images are, how you share images with
-others, and how you use asynchronous image tasks.</p>
+<p>We welcome feedback, comments, and bug reports. Log into the Rackspace
+customer portal at <a class="reference external" href="https://feedback.rackspace.com/">https://feedback.rackspace.com/</a>.</p>
+</div>
+<div class="section" id="rackspace-pricing-and-terms-of-service">
+<h2>Rackspace pricing and terms of service<a class="headerlink" href="#rackspace-pricing-and-terms-of-service" title="Permalink to this headline">#</a></h2>
+<p>Cloud Images is part of the Rackspace cloud and your use of the Cloud Images API will be
+billed according to the schedule at <a class="reference external" href="http://www.rackspace.com/cloud/images">http://www.rackspace.com/cloud/images</a>.</p>
+<p>Periodically review the Rackspace Cloud Terms of Service for your
+Terms of Service because they can be updated any time. These documents also include
+the Acceptable Use Policies.</p>
+</div>
+<div class="section" id="concepts">
+<span id="ci-dg-concepts"></span><h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">#</a></h2>
+<p>To understand the Cloud Images service and API, review the following key terms and
+concepts.</p>
 </div>
 <div class="section" id="images">
-<span id="ci-dg-overview-images"></span><h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">#</a></h2>
+<span id="ci-concepts-images"></span><h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">#</a></h2>
 <p>Server images are used to store a snapshot of a server&#8217;s configuration.
 If you take an image of a server, you can create a new server from that
 image. The new server will have the same files and operating system that
 the original server had at the time the image was created.</p>
-<p>The Cloud Images service provides operations that enable you to
-manipulate images, to import and export images (by using tasks), and to
-share images with other people.</p>
-<p>The Cloud Images service enables you to use standard images (which are
-supported by Rackspace) and to create, share, and use nonstandard images
-(which are not supported by Rackspace). For more information, see
-<a class="reference external" href="http://www.rackspace.com/knowledge_center/article/rackspace-standard-and-non-standard-images">Rackspace Standard and Non-Standard
-Images</a>.</p>
-<p>Cloud Images has the following expected benefits:</p>
-<ul>
-<li><p class="first">Images can be imported and exported among public cloud, private cloud and sources outside of Rackspace.</p>
-<blockquote>
-<div><ul class="simple">
-<li>Images are portable, taking full advantage of the open cloud.</li>
-<li>Images are imported from a private cloud into the public cloud for cloud-bursting.</li>
-<li>Images created in the public cloud can be imported to a private cloud, or to
-another provider&#8217;s cloud, for redundancy and high availability.</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p class="first">Customers share images.</p>
-<blockquote>
-<div><ul class="simple">
-<li>Users with multiple accounts share images among the accounts.</li>
-<li>Images are shared as an informal &#8220;image marketplace&#8221;.</li>
-</ul>
-</div></blockquote>
-</li>
-</ul>
+<p>The Cloud Images service enables you to use standard, Rackspace-supported images
+and to create, share, and use nonstandard images that are not supported by Rackspace.</p>
 <div class="section" id="standard-images">
-<span id="ci-dg-overview-standard-images"></span><h3>Standard images<a class="headerlink" href="#standard-images" title="Permalink to this headline">#</a></h3>
+<span id="ci-concepts-standard-images"></span><h3>Standard images<a class="headerlink" href="#standard-images" title="Permalink to this headline">#</a></h3>
 <p>Standard images include the following images:</p>
 <ul class="simple">
 <li>All base images that have not reached their end of life and that are
@@ -166,7 +137,7 @@ provided specifically for RackConnect customers</li>
 </ul>
 </div>
 <div class="section" id="nonstandard-images">
-<span id="ci-dg-overview-nonstandard-images"></span><h3>Nonstandard images<a class="headerlink" href="#nonstandard-images" title="Permalink to this headline">#</a></h3>
+<span id="ci-concepts-nonstandard-images"></span><h3>Nonstandard images<a class="headerlink" href="#nonstandard-images" title="Permalink to this headline">#</a></h3>
 <p>Nonstandard images include the following images:</p>
 <ul class="simple">
 <li>All imported and exported images</li>
@@ -182,265 +153,6 @@ RackConnect customers</li>
 </div>
 </div>
 </div>
-<div class="section" id="image-sharing">
-<span id="ci-dg-overview-sharing"></span><h2>Image sharing<a class="headerlink" href="#image-sharing" title="Permalink to this headline">#</a></h2>
-<p>Image producers create and share images with image consumers, allowing
-the consumers to use the shared image when booting a server. The
-producer shares an image with the consumer by making the consumer a
-member of that image. The consumer then accepts or rejects the image
-by changing the image member status. After it is accepted, the image
-appears in the consumer&#8217;s image list. As long as the consumer is an
-member of the image, the consumer can use the image, regardless of the
-image member status.</p>
-<p><strong>Figure: Sharing an image</strong></p>
-<img alt="src/img/image-member.png" src="public/dist/img/image-member.png" />
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>In the Cloud Images API, the image member status serves three
-purposes:</p>
-<ul class="last simple">
-<li>The member status controls whether image appears in the consumer&#8217;s
-image list. If the image member status is <code class="docutils literal"><span class="pre">accepted</span></code>, the image
-appears in the consumer&#8217;s image list. Otherwise, the image does not
-appear in the image list.</li>
-<li>The member status can be used to filter the consumer&#8217;s image list.
-For example, the consumer can discover images that have been shared
-with him or her by using the instructions in
-the <em>List images</em> API operation section and filtering
-the request by using <code class="docutils literal"><span class="pre">visibility=shared&amp;member_status=pending</span></code>.</li>
-<li>The member status lets the producer know whether the consumer has
-seen and acted on the shared image. If the status is <code class="docutils literal"><span class="pre">accepted</span></code> or
-<code class="docutils literal"><span class="pre">rejected</span></code>, the consumer has definitely seen the shared image. If
-the status is <code class="docutils literal"><span class="pre">pending</span></code>, the consumer may not be aware that an
-image was shared.</li>
-</ul>
-</div>
-<p>For more information on image member status, search for “Image member
-statuses”.</p>
-<p>Image producers and consumers have different abilities and
-responsibilities regarding image sharing. The following list shows these
-abilities:</p>
-<ul class="simple">
-<li>Image producers add or remove image members, but they may not modify
-the member status of an image member.</li>
-<li>Image producers and consumers view the status of image members. When
-listing image members, the producers see all the image members, and
-the consumers see only themselves.</li>
-<li>Image consumers change their own member status, but they may not add
-or remove themselves as an image member.</li>
-<li>Image consumers can boot from any image shared by the image producer,
-regardless of the member status, as long as the consumer knows the
-image ID.</li>
-</ul>
-<div class="section" id="sample-workflow-for-image-sharing-after-image-creation">
-<h3>Sample workflow for image sharing, after image creation<a class="headerlink" href="#sample-workflow-for-image-sharing-after-image-creation" title="Permalink to this headline">#</a></h3>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Communications between the image producer and the consumer, like
-those described in this sample workflow, must be arranged independent of the
-Cloud Images API. The consumer and producer can send notifications by
-using email, phone, Twitter, or other channels.</p>
-</div>
-<ol class="arabic simple">
-<li>The producer posts the availability of specific images.</li>
-<li>A potential consumer provides the producer with the consumer&#8217;s tenant
-ID. Optionally, the producer might request the consumer&#8217;s email
-address for notification purposes, but this is outside the scope of
-the API.</li>
-<li>The producer shares the image with the consumer,  by using the
-<em>Create image member</em> API operation.</li>
-<li>Optionally, the producer notifies the consumer that the image has
-been shared and provides the image&#8217;s ID (UUID).</li>
-<li>If the consumer wants the image to appear in the image list, the
-consumer uses the Cloud Images API to change the image member status
-to <code class="docutils literal"><span class="pre">accepted</span></code>, by using the <em>Update image member</em> API operation.</li>
-<li>If the consumer subsequently wants to hide the image, the consumer
-uses the Cloud Images API to change the image member status to
-<code class="docutils literal"><span class="pre">rejected</span></code>. If the consumer wants to hide the image, but is open to
-the possibility of being reminded by the producer that the image is
-available, the consumer uses the Cloud Images API to change the image
-member status to <code class="docutils literal"><span class="pre">pending</span></code>, by using the <em>Update image member</em> API operation.</li>
-</ol>
-</div>
-</div>
-<div class="section" id="asynchronous-image-tasks">
-<span id="ci-dg-overview-image-tasks"></span><h2>Asynchronous image tasks<a class="headerlink" href="#asynchronous-image-tasks" title="Permalink to this headline">#</a></h2>
-<p>An image task request performs an asynchronous image-related
-operation, such as importing or exporting an image. The request creates
-a disposable task resource that you poll for information about the
-operation&#8217;s status.</p>
-<p>After you initiate an image import or export, poll the task&#8217;s status by using
-the <em>Get task details</em> API operation repeatedly until the task completes. The
-“Get details for a task” section of this guide shows an example.</p>
-<p>When the poll response has a status of <code class="docutils literal"><span class="pre">success</span></code> or <code class="docutils literal"><span class="pre">failure</span></code>, the
-response includes an expiration date and time. After expiration, the
-disposable task resource is deleted, but the result of the task, such as
-an imported or exported image, neither expires nor disappears.</p>
-<p>For more information on task statuses, search for &#8220;task statuses&#8221;.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>Tasks in the Cloud Images API conform to the uniform task interface
-provided by the OpenStack Images v2 API, with each task resource
-containing both input and result parameters. The API design enables
-individual providers, like Rackspace, to easily customize these two
-parameters.</p>
-<p class="last">The <em>Task to import image</em> and <em>Task to export image</em> sections
-and &#8220;POSTexportImagetasksImageTask&#8221; show the Rackspace requirements for these
-parameters.</p>
-</div>
-<div class="section" id="high-level-process-for-importing-an-image">
-<h3>High-level process for importing an image<a class="headerlink" href="#high-level-process-for-importing-an-image" title="Permalink to this headline">#</a></h3>
-<ol class="arabic simple">
-<li>Put the image into your Cloud Files account.</li>
-<li>Submit the asynchronous import request by using the <em>Task to import image</em> API
-operation. The “Import an image by using tasks” section of this guide shows an example.</li>
-<li>The Cloud Images service begins to fetch the image from your cloud
-storage and to create a new image for you. This activity takes some
-time.</li>
-<li>Poll the task status by using the <em>Get task details</em> operation repeatedly. The “Get
-details for a task” section of this guide shows an example.</li>
-</ol>
-</div>
-<div class="section" id="high-level-process-for-exporting-an-image">
-<h3>High-level process for exporting an image<a class="headerlink" href="#high-level-process-for-exporting-an-image" title="Permalink to this headline">#</a></h3>
-<ol class="arabic simple">
-<li>Determine the UUID of the image you want to export.</li>
-<li>Submit the export request by using the <em>Task to export image</em> API operation. The
-“Export an image by using tasks” section of this guide shows an example.</li>
-<li>The Cloud Images service begins to process the image, to convert it
-to a convenient format for a future export of the image to another
-cloud (or to another region of the Rackspace cloud), and to transfer
-the exported image to your Cloud Files account. This activity takes
-some time.</li>
-<li>Poll the task status by using the <em>Get task details</em> operation repeatedly. The “Get
-details for a task” section of this guide shows an example.</li>
-</ol>
-</div>
-</div>
-<div class="section" id="statuses">
-<span id="ci-dg-overview-statuses"></span><h2>Statuses<a class="headerlink" href="#statuses" title="Permalink to this headline">#</a></h2>
-<p>The Cloud Images API uses a variety of statuses to identify the state of
-images or image components. This section describes the statuses and
-their values.</p>
-<div class="section" id="image-statuses">
-<span id="ci-dg-overview-image-statuses"></span><h3>Image statuses<a class="headerlink" href="#image-statuses" title="Permalink to this headline">#</a></h3>
-<p>Images in the Cloud Images service can have any of the following
-statuses when you display details by using the <em>Get image details</em> API operation.</p>
-<dl class="docutils">
-<dt><strong>queued</strong></dt>
-<dd>The image identifier has been reserved for an image in the Cloud
-Images registry. No image data has been uploaded to the Cloud Images
-service, and the image size was not explicitly set to zero on
-creation.</dd>
-<dt><strong>saving</strong></dt>
-<dd>An image&#8217;s raw data is being uploaded to the Cloud Images service.</dd>
-<dt><strong>active</strong></dt>
-<dd>The image is fully available in the Cloud Images service. This
-status applies either after the image is uploaded or if the image
-size is explicitly set to zero on creation.</dd>
-<dt><strong>killed</strong></dt>
-<dd>An error occurred during the image upload process, and the image
-data is unreadable.</dd>
-<dt><strong>deleted</strong></dt>
-<dd>The Cloud Images service has retained the information about the
-image, but the image is no longer available to use. An image with
-this status will be removed automatically at a later date.</dd>
-<dt><strong>pending_delete</strong></dt>
-<dd>This status is similar to deleted, however, the Cloud Images service
-has not yet removed the image data. An image with this status is
-recoverable.</dd>
-<dt><strong>deactivated</strong></dt>
-<dd>The administrator has marked the image as unavailable while it is under
-investigation. Image operations like list, get details, image sharing, and
-set metadata work; however, users cannot perform operations that must
-access image data. For example, users cannot boot from a deactivated image
-or export a deactivated image.</dd>
-</dl>
-</div>
-<div class="section" id="task-statuses">
-<span id="ci-dg-overview-task-statuses"></span><h3>Task statuses<a class="headerlink" href="#task-statuses" title="Permalink to this headline">#</a></h3>
-<p>Image tasks are used for importing images from your Cloud Files account
-and for exporting images to your Cloud files account. For more
-information on image tasks, search for “Asynchronous image tasks”.</p>
-<p>Image tasks in the Cloud Images service can have any of the following
-statuses when you poll them by using the <em>Get details for a task</em> API operation.</p>
-<dl class="docutils">
-<dt><strong>pending</strong></dt>
-<dd>The image task is waiting for execution.</dd>
-<dt><strong>processing</strong></dt>
-<dd>The image task is processing.</dd>
-<dt><strong>success</strong></dt>
-<dd>The image task completed successfully.</dd>
-<dt><strong>failure</strong></dt>
-<dd>The image task did not complete successfully.</dd>
-</dl>
-</div>
-<div class="section" id="image-member-statuses">
-<span id="ci-dg-overview-member-statuses"></span><h3>Image member statuses<a class="headerlink" href="#image-member-statuses" title="Permalink to this headline">#</a></h3>
-<p>When an image producer wants to share an image with a potential image
-consumer, the producer creates an image member, linking the image and
-the consumer. Once an image is shared, the image is available for the
-consumer to use, regardless of image member status. Both producers and
-consumers can check the status of an image member.</p>
-<p>Image member status both controls whether the image appears in the
-consumer&#8217;s image list and lets the producer know whether the consumer
-acknowledges the offer. If the consumer wants the image to appear in the
-image list, the consumer accepts the image. Otherwise, the consumer
-rejects the image.</p>
-<p>If the image producer no longer wants the share an image with a
-consumer, the producer deletes the image member. Once the image member
-is deleted, the consumer cannot use the image, and the image is removed
-from the consumer&#8217;s image list.</p>
-<p>For more information on image sharing, search for “Image sharing”.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>Consumers and producers view the image status by using the
-instructions in “Get image member details”</li>
-<li>Consumers change the status any time by using the instructions in “Update
-an image member”</li>
-<li>Producers add image members by using the instructions in “Create
-an image member”</li>
-<li>Producers delete image members by using the instructions in “Delete an image
-member”</li>
-</ul>
-</div>
-<p>Image members can have any of the following statuses.</p>
-<dl class="docutils">
-<dt><strong>accepted</strong></dt>
-<dd>The consumer accepts the invitation to potentially use the offered
-image, and the image appears in the consumer&#8217;s image list. The
-producer knows that the consumer made an active decision about the
-image.</dd>
-<dt><strong>rejected</strong></dt>
-<dd>The consumer declines the invitation to potentially use the offered
-image, and the image does not appears in the consumer&#8217;s image list.
-The producer knows that the consumer made an active decision about
-the image.</dd>
-<dt><strong>pending</strong></dt>
-<dd>The consumer neither accepts nor declines the invitation to
-potentially use the offered image, and may not have even noticed the
-offer. The producer might elect to send a reminder that the image is
-available, but this is outside the scope of the Cloud Images API.</dd>
-</dl>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">With a <code class="docutils literal"><span class="pre">rejected</span></code> or <code class="docutils literal"><span class="pre">pending</span></code>  image member status, the consumer can still use the
-image but must know the image ID, since the image is not in the image list.</p>
-</div>
-</div>
-</div>
-<div class="section" id="concepts">
-<h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">#</a></h2>
-<p>To take advantage of the Cloud Images service, it is helpful to be familiar with the
-concepts outlined in this section:</p>
-<ul class="simple">
-<li><strong>image tasks</strong></li>
-<li><strong>image entities</strong></li>
-<li><strong>common image properties</strong></li>
-<li><strong>HTTP PATCH method</strong></li>
-</ul>
-</div>
 <div class="section" id="image-entities">
 <h2>Image entities<a class="headerlink" href="#image-entities" title="Permalink to this headline">#</a></h2>
 <p>An image entity is represented by a JSON-encoded data structure and its raw binary data.</p>
@@ -454,7 +166,7 @@ they have been explicitly set.</p>
 allows it. These user-defined attributes will appear like any other image attributes.</p>
 </div>
 <div class="section" id="image-identifiers">
-<h2>Image identifiers<a class="headerlink" href="#image-identifiers" title="Permalink to this headline">#</a></h2>
+<span id="ci-concepts-image-identifiers"></span><h2>Image identifiers<a class="headerlink" href="#image-identifiers" title="Permalink to this headline">#</a></h2>
 <p>Images are uniquely identified by a <em>URI</em> that matches the following
 signature:</p>
 <p><code class="docutils literal"><span class="pre">{image</span> <span class="pre">server</span> <span class="pre">location}/v2/images/{image_ID}</span></code></p>
@@ -468,7 +180,7 @@ an image</dd>
 </dl>
 </div>
 <div class="section" id="common-image-properties">
-<h2>Common image properties<a class="headerlink" href="#common-image-properties" title="Permalink to this headline">#</a></h2>
+<span id="ci-concepts-common-image-properties"></span><h2>Common image properties<a class="headerlink" href="#common-image-properties" title="Permalink to this headline">#</a></h2>
 <p>To help end users use your images, you can put additional common
 properties, or metadata, on your images.</p>
 <p>The available properties and their expected values include the following
@@ -525,8 +237,256 @@ as shown here. The allowed values are as follows:</p>
 </dl>
 </div>
 </div>
+<div class="section" id="image-sharing">
+<span id="ci-concepts-image-sharing"></span><h2>Image sharing<a class="headerlink" href="#image-sharing" title="Permalink to this headline">#</a></h2>
+<p>Image producers create and share images with image consumers, allowing
+the consumers to use the shared image when booting a server. The
+producer shares an image with the consumer by making the consumer a
+member of that image. The consumer then accepts or rejects the image
+by changing the image member status. After it is accepted, the image
+appears in the consumer&#8217;s image list. As long as the consumer is an
+member of the image, the consumer can use the image, regardless of the
+image member status.</p>
+<p><strong>Figure: Sharing an image</strong></p>
+<img alt="src/img/image-member.png" src="public/dist/img/image-member.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>In the Cloud Images API, the image member status serves three
+purposes:</p>
+<ul class="last simple">
+<li>The member status controls whether image appears in the consumer&#8217;s
+image list. If the image member status is <code class="docutils literal"><span class="pre">accepted</span></code>, the image
+appears in the consumer&#8217;s image list. Otherwise, the image does not
+appear in the image list.</li>
+<li>The member status can be used to filter the consumer&#8217;s image list.
+For example, the consumer can discover images that have been shared
+with him or her by using the instructions in
+the <em>List images</em> API operation section and filtering
+the request by using <code class="docutils literal"><span class="pre">visibility=shared&amp;member_status=pending</span></code>.</li>
+<li>The member status lets the producer know whether the consumer has
+seen and acted on the shared image. If the status is <code class="docutils literal"><span class="pre">accepted</span></code> or
+<code class="docutils literal"><span class="pre">rejected</span></code>, the consumer has definitely seen the shared image. If
+the status is <code class="docutils literal"><span class="pre">pending</span></code>, the consumer may not be aware that an
+image was shared.</li>
+</ul>
+</div>
+<p>For more information on image member status, search for â€œImage member
+statusesâ€.</p>
+<p>Image producers and consumers have different abilities and
+responsibilities regarding image sharing. The following list shows these
+abilities:</p>
+<ul class="simple">
+<li>Image producers add or remove image members, but they may not modify
+the member status of an image member.</li>
+<li>Image producers and consumers view the status of image members. When
+listing image members, the producers see all the image members, and
+the consumers see only themselves.</li>
+<li>Image consumers change their own member status, but they may not add
+or remove themselves as an image member.</li>
+<li>Image consumers can boot from any image shared by the image producer,
+regardless of the member status, as long as the consumer knows the
+image ID.</li>
+</ul>
+<div class="section" id="sample-workflow-for-image-sharing-after-image-creation">
+<h3>Sample workflow for image sharing, after image creation<a class="headerlink" href="#sample-workflow-for-image-sharing-after-image-creation" title="Permalink to this headline">#</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Communications between the image producer and the consumer, like
+those described in this sample workflow, must be arranged independent of the
+Cloud Images API. The consumer and producer can send notifications by
+using email, phone, Twitter, or other channels.</p>
+</div>
+<ol class="arabic simple">
+<li>The producer posts the availability of specific images.</li>
+<li>A potential consumer provides the producer with the consumer&#8217;s tenant
+ID. Optionally, the producer might request the consumer&#8217;s email
+address for notification purposes, but this is outside the scope of
+the API.</li>
+<li>The producer shares the image with the consumer,  by using the
+<em>Create image member</em> API operation.</li>
+<li>Optionally, the producer notifies the consumer that the image has
+been shared and provides the image&#8217;s ID (UUID).</li>
+<li>If the consumer wants the image to appear in the image list, the
+consumer uses the Cloud Images API to change the image member status
+to <code class="docutils literal"><span class="pre">accepted</span></code>, by using the <em>Update image member</em> API operation.</li>
+<li>If the consumer subsequently wants to hide the image, the consumer
+uses the Cloud Images API to change the image member status to
+<code class="docutils literal"><span class="pre">rejected</span></code>. If the consumer wants to hide the image, but is open to
+the possibility of being reminded by the producer that the image is
+available, the consumer uses the Cloud Images API to change the image
+member status to <code class="docutils literal"><span class="pre">pending</span></code>, by using the <em>Update image member</em> API operation.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="asynchronous-image-tasks">
+<span id="ci-concepts-asynchronous-image-tasks"></span><h2>Asynchronous image tasks<a class="headerlink" href="#asynchronous-image-tasks" title="Permalink to this headline">#</a></h2>
+<p>An image task request performs an asynchronous image-related
+operation, such as importing or exporting an image. The request creates
+a disposable task resource that you poll for information about the
+operation&#8217;s status.</p>
+<p>After you initiate an image import or export, poll the task&#8217;s status by using
+the <em>Get task details</em> API operation repeatedly until the task completes. The
+â€œGet details for a taskâ€ section of this guide shows an example.</p>
+<p>When the poll response has a status of <code class="docutils literal"><span class="pre">success</span></code> or <code class="docutils literal"><span class="pre">failure</span></code>, the
+response includes an expiration date and time. After expiration, the
+disposable task resource is deleted, but the result of the task, such as
+an imported or exported image, neither expires nor disappears.</p>
+<p>For more information on task statuses, search for &#8220;task statuses&#8221;.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Tasks in the Cloud Images API conform to the uniform task interface
+provided by the OpenStack Images v2 API, with each task resource
+containing both input and result parameters. The API design enables
+individual providers, like Rackspace, to easily customize these two
+parameters.</p>
+<p class="last">The <em>Task to import image</em> and <em>Task to export image</em> sections
+and &#8220;POSTexportImagetasksImageTask&#8221; show the Rackspace requirements for these
+parameters.</p>
+</div>
+<div class="section" id="high-level-process-for-importing-an-image">
+<h3>High-level process for importing an image<a class="headerlink" href="#high-level-process-for-importing-an-image" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li>Put the image into your Cloud Files account.</li>
+<li>Submit the asynchronous import request by using the <em>Task to import image</em> API
+operation. The â€œImport an image by using tasksâ€ section of this guide shows an example.</li>
+<li>The Cloud Images service begins to fetch the image from your cloud
+storage and to create a new image for you. This activity takes some
+time.</li>
+<li>Poll the task status by using the <em>Get task details</em> operation repeatedly. The â€œGet
+details for a taskâ€ section of this guide shows an example.</li>
+</ol>
+</div>
+<div class="section" id="high-level-process-for-exporting-an-image">
+<h3>High-level process for exporting an image<a class="headerlink" href="#high-level-process-for-exporting-an-image" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li>Determine the UUID of the image you want to export.</li>
+<li>Submit the export request by using the <em>Task to export image</em> API operation. The
+â€œExport an image by using tasksâ€ section of this guide shows an example.</li>
+<li>The Cloud Images service begins to process the image, to convert it
+to a convenient format for a future export of the image to another
+cloud (or to another region of the Rackspace cloud), and to transfer
+the exported image to your Cloud Files account. This activity takes
+some time.</li>
+<li>Poll the task status by using the <em>Get task details</em> operation repeatedly. The â€œGet
+details for a taskâ€ section of this guide shows an example.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="statuses">
+<span id="ci-concepts-statuses"></span><h2>Statuses<a class="headerlink" href="#statuses" title="Permalink to this headline">#</a></h2>
+<p>The Cloud Images API uses a variety of statuses to identify the state of
+images or image components. This section describes the statuses and
+their values.</p>
+<div class="section" id="image-statuses">
+<span id="ci-dg-overview-image-statuses"></span><h3>Image statuses<a class="headerlink" href="#image-statuses" title="Permalink to this headline">#</a></h3>
+<p>Images in the Cloud Images service can have any of the following
+statuses when you display details by using the <em>Get image details</em> API operation.</p>
+<dl class="docutils">
+<dt><strong>queued</strong></dt>
+<dd>The image identifier has been reserved for an image in the Cloud
+Images registry. No image data has been uploaded to the Cloud Images
+service, and the image size was not explicitly set to zero on
+creation.</dd>
+<dt><strong>saving</strong></dt>
+<dd>An image&#8217;s raw data is being uploaded to the Cloud Images service.</dd>
+<dt><strong>active</strong></dt>
+<dd>The image is fully available in the Cloud Images service. This
+status applies either after the image is uploaded or if the image
+size is explicitly set to zero on creation.</dd>
+<dt><strong>killed</strong></dt>
+<dd>An error occurred during the image upload process, and the image
+data is unreadable.</dd>
+<dt><strong>deleted</strong></dt>
+<dd>The Cloud Images service has retained the information about the
+image, but the image is no longer available to use. An image with
+this status will be removed automatically at a later date.</dd>
+<dt><strong>pending_delete</strong></dt>
+<dd>This status is similar to deleted, however, the Cloud Images service
+has not yet removed the image data. An image with this status is
+recoverable.</dd>
+<dt><strong>deactivated</strong></dt>
+<dd>The administrator has marked the image as unavailable while it is under
+investigation. Image operations like list, get details, image sharing, and
+set metadata work; however, users cannot perform operations that must
+access image data. For example, users cannot boot from a deactivated image
+or export a deactivated image.</dd>
+</dl>
+</div>
+<div class="section" id="task-statuses">
+<span id="ci-dg-overview-task-statuses"></span><h3>Task statuses<a class="headerlink" href="#task-statuses" title="Permalink to this headline">#</a></h3>
+<p>Image tasks are used for importing images from your Cloud Files account
+and for exporting images to your Cloud files account. For more
+information on image tasks, search for â€œAsynchronous image tasksâ€.</p>
+<p>Image tasks in the Cloud Images service can have any of the following
+statuses when you poll them by using the <em>Get details for a task</em> API operation.</p>
+<dl class="docutils">
+<dt><strong>pending</strong></dt>
+<dd>The image task is waiting for execution.</dd>
+<dt><strong>processing</strong></dt>
+<dd>The image task is processing.</dd>
+<dt><strong>success</strong></dt>
+<dd>The image task completed successfully.</dd>
+<dt><strong>failure</strong></dt>
+<dd>The image task did not complete successfully.</dd>
+</dl>
+</div>
+<div class="section" id="image-member-statuses">
+<span id="ci-dg-overview-member-statuses"></span><h3>Image member statuses<a class="headerlink" href="#image-member-statuses" title="Permalink to this headline">#</a></h3>
+<p>When an image producer wants to share an image with a potential image
+consumer, the producer creates an image member, linking the image and
+the consumer. Once an image is shared, the image is available for the
+consumer to use, regardless of image member status. Both producers and
+consumers can check the status of an image member.</p>
+<p>Image member status both controls whether the image appears in the
+consumer&#8217;s image list and lets the producer know whether the consumer
+acknowledges the offer. If the consumer wants the image to appear in the
+image list, the consumer accepts the image. Otherwise, the consumer
+rejects the image.</p>
+<p>If the image producer no longer wants the share an image with a
+consumer, the producer deletes the image member. Once the image member
+is deleted, the consumer cannot use the image, and the image is removed
+from the consumer&#8217;s image list.</p>
+<p>For more information on image sharing, search for â€œImage sharingâ€.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Consumers and producers view the image status by using the
+instructions in â€œGet image member detailsâ€</li>
+<li>Consumers change the status any time by using the instructions in â€œUpdate
+an image memberâ€</li>
+<li>Producers add image members by using the instructions in â€œCreate
+an image memberâ€</li>
+<li>Producers delete image members by using the instructions in â€œDelete an image
+memberâ€</li>
+</ul>
+</div>
+<p>Image members can have any of the following statuses.</p>
+<dl class="docutils">
+<dt><strong>accepted</strong></dt>
+<dd>The consumer accepts the invitation to potentially use the offered
+image, and the image appears in the consumer&#8217;s image list. The
+producer knows that the consumer made an active decision about the
+image.</dd>
+<dt><strong>rejected</strong></dt>
+<dd>The consumer declines the invitation to potentially use the offered
+image, and the image does not appears in the consumer&#8217;s image list.
+The producer knows that the consumer made an active decision about
+the image.</dd>
+<dt><strong>pending</strong></dt>
+<dd>The consumer neither accepts nor declines the invitation to
+potentially use the offered image, and may not have even noticed the
+offer. The producer might elect to send a reminder that the image is
+available, but this is outside the scope of the Cloud Images API.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">With a <code class="docutils literal"><span class="pre">rejected</span></code> or <code class="docutils literal"><span class="pre">pending</span></code>  image member status, the consumer can still use the
+image but must know the image ID, since the image is not in the image list.</p>
+</div>
+</div>
+</div>
 <div class="section" id="http-patch-method">
-<h2>HTTP PATCH method<a class="headerlink" href="#http-patch-method" title="Permalink to this headline">#</a></h2>
+<span id="ci-concepts-http-patch-method"></span><h2>HTTP PATCH method<a class="headerlink" href="#http-patch-method" title="Permalink to this headline">#</a></h2>
 <p>The Cloud Images API uses the HTTP PATCH method to update image
 properties.</p>
 <p>The HTTP PATCH request must provide a media type so that the server
@@ -572,28 +532,28 @@ necessary to use the <code class="docutils literal"><span class="pre">HTTP</span
 follows</p>
 <p>Image Entity:</p>
 <div class="code highlight-python"><div class="highlight"><pre><span class="p">{</span>
-   <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="s">&quot;da3b75d9-3f4a-40e7-8a2c-bfab23927dea&quot;</span><span class="p">,</span>
-   <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;cirros-0.3.0-x86_64-uec-ramdisk&quot;</span><span class="p">,</span>
-   <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;active&quot;</span><span class="p">,</span>
-   <span class="s">&quot;visibility&quot;</span><span class="p">:</span> <span class="s">&quot;public&quot;</span><span class="p">,</span>
-   <span class="s">&quot;size&quot;</span><span class="p">:</span> <span class="mi">2254249</span><span class="p">,</span>
-   <span class="s">&quot;checksum&quot;</span><span class="p">:</span> <span class="s">&quot;2cec138d7dae2aa59038ef8c9aec2390&quot;</span><span class="p">,</span>
-   <span class="s">&quot;~/.ssh/&quot;</span><span class="p">:</span> <span class="s">&quot;present&quot;</span><span class="p">,</span>
-   <span class="s">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;ping&quot;</span><span class="p">,</span> <span class="s">&quot;pong&quot;</span><span class="p">],</span>
-   <span class="s">&quot;created_at&quot;</span><span class="p">:</span> <span class="s">&quot;2012-08-10T19:23:50Z&quot;</span><span class="p">,</span>
-   <span class="s">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s">&quot;2012-08-10T19:23:50Z&quot;</span><span class="p">,</span>
-   <span class="s">&quot;self&quot;</span><span class="p">:</span> <span class="s">&quot;/v2/images/da3b75d9-3f4a-40e7-8a2c-bfab23927dea&quot;</span><span class="p">,</span>
-   <span class="s">&quot;file&quot;</span><span class="p">:</span> <span class="s">&quot;/v2/images/da3b75d9-3f4a-40e7-8a2c-bfab23927dea/file&quot;</span><span class="p">,</span>
-   <span class="s">&quot;schema&quot;</span><span class="p">:</span> <span class="s">&quot;/v2/schemas/image&quot;</span>
+    <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="s">&quot;da3b75d9-3f4a-40e7-8a2c-bfab23927dea&quot;</span><span class="p">,</span>
+    <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;cirros-0.3.0-x86_64-uec-ramdisk&quot;</span><span class="p">,</span>
+    <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;active&quot;</span><span class="p">,</span>
+    <span class="s">&quot;visibility&quot;</span><span class="p">:</span> <span class="s">&quot;public&quot;</span><span class="p">,</span>
+    <span class="s">&quot;size&quot;</span><span class="p">:</span> <span class="mi">2254249</span><span class="p">,</span>
+    <span class="s">&quot;checksum&quot;</span><span class="p">:</span> <span class="s">&quot;2cec138d7dae2aa59038ef8c9aec2390&quot;</span><span class="p">,</span>
+    <span class="s">&quot;~/.ssh/&quot;</span><span class="p">:</span> <span class="s">&quot;present&quot;</span><span class="p">,</span>
+    <span class="s">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;ping&quot;</span><span class="p">,</span> <span class="s">&quot;pong&quot;</span><span class="p">],</span>
+    <span class="s">&quot;created_at&quot;</span><span class="p">:</span> <span class="s">&quot;2012-08-10T19:23:50Z&quot;</span><span class="p">,</span>
+    <span class="s">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s">&quot;2012-08-10T19:23:50Z&quot;</span><span class="p">,</span>
+    <span class="s">&quot;self&quot;</span><span class="p">:</span> <span class="s">&quot;/v2/images/da3b75d9-3f4a-40e7-8a2c-bfab23927dea&quot;</span><span class="p">,</span>
+    <span class="s">&quot;file&quot;</span><span class="p">:</span> <span class="s">&quot;/v2/images/da3b75d9-3f4a-40e7-8a2c-bfab23927dea/file&quot;</span><span class="p">,</span>
+    <span class="s">&quot;schema&quot;</span><span class="p">:</span> <span class="s">&quot;/v2/schemas/image&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Comparison of the JSON Pointer to the Image Entity Key Pair:</p>
 <div class="code highlight-python"><div class="highlight"><pre>JSON Pointer        Image Entity Key Pair
-/name          &quot;name&quot;:&quot;cirros-0.3.0-x86_64-uec-ramdisk&quot;
-/size          &quot;size&quot;:&quot;2254249&quot;
-/tags          &quot;tags&quot;:[&quot;ping&quot;, &quot;pong&quot;]
-/~0~1.ssh~1    &quot;~/.ssh/&quot;:&quot;present&quot;
+ /name          &quot;name&quot;:&quot;cirros-0.3.0-x86_64-uec-ramdisk&quot;
+ /size          &quot;size&quot;:&quot;2254249&quot;
+ /tags          &quot;tags&quot;:[&quot;ping&quot;, &quot;pong&quot;]
+ /~0~1.ssh~1    &quot;~/.ssh/&quot;:&quot;present&quot;
 </pre></div>
 </div>
 </div>
@@ -714,7 +674,7 @@ Cloud Identity Service.</p>
 <p>The Cloud Images API supports JSON data serialization request and response formats.</p>
 </div>
 <div class="section" id="sending-api-requests-and-receiving-responses">
-<h2>Sending API requests and receiving responses<a class="headerlink" href="#sending-api-requests-and-receiving-responses" title="Permalink to this headline">#</a></h2>
+<span id="images-dg-gen-info-send-request-receive-response"></span><h2>Sending API requests and receiving responses<a class="headerlink" href="#sending-api-requests-and-receiving-responses" title="Permalink to this headline">#</a></h2>
 <p>You have several options for sending requests through an API:</p>
 <ul>
 <li><p class="first">Developers and testers might prefer to use cURL with the command-line tool from
@@ -738,7 +698,7 @@ services, from <a class="reference external" href="http://code.google.com/p/rest
 </ul>
 </div>
 <div class="section" id="media-types">
-<h2>Media Types<a class="headerlink" href="#media-types" title="Permalink to this headline">#</a></h2>
+<span id="images-dg-gen-info-media-types"></span><h2>Media Types<a class="headerlink" href="#media-types" title="Permalink to this headline">#</a></h2>
 <p>The Cloud Images API accepts and serves JSON-encoded data. The media type required in the
 request varies by the following request types:</p>
 <ul class="simple">
@@ -749,14 +709,15 @@ request varies by the following request types:</p>
 </ul>
 </div>
 <div class="section" id="json-schemas">
-<h2>JSON Schemas<a class="headerlink" href="#json-schemas" title="Permalink to this headline">#</a></h2>
+<span id="images-dg-gen-info-json-schemas"></span><h2>JSON Schemas<a class="headerlink" href="#json-schemas" title="Permalink to this headline">#</a></h2>
 <p>The necessary JSON-schema documents are provided at predictable URIs. A consumer
 validates server responses and client requests based on the published schemas. The
 schemas contained in this document are only examples and should not be used to validate
 your requests. A client should always fetch current schemas from the server.</p>
 </div>
+</div>
 <div class="section" id="how-curl-commands-work">
-<span id="ci-dg-generalapi-curl"></span><h2>How cURL commands work<a class="headerlink" href="#how-curl-commands-work" title="Permalink to this headline">#</a></h2>
+<span id="ci-dg-generalapi-curl"></span><h1>How cURL commands work<a class="headerlink" href="#how-curl-commands-work" title="Permalink to this headline">#</a></h1>
 <p>cURL is a command-line tool that you can use to interact with REST interfaces. cURL lets
 you to transmit and receive HTTP requests and responses from the command line or a shell
 script, which enables you to work with the API directly. It is available for Linux distributions,
@@ -767,12 +728,12 @@ of this guide directly to the command line or a script.</p>
 network using JSON.</p>
 <p><strong>cURL command example: JSON request</strong></p>
 <div class="code highlight-python"><div class="highlight"><pre>      $ curl https://dfw.servers.api.rackspacecloud.com/v2/$account/servers \
--X POST \
--H &quot;X-Auth-Project-Id: $account&quot; \
--H &quot;Content-Type: application/json&quot; \
--H &quot;Accept: application/json&quot; \
--H &quot;X-Auth-Token: $token&quot; \
--d &#39;{&quot;server&quot;: {&quot;name&quot;: &quot;my_server_with_network&quot;, &quot;imageRef&quot;: &quot;d42f821e-c2d1-4796-9f07-af5ed7912d0e&quot;, &quot;flavorRef&quot;: &quot;2&quot;, &quot;max_count&quot;: 1, &quot;min_count&quot;: 1, &quot;networks&quot;: [{&quot;uuid&quot;: &quot;538a112a-34d1-47ff-bf1e-c40639e886e2&quot;}, {&quot;uuid&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;}, {&quot;uuid&quot;: &quot;11111111-1111-1111-1111-111111111111&quot;}]}}&#39; \
+ -X POST \
+ -H &quot;X-Auth-Project-Id: $account&quot; \
+ -H &quot;Content-Type: application/json&quot; \
+ -H &quot;Accept: application/json&quot; \
+ -H &quot;X-Auth-Token: $token&quot; \
+ -d &#39;{&quot;server&quot;: {&quot;name&quot;: &quot;my_server_with_network&quot;, &quot;imageRef&quot;: &quot;d42f821e-c2d1-4796-9f07-af5ed7912d0e&quot;, &quot;flavorRef&quot;: &quot;2&quot;, &quot;max_count&quot;: 1, &quot;min_count&quot;: 1, &quot;networks&quot;: [{&quot;uuid&quot;: &quot;538a112a-34d1-47ff-bf1e-c40639e886e2&quot;}, {&quot;uuid&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;}, {&quot;uuid&quot;: &quot;11111111-1111-1111-1111-111111111111&quot;}]}}&#39; \
 | python -m json.tool
 </pre></div>
 </div>
@@ -861,7 +822,6 @@ appending the following command to the cURL call:</p>
 simplejson.tool. For information about simplejson.tool, see <a class="reference external" href="http://simplejson.googlecode.com/svn/tags/simplejson-2.0.9/docs/index.html">simplejson encoder and decoder</a>.</p>
 <p class="last">If you do not want to pretty-print JSON output, omit this code.</p>
 </div>
-</div>
 <div class="section" id="authenticate-through-the-rackspace-cloud-identity-service">
 <h2>Authenticate through the Rackspace Cloud Identity Service<a class="headerlink" href="#authenticate-through-the-rackspace-cloud-identity-service" title="Permalink to this headline">#</a></h2>
 <p>To authenticate access to the Rackspace Cloud Images service, you issue an
@@ -912,19 +872,19 @@ API Key field and click Show.</li>
 </ol>
 <p>The following cURL examples show how to get an authentication token by
 entering your username and either password or your API key.</p>
-<p><strong>Example: Authenticate to the Identity Endpoint – Username and
+<p><strong>Example: Authenticate to the Identity Endpoint â€“ Username and
 Password: JSON Request</strong></p>
 <div class="highlight-sh"><div class="highlight"><pre><span class="nv">$ </span>curl -s https://identity.api.rackspacecloud.com/v2.0/tokens -X <span class="s1">&#39;POST&#39;</span> <span class="se">\</span>
-    -d <span class="s1">&#39;{&quot;auth&quot;:{&quot;passwordCredentials&quot;:{&quot;username&quot;:&quot;MyRackspaceAcct&quot;, \</span>
+     -d <span class="s1">&#39;{&quot;auth&quot;:{&quot;passwordCredentials&quot;:{&quot;username&quot;:&quot;MyRackspaceAcct&quot;, \</span>
 <span class="s1">     &quot;password&quot;:&quot;MyRackspacePwd&quot;}}}&#39;</span> <span class="se">\</span>
-    -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="p">|</span> python -m json.tool
+     -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="p">|</span> python -m json.tool
 </pre></div>
 </div>
-<p><strong>Example: Authenticate to the Identity Endpoint – Username and API
+<p><strong>Example: Authenticate to the Identity Endpoint â€“ Username and API
 Key: JSON Request</strong></p>
 <div class="highlight-sh"><div class="highlight"><pre><span class="nv">$ </span>curl -s https://identity.api.rackspacecloud.com/v2.0/tokens -X <span class="s1">&#39;POST&#39;</span> <span class="se">\</span>
-    -d <span class="s1">&#39;{&quot;auth&quot;:{&quot;RAX-KSKEY:apiKeyCredentials&quot;:{&quot;username&quot;:&quot;MyRackspaceAcct&quot;, &quot;apiKey&quot;:&quot;0000000000000000000&quot;}}}&#39;</span> <span class="se">\</span>
-    -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="p">|</span> python -m json.tool
+     -d <span class="s1">&#39;{&quot;auth&quot;:{&quot;RAX-KSKEY:apiKeyCredentials&quot;:{&quot;username&quot;:&quot;MyRackspaceAcct&quot;, &quot;apiKey&quot;:&quot;0000000000000000000&quot;}}}&#39;</span> <span class="se">\</span>
+     -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="p">|</span> python -m json.tool
 </pre></div>
 </div>
 <div class="admonition note">
@@ -955,101 +915,101 @@ request with multi-factor authentication credentials.</p>
 format:</p>
 <p><strong>Example:&nbsp;Authenticate: JSON Response</strong></p>
 <div class="highlight-sh"><div class="highlight"><pre><span class="o">{</span>
-   <span class="s2">&quot;access&quot;</span>: <span class="o">{</span>
-       <span class="s2">&quot;serviceCatalog&quot;</span>: <span class="o">[</span>
-           <span class="o">{</span>
-               <span class="s2">&quot;endpoints&quot;</span>: <span class="o">[</span>
-                   <span class="o">{</span>
-                       <span class="s2">&quot;internalURL&quot;</span>: <span class="s2">&quot;https://snet-storage101.dfw1.clouddrive.com/v1/MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7&quot;</span>,
-                       <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://storage101.dfw1.clouddrive.com/v1/MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7&quot;</span>,
-                       <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;DFW&quot;</span>,
-                       <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7&quot;</span>
-                   <span class="o">}</span>,
-                   <span class="o">{</span>
-                       <span class="s2">&quot;internalURL&quot;</span>: <span class="s2">&quot;https://snet-storage101.ord1.clouddrive.com/v1/MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7&quot;</span>,
-                       <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://storage101.ord1.clouddrive.com/v1/MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7&quot;</span>,
-                       <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;ORD&quot;</span>,
-                       <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7&quot;</span>
-                   <span class="o">}</span>
-               <span class="o">]</span>,
-               <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;cloudFiles&quot;</span>,
-               <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;object-store&quot;</span>
-           <span class="o">}</span>,
-                           <span class="o">{</span>
-                           <span class="s2">&quot;endpoints&quot;</span>: <span class="o">[</span>
-                                   <span class="o">{</span>
-                                   <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;IAD&quot;</span>,
-                                   <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;820712&quot;</span>,
-                                   <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://iad.images.api.rackspacecloud.com/v2&quot;</span>
-                                   <span class="o">}</span>,
-                                   <span class="o">{</span>
-                                   <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;ORD&quot;</span>,
-                                   <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;820712&quot;</span>,
-                                   <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://ord.images.api.rackspacecloud.com/v2&quot;</span>
-                                   <span class="o">}</span>,
-                                   <span class="o">{</span>
-                                           <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;HKG&quot;</span>,
-                                   <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;820712&quot;</span>,
-                                   <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://hkg.images.api.rackspacecloud.com/v2&quot;</span>
-                                   <span class="o">}</span>,
-                                   <span class="o">{</span>
-                                   <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;DFW&quot;</span>,
-                                   <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;820712&quot;</span>,
-                                   <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://dfw.images.api.rackspacecloud.com/v2&quot;</span>
-                           <span class="o">}</span>,
-                                   <span class="o">{</span>
-                                   <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;SYD&quot;</span>,
-                                   <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;820712&quot;</span>,
-                                   <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://syd.images.api.rackspacecloud.com/v2&quot;</span>
-                                   <span class="o">}</span>
-                           <span class="o">]</span>,
-                           <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;cloudImages&quot;</span>,
-                           <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;image&quot;</span>
-                   <span class="o">}</span>,
-           <span class="o">{</span>
-               <span class="s2">&quot;endpoints&quot;</span>: <span class="o">[</span>
-                   <span class="o">{</span>
-                       <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/v2/010101&quot;</span>,
-                       <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;DFW&quot;</span>,
-                       <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;010101&quot;</span>,
-                       <span class="s2">&quot;versionId&quot;</span>: <span class="s2">&quot;2&quot;</span>,
-                       <span class="s2">&quot;versionInfo&quot;</span>: <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/v2&quot;</span>,
-                       <span class="s2">&quot;versionList&quot;</span>: <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/&quot;</span>
-                   <span class="o">}</span>,
-                   <span class="o">{</span>
-                       <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://ord.servers.api.rackspacecloud.com/v2/010101&quot;</span>,
-                       <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;ORD&quot;</span>,
-                       <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;010101&quot;</span>,
-                       <span class="s2">&quot;versionId&quot;</span>: <span class="s2">&quot;2&quot;</span>,
-                       <span class="s2">&quot;versionInfo&quot;</span>: <span class="s2">&quot;https://ord.servers.api.rackspacecloud.com/v2&quot;</span>,
-                       <span class="s2">&quot;versionList&quot;</span>: <span class="s2">&quot;https://ord.servers.api.rackspacecloud.com/&quot;</span>
-                   <span class="o">}</span>
-               <span class="o">]</span>,
-               <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;cloudServersOpenStack&quot;</span>,
-               <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;compute&quot;</span>
-           <span class="o">}</span>
-       <span class="o">]</span>,
-       <span class="s2">&quot;token&quot;</span>: <span class="o">{</span>
-           <span class="s2">&quot;expires&quot;</span>: <span class="s2">&quot;2012-09-14T15:11:57.585-05:00&quot;</span>,
-           <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;858fb4c2-bf15-4dac-917d-8ec750ae9baa&quot;</span>,
-           <span class="s2">&quot;tenant&quot;</span>: <span class="o">{</span>
-               <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;010101&quot;</span>,
-               <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;010101&quot;</span>
-           <span class="o">}</span>
-       <span class="o">}</span>,
-       <span class="s2">&quot;user&quot;</span>: <span class="o">{</span>
-           <span class="s2">&quot;RAX-AUTH:defaultRegion&quot;</span>: <span class="s2">&quot;DFW&quot;</span>,
-           <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;170454&quot;</span>,
-           <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;MyRackspaceAcct&quot;</span>,
-           <span class="s2">&quot;roles&quot;</span>: <span class="o">[</span>
-               <span class="o">{</span>
-                   <span class="s2">&quot;description&quot;</span>: <span class="s2">&quot;User Admin Role.&quot;</span>,
-                   <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;3&quot;</span>,
-                   <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;identity:user-admin&quot;</span>
-               <span class="o">}</span>
-           <span class="o">]</span>
-       <span class="o">}</span>
-   <span class="o">}</span>
+    <span class="s2">&quot;access&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;serviceCatalog&quot;</span>: <span class="o">[</span>
+            <span class="o">{</span>
+                <span class="s2">&quot;endpoints&quot;</span>: <span class="o">[</span>
+                    <span class="o">{</span>
+                        <span class="s2">&quot;internalURL&quot;</span>: <span class="s2">&quot;https://snet-storage101.dfw1.clouddrive.com/v1/MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7&quot;</span>,
+                        <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://storage101.dfw1.clouddrive.com/v1/MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7&quot;</span>,
+                        <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;DFW&quot;</span>,
+                        <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7&quot;</span>
+                    <span class="o">}</span>,
+                    <span class="o">{</span>
+                        <span class="s2">&quot;internalURL&quot;</span>: <span class="s2">&quot;https://snet-storage101.ord1.clouddrive.com/v1/MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7&quot;</span>,
+                        <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://storage101.ord1.clouddrive.com/v1/MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7&quot;</span>,
+                        <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;ORD&quot;</span>,
+                        <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;MossoCloudFS_530f8649-324c-499c-a075-2195854d52a7&quot;</span>
+                    <span class="o">}</span>
+                <span class="o">]</span>,
+                <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;cloudFiles&quot;</span>,
+                <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;object-store&quot;</span>
+            <span class="o">}</span>,
+                            <span class="o">{</span>
+                            <span class="s2">&quot;endpoints&quot;</span>: <span class="o">[</span>
+                                    <span class="o">{</span>
+                                    <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;IAD&quot;</span>,
+                                    <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;820712&quot;</span>,
+                                    <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://iad.images.api.rackspacecloud.com/v2&quot;</span>
+                                    <span class="o">}</span>,
+                                    <span class="o">{</span>
+                                    <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;ORD&quot;</span>,
+                                    <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;820712&quot;</span>,
+                                    <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://ord.images.api.rackspacecloud.com/v2&quot;</span>
+                                    <span class="o">}</span>,
+                                    <span class="o">{</span>
+                                            <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;HKG&quot;</span>,
+                                    <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;820712&quot;</span>,
+                                    <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://hkg.images.api.rackspacecloud.com/v2&quot;</span>
+                                    <span class="o">}</span>,
+                                    <span class="o">{</span>
+                                    <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;DFW&quot;</span>,
+                                    <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;820712&quot;</span>,
+                                    <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://dfw.images.api.rackspacecloud.com/v2&quot;</span>
+                            <span class="o">}</span>,
+                                    <span class="o">{</span>
+                                    <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;SYD&quot;</span>,
+                                    <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;820712&quot;</span>,
+                                    <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://syd.images.api.rackspacecloud.com/v2&quot;</span>
+                                    <span class="o">}</span>
+                            <span class="o">]</span>,
+                            <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;cloudImages&quot;</span>,
+                            <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;image&quot;</span>
+                    <span class="o">}</span>,
+            <span class="o">{</span>
+                <span class="s2">&quot;endpoints&quot;</span>: <span class="o">[</span>
+                    <span class="o">{</span>
+                        <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/v2/010101&quot;</span>,
+                        <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;DFW&quot;</span>,
+                        <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;010101&quot;</span>,
+                        <span class="s2">&quot;versionId&quot;</span>: <span class="s2">&quot;2&quot;</span>,
+                        <span class="s2">&quot;versionInfo&quot;</span>: <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/v2&quot;</span>,
+                        <span class="s2">&quot;versionList&quot;</span>: <span class="s2">&quot;https://dfw.servers.api.rackspacecloud.com/&quot;</span>
+                    <span class="o">}</span>,
+                    <span class="o">{</span>
+                        <span class="s2">&quot;publicURL&quot;</span>: <span class="s2">&quot;https://ord.servers.api.rackspacecloud.com/v2/010101&quot;</span>,
+                        <span class="s2">&quot;region&quot;</span>: <span class="s2">&quot;ORD&quot;</span>,
+                        <span class="s2">&quot;tenantId&quot;</span>: <span class="s2">&quot;010101&quot;</span>,
+                        <span class="s2">&quot;versionId&quot;</span>: <span class="s2">&quot;2&quot;</span>,
+                        <span class="s2">&quot;versionInfo&quot;</span>: <span class="s2">&quot;https://ord.servers.api.rackspacecloud.com/v2&quot;</span>,
+                        <span class="s2">&quot;versionList&quot;</span>: <span class="s2">&quot;https://ord.servers.api.rackspacecloud.com/&quot;</span>
+                    <span class="o">}</span>
+                <span class="o">]</span>,
+                <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;cloudServersOpenStack&quot;</span>,
+                <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;compute&quot;</span>
+            <span class="o">}</span>
+        <span class="o">]</span>,
+        <span class="s2">&quot;token&quot;</span>: <span class="o">{</span>
+            <span class="s2">&quot;expires&quot;</span>: <span class="s2">&quot;2012-09-14T15:11:57.585-05:00&quot;</span>,
+            <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;858fb4c2-bf15-4dac-917d-8ec750ae9baa&quot;</span>,
+            <span class="s2">&quot;tenant&quot;</span>: <span class="o">{</span>
+                <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;010101&quot;</span>,
+                <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;010101&quot;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>,
+        <span class="s2">&quot;user&quot;</span>: <span class="o">{</span>
+            <span class="s2">&quot;RAX-AUTH:defaultRegion&quot;</span>: <span class="s2">&quot;DFW&quot;</span>,
+            <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;170454&quot;</span>,
+            <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;MyRackspaceAcct&quot;</span>,
+            <span class="s2">&quot;roles&quot;</span>: <span class="o">[</span>
+                <span class="o">{</span>
+                    <span class="s2">&quot;description&quot;</span>: <span class="s2">&quot;User Admin Role.&quot;</span>,
+                    <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;3&quot;</span>,
+                    <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;identity:user-admin&quot;</span>
+                <span class="o">}</span>
+            <span class="o">]</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -1109,7 +1069,7 @@ request to list images as follows:</p>
 <div class="highlight-sh"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">export </span><span class="nv">account</span><span class="o">=</span><span class="s2">&quot;010101&quot;</span>
 <span class="nv">$ </span><span class="nb">export </span><span class="nv">token</span><span class="o">=</span><span class="s2">&quot;00000000-0000-0000-000000000000&quot;</span>
 <span class="nv">$ </span>curl -s https://dfw.images.api.rackspacecloud.com/v2/<span class="nv">$account</span>/images <span class="se">\</span>
-    -X <span class="s2">&quot;GET&quot;</span> -H <span class="s2">&quot;X-Auth-Token: </span><span class="nv">$token</span><span class="s2">&quot;</span> <span class="p">|</span> python -m json.tool
+     -X <span class="s2">&quot;GET&quot;</span> -H <span class="s2">&quot;X-Auth-Token: </span><span class="nv">$token</span><span class="s2">&quot;</span> <span class="p">|</span> python -m json.tool
 </pre></div>
 </div>
 </div>
@@ -1123,7 +1083,7 @@ which account users of their Cloud account have access to which next gen
 Cloud Servers API service capabilities, based on roles defined by
 Rackspace (see Next Gen Cloud Servers Product Roles and
 Permissions). The permissions to perform certain operations in next gen
-Cloud Servers API – create, read, update, delete – are assigned to specific
+Cloud Servers API â€“ create, read, update, delete â€“ are assigned to specific
 roles. The account owner user assigns these roles, either global (multiproduct)
 or product-specific (for example, next gen Cloud Servers), to account
 users.</p>
@@ -1236,6 +1196,1948 @@ working in, you can find that information in your Cloud Control Panel at
 </div>
 </div>
 </div>
-    </div>
+<div class="section" id="api-operations">
+<span id="images-dg-api-operations"></span><h1>API Operations<a class="headerlink" href="#api-operations" title="Permalink to this headline">#</a></h1>
+<p>Developers use the operations described in this chapter to perform the following tasks:</p>
+<ul class="simple">
+<li>Manage images</li>
+<li>Create and manage image members</li>
+<li>Create and manage image tags</li>
+<li>Manage image tasks like importing and exporting images</li>
+<li>Get information about image schemas</li>
+</ul>
+<div class="section" id="images-api-operations-images">
+<span id="id1"></span><h2>Images<a class="headerlink" href="#images-api-operations-images" title="Permalink to this headline">#</a></h2>
+<p>Use the images API operations to list, delete, and update images.</p>
+</div>
+</div>
+<div class="section" id="list-images-1">
+<h1>List Images -  1<a class="headerlink" href="#list-images-1" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="get-list-images-images.html#request">Request</a>
+<a class="reference external" href="get-list-images-images.html#response">Response</a></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">GET</span> <span class="o">/</span><span class="n">images</span>
+</pre></div>
+</div>
+<p>Lists public virtual machine (VM) images.</p>
+<p>This operation returns images you created, shared images that you accepted, and standard images. For more information about standard images, see ` 1.1.1. Standard images &lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci-devguide/content/what-and-why.html#std-images">http://docs.rackspace.com/images/api/v2/ci-devguide/content/what-and-why.html#std-images</a>&gt;`__. The response conforms to the schema found in ` 4.5.1. Get images schema &lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImagesSchema_schemas_images_Schema_Calls.html">http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImagesSchema_schemas_images_Schema_Calls.html</a>&gt;`__.</p>
+<p>This operation returns a subset of the larger collection of images and a link that you can use to get the next set of images. Always check for the presence of a <code class="docutils literal"><span class="pre">next</span></code> link and use it as the URI in a subsequent <code class="docutils literal"><span class="pre">GET</span></code> request. Follow this pattern until a <code class="docutils literal"><span class="pre">next</span></code> link is no longer provided. The next link preserves any query parameters that you send in your initial request. You can use the <code class="docutils literal"><span class="pre">first</span></code> link to jump back to the first page of the collection. If you prefer to paginate through images manually, use the <code class="docutils literal"><span class="pre">limit</span></code> and <code class="docutils literal"><span class="pre">marker</span></code> parameters.</p>
+<p>The List Images operation accepts several types of query parameters that you can use to filter the results of the returned collection.</p>
+<p>A client can provide direct comparison filters by using most image attributes, such as <code class="docutils literal"><span class="pre">name=Ubuntu</span></code>, <code class="docutils literal"><span class="pre">visibility=public</span></code>, and so on. A client cannot filter on tags or anything defined as a link in the json-schema, such as <code class="docutils literal"><span class="pre">self</span></code>, <code class="docutils literal"><span class="pre">file</span></code>, or <code class="docutils literal"><span class="pre">schema</span></code>.</p>
+<p>You can use the <code class="docutils literal"><span class="pre">size_min</span></code> and <code class="docutils literal"><span class="pre">size_max</span></code> query parameters to perform greater-than and less-than filtering of images based on their <code class="docutils literal"><span class="pre">size</span></code> attribute. The size is measured in bytes and refers to the size of an image when it is stored on disk.</p>
+<p>For example, sending a <code class="docutils literal"><span class="pre">size_min</span></code> filter of 1048576 and size_max of 4194304 filters the container to include only images that are between 1 MB and 4 MB in size.</p>
+<p>You can sort the results of this operation by using the <code class="docutils literal"><span class="pre">sort_key</span></code> and <code class="docutils literal"><span class="pre">sort_dir</span></code> parameters. The API uses the natural sorting of whatever image attribute is provided as the <code class="docutils literal"><span class="pre">sort_key</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Public images may reach end-of-life and be removed from the base image list. This ` Hidden Base Images article &lt;<a class="reference external" href="http://www.rackspace.com/knowledge_center/article/hidden-base-images">http://www.rackspace.com/knowledge_center/article/hidden-base-images</a>&gt;`__ contains images which have been removed from the base images list but which may still be available.</p>
+</div>
+<p>This table shows the possible response codes for this operation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Response Code</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>200</td>
+<td>Success</td>
+<td>Request succeeded.</td>
+</tr>
+<tr class="row-odd"><td>400</td>
+<td>Error</td>
+<td>A general error has
+occured.</td>
+</tr>
+<tr class="row-even"><td>401</td>
+<td>Unauthorized</td>
+<td>Unauthorized.</td>
+</tr>
+<tr class="row-odd"><td>403</td>
+<td>Forbidden</td>
+<td>Forbidden.</td>
+</tr>
+<tr class="row-even"><td>405</td>
+<td>Bad Method</td>
+<td>Bad method.</td>
+</tr>
+<tr class="row-odd"><td>413</td>
+<td>Over Limit</td>
+<td>The number of items
+returned is above the
+allowed limit.</td>
+</tr>
+<tr class="row-even"><td>503</td>
+<td>Service Unavailable</td>
+<td>The requested service is
+unavailable.</td>
+</tr>
+<tr class="row-odd"><td>500</td>
+<td>API Fault</td>
+<td>API fault.</td>
+</tr>
+<tr class="row-even"><td>404</td>
+<td>Not Found</td>
+<td>Resource not found.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the query parameters for the request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>limit</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Requests a specific page
+size. Expect a response
+to a limited request to
+return between zero
+items and the number
+specified. The typical
+pattern for using the
+<code class="docutils literal"><span class="pre">limit</span></code> and <code class="docutils literal"><span class="pre">marker</span></code>
+parameters is to make an
+initial limited request
+and then to use the ID
+of the last image from
+the response as the
+<code class="docutils literal"><span class="pre">marker</span></code> parameter in
+a subsequent limited
+request.</td>
+</tr>
+<tr class="row-odd"><td>marker</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Specifies the ID of the
+last-seen image. The
+typical pattern for
+using the <code class="docutils literal"><span class="pre">limit</span></code> and
+<code class="docutils literal"><span class="pre">marker</span></code> parameters is
+to make an initial
+limited request and then
+to use the ID of the
+last image from the
+response as the
+<code class="docutils literal"><span class="pre">marker</span></code> parameter in
+a subsequent limited
+request.</td>
+</tr>
+<tr class="row-even"><td>name</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Filter parameter that
+specifies the name of
+the image as a string.</td>
+</tr>
+<tr class="row-odd"><td>visibility</td>
+<td>imageapi:string
+<em>(Required)</em></td>
+<td>Filter parameter that
+specifies image
+visibility as either
+<code class="docutils literal"><span class="pre">public</span></code>, <code class="docutils literal"><span class="pre">private</span></code>,
+or <code class="docutils literal"><span class="pre">shared</span></code>.</td>
+</tr>
+<tr class="row-even"><td>member_status</td>
+<td>imageapi:string
+<em>(Required)</em></td>
+<td>Filter parameter that
+shows images with the
+specified member status
+for only those images
+shared with the user.
+Valid values are
+<code class="docutils literal"><span class="pre">accepted</span></code>,
+<code class="docutils literal"><span class="pre">pending</span></code>,
+<code class="docutils literal"><span class="pre">rejected</span></code>, and
+<code class="docutils literal"><span class="pre">all</span></code>. The default is
+<code class="docutils literal"><span class="pre">accepted</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>owner</td>
+<td>imageapi:string
+<em>(Required)</em></td>
+<td>Filter parameter that
+shows images shared with
+the user by the
+specified tag.</td>
+</tr>
+<tr class="row-even"><td>tag</td>
+<td>imageapi:string
+<em>(Required)</em></td>
+<td>Filter parameter that
+shows images with the
+specified tag, where the
+owner is indicated by
+tenant ID.</td>
+</tr>
+<tr class="row-odd"><td>status</td>
+<td>xsd:int <em>(Required)</em></td>
+<td>Filter parameter that
+species the image status
+as <code class="docutils literal"><span class="pre">queued</span></code>,
+<code class="docutils literal"><span class="pre">saving</span></code>, <code class="docutils literal"><span class="pre">active</span></code>,
+<code class="docutils literal"><span class="pre">killed</span></code>, <code class="docutils literal"><span class="pre">deleted</span></code>,
+or <code class="docutils literal"><span class="pre">pending_delete</span></code>.</td>
+</tr>
+<tr class="row-even"><td>size_min</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Filter parameter that
+specifies the minimum
+size of the image in
+bytes.</td>
+</tr>
+<tr class="row-odd"><td>size_max</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Filter parameter that
+specifies the maximum
+size of the image in
+bytes.</td>
+</tr>
+<tr class="row-even"><td>sort_key</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Sort key. All image
+attributes can be used
+as the sort key, except
+<code class="docutils literal"><span class="pre">tags</span></code> and <code class="docutils literal"><span class="pre">link</span></code>
+attributes. The default
+is <code class="docutils literal"><span class="pre">created_at</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>sort_dir</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Sort direction. Valid
+values are <code class="docutils literal"><span class="pre">asc</span></code>
+(ascending) and <code class="docutils literal"><span class="pre">desc</span></code>
+(descending). The
+default is <code class="docutils literal"><span class="pre">desc</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the body parameters for the response:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="20%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>images</td>
+<td>array
+<em>(Required)</em></td>
+<td>The array of the images in the list.</td>
+</tr>
+<tr class="row-odd"><td>id</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The UUID of the image.</td>
+</tr>
+<tr class="row-even"><td>name</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The name of the image.</td>
+</tr>
+<tr class="row-odd"><td>status</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The status of the image. For possible image
+statuses, see ` 1.4.1. Image statuses
+&lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci">http://docs.rackspace.com/images/api/v2/ci</a>-
+devguide/content/image-statuses.html&gt;`__.</td>
+</tr>
+<tr class="row-even"><td>visibility</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>Specifies image visibility as either
+<code class="docutils literal"><span class="pre">public</span></code>, <code class="docutils literal"><span class="pre">private</span></code>, or <code class="docutils literal"><span class="pre">shared</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>size</td>
+<td>xsd:integer
+<em>(Required)</em></td>
+<td>The size of the image in bytes.</td>
+</tr>
+<tr class="row-even"><td>checksum</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The checksum of the image.</td>
+</tr>
+<tr class="row-odd"><td>tags</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The user-defined image tags.</td>
+</tr>
+<tr class="row-even"><td>created_at</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The date and time that the image was created.</td>
+</tr>
+<tr class="row-odd"><td>updated_at</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The date and time that the image was updated.</td>
+</tr>
+<tr class="row-even"><td>self</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The link to the image.</td>
+</tr>
+<tr class="row-odd"><td>file</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The image file.</td>
+</tr>
+<tr class="row-even"><td>schema</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The schema of the image.</td>
+</tr>
+<tr class="row-odd"><td>first</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The URI for the first image in the list.</td>
+</tr>
+<tr class="row-even"><td>next</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The URI for the next image in the list.</td>
+</tr>
+<tr class="row-odd"><td>schema</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The schema of the images list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example List Images: JSON response</strong></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="p">{</span>
+   <span class="s">&quot;images&quot;</span><span class="p">:</span>
+   <span class="p">[</span>
+      <span class="p">{</span>
+         <span class="s">&quot;id&quot;</span><span class="p">:</span><span class="s">&quot;da3b75d9-3f4a-40e7-8a2c-bfab23927dea&quot;</span><span class="p">,</span>
+         <span class="s">&quot;name&quot;</span><span class="p">:</span><span class="s">&quot;cirros-0.3.0-x86_64-uec-ramdisk&quot;</span><span class="p">,</span>
+         <span class="s">&quot;status&quot;</span><span class="p">:</span><span class="s">&quot;active&quot;</span><span class="p">,</span>
+         <span class="s">&quot;visibility&quot;</span><span class="p">:</span><span class="s">&quot;public&quot;</span><span class="p">,</span>
+         <span class="s">&quot;size&quot;</span><span class="p">:</span><span class="mi">2254249</span><span class="p">,</span>
+         <span class="s">&quot;checksum&quot;</span><span class="p">:</span><span class="s">&quot;2cec138d7dae2aa59038ef8c9aec2390&quot;</span><span class="p">,</span>
+         <span class="s">&quot;tags&quot;</span><span class="p">:[</span>
+            <span class="s">&quot;ping&quot;</span><span class="p">,</span>
+            <span class="s">&quot;pong&quot;</span>
+         <span class="p">],</span>
+         <span class="s">&quot;created_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-10T19:23:50Z&quot;</span><span class="p">,</span>
+         <span class="s">&quot;updated_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-10T19:23:50Z&quot;</span><span class="p">,</span>
+         <span class="s">&quot;self&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/da3b75d9-3f4a-40e7-8a2c-bfab23927dea&quot;</span><span class="p">,</span>
+         <span class="s">&quot;file&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/da3b75d9-3f4a-40e7-8a2c-bfab23927dea/file&quot;</span><span class="p">,</span>
+         <span class="s">&quot;schema&quot;</span><span class="p">:</span><span class="s">&quot;/v2/schemas/image&quot;</span><span class="p">},</span>
+      <span class="p">{</span>
+         <span class="s">&quot;id&quot;</span><span class="p">:</span><span class="s">&quot;0d5bcbc7-b066-4217-83f4-7111a60a399a&quot;</span><span class="p">,</span>
+         <span class="s">&quot;name&quot;</span><span class="p">:</span><span class="s">&quot;cirros-0.3.0-x86_64-uec&quot;</span><span class="p">,</span>
+         <span class="s">&quot;status&quot;</span><span class="p">:</span><span class="s">&quot;active&quot;</span><span class="p">,</span>
+         <span class="s">&quot;visibility&quot;</span><span class="p">:</span><span class="s">&quot;public&quot;</span><span class="p">,</span>
+         <span class="s">&quot;size&quot;</span><span class="p">:</span><span class="mi">25165824</span><span class="p">,</span>
+         <span class="s">&quot;checksum&quot;</span><span class="p">:</span><span class="s">&quot;2f81976cae15c16ef0010c51e3a6c163&quot;</span><span class="p">,</span>
+         <span class="s">&quot;tags&quot;</span><span class="p">:[</span> <span class="p">],</span>
+         <span class="s">&quot;created_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-10T19:23:50Z&quot;</span><span class="p">,</span>
+         <span class="s">&quot;updated_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-10T19:23:50Z&quot;</span><span class="p">,</span>
+         <span class="s">&quot;self&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/0d5bcbc7-b066-4217-83f4-7111a60a399a&quot;</span><span class="p">,</span>
+         <span class="s">&quot;file&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/0d5bcbc7-b066-4217-83f4-7111a60a399a/file&quot;</span><span class="p">,</span>
+         <span class="s">&quot;schema&quot;</span><span class="p">:</span><span class="s">&quot;/v2/schemas/image&quot;</span><span class="p">},</span>
+      <span class="p">{</span>
+         <span class="s">&quot;id&quot;</span><span class="p">:</span><span class="s">&quot;e6421c88-b1ed-4407-8824-b57298249091&quot;</span><span class="p">,</span>
+         <span class="s">&quot;name&quot;</span><span class="p">:</span><span class="s">&quot;cirros-0.3.0-x86_64-uec-kernel&quot;</span><span class="p">,</span>
+         <span class="s">&quot;status&quot;</span><span class="p">:</span><span class="s">&quot;active&quot;</span><span class="p">,</span>
+         <span class="s">&quot;visibility&quot;</span><span class="p">:</span><span class="s">&quot;public&quot;</span><span class="p">,</span>
+         <span class="s">&quot;size&quot;</span><span class="p">:</span><span class="mi">4731440</span><span class="p">,</span>
+         <span class="s">&quot;checksum&quot;</span><span class="p">:</span><span class="s">&quot;cfb203e7267a28e435dbcb05af5910a9&quot;</span><span class="p">,</span>
+         <span class="s">&quot;tags&quot;</span><span class="p">:[</span> <span class="p">],</span>
+         <span class="s">&quot;created_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-10T19:23:49Z&quot;</span><span class="p">,</span>
+         <span class="s">&quot;updated_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-10T19:23:49Z&quot;</span><span class="p">,</span>
+         <span class="s">&quot;self&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/e6421c88-b1ed-4407-8824-b57298249091&quot;</span><span class="p">,</span>
+         <span class="s">&quot;file&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/e6421c88-b1ed-4407-8824-b57298249091/file&quot;</span><span class="p">,</span>
+         <span class="s">&quot;schema&quot;</span><span class="p">:</span><span class="s">&quot;/v2/schemas/image&quot;</span><span class="p">}</span>
+   <span class="p">],</span>
+   <span class="s">&quot;first&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images?limit=3&quot;</span><span class="p">,</span>
+   <span class="s">&quot;next&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images?limit=3&amp;marker=e6421c88-b1ed-4407-8824-b57298249091&quot;</span><span class="p">,</span>
+   <span class="s">&quot;schema&quot;</span><span class="p">:</span><span class="s">&quot;/v2/schemas/images&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-image-details-1">
+<h1>Get Image Details -  1<a class="headerlink" href="#get-image-details-1" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="get-get-image-details-images-image-id.html#request">Request</a>
+<a class="reference external" href="get-get-image-details-images-image-id.html#response">Response</a></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">GET</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Gets the details for the specified image.</p>
+<p>This operation shows the details for the image. The response body is a single image entity and conforms to the schema found in ` 4.5.2. Get image schema &lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImageSchema_schemas_image_Schema_Calls.html">http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImageSchema_schemas_image_Schema_Calls.html</a>&gt;`__.</p>
+<p>This table shows the possible response codes for this operation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Response Code</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>200</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>400</td>
+<td>Error</td>
+<td>A general error has
+occured.</td>
+</tr>
+<tr class="row-even"><td>401</td>
+<td>Unauthorized</td>
+<td>Unauthorized.</td>
+</tr>
+<tr class="row-odd"><td>403</td>
+<td>Forbidden</td>
+<td>Forbidden.</td>
+</tr>
+<tr class="row-even"><td>405</td>
+<td>Bad Method</td>
+<td>Bad method.</td>
+</tr>
+<tr class="row-odd"><td>413</td>
+<td>Over Limit</td>
+<td>The number of items
+returned is above the
+allowed limit.</td>
+</tr>
+<tr class="row-even"><td>503</td>
+<td>Service Unavailable</td>
+<td>The requested service is
+unavailable.</td>
+</tr>
+<tr class="row-odd"><td>500</td>
+<td>API Fault</td>
+<td>API fault.</td>
+</tr>
+<tr class="row-even"><td>404</td>
+<td>Not Found</td>
+<td>Resource not found.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the URI parameters for the request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>{image_id}</td>
+<td>csapi:uuid</td>
+<td>Image ID stored through
+the image API, typically
+a UUID.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the body parameters for the response:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="20%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>id</td>
+<td>xsd:string</td>
+<td>The UUID of the image.</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>xsd:string</td>
+<td>The name of the image.</td>
+</tr>
+<tr class="row-even"><td>status</td>
+<td>xsd:string</td>
+<td>The status of the image. For possible image
+statuses, see ` 1.4.1. Image statuses
+&lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci">http://docs.rackspace.com/images/api/v2/ci</a>-
+devguide/content/image-statuses.html&gt;`__.</td>
+</tr>
+<tr class="row-odd"><td>visibility</td>
+<td>xsd:string</td>
+<td>Specifies image visibility as either
+<code class="docutils literal"><span class="pre">public</span></code>, <code class="docutils literal"><span class="pre">private</span></code>, or <code class="docutils literal"><span class="pre">shared</span></code>.</td>
+</tr>
+<tr class="row-even"><td>checksum</td>
+<td>xsd:string</td>
+<td>The checksum of the image.</td>
+</tr>
+<tr class="row-odd"><td>minRam</td>
+<td>xsd:string</td>
+<td>The minimum server RAM required for this
+image.</td>
+</tr>
+<tr class="row-even"><td>minDisk</td>
+<td>xsd:string</td>
+<td>The minimum server disk size required for
+this image.</td>
+</tr>
+<tr class="row-odd"><td>tags</td>
+<td>array</td>
+<td>An array of user-defined image tags.</td>
+</tr>
+<tr class="row-even"><td>created_at</td>
+<td>xsd:string</td>
+<td>The date and time that the image was created.</td>
+</tr>
+<tr class="row-odd"><td>updated_at</td>
+<td>xsd:string</td>
+<td>The date and time that the image was updated.</td>
+</tr>
+<tr class="row-even"><td>schema</td>
+<td>xsd:string</td>
+<td>The schema of the image.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Get Image Details: JSON response</strong></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;container_format&quot;</span><span class="p">:</span> <span class="s">&quot;ovf&quot;</span><span class="p">,</span>
+    <span class="s">&quot;min_ram&quot;</span><span class="p">:</span> <span class="mi">512</span><span class="p">,</span>
+    <span class="s">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s">&quot;2015-03-09T19:32:29Z&quot;</span><span class="p">,</span>
+    <span class="s">&quot;owner&quot;</span><span class="p">:</span> <span class="s">&quot;657197&quot;</span><span class="p">,</span>
+    <span class="s">&quot;file&quot;</span><span class="p">:</span> <span class="s">&quot;/v2/images/126a6674-6308-421f-801e-fc302ab4f53f/file&quot;</span><span class="p">,</span>
+    <span class="s">&quot;flavor_classes&quot;</span><span class="p">:</span> <span class="s">&quot;*,!onmetal&quot;</span><span class="p">,</span>
+    <span class="s">&quot;vm_mode&quot;</span><span class="p">:</span> <span class="s">&quot;hvm&quot;</span><span class="p">,</span>
+    <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="s">&quot;126a6674-6308-421f-801e-fc302ab4f53f&quot;</span><span class="p">,</span>
+    <span class="s">&quot;size&quot;</span><span class="p">:</span> <span class="mi">758777106</span><span class="p">,</span>
+    <span class="s">&quot;os_distro&quot;</span><span class="p">:</span> <span class="s">&quot;centos&quot;</span><span class="p">,</span>
+    <span class="s">&quot;image_type&quot;</span><span class="p">:</span> <span class="s">&quot;base&quot;</span><span class="p">,</span>
+    <span class="s">&quot;self&quot;</span><span class="p">:</span> <span class="s">&quot;/v2/images/126a6674-6308-421f-801e-fc302ab4f53f&quot;</span><span class="p">,</span>
+    <span class="s">&quot;disk_format&quot;</span><span class="p">:</span> <span class="s">&quot;vhd&quot;</span><span class="p">,</span>
+    <span class="s">&quot;schema&quot;</span><span class="p">:</span> <span class="s">&quot;/v2/schemas/image&quot;</span><span class="p">,</span>
+    <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;active&quot;</span><span class="p">,</span>
+    <span class="s">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s">&quot;visibility&quot;</span><span class="p">:</span> <span class="s">&quot;public&quot;</span><span class="p">,</span>
+    <span class="s">&quot;auto_disk_config&quot;</span><span class="p">:</span> <span class="s">&quot;disabled&quot;</span><span class="p">,</span>
+    <span class="s">&quot;min_disk&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;CentOS 7 (PVHVM)&quot;</span><span class="p">,</span>
+    <span class="s">&quot;checksum&quot;</span><span class="p">:</span> <span class="s">&quot;554bd2ad5b3a275c46b6d8983ae4da26&quot;</span><span class="p">,</span>
+    <span class="s">&quot;created_at&quot;</span><span class="p">:</span> <span class="s">&quot;2015-01-28T19:31:37Z&quot;</span><span class="p">,</span>
+    <span class="s">&quot;cache_in_nova&quot;</span><span class="p">:</span> <span class="s">&quot;True&quot;</span><span class="p">,</span>
+    <span class="s">&quot;protected&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s">&quot;os_type&quot;</span><span class="p">:</span> <span class="s">&quot;linux&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__release_id&quot;</span><span class="p">:</span> <span class="s">&quot;220&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__build_core&quot;</span><span class="p">:</span> <span class="s">&quot;1&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__options&quot;</span><span class="p">:</span> <span class="s">&quot;0&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__release_version&quot;</span><span class="p">:</span> <span class="s">&quot;10&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__platform_target&quot;</span><span class="p">:</span> <span class="s">&quot;PublicCloud&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__build_managed&quot;</span><span class="p">:</span> <span class="s">&quot;1&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__visible_managed&quot;</span><span class="p">:</span> <span class="s">&quot;0&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__source&quot;</span><span class="p">:</span> <span class="s">&quot;kickstart&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__ui_default_show&quot;</span><span class="p">:</span> <span class="s">&quot;True&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__release_build_date&quot;</span><span class="p">:</span> <span class="s">&quot;2015-01-28_18-59-30&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__visible_core&quot;</span><span class="p">:</span> <span class="s">&quot;0&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__build_rackconnect&quot;</span><span class="p">:</span> <span class="s">&quot;1&quot;</span><span class="p">,</span>
+    <span class="s">&quot;com.rackspace__1__visible_rackconnect&quot;</span><span class="p">:</span> <span class="s">&quot;0&quot;</span><span class="p">,</span>
+    <span class="s">&quot;org.openstack__1__os_version&quot;</span><span class="p">:</span> <span class="s">&quot;7&quot;</span><span class="p">,</span>
+    <span class="s">&quot;org.openstack__1__architecture&quot;</span><span class="p">:</span> <span class="s">&quot;x64&quot;</span><span class="p">,</span>
+    <span class="s">&quot;org.openstack__1__os_distro&quot;</span><span class="p">:</span> <span class="s">&quot;org.centos&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="update-image-1">
+<h1>Update Image -  1<a class="headerlink" href="#update-image-1" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="patch-update-image-images-image-id.html#request">Request</a>
+<a class="reference external" href="patch-update-image-images-image-id.html#response">Response</a></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">PATCH</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Updates the specified image.</p>
+<p>This operation allows you to update an image that you own. The request body must conform to the <code class="docutils literal"><span class="pre">'application/openstack-images-v2.1-json-patch'</span></code> media type. The response conforms to the schema found in ` 4.5.2. Get image schema &lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImageSchema_schemas_image_Schema_Calls.html">http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImageSchema_schemas_image_Schema_Calls.html</a>&gt;`__.</p>
+<p>You can use the <code class="docutils literal"><span class="pre">HTTP</span> <span class="pre">PATCH</span></code> method to update certain standard properties, and to add, update, or remove custom, user-defined image properties. For more information, see ` 2.4. HTTP PATCH method &lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci-devguide/content/patch-method.html">http://docs.rackspace.com/images/api/v2/ci-devguide/content/patch-method.html</a>&gt;`__ in this guide. Here are some guidelines for custom, user-defined properties.</p>
+<ul class="simple">
+<li>Adding properties: You can add custom properties to your image.</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Naming properties: We recommend you name a custom property by prefixing your domain or name, and we do not allow you to use <code class="docutils literal"><span class="pre">com.rackspace</span></code> as the prefix. For example, <code class="docutils literal"><span class="pre">com.mycompany.myproperty</span></code> and <code class="docutils literal"><span class="pre">myname.myproperty</span></code> are valid, and <code class="docutils literal"><span class="pre">com.rackspace.myproperty</span></code> is not allowed.</li>
+</ul>
+<p>Do not use the prefix <code class="docutils literal"><span class="pre">org.openstack</span></code> since OpenStack might add a property with the same name.</p>
+</div></blockquote>
+<ul class="simple">
+<li>Deleting properties: You can delete any custom property which you previously added to your image.</li>
+<li>Updating properties: You can update any custom properties that you previously added to an image that you own, and you can update the following standard properties:</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">name</span></code></li>
+<li><code class="docutils literal"><span class="pre">tags</span></code></li>
+<li><code class="docutils literal"><span class="pre">os_distro</span></code></li>
+<li><code class="docutils literal"><span class="pre">os_version</span></code></li>
+<li><code class="docutils literal"><span class="pre">protected</span></code></li>
+<li><code class="docutils literal"><span class="pre">container_format</span></code> (changing this may render your image unusable)</li>
+<li><code class="docutils literal"><span class="pre">disk_format</span></code> (changing this may render your image unusable)</li>
+<li><code class="docutils literal"><span class="pre">min_disk</span></code> (changing this affects what flavors you can use with the image)</li>
+<li><code class="docutils literal"><span class="pre">min_ram</span></code> (changing this affects what flavors you can use with the image)</li>
+<li><code class="docutils literal"><span class="pre">ramdisk_id</span></code> (only applies to disk_format of <code class="docutils literal"><span class="pre">ami</span></code> )</li>
+<li><code class="docutils literal"><span class="pre">kernel_id</span></code> (only applies to disk_format of <code class="docutils literal"><span class="pre">ami</span></code> )</li>
+</ul>
+</div></blockquote>
+<p>In general, you can update any properties you own, but do not expect to be able to update anyone else&#8217;s properties. For example, you can&#8217;t update any properties starting with <code class="docutils literal"><span class="pre">com.rackspace</span></code>, and you might not be able to update some properties starting with <code class="docutils literal"><span class="pre">org.openstack</span></code>.</p>
+<p>This table shows the possible response codes for this operation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Response Code</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>200</td>
+<td>Success</td>
+<td>Request succeeded.</td>
+</tr>
+<tr class="row-odd"><td>400</td>
+<td>Error</td>
+<td>A general error has
+occured.</td>
+</tr>
+<tr class="row-even"><td>401</td>
+<td>Unauthorized</td>
+<td>Unauthorized.</td>
+</tr>
+<tr class="row-odd"><td>403</td>
+<td>Forbidden</td>
+<td>Forbidden.</td>
+</tr>
+<tr class="row-even"><td>405</td>
+<td>Bad Method</td>
+<td>Bad method.</td>
+</tr>
+<tr class="row-odd"><td>413</td>
+<td>Over Limit</td>
+<td>The number of items
+returned is above the
+allowed limit.</td>
+</tr>
+<tr class="row-even"><td>503</td>
+<td>Service Unavailable</td>
+<td>The requested service is
+unavailable.</td>
+</tr>
+<tr class="row-odd"><td>500</td>
+<td>API Fault</td>
+<td>API fault.</td>
+</tr>
+<tr class="row-even"><td>415</td>
+<td>Bad Media Type</td>
+<td>Bad media type. This may
+result if the wrong
+media type is used in
+the cURL request.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the URI parameters for the request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>{image_id}</td>
+<td>csapi:uuid</td>
+<td>Image ID stored through
+the image API, typically
+a UUID.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the body parameters for the request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>op</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The operation to be
+executed ( <code class="docutils literal"><span class="pre">add</span></code>,
+<code class="docutils literal"><span class="pre">remove</span></code>, or
+<code class="docutils literal"><span class="pre">replace</span></code> ).</td>
+</tr>
+<tr class="row-odd"><td>path</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The location within the
+image where the
+operation is to be
+performed.</td>
+</tr>
+<tr class="row-even"><td>value</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The actual value to be
+added or replaced. It is
+not required for the
+<code class="docutils literal"><span class="pre">delete</span></code> operation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Update Image: JSON request</strong></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="p">[</span>
+    <span class="p">{</span><span class="s">&quot;op&quot;</span><span class="p">:</span> <span class="s">&quot;replace&quot;</span><span class="p">,</span> <span class="s">&quot;path&quot;</span><span class="p">:</span> <span class="s">&quot;/name&quot;</span><span class="p">,</span> <span class="s">&quot;value&quot;</span><span class="p">:</span> <span class="s">&quot;Fedora 17&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">&quot;op&quot;</span><span class="p">:</span> <span class="s">&quot;replace&quot;</span><span class="p">,</span> <span class="s">&quot;path&quot;</span><span class="p">:</span> <span class="s">&quot;/tags&quot;</span><span class="p">,</span> <span class="s">&quot;value&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;fedora&quot;</span><span class="p">,</span> <span class="s">&quot;beefy&quot;</span><span class="p">]}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>This table shows the body parameters for the response:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="20%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>id</td>
+<td>xsd:string</td>
+<td>The UUID of the image.</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>xsd:string</td>
+<td>The name of the image.</td>
+</tr>
+<tr class="row-even"><td>status</td>
+<td>xsd:string</td>
+<td>The status of the image. For possible image
+statuses, see ` 1.4.1. Image statuses
+&lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci">http://docs.rackspace.com/images/api/v2/ci</a>-
+devguide/content/image-statuses.html&gt;`__.</td>
+</tr>
+<tr class="row-odd"><td>visibility</td>
+<td>xsd:string</td>
+<td>Specifies image visibility as either
+<code class="docutils literal"><span class="pre">public</span></code>, <code class="docutils literal"><span class="pre">private</span></code>, or <code class="docutils literal"><span class="pre">shared</span></code>.</td>
+</tr>
+<tr class="row-even"><td>checksum</td>
+<td>xsd:string</td>
+<td>The checksum of the image.</td>
+</tr>
+<tr class="row-odd"><td>minRam</td>
+<td>xsd:string</td>
+<td>The minimum server RAM required for this
+image.</td>
+</tr>
+<tr class="row-even"><td>minDisk</td>
+<td>xsd:string</td>
+<td>The minimum server disk size required for
+this image.</td>
+</tr>
+<tr class="row-odd"><td>tags</td>
+<td>array</td>
+<td>An array of user-defined image tags.</td>
+</tr>
+<tr class="row-even"><td>created_at</td>
+<td>xsd:string</td>
+<td>The date and time that the image was created.</td>
+</tr>
+<tr class="row-odd"><td>updated_at</td>
+<td>xsd:string</td>
+<td>The date and time that the image was updated.</td>
+</tr>
+<tr class="row-even"><td>schema</td>
+<td>xsd:string</td>
+<td>The schema of the image.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Update Image: JSON response</strong></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="p">{</span>
+   <span class="s">&quot;id&quot;</span><span class="p">:</span><span class="s">&quot;e7db3b45-8db7-47ad-8109-3fb55c2c24fd&quot;</span><span class="p">,</span>
+   <span class="s">&quot;name&quot;</span><span class="p">:</span><span class="s">&quot;Fedora 17&quot;</span><span class="p">,</span>
+   <span class="s">&quot;status&quot;</span><span class="p">:</span><span class="s">&quot;queued&quot;</span><span class="p">,</span>
+   <span class="s">&quot;visibility&quot;</span><span class="p">:</span><span class="s">&quot;public&quot;</span><span class="p">,</span>
+   <span class="s">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;fedora&quot;</span><span class="p">,</span> <span class="s">&quot;beefy&quot;</span><span class="p">],</span>
+   <span class="s">&quot;created_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-11T17:15:52Z&quot;</span><span class="p">,</span>
+   <span class="s">&quot;updated_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-11T17:15:52Z&quot;</span><span class="p">,</span>
+   <span class="s">&quot;self&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/e7db3b45-8db7-47ad-8109-3fb55c2c24fd&quot;</span><span class="p">,</span>
+   <span class="s">&quot;file&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/e7db3b45-8db7-47ad-8109-3fb55c2c24fd/file&quot;</span><span class="p">,</span>
+   <span class="s">&quot;schema&quot;</span><span class="p">:</span><span class="s">&quot;/v2/schemas/image&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-image-1">
+<h1>Delete Image -  1<a class="headerlink" href="#delete-image-1" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="delete-delete-image-images-image-id.html#request">Request</a>
+<a class="reference external" href="delete-delete-image-images-image-id.html#response">Response</a></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">DELETE</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Deletes the specified image.</p>
+<p>This operation deletes the image. Make sure you set <code class="docutils literal"><span class="pre">protected</span></code> parameter to false (Boolean) before performing the delete. If the operation succeeds, it returns an <code class="docutils literal"><span class="pre">HTTP</span> <span class="pre">204</span></code> status code with no response body.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">An attempt to delete an image with the <code class="docutils literal"><span class="pre">protected</span></code> parameter set to <code class="docutils literal"><span class="pre">true</span></code> (boolean) results in a response code <code class="docutils literal"><span class="pre">HTTP</span> <span class="pre">403</span></code>.</p>
+</div>
+<p>This table shows the possible response codes for this operation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Response Code</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>204</td>
+<td>Delete Successful</td>
+<td>Delete request succeeded.</td>
+</tr>
+<tr class="row-odd"><td>400</td>
+<td>Error</td>
+<td>A general error has
+occured.</td>
+</tr>
+<tr class="row-even"><td>401</td>
+<td>Unauthorized</td>
+<td>Unauthorized.</td>
+</tr>
+<tr class="row-odd"><td>403</td>
+<td>Forbidden</td>
+<td>Forbidden.</td>
+</tr>
+<tr class="row-even"><td>405</td>
+<td>Bad Method</td>
+<td>Bad method.</td>
+</tr>
+<tr class="row-odd"><td>413</td>
+<td>Over Limit</td>
+<td>The number of items
+returned is above the
+allowed limit.</td>
+</tr>
+<tr class="row-even"><td>503</td>
+<td>Service Unavailable</td>
+<td>The requested service is
+unavailable.</td>
+</tr>
+<tr class="row-odd"><td>500</td>
+<td>API Fault</td>
+<td>API fault.</td>
+</tr>
+<tr class="row-even"><td>404</td>
+<td>Not Found</td>
+<td>Resource not found.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the URI parameters for the request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>{image_id}</td>
+<td>csapi:uuid</td>
+<td>Image ID stored through
+the image API, typically
+a UUID.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="images-api-operations-image-sharing">
+<span id="id2"></span><h2>Image sharing<a class="headerlink" href="#images-api-operations-image-sharing" title="Permalink to this headline">#</a></h2>
+<p>Use image sharing operations to distribute and manage
+images. For more information,
+see <em>Image sharing</em> in the Cloud Images Developer Guide.</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h1>List Images -  1<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="get-list-images-images.html#request">Request</a>
+<a class="reference external" href="get-list-images-images.html#response">Response</a></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">GET</span> <span class="o">/</span><span class="n">images</span>
+</pre></div>
+</div>
+<p>Lists public virtual machine (VM) images.</p>
+<p>This operation returns images you created, shared images that you accepted, and standard images. For more information about standard images, see ` 1.1.1. Standard images &lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci-devguide/content/what-and-why.html#std-images">http://docs.rackspace.com/images/api/v2/ci-devguide/content/what-and-why.html#std-images</a>&gt;`__. The response conforms to the schema found in ` 4.5.1. Get images schema &lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImagesSchema_schemas_images_Schema_Calls.html">http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImagesSchema_schemas_images_Schema_Calls.html</a>&gt;`__.</p>
+<p>This operation returns a subset of the larger collection of images and a link that you can use to get the next set of images. Always check for the presence of a <code class="docutils literal"><span class="pre">next</span></code> link and use it as the URI in a subsequent <code class="docutils literal"><span class="pre">GET</span></code> request. Follow this pattern until a <code class="docutils literal"><span class="pre">next</span></code> link is no longer provided. The next link preserves any query parameters that you send in your initial request. You can use the <code class="docutils literal"><span class="pre">first</span></code> link to jump back to the first page of the collection. If you prefer to paginate through images manually, use the <code class="docutils literal"><span class="pre">limit</span></code> and <code class="docutils literal"><span class="pre">marker</span></code> parameters.</p>
+<p>The List Images operation accepts several types of query parameters that you can use to filter the results of the returned collection.</p>
+<p>A client can provide direct comparison filters by using most image attributes, such as <code class="docutils literal"><span class="pre">name=Ubuntu</span></code>, <code class="docutils literal"><span class="pre">visibility=public</span></code>, and so on. A client cannot filter on tags or anything defined as a link in the json-schema, such as <code class="docutils literal"><span class="pre">self</span></code>, <code class="docutils literal"><span class="pre">file</span></code>, or <code class="docutils literal"><span class="pre">schema</span></code>.</p>
+<p>You can use the <code class="docutils literal"><span class="pre">size_min</span></code> and <code class="docutils literal"><span class="pre">size_max</span></code> query parameters to perform greater-than and less-than filtering of images based on their <code class="docutils literal"><span class="pre">size</span></code> attribute. The size is measured in bytes and refers to the size of an image when it is stored on disk.</p>
+<p>For example, sending a <code class="docutils literal"><span class="pre">size_min</span></code> filter of 1048576 and size_max of 4194304 filters the container to include only images that are between 1 MB and 4 MB in size.</p>
+<p>You can sort the results of this operation by using the <code class="docutils literal"><span class="pre">sort_key</span></code> and <code class="docutils literal"><span class="pre">sort_dir</span></code> parameters. The API uses the natural sorting of whatever image attribute is provided as the <code class="docutils literal"><span class="pre">sort_key</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Public images may reach end-of-life and be removed from the base image list. This ` Hidden Base Images article &lt;<a class="reference external" href="http://www.rackspace.com/knowledge_center/article/hidden-base-images">http://www.rackspace.com/knowledge_center/article/hidden-base-images</a>&gt;`__ contains images which have been removed from the base images list but which may still be available.</p>
+</div>
+<p>This table shows the possible response codes for this operation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Response Code</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>200</td>
+<td>Success</td>
+<td>Request succeeded.</td>
+</tr>
+<tr class="row-odd"><td>400</td>
+<td>Error</td>
+<td>A general error has
+occured.</td>
+</tr>
+<tr class="row-even"><td>401</td>
+<td>Unauthorized</td>
+<td>Unauthorized.</td>
+</tr>
+<tr class="row-odd"><td>403</td>
+<td>Forbidden</td>
+<td>Forbidden.</td>
+</tr>
+<tr class="row-even"><td>405</td>
+<td>Bad Method</td>
+<td>Bad method.</td>
+</tr>
+<tr class="row-odd"><td>413</td>
+<td>Over Limit</td>
+<td>The number of items
+returned is above the
+allowed limit.</td>
+</tr>
+<tr class="row-even"><td>503</td>
+<td>Service Unavailable</td>
+<td>The requested service is
+unavailable.</td>
+</tr>
+<tr class="row-odd"><td>500</td>
+<td>API Fault</td>
+<td>API fault.</td>
+</tr>
+<tr class="row-even"><td>404</td>
+<td>Not Found</td>
+<td>Resource not found.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the query parameters for the request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>limit</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Requests a specific page
+size. Expect a response
+to a limited request to
+return between zero
+items and the number
+specified. The typical
+pattern for using the
+<code class="docutils literal"><span class="pre">limit</span></code> and <code class="docutils literal"><span class="pre">marker</span></code>
+parameters is to make an
+initial limited request
+and then to use the ID
+of the last image from
+the response as the
+<code class="docutils literal"><span class="pre">marker</span></code> parameter in
+a subsequent limited
+request.</td>
+</tr>
+<tr class="row-odd"><td>marker</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Specifies the ID of the
+last-seen image. The
+typical pattern for
+using the <code class="docutils literal"><span class="pre">limit</span></code> and
+<code class="docutils literal"><span class="pre">marker</span></code> parameters is
+to make an initial
+limited request and then
+to use the ID of the
+last image from the
+response as the
+<code class="docutils literal"><span class="pre">marker</span></code> parameter in
+a subsequent limited
+request.</td>
+</tr>
+<tr class="row-even"><td>name</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Filter parameter that
+specifies the name of
+the image as a string.</td>
+</tr>
+<tr class="row-odd"><td>visibility</td>
+<td>imageapi:string
+<em>(Required)</em></td>
+<td>Filter parameter that
+specifies image
+visibility as either
+<code class="docutils literal"><span class="pre">public</span></code>, <code class="docutils literal"><span class="pre">private</span></code>,
+or <code class="docutils literal"><span class="pre">shared</span></code>.</td>
+</tr>
+<tr class="row-even"><td>member_status</td>
+<td>imageapi:string
+<em>(Required)</em></td>
+<td>Filter parameter that
+shows images with the
+specified member status
+for only those images
+shared with the user.
+Valid values are
+<code class="docutils literal"><span class="pre">accepted</span></code>,
+<code class="docutils literal"><span class="pre">pending</span></code>,
+<code class="docutils literal"><span class="pre">rejected</span></code>, and
+<code class="docutils literal"><span class="pre">all</span></code>. The default is
+<code class="docutils literal"><span class="pre">accepted</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>owner</td>
+<td>imageapi:string
+<em>(Required)</em></td>
+<td>Filter parameter that
+shows images shared with
+the user by the
+specified tag.</td>
+</tr>
+<tr class="row-even"><td>tag</td>
+<td>imageapi:string
+<em>(Required)</em></td>
+<td>Filter parameter that
+shows images with the
+specified tag, where the
+owner is indicated by
+tenant ID.</td>
+</tr>
+<tr class="row-odd"><td>status</td>
+<td>xsd:int <em>(Required)</em></td>
+<td>Filter parameter that
+species the image status
+as <code class="docutils literal"><span class="pre">queued</span></code>,
+<code class="docutils literal"><span class="pre">saving</span></code>, <code class="docutils literal"><span class="pre">active</span></code>,
+<code class="docutils literal"><span class="pre">killed</span></code>, <code class="docutils literal"><span class="pre">deleted</span></code>,
+or <code class="docutils literal"><span class="pre">pending_delete</span></code>.</td>
+</tr>
+<tr class="row-even"><td>size_min</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Filter parameter that
+specifies the minimum
+size of the image in
+bytes.</td>
+</tr>
+<tr class="row-odd"><td>size_max</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Filter parameter that
+specifies the maximum
+size of the image in
+bytes.</td>
+</tr>
+<tr class="row-even"><td>sort_key</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Sort key. All image
+attributes can be used
+as the sort key, except
+<code class="docutils literal"><span class="pre">tags</span></code> and <code class="docutils literal"><span class="pre">link</span></code>
+attributes. The default
+is <code class="docutils literal"><span class="pre">created_at</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>sort_dir</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>Sort direction. Valid
+values are <code class="docutils literal"><span class="pre">asc</span></code>
+(ascending) and <code class="docutils literal"><span class="pre">desc</span></code>
+(descending). The
+default is <code class="docutils literal"><span class="pre">desc</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the body parameters for the response:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="20%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>images</td>
+<td>array
+<em>(Required)</em></td>
+<td>The array of the images in the list.</td>
+</tr>
+<tr class="row-odd"><td>id</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The UUID of the image.</td>
+</tr>
+<tr class="row-even"><td>name</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The name of the image.</td>
+</tr>
+<tr class="row-odd"><td>status</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The status of the image. For possible image
+statuses, see ` 1.4.1. Image statuses
+&lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci">http://docs.rackspace.com/images/api/v2/ci</a>-
+devguide/content/image-statuses.html&gt;`__.</td>
+</tr>
+<tr class="row-even"><td>visibility</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>Specifies image visibility as either
+<code class="docutils literal"><span class="pre">public</span></code>, <code class="docutils literal"><span class="pre">private</span></code>, or <code class="docutils literal"><span class="pre">shared</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>size</td>
+<td>xsd:integer
+<em>(Required)</em></td>
+<td>The size of the image in bytes.</td>
+</tr>
+<tr class="row-even"><td>checksum</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The checksum of the image.</td>
+</tr>
+<tr class="row-odd"><td>tags</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The user-defined image tags.</td>
+</tr>
+<tr class="row-even"><td>created_at</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The date and time that the image was created.</td>
+</tr>
+<tr class="row-odd"><td>updated_at</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The date and time that the image was updated.</td>
+</tr>
+<tr class="row-even"><td>self</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The link to the image.</td>
+</tr>
+<tr class="row-odd"><td>file</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The image file.</td>
+</tr>
+<tr class="row-even"><td>schema</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The schema of the image.</td>
+</tr>
+<tr class="row-odd"><td>first</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The URI for the first image in the list.</td>
+</tr>
+<tr class="row-even"><td>next</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The URI for the next image in the list.</td>
+</tr>
+<tr class="row-odd"><td>schema</td>
+<td>xsd:string
+<em>(Required)</em></td>
+<td>The schema of the images list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example List Images: JSON response</strong></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="p">{</span>
+   <span class="s">&quot;images&quot;</span><span class="p">:</span>
+   <span class="p">[</span>
+      <span class="p">{</span>
+         <span class="s">&quot;id&quot;</span><span class="p">:</span><span class="s">&quot;da3b75d9-3f4a-40e7-8a2c-bfab23927dea&quot;</span><span class="p">,</span>
+         <span class="s">&quot;name&quot;</span><span class="p">:</span><span class="s">&quot;cirros-0.3.0-x86_64-uec-ramdisk&quot;</span><span class="p">,</span>
+         <span class="s">&quot;status&quot;</span><span class="p">:</span><span class="s">&quot;active&quot;</span><span class="p">,</span>
+         <span class="s">&quot;visibility&quot;</span><span class="p">:</span><span class="s">&quot;public&quot;</span><span class="p">,</span>
+         <span class="s">&quot;size&quot;</span><span class="p">:</span><span class="mi">2254249</span><span class="p">,</span>
+         <span class="s">&quot;checksum&quot;</span><span class="p">:</span><span class="s">&quot;2cec138d7dae2aa59038ef8c9aec2390&quot;</span><span class="p">,</span>
+         <span class="s">&quot;tags&quot;</span><span class="p">:[</span>
+            <span class="s">&quot;ping&quot;</span><span class="p">,</span>
+            <span class="s">&quot;pong&quot;</span>
+         <span class="p">],</span>
+         <span class="s">&quot;created_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-10T19:23:50Z&quot;</span><span class="p">,</span>
+         <span class="s">&quot;updated_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-10T19:23:50Z&quot;</span><span class="p">,</span>
+         <span class="s">&quot;self&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/da3b75d9-3f4a-40e7-8a2c-bfab23927dea&quot;</span><span class="p">,</span>
+         <span class="s">&quot;file&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/da3b75d9-3f4a-40e7-8a2c-bfab23927dea/file&quot;</span><span class="p">,</span>
+         <span class="s">&quot;schema&quot;</span><span class="p">:</span><span class="s">&quot;/v2/schemas/image&quot;</span><span class="p">},</span>
+      <span class="p">{</span>
+         <span class="s">&quot;id&quot;</span><span class="p">:</span><span class="s">&quot;0d5bcbc7-b066-4217-83f4-7111a60a399a&quot;</span><span class="p">,</span>
+         <span class="s">&quot;name&quot;</span><span class="p">:</span><span class="s">&quot;cirros-0.3.0-x86_64-uec&quot;</span><span class="p">,</span>
+         <span class="s">&quot;status&quot;</span><span class="p">:</span><span class="s">&quot;active&quot;</span><span class="p">,</span>
+         <span class="s">&quot;visibility&quot;</span><span class="p">:</span><span class="s">&quot;public&quot;</span><span class="p">,</span>
+         <span class="s">&quot;size&quot;</span><span class="p">:</span><span class="mi">25165824</span><span class="p">,</span>
+         <span class="s">&quot;checksum&quot;</span><span class="p">:</span><span class="s">&quot;2f81976cae15c16ef0010c51e3a6c163&quot;</span><span class="p">,</span>
+         <span class="s">&quot;tags&quot;</span><span class="p">:[</span> <span class="p">],</span>
+         <span class="s">&quot;created_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-10T19:23:50Z&quot;</span><span class="p">,</span>
+         <span class="s">&quot;updated_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-10T19:23:50Z&quot;</span><span class="p">,</span>
+         <span class="s">&quot;self&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/0d5bcbc7-b066-4217-83f4-7111a60a399a&quot;</span><span class="p">,</span>
+         <span class="s">&quot;file&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/0d5bcbc7-b066-4217-83f4-7111a60a399a/file&quot;</span><span class="p">,</span>
+         <span class="s">&quot;schema&quot;</span><span class="p">:</span><span class="s">&quot;/v2/schemas/image&quot;</span><span class="p">},</span>
+      <span class="p">{</span>
+         <span class="s">&quot;id&quot;</span><span class="p">:</span><span class="s">&quot;e6421c88-b1ed-4407-8824-b57298249091&quot;</span><span class="p">,</span>
+         <span class="s">&quot;name&quot;</span><span class="p">:</span><span class="s">&quot;cirros-0.3.0-x86_64-uec-kernel&quot;</span><span class="p">,</span>
+         <span class="s">&quot;status&quot;</span><span class="p">:</span><span class="s">&quot;active&quot;</span><span class="p">,</span>
+         <span class="s">&quot;visibility&quot;</span><span class="p">:</span><span class="s">&quot;public&quot;</span><span class="p">,</span>
+         <span class="s">&quot;size&quot;</span><span class="p">:</span><span class="mi">4731440</span><span class="p">,</span>
+         <span class="s">&quot;checksum&quot;</span><span class="p">:</span><span class="s">&quot;cfb203e7267a28e435dbcb05af5910a9&quot;</span><span class="p">,</span>
+         <span class="s">&quot;tags&quot;</span><span class="p">:[</span> <span class="p">],</span>
+         <span class="s">&quot;created_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-10T19:23:49Z&quot;</span><span class="p">,</span>
+         <span class="s">&quot;updated_at&quot;</span><span class="p">:</span><span class="s">&quot;2012-08-10T19:23:49Z&quot;</span><span class="p">,</span>
+         <span class="s">&quot;self&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/e6421c88-b1ed-4407-8824-b57298249091&quot;</span><span class="p">,</span>
+         <span class="s">&quot;file&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images/e6421c88-b1ed-4407-8824-b57298249091/file&quot;</span><span class="p">,</span>
+         <span class="s">&quot;schema&quot;</span><span class="p">:</span><span class="s">&quot;/v2/schemas/image&quot;</span><span class="p">}</span>
+   <span class="p">],</span>
+   <span class="s">&quot;first&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images?limit=3&quot;</span><span class="p">,</span>
+   <span class="s">&quot;next&quot;</span><span class="p">:</span><span class="s">&quot;/v2/images?limit=3&amp;marker=e6421c88-b1ed-4407-8824-b57298249091&quot;</span><span class="p">,</span>
+   <span class="s">&quot;schema&quot;</span><span class="p">:</span><span class="s">&quot;/v2/schemas/images&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-image-member-details-1">
+<h1>Get Image Member Details -  1<a class="headerlink" href="#get-image-member-details-1" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="get-get-image-member-details-images-image-id-members-member-id.html#request">Request</a>
+<a class="reference external" href="get-get-image-member-details-images-image-id-members-member-id.html#response">Response</a></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">GET</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span><span class="o">/</span><span class="n">members</span><span class="o">/</span><span class="p">{</span><span class="n">member_id</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Gets the details for the specified image member.</p>
+<p>This operation shows details of the image member. The response conforms to the schema found in ` 4.5.3. Get image members schema &lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImageMembersSchemas_schemas_members_Schema_Calls.html">http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImageMembersSchemas_schemas_members_Schema_Calls.html</a>&gt;`__.</p>
+<p>To get a successful response, either the image owner must make the call or the <code class="docutils literal"><span class="pre">tenant_id</span></code> of the user making the call must match the specified <code class="docutils literal"><span class="pre">member_id</span></code>. Otherwise the response is <code class="docutils literal"><span class="pre">HTTP</span> <span class="pre">404</span></code>.</p>
+<p>This table shows the possible response codes for this operation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Response Code</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>200</td>
+<td>Success</td>
+<td>Request succeeded.</td>
+</tr>
+<tr class="row-odd"><td>400</td>
+<td>Error</td>
+<td>A general error has
+occured.</td>
+</tr>
+<tr class="row-even"><td>401</td>
+<td>Unauthorized</td>
+<td>Unauthorized.</td>
+</tr>
+<tr class="row-odd"><td>403</td>
+<td>Forbidden</td>
+<td>Forbidden.</td>
+</tr>
+<tr class="row-even"><td>405</td>
+<td>Bad Method</td>
+<td>Bad method.</td>
+</tr>
+<tr class="row-odd"><td>413</td>
+<td>Over Limit</td>
+<td>The number of items
+returned is above the
+allowed limit.</td>
+</tr>
+<tr class="row-even"><td>503</td>
+<td>Service Unavailable</td>
+<td>The requested service is
+unavailable.</td>
+</tr>
+<tr class="row-odd"><td>500</td>
+<td>API Fault</td>
+<td>API fault.</td>
+</tr>
+<tr class="row-even"><td>404</td>
+<td>Not Found</td>
+<td>Resource not found.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the URI parameters for the request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>{image_id}</td>
+<td>csapi:uuid</td>
+<td>Image ID stored through
+the image API, typically
+a UUID.</td>
+</tr>
+<tr class="row-odd"><td>{member_id}</td>
+<td>xsd:string</td>
+<td>Image member ID. For
+example, the tenant ID
+of the user with whom
+the image is being
+shared.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the body parameters for the response:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>created_at</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The date and time that
+the image member was
+created.</td>
+</tr>
+<tr class="row-odd"><td>image_id</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The UUID of the image.</td>
+</tr>
+<tr class="row-even"><td>member_id</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The id of the image
+member.</td>
+</tr>
+<tr class="row-odd"><td>schema</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The schema of the image
+member.</td>
+</tr>
+<tr class="row-even"><td>status</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The status of the image
+member ( <code class="docutils literal"><span class="pre">pending</span></code>,
+<code class="docutils literal"><span class="pre">accepted</span></code>, or
+<code class="docutils literal"><span class="pre">rejected</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>updated_at</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The date and time that
+the image member was
+updated.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Get Image Member Details: JSON response</strong></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;created_at&quot;</span><span class="p">:</span> <span class="s">&quot;2014-02-20T04:15:17Z&quot;</span><span class="p">,</span>
+    <span class="s">&quot;image_id&quot;</span><span class="p">:</span> <span class="s">&quot;634985e5-0f2e-488e-bd7c-928d9a8ea82a&quot;</span><span class="p">,</span>
+    <span class="s">&quot;member_id&quot;</span><span class="p">:</span> <span class="s">&quot;348129&quot;</span><span class="p">,</span>
+    <span class="s">&quot;schema&quot;</span><span class="p">:</span> <span class="s">&quot;/v2/schemas/member&quot;</span><span class="p">,</span>
+    <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;pending&quot;</span><span class="p">,</span>
+    <span class="s">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s">&quot;2014-02-20T04:15:17Z&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-image-member-1">
+<h1>Create Image Member -  1<a class="headerlink" href="#create-image-member-1" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="post-create-image-member-images-image-id-members.html#request">Request</a>
+<a class="reference external" href="post-create-image-member-images-image-id-members.html#response">Response</a></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">POST</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span><span class="o">/</span><span class="n">members</span>
+</pre></div>
+</div>
+<p>Adds the specified <code class="docutils literal"><span class="pre">account</span> <span class="pre">ID/tenant</span> <span class="pre">ID</span></code> specified in the request body as an image member.</p>
+<p>This operation allows you to add users, by <code class="docutils literal"><span class="pre">member_id</span></code> (which is the <code class="docutils literal"><span class="pre">tenant_id</span></code> ) to the list of members with whom the image is shared. The member status of a newly created image member is <code class="docutils literal"><span class="pre">pending</span></code>. The response conforms to the schema found in ` 4.5.3. Get image members schema &lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImageMembersSchemas_schemas_members_Schema_Calls.html">http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImageMembersSchemas_schemas_members_Schema_Calls.html</a>&gt;`__.</p>
+<p>If the user making the call is not the image owner, the response is <code class="docutils literal"><span class="pre">HTTP</span> <span class="pre">404</span></code>.</p>
+<p>This table shows the possible response codes for this operation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Response Code</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>200</td>
+<td>Success</td>
+<td>Request succeeded.</td>
+</tr>
+<tr class="row-odd"><td>400</td>
+<td>Error</td>
+<td>A general error has
+occured.</td>
+</tr>
+<tr class="row-even"><td>401</td>
+<td>Unauthorized</td>
+<td>Unauthorized.</td>
+</tr>
+<tr class="row-odd"><td>403</td>
+<td>Forbidden</td>
+<td>Forbidden.</td>
+</tr>
+<tr class="row-even"><td>405</td>
+<td>Bad Method</td>
+<td>Bad method.</td>
+</tr>
+<tr class="row-odd"><td>413</td>
+<td>Over Limit</td>
+<td>The number of items
+returned is above the
+allowed limit.</td>
+</tr>
+<tr class="row-even"><td>503</td>
+<td>Service Unavailable</td>
+<td>The requested service is
+unavailable.</td>
+</tr>
+<tr class="row-odd"><td>500</td>
+<td>API Fault</td>
+<td>API fault.</td>
+</tr>
+<tr class="row-even"><td>415</td>
+<td>Bad Media Type</td>
+<td>Bad media type. This may
+result if the wrong
+media type is used in
+the cURL request.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the URI parameters for the request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>{image_id}</td>
+<td>csapi:uuid</td>
+<td>Image ID stored through
+the image API, typically
+a UUID.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the body parameters for the request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>member</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The member ID. This is
+the tenant ID of the
+user with whom the image
+is to be shared.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Create Image Member: JSON request</strong></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;member&quot;</span><span class="p">:</span> <span class="s">&quot;554433&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This table shows the body parameters for the response:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>created_at</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The date and time that
+the image member was
+created.</td>
+</tr>
+<tr class="row-odd"><td>image_id</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The UUID of the image.</td>
+</tr>
+<tr class="row-even"><td>member_id</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The id of the image
+member.</td>
+</tr>
+<tr class="row-odd"><td>schema</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The schema of the image
+member.</td>
+</tr>
+<tr class="row-even"><td>status</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The status of the image
+member ( <code class="docutils literal"><span class="pre">pending</span></code>,
+<code class="docutils literal"><span class="pre">accepted</span></code>, or
+<code class="docutils literal"><span class="pre">rejected</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>updated_at</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The date and time that
+the image member was
+updated.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Create Image Member: JSON response</strong></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;created_at&quot;</span><span class="p">:</span> <span class="s">&quot;2013-09-20T19:22:19Z&quot;</span><span class="p">,</span>
+    <span class="s">&quot;image_id&quot;</span><span class="p">:</span> <span class="s">&quot;a96be11e-8536-4910-92cb-de50aa19dfe6&quot;</span><span class="p">,</span>
+    <span class="s">&quot;member_id&quot;</span><span class="p">:</span> <span class="s">&quot;554433&quot;</span><span class="p">,</span>
+    <span class="s">&quot;schema&quot;</span><span class="p">:</span> <span class="s">&quot;/v2/schemas/member&quot;</span><span class="p">,</span>
+    <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;pending&quot;</span><span class="p">,</span>
+    <span class="s">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s">&quot;2013-09-20T19:25:31Z&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-image-member-1">
+<h1>Delete Image Member -  1<a class="headerlink" href="#delete-image-member-1" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="delete-delete-image-member-images-image-id-members-member-id.html#request">Request</a>
+<a class="reference external" href="delete-delete-image-member-images-image-id-members-member-id.html#response">Response</a></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">DELETE</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span><span class="o">/</span><span class="n">members</span><span class="o">/</span><span class="p">{</span><span class="n">member_id</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Deletes the specified <code class="docutils literal"><span class="pre">account</span> <span class="pre">ID/tenant</span> <span class="pre">ID</span></code> from the member list of the specified image.</p>
+<p>This operation deletes the image member from the image. This call, which can only be made by the image owner, removes users from the list of members who have access to a shared image.</p>
+<p>If the <code class="docutils literal"><span class="pre">{member_id}</span></code> is not a member of the specified image, the response is <code class="docutils literal"><span class="pre">HTTP</span> <span class="pre">404</span></code></p>
+<p>This table shows the possible response codes for this operation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Response Code</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>204</td>
+<td>Success</td>
+<td>Delete request succeeded.</td>
+</tr>
+<tr class="row-odd"><td>400</td>
+<td>Error</td>
+<td>A general error has
+occured.</td>
+</tr>
+<tr class="row-even"><td>401</td>
+<td>Unauthorized</td>
+<td>Unauthorized.</td>
+</tr>
+<tr class="row-odd"><td>403</td>
+<td>Forbidden</td>
+<td>Forbidden.</td>
+</tr>
+<tr class="row-even"><td>405</td>
+<td>Bad Method</td>
+<td>Bad method.</td>
+</tr>
+<tr class="row-odd"><td>413</td>
+<td>Over Limit</td>
+<td>The number of items
+returned is above the
+allowed limit.</td>
+</tr>
+<tr class="row-even"><td>503</td>
+<td>Service Unavailable</td>
+<td>The requested service is
+unavailable.</td>
+</tr>
+<tr class="row-odd"><td>500</td>
+<td>API Fault</td>
+<td>API fault.</td>
+</tr>
+<tr class="row-even"><td>404</td>
+<td>Not Found</td>
+<td>Resource not found.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the URI parameters for the request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>{image_id}</td>
+<td>csapi:uuid</td>
+<td>Image ID stored through
+the image API, typically
+a UUID.</td>
+</tr>
+<tr class="row-odd"><td>{member_id}</td>
+<td>xsd:string</td>
+<td>Image member ID. For
+example, the tenant ID
+of the user with whom
+the image is being
+shared.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="update-image-member-1">
+<h1>Update Image Member -  1<a class="headerlink" href="#update-image-member-1" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="put-update-image-member-images-image-id-members-member-id.html#request">Request</a>
+<a class="reference external" href="put-update-image-member-images-image-id-members-member-id.html#response">Response</a></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">PUT</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span><span class="o">/</span><span class="n">members</span><span class="o">/</span><span class="p">{</span><span class="n">member_id</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Sets the specified status for the specified member of the specified image.</p>
+<p>This operation updates the image member. The response conforms to the schema found in ` 4.5.3. Get image members schema &lt;<a class="reference external" href="http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImageMembersSchemas_schemas_members_Schema_Calls.html">http://docs.rackspace.com/images/api/v2/ci-devguide/content/GET_getImageMembersSchemas_schemas_members_Schema_Calls.html</a>&gt;`__.</p>
+<p>If the call is made by the image owner, the response is <code class="docutils literal"><span class="pre">HTTP</span> <span class="pre">403</span> <span class="pre">(Forbidden)</span></code>.</p>
+<p>If the call is made by a user who is not the owner and whose <code class="docutils literal"><span class="pre">tenant</span> <span class="pre">ID</span></code> is not the same as the {member_id} is the operation URI, the response is <code class="docutils literal"><span class="pre">HTTP</span> <span class="pre">404</span></code>.</p>
+<p>This table shows the possible response codes for this operation:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Response Code</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>200</td>
+<td>Success</td>
+<td>Request succeeded.</td>
+</tr>
+<tr class="row-odd"><td>400</td>
+<td>Error</td>
+<td>A general error has
+occured.</td>
+</tr>
+<tr class="row-even"><td>401</td>
+<td>Unauthorized</td>
+<td>Unauthorized.</td>
+</tr>
+<tr class="row-odd"><td>403</td>
+<td>Forbidden</td>
+<td>Forbidden.</td>
+</tr>
+<tr class="row-even"><td>405</td>
+<td>Bad Method</td>
+<td>Bad method.</td>
+</tr>
+<tr class="row-odd"><td>413</td>
+<td>Over Limit</td>
+<td>The number of items
+returned is above the
+allowed limit.</td>
+</tr>
+<tr class="row-even"><td>503</td>
+<td>Service Unavailable</td>
+<td>The requested service is
+unavailable.</td>
+</tr>
+<tr class="row-odd"><td>500</td>
+<td>API Fault</td>
+<td>API fault.</td>
+</tr>
+<tr class="row-even"><td>415</td>
+<td>Bad Media Type</td>
+<td>Bad media type. This may
+result if the wrong
+media type is used in
+the cURL request.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the URI parameters for the request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>{image_id}</td>
+<td>csapi:uuid</td>
+<td>Image ID stored through
+the image API, typically
+a UUID.</td>
+</tr>
+<tr class="row-odd"><td>{member_id}</td>
+<td>xsd:string</td>
+<td>Image member ID. For
+example, the tenant ID
+of the user with whom
+the image is being
+shared.</td>
+</tr>
+</tbody>
+</table>
+<p>This table shows the body parameters for the request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>status</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The status to which this
+image member should be
+set. Valid values are as
+follows: <a href="#id4"><span class="problematic" id="id5">``</span></a>pending``At
+creation, the member&#8217;s
+status is set to
+pending. The image is
+not visible in the
+member&#8217;s image-list, but
+the member can still
+boot instances from the
+image. <a href="#id6"><span class="problematic" id="id7">``</span></a>accepted``The
+image is visible in the
+member&#8217;s image-list. The
+member can boot
+instances from the
+image. <a href="#id8"><span class="problematic" id="id9">``</span></a>rejected``The
+member has decided that
+he or she does not want
+to see the image. The
+image is not visible in
+the member&#8217;s image-list,
+but the member can still
+boot instances from the
+image.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Update Image Member: JSON request</strong></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;accepted&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This table shows the body parameters for the response:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>created_at</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The date and time that
+the image member was
+created.</td>
+</tr>
+<tr class="row-odd"><td>image_id</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The UUID of the image.</td>
+</tr>
+<tr class="row-even"><td>member_id</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The id of the image
+member.</td>
+</tr>
+<tr class="row-odd"><td>schema</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The schema of the image
+member.</td>
+</tr>
+<tr class="row-even"><td>status</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The status of the image
+member ( <code class="docutils literal"><span class="pre">pending</span></code>,
+<code class="docutils literal"><span class="pre">accepted</span></code>, or
+<code class="docutils literal"><span class="pre">rejected</span></code>.</td>
+</tr>
+<tr class="row-odd"><td>updated_at</td>
+<td>xsd:string <em>(Required)</em></td>
+<td>The date and time that
+the image member was
+updated.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Update Image Member: JSON response</strong></p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;created_at&quot;</span><span class="p">:</span> <span class="s">&quot;2013-09-20T19:22:19Z&quot;</span><span class="p">,</span>
+    <span class="s">&quot;image_id&quot;</span><span class="p">:</span> <span class="s">&quot;a96be11e-8536-4910-92cb-de50aa19dfe6&quot;</span><span class="p">,</span>
+    <span class="s">&quot;member_id&quot;</span><span class="p">:</span> <span class="s">&quot;554433&quot;</span><span class="p">,</span>
+    <span class="s">&quot;schema&quot;</span><span class="p">:</span> <span class="s">&quot;/v2/schemas/member&quot;</span><span class="p">,</span>
+    <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;accepted&quot;</span><span class="p">,</span>
+    <span class="s">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s">&quot;2013-09-20T20:15:31Z&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
 </section>
 {% endblock %}

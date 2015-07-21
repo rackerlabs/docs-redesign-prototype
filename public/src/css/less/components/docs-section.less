@@ -3,6 +3,10 @@
     display: block;
     width: 100%;
 
+    blockquote {
+        background: magenta;
+    }
+
     a {
         display: inline;
         position: relative;
@@ -11,6 +15,42 @@
         &:hover {
             color: @link-color-hover;
         }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        .headerlink {
+            .fa();
+            bottom: 7px;
+            display: inline-block;
+            left: -15px;
+            opacity: 0;
+            position: absolute;
+            text-indent: -999px;
+            .transition(opacity 0.1s ease-in-out);
+            width: 15px;
+
+            &:before {
+                content: @fa-var-link;
+                font-size: 14px;
+                position: absolute;
+                left: 0;
+                text-indent: 0;
+                top: 0;
+
+            }
+        }
+
+        &:hover .headerlink {
+            opacity: 1;
+
+            &:after {
+                background: none;
+            }
+        }
+    }
+
+    table {
+        .table();
     }
 
     pre {
@@ -39,42 +79,6 @@
             float: left;
             padding-right: 35px;
             width: 50%;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            .headerlink {
-                .fa();
-                bottom: 7px;
-                display: inline-block;
-                left: -15px;
-                opacity: 0;
-                position: absolute;
-                text-indent: -999px;
-                .transition(opacity 0.1s ease-in-out);
-                width: 15px;
-
-                &:before {
-                    content: @fa-var-link;
-                    font-size: 14px;
-                    position: absolute;
-                    left: 0;
-                    text-indent: 0;
-                    top: 0;
-
-                }
-            }
-
-            &:hover .headerlink {
-                opacity: 1;
-
-                &:after {
-                    background: none;
-                }
-            }
-        }
-
-        table {
-            .table();
         }
     }
 
