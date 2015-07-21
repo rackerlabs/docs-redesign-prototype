@@ -1,0 +1,53 @@
+.docs-body {
+    @gutter-width: 0px;
+    .grid(@gutter-width);
+
+    .docs-intro {
+        margin-bottom: 2em;
+
+        .revision-date {
+            .titillium();
+            font-size: 12px;
+        }
+
+        .tags {
+            font-size: 12px;
+            margin: 10px 0 0 0;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                list-style-type: none;
+
+                a {
+                    .titillium();
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                & + li {
+                    border-left: solid 1px shade(white, 20%);
+                    margin-left: 0.5em;
+                    padding-left: ~"calc(0.5em + 1px)";
+                }
+            }
+        }
+
+        .headerlink {
+            display: none;
+        }
+    }
+}
+
+.show-section-nav {
+    .docs-content {
+        @media (max-width: 768px) {
+            .transform(translate(0, 0));
+            .transform(translate3d(25%, 0, 0));
+        }
+
+    }
+}
