@@ -2182,9 +2182,6 @@ table {
 .docs-section:after {
   clear: both;
 }
-.docs-section blockquote {
-  background: magenta;
-}
 .docs-section a {
   display: inline;
   position: relative;
@@ -2205,7 +2202,7 @@ table {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  bottom: 7px;
+  bottom: 0px;
   display: inline-block;
   left: -15px;
   opacity: 0;
@@ -3345,6 +3342,7 @@ dl dd {
   margin-left: 0px;
   vertical-align: top;
   width: calc( 75%  -  0px );
+  font-size: 16px;
   padding-left: 35px;
 }
 .docs-body.docs .docs-section .description,

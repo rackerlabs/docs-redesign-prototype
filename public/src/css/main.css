@@ -2782,49 +2782,20 @@ table {
 .docs-section a:hover {
   color: #2f89c5;
 }
-/* line 16, public/src/css/less/components/docs-section.less */
-.docs-section pre {
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding-bottom: 0.5em;
-}
-/* line 21, public/src/css/less/components/docs-section.less */
-.docs-section pre::-webkit-scrollbar {
-  background: transparent;
-  height: 10px;
-  width: 10px;
-}
-/* line 27, public/src/css/less/components/docs-section.less */
-.docs-section pre::-webkit-scrollbar-track:horizontal {
-  background: transparent;
-}
-/* line 31, public/src/css/less/components/docs-section.less */
-.docs-section pre::-webkit-scrollbar-thumb:horizontal {
-  background: #5e6470;
-  border-radius: 10px;
-}
-@media (min-width: 1025px) {
-  /* line 38, public/src/css/less/components/docs-section.less */
-  .docs-section > .description {
-    float: left;
-    padding-right: 35px;
-    width: 50%;
-  }
-}
-/* line 45, public/src/css/less/components/docs-section.less */
-.docs-section > .description h1 .headerlink,
-.docs-section > .description h2 .headerlink,
-.docs-section > .description h3 .headerlink,
-.docs-section > .description h4 .headerlink,
-.docs-section > .description h5 .headerlink,
-.docs-section > .description h6 .headerlink {
+/* line 18, public/src/css/less/components/docs-section.less */
+.docs-section h1 .headerlink,
+.docs-section h2 .headerlink,
+.docs-section h3 .headerlink,
+.docs-section h4 .headerlink,
+.docs-section h5 .headerlink,
+.docs-section h6 .headerlink {
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  bottom: 7px;
+  bottom: 0px;
   display: inline-block;
   left: -15px;
   opacity: 0;
@@ -2836,30 +2807,30 @@ table {
   width: 15px;
 }
 /* line 14, public/components/fontawesome/less/bordered-pulled.less */
-.docs-section > .description h1 .headerlink.pull-left,
-.docs-section > .description h2 .headerlink.pull-left,
-.docs-section > .description h3 .headerlink.pull-left,
-.docs-section > .description h4 .headerlink.pull-left,
-.docs-section > .description h5 .headerlink.pull-left,
-.docs-section > .description h6 .headerlink.pull-left {
+.docs-section h1 .headerlink.pull-left,
+.docs-section h2 .headerlink.pull-left,
+.docs-section h3 .headerlink.pull-left,
+.docs-section h4 .headerlink.pull-left,
+.docs-section h5 .headerlink.pull-left,
+.docs-section h6 .headerlink.pull-left {
   margin-right: .3em;
 }
 /* line 15, public/components/fontawesome/less/bordered-pulled.less */
-.docs-section > .description h1 .headerlink.pull-right,
-.docs-section > .description h2 .headerlink.pull-right,
-.docs-section > .description h3 .headerlink.pull-right,
-.docs-section > .description h4 .headerlink.pull-right,
-.docs-section > .description h5 .headerlink.pull-right,
-.docs-section > .description h6 .headerlink.pull-right {
+.docs-section h1 .headerlink.pull-right,
+.docs-section h2 .headerlink.pull-right,
+.docs-section h3 .headerlink.pull-right,
+.docs-section h4 .headerlink.pull-right,
+.docs-section h5 .headerlink.pull-right,
+.docs-section h6 .headerlink.pull-right {
   margin-left: .3em;
 }
-/* line 56, public/src/css/less/components/docs-section.less */
-.docs-section > .description h1 .headerlink:before,
-.docs-section > .description h2 .headerlink:before,
-.docs-section > .description h3 .headerlink:before,
-.docs-section > .description h4 .headerlink:before,
-.docs-section > .description h5 .headerlink:before,
-.docs-section > .description h6 .headerlink:before {
+/* line 29, public/src/css/less/components/docs-section.less */
+.docs-section h1 .headerlink:before,
+.docs-section h2 .headerlink:before,
+.docs-section h3 .headerlink:before,
+.docs-section h4 .headerlink:before,
+.docs-section h5 .headerlink:before,
+.docs-section h6 .headerlink:before {
   content: "\f0c1";
   font-size: 14px;
   position: absolute;
@@ -2867,31 +2838,31 @@ table {
   text-indent: 0;
   top: 0;
 }
-/* line 67, public/src/css/less/components/docs-section.less */
-.docs-section > .description h1:hover .headerlink,
-.docs-section > .description h2:hover .headerlink,
-.docs-section > .description h3:hover .headerlink,
-.docs-section > .description h4:hover .headerlink,
-.docs-section > .description h5:hover .headerlink,
-.docs-section > .description h6:hover .headerlink {
+/* line 40, public/src/css/less/components/docs-section.less */
+.docs-section h1:hover .headerlink,
+.docs-section h2:hover .headerlink,
+.docs-section h3:hover .headerlink,
+.docs-section h4:hover .headerlink,
+.docs-section h5:hover .headerlink,
+.docs-section h6:hover .headerlink {
   opacity: 1;
 }
-/* line 70, public/src/css/less/components/docs-section.less */
-.docs-section > .description h1:hover .headerlink:after,
-.docs-section > .description h2:hover .headerlink:after,
-.docs-section > .description h3:hover .headerlink:after,
-.docs-section > .description h4:hover .headerlink:after,
-.docs-section > .description h5:hover .headerlink:after,
-.docs-section > .description h6:hover .headerlink:after {
+/* line 43, public/src/css/less/components/docs-section.less */
+.docs-section h1:hover .headerlink:after,
+.docs-section h2:hover .headerlink:after,
+.docs-section h3:hover .headerlink:after,
+.docs-section h4:hover .headerlink:after,
+.docs-section h5:hover .headerlink:after,
+.docs-section h6:hover .headerlink:after {
   background: none;
 }
-/* line 76, public/src/css/less/components/docs-section.less */
-.docs-section > .description table {
+/* line 49, public/src/css/less/components/docs-section.less */
+.docs-section table {
   margin-bottom: 1.5em;
   max-width: 100%;
 }
 /* line 5, public/src/css/less/mixins/table.less */
-.docs-section > .description table caption {
+.docs-section table caption {
   font-family: 'titillium-bold', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -2900,7 +2871,7 @@ table {
   text-align: left;
 }
 /* line 13, public/src/css/less/mixins/table.less */
-.docs-section > .description table thead th {
+.docs-section table thead th {
   font-family: 'open-sans-bold', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -2909,18 +2880,47 @@ table {
   text-align: center;
 }
 /* line 22, public/src/css/less/mixins/table.less */
-.docs-section > .description table tr td,
-.docs-section > .description table tr th {
+.docs-section table tr td,
+.docs-section table tr th {
   border: solid 1px #d9d9d9;
   border-collapse: collapse;
   padding: 0.5em;
 }
 /* line 31, public/src/css/less/mixins/table.less */
-.docs-section > .description table tbody tr:nth-child(even) td,
-.docs-section > .description table tbody tr:nth-child(even) th {
+.docs-section table tbody tr:nth-child(even) td,
+.docs-section table tbody tr:nth-child(even) th {
   background: #f7f7f7;
 }
-/* line 84, public/src/css/less/components/docs-section.less */
+/* line 53, public/src/css/less/components/docs-section.less */
+.docs-section pre {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.5em;
+}
+/* line 58, public/src/css/less/components/docs-section.less */
+.docs-section pre::-webkit-scrollbar {
+  background: transparent;
+  height: 10px;
+  width: 10px;
+}
+/* line 64, public/src/css/less/components/docs-section.less */
+.docs-section pre::-webkit-scrollbar-track:horizontal {
+  background: transparent;
+}
+/* line 68, public/src/css/less/components/docs-section.less */
+.docs-section pre::-webkit-scrollbar-thumb:horizontal {
+  background: #5e6470;
+  border-radius: 10px;
+}
+@media (min-width: 1025px) {
+  /* line 75, public/src/css/less/components/docs-section.less */
+  .docs-section > .description {
+    float: left;
+    padding-right: 35px;
+    width: 50%;
+  }
+}
+/* line 85, public/src/css/less/components/docs-section.less */
 .docs-section > .code h2 .copy-link,
 .docs-section > .code h3 .copy-link,
 .docs-section > .code h4 .copy-link,
@@ -2931,30 +2931,30 @@ table {
   right: 0;
   width: 1em;
 }
-/* line 93, public/src/css/less/components/docs-section.less */
+/* line 94, public/src/css/less/components/docs-section.less */
 .docs-section > .code hr {
   background: rgba(255, 255, 255, 0.2);
   border: none;
   height: 1px;
   margin: 1em 0;
 }
-/* line 101, public/src/css/less/components/docs-section.less */
+/* line 102, public/src/css/less/components/docs-section.less */
 .docs-section > .code .highlight {
   padding: 1em 0;
 }
-/* line 105, public/src/css/less/components/docs-section.less */
+/* line 106, public/src/css/less/components/docs-section.less */
 .docs-section > .code pre,
 .docs-section > .code code {
   color: #e0e0d7;
 }
 @media (min-width: 1025px) {
-  /* line 109, public/src/css/less/components/docs-section.less */
+  /* line 110, public/src/css/less/components/docs-section.less */
   .docs-section > .code {
     color: white;
     margin-left: 50%;
     padding: 0 35px;
   }
-  /* line 114, public/src/css/less/components/docs-section.less */
+  /* line 115, public/src/css/less/components/docs-section.less */
   .docs-section > .code h3 {
     border-bottom: dotted 1px rgba(224, 224, 215, 0.3);
     color: white;
@@ -3922,8 +3922,8 @@ dl dd {
 .site-footer .footer-container {
   max-width: 960px;
   display: block;
-  width: calc(100% +  20px );
-  margin-left: -20px;
+  width: calc(100% +  0px );
+  margin-left: 0px;
   overflow: hidden;
   vertical-align: top;
   margin-left: auto;
@@ -3961,9 +3961,9 @@ dl dd {
     -moz-box-sizing: border-box;
     display: inline-block;
     margin-right: -0.26rem;
-    margin-left: 20px;
+    margin-left: 0px;
     vertical-align: top;
-    width: calc( 50%  -  20px );
+    width: calc( 50%  -  0px );
     margin-bottom: 40px;
   }
   /* line 64, public/src/css/less/modules/site-footer.less */
@@ -4002,9 +4002,9 @@ dl dd {
     -moz-box-sizing: border-box;
     display: inline-block;
     margin-right: -0.26rem;
-    margin-left: 20px;
+    margin-left: 0px;
     vertical-align: top;
-    width: calc( 41.66666667%  -  20px );
+    width: calc( 41.66666667%  -  0px );
   }
   /* line 91, public/src/css/less/modules/site-footer.less */
   .site-footer .blog-links,
@@ -4013,9 +4013,9 @@ dl dd {
     -moz-box-sizing: border-box;
     display: inline-block;
     margin-right: -0.26rem;
-    margin-left: 20px;
+    margin-left: 0px;
     vertical-align: top;
-    width: calc( 16.66666667%  -  20px );
+    width: calc( 16.66666667%  -  0px );
   }
   /* line 95, public/src/css/less/modules/site-footer.less */
   .site-footer .other-links {
@@ -4023,47 +4023,32 @@ dl dd {
     -moz-box-sizing: border-box;
     display: inline-block;
     margin-right: -0.26rem;
-    margin-left: 20px;
+    margin-left: 0px;
     vertical-align: top;
-    width: calc( 25%  -  20px );
+    width: calc( 25%  -  0px );
   }
 }
-/* line 1, public/src/css/less/modules/docs-content.less */
-.docs-body {
-  display: block;
-  width: calc(100% +  0px );
-  margin-left: 0px;
-  overflow: hidden;
-  vertical-align: top;
-  font-size: 15px;
-  padding-bottom: 35px;
+/* line 1, public/src/css/less/modules/docs.less */
+.docs-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+  width: 90%;
 }
-/* line 7, public/src/css/less/modules/docs-content.less */
-.docs-body h1 {
-  color: #666666;
-  line-height: 1.1;
-}
-/* line 12, public/src/css/less/modules/docs-content.less */
-.docs-body h2,
-.docs-body h3 {
-  border-bottom: dotted 1px rgba(0, 0, 0, 0.3);
-  line-height: 2;
-  margin-bottom: 15px;
-}
-/* line 18, public/src/css/less/modules/docs-content.less */
-.docs-body .background {
+/* line 6, public/src/css/less/modules/docs.less */
+.docs-body.docs .background {
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
 }
-/* line 25, public/src/css/less/modules/docs-content.less */
-.docs-body .background .left {
+/* line 13, public/src/css/less/modules/docs.less */
+.docs-body.docs .background .left {
   display: none;
 }
-/* line 29, public/src/css/less/modules/docs-content.less */
-.docs-body .background .center {
+/* line 17, public/src/css/less/modules/docs.less */
+.docs-body.docs .background .center {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   display: inline-block;
@@ -4074,13 +4059,13 @@ dl dd {
   background: white;
   height: 100%;
 }
-/* line 34, public/src/css/less/modules/docs-content.less */
-.docs-body .background .right {
+/* line 22, public/src/css/less/modules/docs.less */
+.docs-body.docs .background .right {
   display: none;
 }
 @media (min-width: 769px) {
-  /* line 39, public/src/css/less/modules/docs-content.less */
-  .docs-body .background .left {
+  /* line 27, public/src/css/less/modules/docs.less */
+  .docs-body.docs .background .left {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     display: inline-block;
@@ -4093,8 +4078,169 @@ dl dd {
   }
 }
 @media (min-width: 1025px) {
-  /* line 47, public/src/css/less/modules/docs-content.less */
-  .docs-body .background .left {
+  /* line 35, public/src/css/less/modules/docs.less */
+  .docs-body.docs .background .left {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 0px;
+    vertical-align: top;
+    width: calc( 25%  -  0px );
+  }
+  /* line 38, public/src/css/less/modules/docs.less */
+  .docs-body.docs .background .center {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 0px;
+    vertical-align: top;
+    width: calc( 75%  -  0px );
+  }
+}
+/* line 44, public/src/css/less/modules/docs.less */
+.docs-body.docs .docs-section-nav {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  margin-right: -0.26rem;
+  margin-left: 0px;
+  vertical-align: top;
+  width: calc( 25%  -  0px );
+}
+/* line 47, public/src/css/less/modules/docs.less */
+.docs-body.docs .docs-section-nav .section-nav-container {
+  padding: 15px 20px;
+}
+/* line 51, public/src/css/less/modules/docs.less */
+.docs-body.docs .docs-section-nav .sticky {
+  width: calc(980px * 1 / 4);
+}
+/* line 56, public/src/css/less/modules/docs.less */
+.docs-body.docs .docs-content {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  margin-right: -0.26rem;
+  margin-left: 0px;
+  vertical-align: top;
+  width: calc( 75%  -  0px );
+  font-size: 16px;
+  padding-left: 35px;
+}
+/* line 62, public/src/css/less/modules/docs.less */
+.docs-body.docs .docs-section .description,
+.docs-body.docs .docs-section .code {
+  width: 100%;
+}
+/* line 1, public/src/css/less/modules/docs-body.less */
+.docs-body {
+  display: block;
+  width: calc(100% +  0px );
+  margin-left: 0px;
+  overflow: hidden;
+  vertical-align: top;
+}
+/* line 5, public/src/css/less/modules/docs-body.less */
+.docs-body .docs-intro {
+  margin-bottom: 2em;
+}
+/* line 8, public/src/css/less/modules/docs-body.less */
+.docs-body .docs-intro .revision-date {
+  font-family: 'titillium-regular', arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+/* line 13, public/src/css/less/modules/docs-body.less */
+.docs-body .docs-intro .tags {
+  font-size: 12px;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+/* line 18, public/src/css/less/modules/docs-body.less */
+.docs-body .docs-intro .tags li {
+  display: inline-block;
+  list-style-type: none;
+}
+/* line 22, public/src/css/less/modules/docs-body.less */
+.docs-body .docs-intro .tags li a {
+  font-family: 'titillium-regular', arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+}
+/* line 26, public/src/css/less/modules/docs-body.less */
+.docs-body .docs-intro .tags li a:hover {
+  text-decoration: underline;
+}
+/* line 31, public/src/css/less/modules/docs-body.less */
+.docs-body .docs-intro .tags li + li {
+  border-left: solid 1px #cccccc;
+  margin-left: 0.5em;
+  padding-left: calc(0.5em + 1px);
+}
+/* line 39, public/src/css/less/modules/docs-body.less */
+.docs-body .docs-intro .headerlink {
+  display: none;
+}
+@media (max-width: 768px) {
+  /* line 47, public/src/css/less/modules/docs-body.less */
+  .show-section-nav .docs-content {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transform: translate3d(25%, 0, 0);
+    -ms-transform: translate3d(25%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+  }
+}
+/* line 4, public/src/css/less/modules/docs-samples.less */
+.docs-body.docs-samples .background {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 11, public/src/css/less/modules/docs-samples.less */
+.docs-body.docs-samples .background .left {
+  display: none;
+}
+/* line 15, public/src/css/less/modules/docs-samples.less */
+.docs-body.docs-samples .background .center {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  margin-right: -0.26rem;
+  margin-left: 0px;
+  vertical-align: top;
+  width: calc( 100%  -  0px );
+  background: white;
+  height: 100%;
+}
+/* line 20, public/src/css/less/modules/docs-samples.less */
+.docs-body.docs-samples .background .right {
+  display: none;
+}
+@media (min-width: 769px) {
+  /* line 25, public/src/css/less/modules/docs-samples.less */
+  .docs-body.docs-samples .background .left {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 0px;
+    vertical-align: top;
+    width: calc( 25%  -  0px );
+    background: #ebebeb;
+    height: 100%;
+  }
+}
+@media (min-width: 1025px) {
+  /* line 33, public/src/css/less/modules/docs-samples.less */
+  .docs-body.docs-samples .background .left {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     display: inline-block;
@@ -4103,8 +4249,8 @@ dl dd {
     vertical-align: top;
     width: calc( 16.66666667%  -  0px );
   }
-  /* line 50, public/src/css/less/modules/docs-content.less */
-  .docs-body .background .center {
+  /* line 36, public/src/css/less/modules/docs-samples.less */
+  .docs-body.docs-samples .background .center {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     display: inline-block;
@@ -4113,8 +4259,8 @@ dl dd {
     vertical-align: top;
     width: calc( 41.66666667%  -  0px );
   }
-  /* line 54, public/src/css/less/modules/docs-content.less */
-  .docs-body .background .right {
+  /* line 40, public/src/css/less/modules/docs-samples.less */
+  .docs-body.docs-samples .background .right {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     display: inline-block;
@@ -4126,8 +4272,8 @@ dl dd {
     height: 100%;
   }
 }
-/* line 62, public/src/css/less/modules/docs-content.less */
-.docs-body .docs-content {
+/* line 48, public/src/css/less/modules/docs-samples.less */
+.docs-body.docs-samples .docs-content {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   display: inline-block;
@@ -4140,13 +4286,13 @@ dl dd {
   -ms-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
 }
-/* line 67, public/src/css/less/modules/docs-content.less */
-.docs-body .docs-content .docs-section:first-of-type {
+/* line 53, public/src/css/less/modules/docs-samples.less */
+.docs-body.docs-samples .docs-content .docs-section:first-of-type {
   padding-top: 5px;
 }
 @media (min-width: 769px) {
-  /* line 71, public/src/css/less/modules/docs-content.less */
-  .docs-body .docs-content {
+  /* line 57, public/src/css/less/modules/docs-samples.less */
+  .docs-body.docs-samples .docs-content {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     display: inline-block;
@@ -4158,8 +4304,8 @@ dl dd {
   }
 }
 @media (min-width: 1025px) {
-  /* line 76, public/src/css/less/modules/docs-content.less */
-  .docs-body .docs-content {
+  /* line 62, public/src/css/less/modules/docs-samples.less */
+  .docs-body.docs-samples .docs-content {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     display: inline-block;
@@ -4168,59 +4314,5 @@ dl dd {
     vertical-align: top;
     width: calc( 83.33333333%  -  0px );
     padding: 5px 0 0 20px;
-  }
-}
-/* line 82, public/src/css/less/modules/docs-content.less */
-.docs-body .docs-intro {
-  margin-bottom: 2em;
-}
-/* line 85, public/src/css/less/modules/docs-content.less */
-.docs-body .docs-intro .revision-date {
-  font-family: 'titillium-regular', arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-}
-/* line 90, public/src/css/less/modules/docs-content.less */
-.docs-body .docs-intro .tags {
-  font-size: 12px;
-  margin: 10px 0 0 0;
-  padding: 0;
-}
-/* line 95, public/src/css/less/modules/docs-content.less */
-.docs-body .docs-intro .tags li {
-  display: inline-block;
-  list-style-type: none;
-}
-/* line 99, public/src/css/less/modules/docs-content.less */
-.docs-body .docs-intro .tags li a {
-  font-family: 'titillium-regular', arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: none;
-}
-/* line 103, public/src/css/less/modules/docs-content.less */
-.docs-body .docs-intro .tags li a:hover {
-  text-decoration: underline;
-}
-/* line 108, public/src/css/less/modules/docs-content.less */
-.docs-body .docs-intro .tags li + li {
-  border-left: solid 1px #cccccc;
-  margin-left: 0.5em;
-  padding-left: calc(0.5em + 1px);
-}
-/* line 116, public/src/css/less/modules/docs-content.less */
-.docs-body .docs-intro .headerlink {
-  display: none;
-}
-@media (max-width: 768px) {
-  /* line 124, public/src/css/less/modules/docs-content.less */
-  .show-section-nav .docs-content {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
-    -webkit-transform: translate3d(25%, 0, 0);
-    -ms-transform: translate3d(25%, 0, 0);
-    transform: translate3d(25%, 0, 0);
   }
 }
