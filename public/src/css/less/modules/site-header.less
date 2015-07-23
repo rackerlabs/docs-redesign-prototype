@@ -19,6 +19,7 @@
             .phone-chat-links, .portal-links {
                 .grid-unit(1/2);
             }
+            overflow: visible;
 
             .portal-links {
                 margin-bottom: 0;
@@ -53,27 +54,33 @@
                 background: shade(white, 13%);
                 border-top: 1px solid black;
                 border-radius: 3px;
-                padding-bottom: 0px;
+                padding-left: 0px;
+                z-index: 10;
+                text-align: left;
             }
 
             &:hover ul {
-                
                 display: block;
                 
-                li {display: block;}
-                
-                li:hover {
-                    background: #737373;
-                    border-radius: 3px; 
-                }
-
-                a {
-                    color: #fff;
+                li {
+                    color: black;
                     display: block;
-                    padding: 3px 6px;
-                    text-decoration: none;
-                    white-space: nowrap
-                }                
+                    
+                    a {
+                        color: black;
+                        display: block;
+                        padding: 3px 6px;
+                        text-decoration: none;
+                        white-space: nowrap
+                    }                
+                    
+                    &:hover {
+                        background: #737373;
+                        border-radius: 3px;
+                        
+                        a {color: white;}
+                    }
+                }
             }
             
         }
