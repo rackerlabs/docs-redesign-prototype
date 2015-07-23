@@ -70,6 +70,39 @@ module.exports = function (grunt) {
             }
         },
         nunjucks: {
+            options: {
+                configureEnvironment: function (env) {
+                    env.addFilter('onePageLinks', function (input) {
+                        var cheerio = require('cheerio');
+                        var $ = cheerio.load(input);
+
+                        $('a').each(function () {
+                            if($(this).attr('href').indexOf('#') === -1) {
+                                return;
+                            }
+
+                            $(this).attr(
+                                'href',
+                                $(this).attr('href').substr($(this).attr('href').indexOf('#'))
+                            );
+                        });
+
+                        return $.html();
+                    });
+
+                    env.addFilter('addScrollIndicators', function (input) {
+                        var cheerio = require('cheerio');
+
+                        var $ = cheerio.load(input);
+                        $('li').each(function () {
+                            $(this).attr('data-drc-scroll-indicator', $('a', this).attr('href').replace('#',''));
+                            $(this).attr('data-use-attribute', 'id');
+                        });
+
+                        return $.html();
+                    });
+                }
+            },
             dev: {
                 options: {
                     data: {},

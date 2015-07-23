@@ -82,6 +82,8 @@ angular.module(moduleName, [])
                 if(data === $attrs.drcScrollIndicator) {
                     $element.addClass('active');
                     $element.parents('li').addClass('active');
+
+                    window.history.pushState({}, '', $element.href);
                 }
                 else {
                     $element.removeClass('active');
