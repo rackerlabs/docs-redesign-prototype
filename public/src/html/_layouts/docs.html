@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rackspace Developer Documentation</title>
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body>
+    {% include "_includes/site-header.html" %}
+    <div class="docs-container">
+        <section class="docs-body docs">
+            <div class="background">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+            </div>
+            <nav class="docs-section-nav" data-drc-section-nav-toggle data-parent=".docs-body">
+                <div class="section-nav-container" data-drc-sticky data-offset-top="332" data-drc-flex-height data-flex-bottom="302">
+                    <a href="https://github.com/rackerlabs/docs-quickstart/edit/master/cloud-servers/getting-started/index.rst" target="_blank" class="github-link"><span class="icon fa fa-github"></span>Edit On Github</a>
+                    {% block leftNav %}{% endblock %}
+                </div>
+                <div class="section-nav-toggle"></div>
+            </nav>
+            <article class="docs-content">
+                {% block content %}{% endblock %}
+            </article>
+        </section>
+    </div>
+    {% include "_includes/site-footer.html" %}
+    <script src="/dist/js/main.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+</body>
+</html>

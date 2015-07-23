@@ -69,6 +69,56 @@ module.exports = function (grunt) {
                 }
             }
         },
+        nunjucks: {
+            options: {
+                configureEnvironment: function (env) {
+                    env.addFilter('onePageLinks', function (input) {
+                        var cheerio = require('cheerio');
+                        var $ = cheerio.load(input);
+
+                        $('a').each(function () {
+                            if($(this).attr('href').indexOf('#') === -1) {
+                                return;
+                            }
+
+                            $(this).attr(
+                                'href',
+                                $(this).attr('href').substr($(this).attr('href').indexOf('#'))
+                            );
+                        });
+
+                        return $.html();
+                    });
+
+                    env.addFilter('addScrollIndicators', function (input) {
+                        var cheerio = require('cheerio');
+
+                        var $ = cheerio.load(input);
+                        $('li').each(function () {
+                            $(this).attr('data-drc-scroll-indicator', $('a', this).attr('href').replace('#',''));
+                            $(this).attr('data-use-attribute', 'id');
+                        });
+
+                        return $.html();
+                    });
+                }
+            },
+            dev: {
+                options: {
+                    data: {},
+                    paths: 'public/src/html'
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'public/src/html',
+                        src: './*.html',
+                        dest: './public/',
+                        ext: '.html'
+                    }
+                ]
+            }
+        },
         watch: {
             less: {
                 files: ['public/src/css/less/**/*.less'],
@@ -78,8 +128,12 @@ module.exports = function (grunt) {
                 files: ['public/src/js/**/*.js'],
                 tasks: ['browserify:dev']
             },
+            nunjucks: {
+                files: ['public/src/html/**/*.html'],
+                tasks: ['nunjucks:dev']
+            },
             livereload: {
-                files: ['public/src/css/main.css', 'public/dist/js/main.js', 'public/index.html'],
+                files: ['public/src/css/main.css', 'public/dist/js/main.js', 'public/*.html'],
                 tasks: [],
                 options: {
                     livereload: true
@@ -94,8 +148,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-nunjucks-2-html');
 
     grunt.registerTask('serve', ['connect:server']);
-    grunt.registerTask('dev', ['less:dev', 'browserify:dev', 'concurrent:dev']);
+    grunt.registerTask('dev', ['nunjucks:dev', 'less:dev', 'browserify:dev', 'concurrent:dev']);
     grunt.registerTask('build', ['less:build', 'browserify:dev', 'copy:images', 'copy:fonts']);
 };
