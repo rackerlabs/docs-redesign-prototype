@@ -42,27 +42,28 @@ p {
 
 h1, .h1 {
     .titillium();
-    font-size: 35px;
+    font-size: percentage((35/14));
 }
 
 h2, .h2 {
     .titillium();
-    font-size: 24px;
+    font-size: percentage((24/14));
 }
 
 h3, .h3 {
     .titillium();
-    font-size: 20px;
+    font-size: percentage((20/14));
 }
 
 h4, .h4 {
     .titillium();
-    font-size: 18px;
+    font-size: percentage((18/14));
+    margin-bottom: 0.25em;
 }
 
 h5, .h5 {
     .titillium('bold');
-    font-size: 16px;
+    font-size: percentage((16/14));
 }
 
 ol {
@@ -75,6 +76,12 @@ ul {
     list-style-type: disc;
     padding-left: 1.4em;
     margin-bottom: 1em;
+}
+
+ol, ul {
+    li {
+        margin-bottom: 0.5em;
+    }
 }
 
 code {
