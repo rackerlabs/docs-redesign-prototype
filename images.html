@@ -112,6 +112,7 @@
 <section class="docs-section">
 
       <div class="section" id="cloud-images">
+    <h1>Cloud Images<a class="headerlink" href="#cloud-images" title="Permalink to this headline">#</a></h1>
     <p>The Rackspace Cloud Images service enables developers to create and
     manipulate images, image members, and associated metadata through a
     simple Representational State Transfer (REST) web service interface.</p>
@@ -132,10 +133,9 @@
     </li>
     </ul>
     <div class="section" id="overview">
-    <span id="ci-dg-overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
-    </div>
+    <span id="id1"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
     <div class="section" id="intended-audience">
-    <h2>Intended Audience<a class="headerlink" href="#intended-audience" title="Permalink to this headline">#</a></h2>
+    <span id="id2"></span><h3>Intended Audience<a class="headerlink" href="#intended-audience" title="Permalink to this headline">#</a></h3>
     <p>This guide is intended to assist software developers who want to develop applications by
     using the Rackspace Cloud Images service REST application programming interface (API).
     It fully documents the Cloud Images API, which enables developers to interact with the
@@ -153,7 +153,7 @@
     </ul>
     </div>
     <div class="section" id="additional-resources">
-    <h2>Additional resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">#</a></h2>
+    <span id="id3"></span><h3>Additional resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">#</a></h3>
     <p>The <a class="reference external" href="http://www.rackspace.com/knowledge_center/article/cloud-images-frequently-asked-questions">Cloud Images
     FAQ</a>
     in the Knowledge Center provides more information about the Cloud Images
@@ -162,20 +162,22 @@
     customer portal at <a class="reference external" href="https://feedback.rackspace.com/">https://feedback.rackspace.com/</a>.</p>
     </div>
     <div class="section" id="rackspace-pricing-and-terms-of-service">
-    <h2>Rackspace pricing and terms of service<a class="headerlink" href="#rackspace-pricing-and-terms-of-service" title="Permalink to this headline">#</a></h2>
+    <span id="pricing-service-level"></span><h3>Rackspace pricing and terms of service<a class="headerlink" href="#rackspace-pricing-and-terms-of-service" title="Permalink to this headline">#</a></h3>
     <p>Cloud Images is part of the Rackspace cloud and your use of the Cloud Images API will be
     billed according to the schedule at <a class="reference external" href="http://www.rackspace.com/cloud/images">http://www.rackspace.com/cloud/images</a>.</p>
     <p>Periodically review the Rackspace Cloud Terms of Service for your
     Terms of Service because they can be updated any time. These documents also include
     the Acceptable Use Policies.</p>
+    <div class="toctree-wrapper compound">
+    </div>
+    </div>
     </div>
     <div class="section" id="concepts">
-    <span id="ci-dg-concepts"></span><h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">#</a></h2>
+    <span id="id4"></span><h2>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">#</a></h2>
     <p>To understand the Cloud Images service and API, review the following key terms and
     concepts.</p>
-    </div>
     <div class="section" id="images">
-    <span id="ci-concepts-images"></span><h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">#</a></h2>
+    <span id="id5"></span><h3>Images<a class="headerlink" href="#images" title="Permalink to this headline">#</a></h3>
     <p>Server images are used to store a snapshot of a server&#8217;s configuration.
     If you take an image of a server, you can create a new server from that
     image. The new server will have the same files and operating system that
@@ -183,7 +185,7 @@
     <p>The Cloud Images service enables you to use standard, Rackspace-supported images
     and to create, share, and use nonstandard images that are not supported by Rackspace.</p>
     <div class="section" id="standard-images">
-    <span id="ci-concepts-standard-images"></span><h3>Standard images<a class="headerlink" href="#standard-images" title="Permalink to this headline">#</a></h3>
+    <span id="id6"></span><h4>Standard images<a class="headerlink" href="#standard-images" title="Permalink to this headline">#</a></h4>
     <p>Standard images include the following images:</p>
     <ul class="simple">
     <li>All base images that have not reached their end of life and that are
@@ -193,7 +195,7 @@
     </ul>
     </div>
     <div class="section" id="nonstandard-images">
-    <span id="ci-concepts-nonstandard-images"></span><h3>Nonstandard images<a class="headerlink" href="#nonstandard-images" title="Permalink to this headline">#</a></h3>
+    <span id="id7"></span><h4>Nonstandard images<a class="headerlink" href="#nonstandard-images" title="Permalink to this headline">#</a></h4>
     <p>Nonstandard images include the following images:</p>
     <ul class="simple">
     <li>All imported and exported images</li>
@@ -210,7 +212,7 @@
     </div>
     </div>
     <div class="section" id="image-entities">
-    <h2>Image entities<a class="headerlink" href="#image-entities" title="Permalink to this headline">#</a></h2>
+    <span id="id8"></span><h3>Image entities<a class="headerlink" href="#image-entities" title="Permalink to this headline">#</a></h3>
     <p>An image entity is represented by a JSON-encoded data structure and its raw binary data.</p>
     <p>An image entity has an identifier (ID) that is guaranteed to be unique within its
     endpoint. The ID is used as a token in request URIs to interact with that specific image.</p>
@@ -222,7 +224,7 @@
     allows it. These user-defined attributes will appear like any other image attributes.</p>
     </div>
     <div class="section" id="image-identifiers">
-    <span id="ci-concepts-image-identifiers"></span><h2>Image identifiers<a class="headerlink" href="#image-identifiers" title="Permalink to this headline">#</a></h2>
+    <span id="id9"></span><h3>Image identifiers<a class="headerlink" href="#image-identifiers" title="Permalink to this headline">#</a></h3>
     <p>Images are uniquely identified by a <em>URI</em> that matches the following
     signature:</p>
     <p><code class="docutils literal"><span class="pre">{image</span> <span class="pre">server</span> <span class="pre">location}/v2/images/{image_ID}</span></code></p>
@@ -236,7 +238,7 @@
     </dl>
     </div>
     <div class="section" id="common-image-properties">
-    <span id="ci-concepts-common-image-properties"></span><h2>Common image properties<a class="headerlink" href="#common-image-properties" title="Permalink to this headline">#</a></h2>
+    <span id="id10"></span><h3>Common image properties<a class="headerlink" href="#common-image-properties" title="Permalink to this headline">#</a></h3>
     <p>To help end users use your images, you can put additional common
     properties, or metadata, on your images.</p>
     <p>The available properties and their expected values include the following
@@ -294,7 +296,7 @@
     </div>
     </div>
     <div class="section" id="image-sharing">
-    <span id="ci-concepts-image-sharing"></span><h2>Image sharing<a class="headerlink" href="#image-sharing" title="Permalink to this headline">#</a></h2>
+    <span id="id11"></span><h3>Image sharing<a class="headerlink" href="#image-sharing" title="Permalink to this headline">#</a></h3>
     <p>Image producers create and share images with image consumers, allowing
     the consumers to use the shared image when booting a server. The
     producer shares an image with the consumer by making the consumer a
@@ -303,8 +305,10 @@
     appears in the consumer&#8217;s image list. As long as the consumer is an
     member of the image, the consumer can use the image, regardless of the
     image member status.</p>
-    <p><strong>Figure: Sharing an image</strong></p>
-    <img alt="../_images/image-member.png" src="../_images/image-member.png" />
+    <div class="figure" id="id47">
+    <img alt="../_images/image-member.png" src="public/src/img/image-member.png" />
+    <p class="caption"><span class="caption-text">Figure: Sharing an image</span></p>
+    </div>
     <div class="admonition note">
     <p class="first admonition-title">Note</p>
     <p>In the Cloud Images API, the image member status serves three
@@ -344,7 +348,7 @@
     image ID.</li>
     </ul>
     <div class="section" id="sample-workflow-for-image-sharing-after-image-creation">
-    <h3>Sample workflow for image sharing, after image creation<a class="headerlink" href="#sample-workflow-for-image-sharing-after-image-creation" title="Permalink to this headline">#</a></h3>
+    <h4>Sample workflow for image sharing, after image creation<a class="headerlink" href="#sample-workflow-for-image-sharing-after-image-creation" title="Permalink to this headline">#</a></h4>
     <div class="admonition note">
     <p class="first admonition-title">Note</p>
     <p class="last">Communications between the image producer and the consumer, like
@@ -375,7 +379,7 @@
     </div>
     </div>
     <div class="section" id="asynchronous-image-tasks">
-    <span id="ci-concepts-asynchronous-image-tasks"></span><h2>Asynchronous image tasks<a class="headerlink" href="#asynchronous-image-tasks" title="Permalink to this headline">#</a></h2>
+    <span id="id12"></span><h3>Asynchronous image tasks<a class="headerlink" href="#asynchronous-image-tasks" title="Permalink to this headline">#</a></h3>
     <p>An image task request performs an asynchronous image-related
     operation, such as importing or exporting an image. The request creates
     a disposable task resource that you poll for information about the
@@ -400,7 +404,7 @@
     parameters.</p>
     </div>
     <div class="section" id="high-level-process-for-importing-an-image">
-    <h3>High-level process for importing an image<a class="headerlink" href="#high-level-process-for-importing-an-image" title="Permalink to this headline">#</a></h3>
+    <h4>High-level process for importing an image<a class="headerlink" href="#high-level-process-for-importing-an-image" title="Permalink to this headline">#</a></h4>
     <ol class="arabic simple">
     <li>Put the image into your Cloud Files account.</li>
     <li>Submit the asynchronous import request by using the <em>Task to import image</em> API
@@ -413,7 +417,7 @@
     </ol>
     </div>
     <div class="section" id="high-level-process-for-exporting-an-image">
-    <h3>High-level process for exporting an image<a class="headerlink" href="#high-level-process-for-exporting-an-image" title="Permalink to this headline">#</a></h3>
+    <h4>High-level process for exporting an image<a class="headerlink" href="#high-level-process-for-exporting-an-image" title="Permalink to this headline">#</a></h4>
     <ol class="arabic simple">
     <li>Determine the UUID of the image you want to export.</li>
     <li>Submit the export request by using the <em>Task to export image</em> API operation. The
@@ -429,12 +433,12 @@
     </div>
     </div>
     <div class="section" id="statuses">
-    <span id="ci-concepts-statuses"></span><h2>Statuses<a class="headerlink" href="#statuses" title="Permalink to this headline">#</a></h2>
+    <span id="id13"></span><h3>Statuses<a class="headerlink" href="#statuses" title="Permalink to this headline">#</a></h3>
     <p>The Cloud Images API uses a variety of statuses to identify the state of
     images or image components. This section describes the statuses and
     their values.</p>
     <div class="section" id="image-statuses">
-    <span id="ci-dg-overview-image-statuses"></span><h3>Image statuses<a class="headerlink" href="#image-statuses" title="Permalink to this headline">#</a></h3>
+    <h4>Image statuses<a class="headerlink" href="#image-statuses" title="Permalink to this headline">#</a></h4>
     <p>Images in the Cloud Images service can have any of the following
     statuses when you display details by using the <em>Get image details</em> API operation.</p>
     <dl class="docutils">
@@ -469,7 +473,7 @@
     </dl>
     </div>
     <div class="section" id="task-statuses">
-    <span id="ci-dg-overview-task-statuses"></span><h3>Task statuses<a class="headerlink" href="#task-statuses" title="Permalink to this headline">#</a></h3>
+    <span id="ci-dg-overview-task-statuses"></span><h4>Task statuses<a class="headerlink" href="#task-statuses" title="Permalink to this headline">#</a></h4>
     <p>Image tasks are used for importing images from your Cloud Files account
     and for exporting images to your Cloud files account. For more
     information on image tasks, search for “Asynchronous image tasks”.</p>
@@ -487,7 +491,7 @@
     </dl>
     </div>
     <div class="section" id="image-member-statuses">
-    <span id="ci-dg-overview-member-statuses"></span><h3>Image member statuses<a class="headerlink" href="#image-member-statuses" title="Permalink to this headline">#</a></h3>
+    <span id="ci-dg-overview-member-statuses"></span><h4>Image member statuses<a class="headerlink" href="#image-member-statuses" title="Permalink to this headline">#</a></h4>
     <p>When an image producer wants to share an image with a potential image
     consumer, the producer creates an image member, linking the image and
     the consumer. Once an image is shared, the image is available for the
@@ -542,7 +546,7 @@
     </div>
     </div>
     <div class="section" id="http-patch-method">
-    <span id="ci-concepts-http-patch-method"></span><h2>HTTP PATCH method<a class="headerlink" href="#http-patch-method" title="Permalink to this headline">#</a></h2>
+    <span id="id14"></span><h3>HTTP PATCH method<a class="headerlink" href="#http-patch-method" title="Permalink to this headline">#</a></h3>
     <p>The Cloud Images API uses the HTTP PATCH method to update image
     properties.</p>
     <p>The HTTP PATCH request must provide a media type so that the server
@@ -566,7 +570,7 @@
     <code class="docutils literal"><span class="pre">user_image_creator</span></code> (with a name for the value).</p>
     </div>
     <div class="section" id="restricted-json-pointers">
-    <h3>Restricted JSON pointers<a class="headerlink" href="#restricted-json-pointers" title="Permalink to this headline">#</a></h3>
+    <h4>Restricted JSON pointers<a class="headerlink" href="#restricted-json-pointers" title="Permalink to this headline">#</a></h4>
     <p>The <code class="docutils literal"><span class="pre">application/openstack-images-v2.1-json-patch</span></code> media type adopts
     a restricted form of JSON Pointers, which limits the allowed number of tokens
     to one token. Restricted JSON Pointers are evaluated as ordinary
@@ -614,7 +618,7 @@
     </div>
     </div>
     <div class="section" id="using-the-http-patch-method">
-    <h3>Using the HTTP PATCH method<a class="headerlink" href="#using-the-http-patch-method" title="Permalink to this headline">#</a></h3>
+    <h4>Using the HTTP PATCH method<a class="headerlink" href="#using-the-http-patch-method" title="Permalink to this headline">#</a></h4>
     <p>The <code class="docutils literal"><span class="pre">'application/openstack-images-v2.1-json-patch'</span></code> media type for
     the HTTP PATCH method allows a subset of operations defined in the
     <code class="docutils literal"><span class="pre">application/json-patch+json</span></code> media type. To perform an operation, you
@@ -660,6 +664,7 @@
     <p class="first admonition-title">Warning</p>
     <p class="last">If an operation object contains no recognized operation member, or
     more than one operation member, an error condition results.</p>
+    </div>
     </div>
     <div class="section" id="http-patch-add-operation">
     <h4>HTTP PATCH add operation<a class="headerlink" href="#http-patch-add-operation" title="Permalink to this headline">#</a></h4>
@@ -716,11 +721,13 @@
     <p class="last">If the specified image property does not exist for the target
     image, an error condition results.</p>
     </div>
+    <div class="toctree-wrapper compound">
+    </div>
     </div>
     </div>
     </div>
     <div class="section" id="general-api-information">
-    <h2>General API Information<a class="headerlink" href="#general-api-information" title="Permalink to this headline">#</a></h2>
+    <span id="general-api-info"></span><h2>General API Information<a class="headerlink" href="#general-api-information" title="Permalink to this headline">#</a></h2>
     <p>This chapter contains helpful information for using API operations, authenticating,
     and using service endpoints.</p>
     <p>The Cloud Images API is defined as a RESTful HTTP service that uses all aspects of the
@@ -728,9 +735,8 @@
     Cloud Images services, you must first issue an authentication request to the Rackspace
     Cloud Identity Service.</p>
     <p>The Cloud Images API supports JSON data serialization request and response formats.</p>
-    </div>
     <div class="section" id="sending-api-requests-and-receiving-responses">
-    <span id="images-dg-gen-info-send-request-receive-response"></span><h2>Sending API requests and receiving responses<a class="headerlink" href="#sending-api-requests-and-receiving-responses" title="Permalink to this headline">#</a></h2>
+    <span id="send-request-receive-responses"></span><h3>Sending API requests and receiving responses<a class="headerlink" href="#sending-api-requests-and-receiving-responses" title="Permalink to this headline">#</a></h3>
     <p>You have several options for sending requests through an API:</p>
     <ul>
     <li><p class="first">Developers and testers might prefer to use cURL with the command-line tool from
@@ -751,10 +757,12 @@
     <ul class="simple">
     <li>You can download and install RESTclient, a Java application for testing ReSTful web
     services, from <a class="reference external" href="http://code.google.com/p/rest-client/">http://code.google.com/p/rest-client/</a>.</li>
+    <li>You can download and install RESTclient, a Java application for testing ReSTful web
+    services, from <a class="reference external" href="http://code.google.com/p/rest-client/">http://code.google.com/p/rest-client/</a>.</li>
     </ul>
     </div>
     <div class="section" id="media-types">
-    <span id="images-dg-gen-info-media-types"></span><h2>Media Types<a class="headerlink" href="#media-types" title="Permalink to this headline">#</a></h2>
+    <span id="id15"></span><h3>Media Types<a class="headerlink" href="#media-types" title="Permalink to this headline">#</a></h3>
     <p>The Cloud Images API accepts and serves JSON-encoded data. The media type required in the
     request varies by the following request types:</p>
     <ul class="simple">
@@ -765,15 +773,14 @@
     </ul>
     </div>
     <div class="section" id="json-schemas">
-    <span id="images-dg-gen-info-json-schemas"></span><h2>JSON Schemas<a class="headerlink" href="#json-schemas" title="Permalink to this headline">#</a></h2>
+    <span id="id16"></span><h3>JSON Schemas<a class="headerlink" href="#json-schemas" title="Permalink to this headline">#</a></h3>
     <p>The necessary JSON-schema documents are provided at predictable URIs. A consumer
     validates server responses and client requests based on the published schemas. The
     schemas contained in this document are only examples and should not be used to validate
     your requests. A client should always fetch current schemas from the server.</p>
     </div>
-    </div>
     <div class="section" id="how-curl-commands-work">
-    <span id="ci-dg-generalapi-curl"></span><h1>How cURL commands work<a class="headerlink" href="#how-curl-commands-work" title="Permalink to this headline">#</a></h1>
+    <span id="id17"></span><h3>How cURL commands work<a class="headerlink" href="#how-curl-commands-work" title="Permalink to this headline">#</a></h3>
     <p>cURL is a command-line tool that you can use to interact with REST interfaces. cURL lets
     you to transmit and receive HTTP requests and responses from the command line or a shell
     script, which enables you to work with the API directly. It is available for Linux distributions,
@@ -878,8 +885,10 @@
     simplejson.tool. For information about simplejson.tool, see <a class="reference external" href="http://simplejson.googlecode.com/svn/tags/simplejson-2.0.9/docs/index.html">simplejson encoder and decoder</a>.</p>
     <p class="last">If you do not want to pretty-print JSON output, omit this code.</p>
     </div>
+    </div>
+    </div>
     <div class="section" id="authenticate-through-the-rackspace-cloud-identity-service">
-    <h2>Authenticate through the Rackspace Cloud Identity Service<a class="headerlink" href="#authenticate-through-the-rackspace-cloud-identity-service" title="Permalink to this headline">#</a></h2>
+    <span id="id18"></span><h2>Authenticate through the Rackspace Cloud Identity Service<a class="headerlink" href="#authenticate-through-the-rackspace-cloud-identity-service" title="Permalink to this headline">#</a></h2>
     <p>To authenticate access to the Rackspace Cloud Images service, you issue an
     authentication request to the Rackspace Cloud Identity Service endpoint.</p>
     <p>In response to valid credentials, an authentication request to the
@@ -1129,9 +1138,8 @@
     </pre></div>
     </div>
     </div>
-    </div>
     <div class="section" id="role-based-access-control">
-    <h2>Role Based Access Control<a class="headerlink" href="#role-based-access-control" title="Permalink to this headline">#</a></h2>
+    <span id="id19"></span><h3>Role Based Access Control<a class="headerlink" href="#role-based-access-control" title="Permalink to this headline">#</a></h3>
     <p>Role Based Access Control (RBAC) restricts access to the capabilities of
     Rackspace Cloud services, including the next gen Cloud Servers API, to
     authorized users only. RBAC enables Rackspace Cloud customers to specify
@@ -1144,7 +1152,7 @@
     or product-specific (for example, next gen Cloud Servers), to account
     users.</p>
     <div class="section" id="assigning-roles-to-account-users">
-    <h3>Assigning Roles to Account Users<a class="headerlink" href="#assigning-roles-to-account-users" title="Permalink to this headline">#</a></h3>
+    <h4>Assigning Roles to Account Users<a class="headerlink" href="#assigning-roles-to-account-users" title="Permalink to this headline">#</a></h4>
     <p>The account owner (identity:user-admin) can create account users on the
     account and then assign roles to those users. The roles grant the
     account users specific permissions for accessing the capabilities of the
@@ -1165,7 +1173,7 @@
     </div>
     </div>
     <div class="section" id="roles-available-for-cloud-images">
-    <h3>Roles Available for Cloud Images<a class="headerlink" href="#roles-available-for-cloud-images" title="Permalink to this headline">#</a></h3>
+    <h4>Roles Available for Cloud Images<a class="headerlink" href="#roles-available-for-cloud-images" title="Permalink to this headline">#</a></h4>
     <p>Three roles (observer, creator, and admin) can be used to access the Cloud Images API
     specifically. The following section describes these roles and their permissions.</p>
     <p><strong>Cloud Images Product Roles and Permissions</strong></p>
@@ -1184,7 +1192,7 @@
     </ul>
     </div>
     <div class="section" id="resolving-conflicts-between-roles">
-    <h3>Resolving Conflicts Between Roles<a class="headerlink" href="#resolving-conflicts-between-roles" title="Permalink to this headline">#</a></h3>
+    <h4>Resolving Conflicts Between Roles<a class="headerlink" href="#resolving-conflicts-between-roles" title="Permalink to this headline">#</a></h4>
     <p>The account owner can set roles for both multiproduct and Cloud Images scope, and it is
     important to understand how any potential conflicts among these roles are resolved. When
     two roles appear to conflict, the role that provides the more extensive permissions takes
@@ -1206,14 +1214,14 @@
     The Cloud Images <strong>observer</strong> role is ignored.</p>
     </div>
     <div class="section" id="rbac-permissions-cross-reference-to-cloud-images-api-operations">
-    <h3>RBAC Permissions Cross-reference to Cloud Images API Operations<a class="headerlink" href="#rbac-permissions-cross-reference-to-cloud-images-api-operations" title="Permalink to this headline">#</a></h3>
+    <h4>RBAC Permissions Cross-reference to Cloud Images API Operations<a class="headerlink" href="#rbac-permissions-cross-reference-to-cloud-images-api-operations" title="Permalink to this headline">#</a></h4>
     <p>API operations for Cloud Images may or may not be available to all roles. To see which
     operations are permitted to invoke which calls, please review <a class="reference external" href="http://www.rackspace.com/knowledge_center/article/detailed-permissions-matrix-for-cloud-images">the Knowledge Center
     article</a>.</p>
     </div>
     </div>
     <div class="section" id="service-access-endpoints">
-    <h2>Service access endpoints<a class="headerlink" href="#service-access-endpoints" title="Permalink to this headline">#</a></h2>
+    <span id="id20"></span><h3>Service access endpoints<a class="headerlink" href="#service-access-endpoints" title="Permalink to this headline">#</a></h3>
     <p>The Rackspace Cloud Images service is a regionalized service. The user
     of the service is therefore responsible for selecting the appropriate
     regional endpoint to ensure access to servers, networks, or other Cloud
@@ -1250,10 +1258,12 @@
     working in, you can find that information in your Cloud Control Panel at
     <a class="reference external" href="http://mycloud.rackspace.com">mycloud.rackspace.com.</a></p>
     </div>
+    <div class="toctree-wrapper compound">
+    </div>
     </div>
     </div>
     <div class="section" id="api-operations">
-    <span id="images-dg-api-operations"></span><h1>API Operations<a class="headerlink" href="#api-operations" title="Permalink to this headline">#</a></h1>
+    <span id="id21"></span><h2>API Operations<a class="headerlink" href="#api-operations" title="Permalink to this headline">#</a></h2>
     <p>Developers use the operations described in this chapter to perform the following tasks:</p>
     <ul class="simple">
     <li>Manage images</li>
@@ -1262,9 +1272,11 @@
     <li>Manage image tasks like importing and exporting images</li>
     <li>Get information about image schemas</li>
     </ul>
-    <div class="section" id="images-api-operations-images">
-    <span id="id1"></span><h2>Images<a class="headerlink" href="#images-api-operations-images" title="Permalink to this headline">#</a></h2>
+    <div class="section" id="api-operations-images">
+    <span id="id22"></span><h3>Images<a class="headerlink" href="#api-operations-images" title="Permalink to this headline">#</a></h3>
     <p>Use the images API operations to list, delete, and update images.</p>
+    <div class="section" id="list-images">
+    <h4>List Images<a class="headerlink" href="#list-images" title="Permalink to this headline">#</a></h4>
     <div class="code highlight-python"><div class="highlight"><pre><span class="n">GET</span> <span class="o">/</span><span class="n">images</span>
     </pre></div>
     </div>
@@ -1336,6 +1348,8 @@
     </tr>
     </tbody>
     </table>
+    <div class="section" id="request">
+    <h5>Request<a class="headerlink" href="#request" title="Permalink to this headline">#</a></h5>
     <p>This table shows the query parameters for the request:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -1474,6 +1488,9 @@
     </tr>
     </tbody>
     </table>
+    </div>
+    <div class="section" id="response">
+    <h5>Response<a class="headerlink" href="#response" title="Permalink to this headline">#</a></h5>
     <p>This table shows the body parameters for the response:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -1627,6 +1644,10 @@
     <span class="p">}</span>
     </pre></div>
     </div>
+    </div>
+    </div>
+    <div class="section" id="get-image-details">
+    <h4>Get Image Details<a class="headerlink" href="#get-image-details" title="Permalink to this headline">#</a></h4>
     <div class="code highlight-python"><div class="highlight"><pre><span class="n">GET</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span>
     </pre></div>
     </div>
@@ -1688,6 +1709,8 @@
     </tr>
     </tbody>
     </table>
+    <div class="section" id="id23">
+    <h5>Request<a class="headerlink" href="#id23" title="Permalink to this headline">#</a></h5>
     <p>This table shows the URI parameters for the request:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -1710,6 +1733,9 @@
     </tr>
     </tbody>
     </table>
+    </div>
+    <div class="section" id="id24">
+    <h5>Response<a class="headerlink" href="#id24" title="Permalink to this headline">#</a></h5>
     <p>This table shows the body parameters for the response:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -1822,6 +1848,10 @@
     <span class="p">}</span>
     </pre></div>
     </div>
+    </div>
+    </div>
+    <div class="section" id="update-image">
+    <h4>Update Image<a class="headerlink" href="#update-image" title="Permalink to this headline">#</a></h4>
     <div class="code highlight-python"><div class="highlight"><pre><span class="n">PATCH</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span>
     </pre></div>
     </div>
@@ -1916,6 +1946,8 @@
     </tr>
     </tbody>
     </table>
+    <div class="section" id="id25">
+    <h5>Request<a class="headerlink" href="#id25" title="Permalink to this headline">#</a></h5>
     <p>This table shows the URI parameters for the request:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -1982,6 +2014,9 @@
     <span class="p">]</span>
     </pre></div>
     </div>
+    </div>
+    <div class="section" id="id26">
+    <h5>Response<a class="headerlink" href="#id26" title="Permalink to this headline">#</a></h5>
     <p>This table shows the body parameters for the response:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -2063,6 +2098,10 @@
     <span class="p">}</span>
     </pre></div>
     </div>
+    </div>
+    </div>
+    <div class="section" id="delete-image">
+    <h4>Delete Image<a class="headerlink" href="#delete-image" title="Permalink to this headline">#</a></h4>
     <div class="code highlight-python"><div class="highlight"><pre><span class="n">DELETE</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span>
     </pre></div>
     </div>
@@ -2128,6 +2167,8 @@
     </tr>
     </tbody>
     </table>
+    <div class="section" id="id27">
+    <h5>Request<a class="headerlink" href="#id27" title="Permalink to this headline">#</a></h5>
     <p>This table shows the URI parameters for the request:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -2151,11 +2192,18 @@
     </tbody>
     </table>
     </div>
-    <div class="section" id="images-api-operations-image-sharing">
-    <span id="id2"></span><h2>Image sharing<a class="headerlink" href="#images-api-operations-image-sharing" title="Permalink to this headline">#</a></h2>
+    <div class="section" id="id28">
+    <h5>Response<a class="headerlink" href="#id28" title="Permalink to this headline">#</a></h5>
+    </div>
+    </div>
+    </div>
+    <div class="section" id="api-operations-image-sharing">
+    <span id="id29"></span><h3>Image sharing<a class="headerlink" href="#api-operations-image-sharing" title="Permalink to this headline">#</a></h3>
     <p>Use image sharing operations to distribute and manage
     images. For more information,
     see <em>Image sharing</em> in the Cloud Images Developer Guide.</p>
+    <div class="section" id="id30">
+    <h4>List Images<a class="headerlink" href="#id30" title="Permalink to this headline">#</a></h4>
     <div class="code highlight-python"><div class="highlight"><pre><span class="n">GET</span> <span class="o">/</span><span class="n">images</span>
     </pre></div>
     </div>
@@ -2227,6 +2275,8 @@
     </tr>
     </tbody>
     </table>
+    <div class="section" id="id31">
+    <h5>Request<a class="headerlink" href="#id31" title="Permalink to this headline">#</a></h5>
     <p>This table shows the query parameters for the request:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -2365,6 +2415,9 @@
     </tr>
     </tbody>
     </table>
+    </div>
+    <div class="section" id="id32">
+    <h5>Response<a class="headerlink" href="#id32" title="Permalink to this headline">#</a></h5>
     <p>This table shows the body parameters for the response:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -2518,6 +2571,10 @@
     <span class="p">}</span>
     </pre></div>
     </div>
+    </div>
+    </div>
+    <div class="section" id="get-image-member-details">
+    <h4>Get Image Member Details<a class="headerlink" href="#get-image-member-details" title="Permalink to this headline">#</a></h4>
     <div class="code highlight-python"><div class="highlight"><pre><span class="n">GET</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span><span class="o">/</span><span class="n">members</span><span class="o">/</span><span class="p">{</span><span class="n">member_id</span><span class="p">}</span>
     </pre></div>
     </div>
@@ -2580,6 +2637,8 @@
     </tr>
     </tbody>
     </table>
+    <div class="section" id="id33">
+    <h5>Request<a class="headerlink" href="#id33" title="Permalink to this headline">#</a></h5>
     <p>This table shows the URI parameters for the request:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -2610,6 +2669,9 @@
     </tr>
     </tbody>
     </table>
+    </div>
+    <div class="section" id="id34">
+    <h5>Response<a class="headerlink" href="#id34" title="Permalink to this headline">#</a></h5>
     <p>This table shows the body parameters for the response:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -2670,6 +2732,10 @@
     <span class="p">}</span>
     </pre></div>
     </div>
+    </div>
+    </div>
+    <div class="section" id="create-image-member">
+    <h4>Create Image Member<a class="headerlink" href="#create-image-member" title="Permalink to this headline">#</a></h4>
     <div class="code highlight-python"><div class="highlight"><pre><span class="n">POST</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span><span class="o">/</span><span class="n">members</span>
     </pre></div>
     </div>
@@ -2735,6 +2801,8 @@
     </tr>
     </tbody>
     </table>
+    <div class="section" id="id35">
+    <h5>Request<a class="headerlink" href="#id35" title="Permalink to this headline">#</a></h5>
     <p>This table shows the URI parameters for the request:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -2786,6 +2854,9 @@
     <span class="p">}</span>
     </pre></div>
     </div>
+    </div>
+    <div class="section" id="id36">
+    <h5>Response<a class="headerlink" href="#id36" title="Permalink to this headline">#</a></h5>
     <p>This table shows the body parameters for the response:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -2846,6 +2917,10 @@
     <span class="p">}</span>
     </pre></div>
     </div>
+    </div>
+    </div>
+    <div class="section" id="delete-image-member">
+    <h4>Delete Image Member<a class="headerlink" href="#delete-image-member" title="Permalink to this headline">#</a></h4>
     <div class="code highlight-python"><div class="highlight"><pre><span class="n">DELETE</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span><span class="o">/</span><span class="n">members</span><span class="o">/</span><span class="p">{</span><span class="n">member_id</span><span class="p">}</span>
     </pre></div>
     </div>
@@ -2908,6 +2983,8 @@
     </tr>
     </tbody>
     </table>
+    <div class="section" id="id37">
+    <h5>Request<a class="headerlink" href="#id37" title="Permalink to this headline">#</a></h5>
     <p>This table shows the URI parameters for the request:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -2938,6 +3015,13 @@
     </tr>
     </tbody>
     </table>
+    </div>
+    <div class="section" id="id38">
+    <h5>Response<a class="headerlink" href="#id38" title="Permalink to this headline">#</a></h5>
+    </div>
+    </div>
+    <div class="section" id="update-image-member">
+    <h4>Update Image Member<a class="headerlink" href="#update-image-member" title="Permalink to this headline">#</a></h4>
     <div class="code highlight-python"><div class="highlight"><pre><span class="n">PUT</span> <span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="p">{</span><span class="n">image_id</span><span class="p">}</span><span class="o">/</span><span class="n">members</span><span class="o">/</span><span class="p">{</span><span class="n">member_id</span><span class="p">}</span>
     </pre></div>
     </div>
@@ -3004,6 +3088,8 @@
     </tr>
     </tbody>
     </table>
+    <div class="section" id="id39">
+    <h5>Request<a class="headerlink" href="#id39" title="Permalink to this headline">#</a></h5>
     <p>This table shows the URI parameters for the request:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -3053,7 +3139,7 @@
     <td>The status to which this
     image member should be
     set. Valid values are as
-    follows: <a href="#id3"><span class="problematic" id="id4">``</span></a>pending``At
+    follows: <a href="#id40"><span class="problematic" id="id41">``</span></a>pending``At
     creation, the member&#8217;s
     status is set to
     pending. The image is
@@ -3061,12 +3147,12 @@
     member&#8217;s image-list, but
     the member can still
     boot instances from the
-    image. <a href="#id5"><span class="problematic" id="id6">``</span></a>accepted``The
+    image. <a href="#id42"><span class="problematic" id="id43">``</span></a>accepted``The
     image is visible in the
     member&#8217;s image-list. The
     member can boot
     instances from the
-    image. <a href="#id7"><span class="problematic" id="id8">``</span></a>rejected``The
+    image. <a href="#id44"><span class="problematic" id="id45">``</span></a>rejected``The
     member has decided that
     he or she does not want
     to see the image. The
@@ -3084,6 +3170,9 @@
     <span class="p">}</span>
     </pre></div>
     </div>
+    </div>
+    <div class="section" id="id46">
+    <h5>Response<a class="headerlink" href="#id46" title="Permalink to this headline">#</a></h5>
     <p>This table shows the body parameters for the response:</p>
     <table border="1" class="docutils">
     <colgroup>
@@ -3145,6 +3234,9 @@
     </pre></div>
     </div>
     <div class="toctree-wrapper compound">
+    </div>
+    </div>
+    </div>
     </div>
     </div>
     </div>
