@@ -1,4 +1,5 @@
 .site-header {
+    
     .header-links {
         background: black;
         color: white;
@@ -18,31 +19,74 @@
             .phone-chat-links, .portal-links {
                 .grid-unit(1/2);
             }
+            overflow: visible;
 
             .portal-links {
+                margin-bottom: 0;
                 text-align: right;
             }
         }
 
         .btn-link {
-            background: shade(white, 13%);
-            border-radius: 3px;
-            color: black;
+            position: relative;
             display: inline-block;
-            line-height: 24px;
-            margin: 0 -0.25em 0 10px;
-            padding: 0 0.75em;
-            .transition(background 0.1s ease-in-out);
-
-            &:hover {
-                background: white;
+            
+            &.sign-up {margin-left: 10px;}
+            
+            span {
+                background: shade(white, 13%);
+                border-radius: 3px;
+                color: black;
+                display: inline-block;
+                line-height: 24px;
+                margin: 0 0 0 5px;
+                padding: 0 0.75em;
+                cursor: pointer;
+                .transition(background 0.1s ease-in-out);                
             }
+            
+            ul {
+                display: none;
+                position: absolute;
+                right: 0px;
+                cursor: pointer;
+                background: shade(white, 13%);
+                border-top: 1px solid black;
+                border-radius: 3px;
+                padding-left: 0px;
+                z-index: 10;
+                text-align: left;
+            }
+
+            &:hover ul {
+                display: block;
+                
+                li {
+                    color: black;
+                    display: block;
+                    
+                    a {
+                        color: black;
+                        display: block;
+                        padding: 4px 6px;
+                        text-decoration: none;
+                        white-space: nowrap
+                    }                
+                    
+                    &:hover {
+                        background: #737373;
+                        border-radius: 3px;
+                        
+                        a {color: white;}
+                    }
+                }
+            }
+            
         }
 
         .text-link {
             display: inline-block;
             line-height: 34px;
-            margin-right: -0.25em;
 
             & + .text-link {
                 margin-left: 6px;
