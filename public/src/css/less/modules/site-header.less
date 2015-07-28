@@ -28,8 +28,8 @@
         }
 
         .btn-link {
+            display: none;
             position: relative;
-            display: inline-block;
 
             &.sign-up {margin-left: 10px;}
 
@@ -99,6 +99,10 @@
                     }
                 }
             }
+
+            @media (min-width: 375px) {
+                display: inline-block;
+            }
         }
 
         .text-link {
@@ -167,7 +171,7 @@
                         display: inline-block;
                         font-size: 12px;
                         line-height: 48px;
-                        padding: 0 2em;
+                        padding: 0 0.5em;
                         text-decoration: none;
                         text-transform: uppercase;
                         .transition(background 0.1s ease-in-out);
@@ -197,6 +201,12 @@
                     @media (min-width: 725px) {
                         display: inline-block;
                     }
+                }
+            }
+
+            @media (min-width: 410px) {
+                & > ul > li > a {
+                    padding: 0 2em;
                 }
             }
 
@@ -322,7 +332,7 @@
             line-height: 1;
             text-transform: uppercase;
             margin-bottom: 0;
-            padding: 40px;
+            padding: 40px 0.5em;
             width: 100%;
 
             .headline-accent {
