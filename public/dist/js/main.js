@@ -37519,6 +37519,7 @@ angular.module(moduleName, [
     require('./services/active-language'),
     require('./components/code-sample'),
     require('./components/copy-code-sample'),
+    require('./components/dropdown-toggle'),
     require('./components/flex-height'),
     require('./components/language-selector'),
     require('./components/scroll-indicator'),
@@ -37528,9 +37529,7 @@ angular.module(moduleName, [
 
 angular.bootstrap(document, [moduleName]);
 
-window.sectionNav = document.querySelector('.docs-section-nav ul');
-
-},{"./components/code-sample":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js","./components/copy-code-sample":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/copy-code-sample.js","./components/flex-height":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/flex-height.js","./components/language-selector":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/language-selector.js","./components/scroll-indicator":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/scroll-indicator.js","./components/section-nav-toggle":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/section-nav-toggle.js","./components/sticky":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/sticky.js","./services/active-language":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/services/active-language.js","angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js":[function(require,module,exports){
+},{"./components/code-sample":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js","./components/copy-code-sample":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/copy-code-sample.js","./components/dropdown-toggle":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/dropdown-toggle.js","./components/flex-height":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/flex-height.js","./components/language-selector":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/language-selector.js","./components/scroll-indicator":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/scroll-indicator.js","./components/section-nav-toggle":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/section-nav-toggle.js","./components/sticky":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/sticky.js","./services/active-language":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/services/active-language.js","angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js":[function(require,module,exports){
 var $ = require('jquery');
 var angular = require('angular');
 
@@ -37583,6 +37582,59 @@ angular.module(moduleName, [])
 
             $element.on('click', function (e) {
                 e.preventDefault();
+            });
+        }
+    };
+});
+
+},{"angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js","jquery":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/jquery/dist/jquery.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/dropdown-toggle.js":[function(require,module,exports){
+var $ = require('jquery');
+var angular = require('angular');
+
+var moduleName = 'drc.components.dropdown-toggle';
+module.exports = moduleName;
+
+var DROPDOWN_EVENT = 'drcDropdownChange';
+
+angular.module(moduleName, [])
+.directive('drcDropdownToggle', function ($rootScope) {
+    return {
+        link: function ($scope, $element, $attrs, ctrl) {
+            $element = $($element);
+
+            var pickDropdown = function (id) {
+                $rootScope.$broadcast(DROPDOWN_EVENT, id);
+            };
+
+            var hideDropdown = function (id) {
+                var selector = '#' + id + ', [data-drc-dropdown-toggle="' + id + '"]';
+                $(selector).removeClass('active');
+            };
+
+            var showDropdown = function (id) {
+                var selector = '#' + id + ', [data-drc-dropdown-toggle="' + id + '"]';
+                $(selector).addClass('active');
+            };
+
+            $element.on('click', function (e) {
+                e.preventDefault();
+                pickDropdown($attrs.drcDropdownToggle);
+            });
+
+            $rootScope.$on(DROPDOWN_EVENT, function (eventName, data) {
+                if(data !== $attrs.drcDropdownToggle) {
+                    hideDropdown($attrs.drcDropdownToggle);
+                    return;
+                }
+
+                if($element.hasClass('active')) {
+                    hideDropdown($attrs.drcDropdownToggle);
+                    return;
+                }
+
+                setTimeout(function () {
+                    showDropdown($attrs.drcDropdownToggle);
+                }, 300);
             });
         }
     };

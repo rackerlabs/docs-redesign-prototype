@@ -2,26 +2,102 @@
     <div class="header-links">
         <div class="header-links-container">
             <div class="phone-chat-links">
-                <span class="text-link">Support: <a href="tel:18009614454">1-800-961-4454</a></span>
+                <span class="text-link support-link">Support: <a href="tel:18009614454">1-800-961-4454</a></span>
                 <span class="text-link">Sales: <a href="tel:18448589954">1-844-858-9954</a></span>
-                <span class="text-link"><a href="">Sales Chat</a></span>
+                <span class="text-link sales-chat-link"><a href="">Sales Chat</a></span>
             </div>
-            <div class="portal-links">
-                <span class="text-link"><a href="">Developers</a></span>
-                <span class="text-link"><a href="">Partners</a></span>
-                <a href="" class="btn-link">Sign Up</a>
-                <a href="" class="btn-link">Log In</a>
-            </div>
+            <ul class="portal-links">
+                <li class="text-link"><a href="">Developers</a></span>
+                <li class="text-link"><a href="">Partners</a></span>
+                <li class="btn-link sign-up">
+                    <span>Sign Up</span>
+                    <ul>
+                        <li><a href="https://cart.rackspace.com/cloud">Rackspace Cloud</a></li>
+                        <li><a href="https://cart.rackspace.com/cloud/sites">Cloud Sites</a></li>
+                        <li><a href="https://cart.rackspace.com/apps">Cloud Office</a></li>
+                    </ul>
+                </li>
+                <li class="btn-link">
+                   <span>Log In</span>
+                    <ul>
+                        <li><a href="https://my.rackspace.com/portal/auth/login">MyRackspace Portal</a></li>
+                        <li><a href="https://mycloud.rackspace.com">Cloud Control Panel</a></li>
+                        <li><a href="https://manage.rackspacecloud.com/pages/Login.jsp">Cloud Sites Control Panel</a></li>
+                        <li><a href="https://apps.rackspace.com">Rackspace Webmail Login</a></li>
+                        <li><a href="https://cp.rackspace.com">Email Admin Login</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="header-nav">
         <nav class="header-nav-container">
             <ul>
                 <li class="logo"><a href=""><img src="public/src/img/rackspace-logo.svg" alt="Rackspace Logo" /></a></li>
-                <li><a href="">Documentation</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">Community</a></li>
+                <li>
+                    <a href="" data-drc-dropdown-toggle="dropdown-documentation">Documentation</a>
+                </li>
+                <li>
+                    <a href="" data-drc-dropdown-toggle="dropdown-products">Products</a>
+                </li>
+                <li>
+                    <a href="" data-drc-dropdown-toggle="dropdown-community">Community</a>
+                </li>
             </ul>
+            <div class="nav-dropdown" id="dropdown-documentation">
+                <div class="dropdown-container">
+                    <div class="dropdown-grid">
+                        <div class="dropdown-column">
+                            <h5>SDK Quickstarts</h5>
+                            <ul>
+                                <li><a href="">Gophercloud</a> <span class="sdk-language">Go</span></li>
+                                <li><a href="">JClouds</a> <span class="sdk-language">Java</span></li>
+                                <li><a href="">OpenStack.NET</a><span class="sdk-language">.NET</span></li>
+                                <li><a href="">pkgcloud</a> <span class="sdk-language">Node.js</span></li>
+                                <li><a href="">php-opencloud</a> <span class="sdk-language">PHP</span></li>
+                                <li><a href="">pyrax</a> <span class="sdk-language">Python</span></li>
+                                <li><a href="">fog</a> <span class="sdk-language">Ruby</span></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown-column">
+                            <h5>Cloud User Guides</h5>
+                            <ul>
+                                <li><a href="">Core Infrastructure</a></li>
+                                <li><a href="">Cloud Servers</a></li>
+                                <li><a href="">Cloud Images</a></li>
+                                <li><a href="">Orchestration</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown-column">
+                            <h5>Developer Community</h5>
+                            <ul>
+                                <li><a href="">Developer Blog</a></li>
+                                <li><a href="">Knowledge Center</a></li>
+                                <li><a href="">Developer Forum</a></li>
+                                <li><a href="">Outreach &amp; Events</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-dropdown" id="dropdown-products">
+                <div class="dropdown-container">
+                    <div class="dropdown-grid">
+                        <div class="dropdown-column">
+                            <h5>Products</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-dropdown" id="dropdown-community">
+                <div class="dropdown-container">
+                    <div class="dropdown-grid">
+                        <div class="dropdown-column">
+                            <h5>Community</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
     </div>
     <div class="header-headline">

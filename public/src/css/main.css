@@ -2984,7 +2984,7 @@ table {
   -webkit-transition: transform 0.2s ease-in-out;
   -ms-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
-  z-index: 2;
+  z-index: 1;
 }
 /* line 9, public/src/css/less/components/docs-section-nav.less */
 .docs-section-nav .section-nav-toggle {
@@ -3770,6 +3770,7 @@ dl dd {
   margin-right: auto;
   max-width: 960px;
   width: 90%;
+  overflow: visible;
 }
 /* line 18, public/src/css/less/modules/site-header.less */
 .site-header .header-links .header-links-container .phone-chat-links,
@@ -3782,39 +3783,102 @@ dl dd {
   vertical-align: top;
   width: calc( 50%  -  0px );
 }
-/* line 22, public/src/css/less/modules/site-header.less */
+/* line 24, public/src/css/less/modules/site-header.less */
 .site-header .header-links .header-links-container .portal-links {
+  margin-bottom: 0;
   text-align: right;
 }
-/* line 27, public/src/css/less/modules/site-header.less */
+/* line 30, public/src/css/less/modules/site-header.less */
 .site-header .header-links .btn-link {
+  position: relative;
+  display: inline-block;
+}
+/* line 34, public/src/css/less/modules/site-header.less */
+.site-header .header-links .btn-link.sign-up {
+  margin-left: 10px;
+}
+/* line 36, public/src/css/less/modules/site-header.less */
+.site-header .header-links .btn-link span {
   background: #dedede;
   border-radius: 3px;
   color: black;
   display: inline-block;
   line-height: 24px;
-  margin: 0 -0.25em 0 10px;
+  margin: 5px 0 0 5px;
   padding: 0 0.75em;
+  cursor: pointer;
   -webkit-transition: background 0.1s ease-in-out;
   -ms-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
 }
-/* line 37, public/src/css/less/modules/site-header.less */
-.site-header .header-links .btn-link:hover {
-  background: white;
+/* line 48, public/src/css/less/modules/site-header.less */
+.site-header .header-links .btn-link ul {
+  display: none;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  background: #ebebeb;
+  border-top: 1px solid black;
+  border-radius: 3px;
+  padding-left: 0px;
+  z-index: 10;
+  text-align: left;
 }
-/* line 42, public/src/css/less/modules/site-header.less */
+/* line 61, public/src/css/less/modules/site-header.less */
+.site-header .header-links .btn-link:hover span {
+  background: #ebebeb;
+}
+/* line 65, public/src/css/less/modules/site-header.less */
+.site-header .header-links .btn-link:hover ul {
+  display: block;
+}
+/* line 68, public/src/css/less/modules/site-header.less */
+.site-header .header-links .btn-link:hover ul li {
+  font-family: 'open-sans-bold', arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #404040;
+  display: block;
+  margin: 0;
+}
+/* line 74, public/src/css/less/modules/site-header.less */
+.site-header .header-links .btn-link:hover ul li:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+/* line 79, public/src/css/less/modules/site-header.less */
+.site-header .header-links .btn-link:hover ul li:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* line 84, public/src/css/less/modules/site-header.less */
+.site-header .header-links .btn-link:hover ul li a {
+  color: black;
+  display: block;
+  padding: 4px 6px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+/* line 92, public/src/css/less/modules/site-header.less */
+.site-header .header-links .btn-link:hover ul li:hover {
+  background: #f7f7f7;
+}
+/* line 95, public/src/css/less/modules/site-header.less */
+.site-header .header-links .btn-link:hover ul li:hover a {
+  color: #404040;
+}
+/* line 104, public/src/css/less/modules/site-header.less */
 .site-header .header-links .text-link {
-  display: inline-block;
+  display: none;
   line-height: 34px;
-  margin-right: -0.25em;
+  margin: 0;
 }
-/* line 47, public/src/css/less/modules/site-header.less */
+/* line 109, public/src/css/less/modules/site-header.less */
 .site-header .header-links .text-link + .text-link {
   margin-left: 6px;
   padding-left: 8px;
 }
-/* line 51, public/src/css/less/modules/site-header.less */
+/* line 113, public/src/css/less/modules/site-header.less */
 .site-header .header-links .text-link + .text-link:before {
   background: white;
   content: '';
@@ -3825,41 +3889,56 @@ dl dd {
   top: 11px;
   width: 1px;
 }
-/* line 63, public/src/css/less/modules/site-header.less */
+/* line 125, public/src/css/less/modules/site-header.less */
 .site-header .header-links .text-link a:hover {
   color: #71b7e6;
 }
-/* line 69, public/src/css/less/modules/site-header.less */
+/* line 130, public/src/css/less/modules/site-header.less */
+.site-header .header-links .support-link {
+  display: inline-block;
+}
+@media (min-width: 600px) {
+  /* line 135, public/src/css/less/modules/site-header.less */
+  .site-header .header-links .sales-chat-link {
+    display: inline-block;
+  }
+}
+@media (min-width: 800px) {
+  /* line 141, public/src/css/less/modules/site-header.less */
+  .site-header .header-links .text-link {
+    display: inline-block;
+  }
+}
+/* line 147, public/src/css/less/modules/site-header.less */
 .site-header .header-nav {
   background: rgba(255, 255, 255, 0.55);
   z-index: 2;
 }
-/* line 73, public/src/css/less/modules/site-header.less */
-.site-header .header-nav .header-nav-container {
+/* line 153, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .header-nav-container > ul {
   margin-left: auto;
   margin-right: auto;
   max-width: 960px;
   width: 90%;
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
 }
-/* line 77, public/src/css/less/modules/site-header.less */
-.site-header .header-nav ul {
-  margin: 0;
-  margin-left: -2em;
-  padding: 0;
-}
-/* line 82, public/src/css/less/modules/site-header.less */
-.site-header .header-nav ul li {
+/* line 159, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .header-nav-container > ul > li {
   display: inline-block;
   list-style-type: none;
+  margin: 0;
 }
-/* line 86, public/src/css/less/modules/site-header.less */
-.site-header .header-nav ul li a {
+/* line 164, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .header-nav-container > ul > li > a {
   font-family: 'open-sans-bold', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   color: #404040;
   display: inline-block;
-  line-height: 60px;
+  font-size: 12px;
+  line-height: 48px;
   padding: 0 2em;
   text-decoration: none;
   text-transform: uppercase;
@@ -3867,16 +3946,17 @@ dl dd {
   -ms-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
 }
-/* line 96, public/src/css/less/modules/site-header.less */
-.site-header .header-nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.5);
+/* line 175, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .header-nav-container > ul > li > a:hover,
+.site-header .header-nav .header-nav-container > ul > li > a.active {
+  background: white;
 }
-/* line 101, public/src/css/less/modules/site-header.less */
-.site-header .header-nav ul li:first-child a {
-  /* padding-left: 0; */
+/* line 181, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .header-nav-container > ul .logo {
+  display: block;
 }
-/* line 106, public/src/css/less/modules/site-header.less */
-.site-header .header-nav ul .logo a img {
+/* line 184, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .header-nav-container > ul .logo a img {
   display: inline-block;
   height: auto;
   vertical-align: top;
@@ -3884,15 +3964,124 @@ dl dd {
   padding: 0;
   width: 140px;
 }
-/* line 119, public/src/css/less/modules/site-header.less */
+@media (min-width: 725px) {
+  /* line 193, public/src/css/less/modules/site-header.less */
+  .site-header .header-nav .header-nav-container > ul .logo {
+    display: inline-block;
+  }
+}
+@media (min-width: 725px) {
+  /* line 200, public/src/css/less/modules/site-header.less */
+  .site-header .header-nav .header-nav-container > ul > li > a {
+    font-size: 14px;
+    line-height: 60px;
+  }
+}
+@media (min-width: 1066px) {
+  /* line 207, public/src/css/less/modules/site-header.less */
+  .site-header .header-nav .header-nav-container > ul > li:first-of-type a {
+    padding-left: 0;
+  }
+}
+/* line 213, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown {
+  background: #f7f7f7;
+  box-shadow: inset 0px 3px 9px -3px rgba(0, 0, 0, 0.15);
+  margin: 0;
+  max-height: 0px;
+  overflow-y: auto;
+  position: absolute;
+  -webkit-transition: max-height 0.2s ease-in-out;
+  -ms-transition: max-height 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out;
+  width: 100%;
+  will-change: max-height;
+  z-index: 2;
+}
+/* line 225, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown.active {
+  max-height: 50vh;
+}
+/* line 229, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown .dropdown-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  width: 90%;
+}
+/* line 233, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown .dropdown-grid {
+  display: block;
+  width: calc(100% +  20px );
+  margin-left: -20px;
+  overflow: hidden;
+  vertical-align: top;
+}
+/* line 237, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown .dropdown-column {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  margin-right: -0.26rem;
+  margin-left: 10px;
+  vertical-align: top;
+  width: calc( 100%  -  10px );
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+@media (min-width: 700px) {
+  /* line 243, public/src/css/less/modules/site-header.less */
+  .site-header .header-nav .nav-dropdown .dropdown-column {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 60px;
+    vertical-align: top;
+    width: calc( 33.33333333%  -  60px );
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+}
+/* line 250, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown h5 {
+  margin-bottom: 0.5em;
+}
+/* line 254, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+/* line 258, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown ul li {
+  margin-bottom: 0;
+}
+/* line 263, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown a {
+  text-decoration: none;
+}
+/* line 266, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown a:hover {
+  text-decoration: underline;
+}
+/* line 271, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown .sdk-language {
+  background: #e0e0e0;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 9px;
+  margin-left: 0.5em;
+  padding: 0 0.5em;
+  text-transform: uppercase;
+}
+/* line 284, public/src/css/less/modules/site-header.less */
 .site-header .header-headline {
   background: url(../img/docs-banner.jpg) 50% 0% no-repeat;
   background-size: cover;
-  margin-top: -60px;
-  padding: 120px 60px 60px 60px;
+  padding: 0;
   z-index: 1;
 }
-/* line 126, public/src/css/less/modules/site-header.less */
+/* line 290, public/src/css/less/modules/site-header.less */
 .site-header .header-headline h2 {
   font-family: 'open-sans-light', arial, sans-serif;
   font-style: normal;
@@ -3903,10 +4092,10 @@ dl dd {
   line-height: 1;
   text-transform: uppercase;
   margin-bottom: 0;
-  padding: 5px;
-  width: auto;
+  padding: 40px;
+  width: 100%;
 }
-/* line 137, public/src/css/less/modules/site-header.less */
+/* line 301, public/src/css/less/modules/site-header.less */
 .site-header .header-headline h2 .headline-accent {
   font-family: 'open-sans-bold', arial, sans-serif;
   font-style: normal;
@@ -3915,16 +4104,44 @@ dl dd {
   display: block;
 }
 @media (min-width: 1250px) {
-  /* line 143, public/src/css/less/modules/site-header.less */
+  /* line 307, public/src/css/less/modules/site-header.less */
   .site-header .header-headline h2 {
     background: transparent;
     padding: 0;
   }
 }
-/* line 149, public/src/css/less/modules/site-header.less */
+/* line 313, public/src/css/less/modules/site-header.less */
 .site-header .header-headline .tagline {
+  display: none;
   font-size: 15px;
   text-transform: uppercase;
+}
+@media (min-width: 725px) {
+  /* line 319, public/src/css/less/modules/site-header.less */
+  .site-header .header-headline {
+    margin-top: -60px;
+  }
+  /* line 322, public/src/css/less/modules/site-header.less */
+  .site-header .header-headline h2 {
+    padding: 100px 40px 40px 40px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 327, public/src/css/less/modules/site-header.less */
+  .site-header .header-headline {
+    padding: 120px 60px 60px 60px;
+  }
+  /* line 330, public/src/css/less/modules/site-header.less */
+  .site-header .header-headline h2 {
+    padding: 5px;
+    width: auto;
+  }
+  /* line 335, public/src/css/less/modules/site-header.less */
+  .site-header .header-headline .tagline {
+    display: block;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
 }
 /* line 1, public/src/css/less/modules/site-footer.less */
 .site-footer {
@@ -4129,15 +4346,7 @@ dl dd {
     transform: translate3d(25%, 0, 0);
   }
 }
-/* line 2, public/src/css/less/layouts/docs.less */
-body.docs .header-headline-container,
-body.docs .docs-container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 980px;
-  width: 90%;
-}
-/* line 9, public/src/css/less/layouts/docs.less */
+/* line 4, public/src/css/less/layouts/docs.less */
 body.docs .docs-body .background {
   height: 100%;
   left: 0;
@@ -4145,11 +4354,11 @@ body.docs .docs-body .background {
   top: 0;
   width: 100%;
 }
-/* line 16, public/src/css/less/layouts/docs.less */
+/* line 11, public/src/css/less/layouts/docs.less */
 body.docs .docs-body .background .left {
   display: none;
 }
-/* line 20, public/src/css/less/layouts/docs.less */
+/* line 15, public/src/css/less/layouts/docs.less */
 body.docs .docs-body .background .center {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4161,12 +4370,12 @@ body.docs .docs-body .background .center {
   background: white;
   height: 100%;
 }
-/* line 25, public/src/css/less/layouts/docs.less */
+/* line 20, public/src/css/less/layouts/docs.less */
 body.docs .docs-body .background .right {
   display: none;
 }
 @media (min-width: 769px) {
-  /* line 30, public/src/css/less/layouts/docs.less */
+  /* line 25, public/src/css/less/layouts/docs.less */
   body.docs .docs-body .background .left {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -4174,13 +4383,13 @@ body.docs .docs-body .background .right {
     margin-right: -0.26rem;
     margin-left: 0px;
     vertical-align: top;
-    width: calc( 25%  -  0px );
+    width: calc( 20%  -  0px );
     background: #ebebeb;
     height: 100%;
   }
 }
 @media (min-width: 1025px) {
-  /* line 38, public/src/css/less/layouts/docs.less */
+  /* line 33, public/src/css/less/layouts/docs.less */
   body.docs .docs-body .background .left {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -4188,9 +4397,9 @@ body.docs .docs-body .background .right {
     margin-right: -0.26rem;
     margin-left: 0px;
     vertical-align: top;
-    width: calc( 25%  -  0px );
+    width: calc( 20%  -  0px );
   }
-  /* line 41, public/src/css/less/layouts/docs.less */
+  /* line 36, public/src/css/less/layouts/docs.less */
   body.docs .docs-body .background .center {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -4198,10 +4407,10 @@ body.docs .docs-body .background .right {
     margin-right: -0.26rem;
     margin-left: 0px;
     vertical-align: top;
-    width: calc( 75%  -  0px );
+    width: calc( 80%  -  0px );
   }
 }
-/* line 47, public/src/css/less/layouts/docs.less */
+/* line 42, public/src/css/less/layouts/docs.less */
 body.docs .docs-body .docs-section-nav {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4209,17 +4418,17 @@ body.docs .docs-body .docs-section-nav {
   margin-right: -0.26rem;
   margin-left: 0px;
   vertical-align: top;
-  width: calc( 25%  -  0px );
+  width: calc( 20%  -  0px );
 }
-/* line 50, public/src/css/less/layouts/docs.less */
+/* line 45, public/src/css/less/layouts/docs.less */
 body.docs .docs-body .docs-section-nav .section-nav-container {
   padding: 15px 20px;
 }
-/* line 54, public/src/css/less/layouts/docs.less */
+/* line 49, public/src/css/less/layouts/docs.less */
 body.docs .docs-body .docs-section-nav .sticky {
-  width: calc(980px * 1 / 4);
+  width: 20%;
 }
-/* line 59, public/src/css/less/layouts/docs.less */
+/* line 54, public/src/css/less/layouts/docs.less */
 body.docs .docs-body .docs-content {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4227,11 +4436,39 @@ body.docs .docs-body .docs-content {
   margin-right: -0.26rem;
   margin-left: 0px;
   vertical-align: top;
-  width: calc( 75%  -  0px );
+  width: calc( 100%  -  0px );
   font-size: 16px;
   padding-left: 35px;
 }
-/* line 65, public/src/css/less/layouts/docs.less */
+@media (min-width: 769px) {
+  /* line 60, public/src/css/less/layouts/docs.less */
+  body.docs .docs-body .docs-content {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 0px;
+    vertical-align: top;
+    width: calc( 80%  -  0px );
+    padding: 0 35px;
+    max-width: 50em;
+  }
+}
+@media (min-width: 1070px) {
+  /* line 66, public/src/css/less/layouts/docs.less */
+  body.docs .docs-body .docs-content {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.26rem;
+    margin-left: 0px;
+    vertical-align: top;
+    width: calc( 80%  -  0px );
+    padding: 0 0;
+    margin-left: calc(40% - 25em);
+  }
+}
+/* line 73, public/src/css/less/layouts/docs.less */
 body.docs .docs-body .docs-section .description,
 body.docs .docs-body .docs-section .code {
   width: 100%;
