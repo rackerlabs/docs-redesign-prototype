@@ -3951,11 +3951,15 @@ dl dd {
 .site-header .header-nav .header-nav-container > ul > li > a.active {
   background: white;
 }
-/* line 181, public/src/css/less/modules/site-header.less */
+/* line 179, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .header-nav-container > ul > li > a.active {
+  background: rgba(247, 247, 247, 0.95);
+}
+/* line 185, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .header-nav-container > ul .logo {
   display: block;
 }
-/* line 184, public/src/css/less/modules/site-header.less */
+/* line 188, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .header-nav-container > ul .logo a img {
   display: inline-block;
   height: auto;
@@ -3965,51 +3969,68 @@ dl dd {
   width: 140px;
 }
 @media (min-width: 725px) {
-  /* line 193, public/src/css/less/modules/site-header.less */
+  /* line 197, public/src/css/less/modules/site-header.less */
   .site-header .header-nav .header-nav-container > ul .logo {
     display: inline-block;
   }
 }
 @media (min-width: 725px) {
-  /* line 200, public/src/css/less/modules/site-header.less */
+  /* line 204, public/src/css/less/modules/site-header.less */
   .site-header .header-nav .header-nav-container > ul > li > a {
     font-size: 14px;
     line-height: 60px;
   }
 }
 @media (min-width: 1066px) {
-  /* line 207, public/src/css/less/modules/site-header.less */
+  /* line 211, public/src/css/less/modules/site-header.less */
   .site-header .header-nav .header-nav-container > ul > li:first-of-type a {
     padding-left: 0;
   }
 }
-/* line 213, public/src/css/less/modules/site-header.less */
+/* line 217, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .nav-dropdown {
-  background: #f7f7f7;
-  box-shadow: inset 0px 3px 9px -3px rgba(0, 0, 0, 0.15);
+  background: rgba(247, 247, 247, 0.95);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
   margin: 0;
   max-height: 0px;
-  overflow-y: auto;
+  overflow-y: scroll;
   position: absolute;
   -webkit-transition: max-height 0.2s ease-in-out;
   -ms-transition: max-height 0.2s ease-in-out;
   transition: max-height 0.2s ease-in-out;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
   width: 100%;
   will-change: max-height;
   z-index: 2;
 }
-/* line 225, public/src/css/less/modules/site-header.less */
+/* line 230, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .nav-dropdown.active {
   max-height: 50vh;
 }
-/* line 229, public/src/css/less/modules/site-header.less */
+/* line 234, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown::-webkit-scrollbar {
+  background: transparent;
+  height: 6px;
+  width: 6px;
+}
+/* line 240, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown::-webkit-scrollbar-track:vertical {
+  background: transparent;
+}
+/* line 244, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown::-webkit-scrollbar-thumb:vertical {
+  background: #d9d9d9;
+}
+/* line 248, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .nav-dropdown .dropdown-container {
   margin-left: auto;
   margin-right: auto;
   max-width: 960px;
   width: 90%;
 }
-/* line 233, public/src/css/less/modules/site-header.less */
+/* line 252, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .nav-dropdown .dropdown-grid {
   display: block;
   width: calc(100% +  20px );
@@ -4017,7 +4038,7 @@ dl dd {
   overflow: hidden;
   vertical-align: top;
 }
-/* line 237, public/src/css/less/modules/site-header.less */
+/* line 256, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .nav-dropdown .dropdown-column {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4030,7 +4051,7 @@ dl dd {
   padding-top: 10px;
 }
 @media (min-width: 700px) {
-  /* line 243, public/src/css/less/modules/site-header.less */
+  /* line 262, public/src/css/less/modules/site-header.less */
   .site-header .header-nav .nav-dropdown .dropdown-column {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -4043,28 +4064,36 @@ dl dd {
     padding-top: 20px;
   }
 }
-/* line 250, public/src/css/less/modules/site-header.less */
+/* line 268, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown .dropdown-column.compact-bottom {
+  padding-bottom: 0;
+}
+/* line 272, public/src/css/less/modules/site-header.less */
+.site-header .header-nav .nav-dropdown .dropdown-column.compact-top {
+  padding-top: 0;
+}
+/* line 277, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .nav-dropdown h5 {
   margin-bottom: 0.5em;
 }
-/* line 254, public/src/css/less/modules/site-header.less */
+/* line 281, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .nav-dropdown ul {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 258, public/src/css/less/modules/site-header.less */
+/* line 285, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .nav-dropdown ul li {
   margin-bottom: 0;
 }
-/* line 263, public/src/css/less/modules/site-header.less */
+/* line 290, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .nav-dropdown a {
   text-decoration: none;
 }
-/* line 266, public/src/css/less/modules/site-header.less */
+/* line 293, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .nav-dropdown a:hover {
   text-decoration: underline;
 }
-/* line 271, public/src/css/less/modules/site-header.less */
+/* line 298, public/src/css/less/modules/site-header.less */
 .site-header .header-nav .nav-dropdown .sdk-language {
   background: #e0e0e0;
   border-radius: 2px;
@@ -4074,14 +4103,14 @@ dl dd {
   padding: 0 0.5em;
   text-transform: uppercase;
 }
-/* line 284, public/src/css/less/modules/site-header.less */
+/* line 311, public/src/css/less/modules/site-header.less */
 .site-header .header-headline {
   background: url(../img/docs-banner.jpg) 50% 0% no-repeat;
   background-size: cover;
   padding: 0;
   z-index: 1;
 }
-/* line 290, public/src/css/less/modules/site-header.less */
+/* line 317, public/src/css/less/modules/site-header.less */
 .site-header .header-headline h2 {
   font-family: 'open-sans-light', arial, sans-serif;
   font-style: normal;
@@ -4095,7 +4124,7 @@ dl dd {
   padding: 40px;
   width: 100%;
 }
-/* line 301, public/src/css/less/modules/site-header.less */
+/* line 328, public/src/css/less/modules/site-header.less */
 .site-header .header-headline h2 .headline-accent {
   font-family: 'open-sans-bold', arial, sans-serif;
   font-style: normal;
@@ -4104,39 +4133,39 @@ dl dd {
   display: block;
 }
 @media (min-width: 1250px) {
-  /* line 307, public/src/css/less/modules/site-header.less */
+  /* line 334, public/src/css/less/modules/site-header.less */
   .site-header .header-headline h2 {
     background: transparent;
     padding: 0;
   }
 }
-/* line 313, public/src/css/less/modules/site-header.less */
+/* line 340, public/src/css/less/modules/site-header.less */
 .site-header .header-headline .tagline {
   display: none;
   font-size: 15px;
   text-transform: uppercase;
 }
 @media (min-width: 725px) {
-  /* line 319, public/src/css/less/modules/site-header.less */
+  /* line 346, public/src/css/less/modules/site-header.less */
   .site-header .header-headline {
     margin-top: -60px;
   }
-  /* line 322, public/src/css/less/modules/site-header.less */
+  /* line 349, public/src/css/less/modules/site-header.less */
   .site-header .header-headline h2 {
     padding: 100px 40px 40px 40px;
   }
 }
 @media (min-width: 768px) {
-  /* line 327, public/src/css/less/modules/site-header.less */
+  /* line 354, public/src/css/less/modules/site-header.less */
   .site-header .header-headline {
     padding: 120px 60px 60px 60px;
   }
-  /* line 330, public/src/css/less/modules/site-header.less */
+  /* line 357, public/src/css/less/modules/site-header.less */
   .site-header .header-headline h2 {
     padding: 5px;
     width: auto;
   }
-  /* line 335, public/src/css/less/modules/site-header.less */
+  /* line 362, public/src/css/less/modules/site-header.less */
   .site-header .header-headline .tagline {
     display: block;
     font-size: 15px;
