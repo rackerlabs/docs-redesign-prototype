@@ -7,6 +7,7 @@ angular.module(moduleName, [
     require('./services/active-language'),
     require('./components/code-sample'),
     require('./components/copy-code-sample'),
+    require('./components/dropdown-toggle'),
     require('./components/flex-height'),
     require('./components/language-selector'),
     require('./components/scroll-indicator'),
@@ -15,5 +16,3 @@ angular.module(moduleName, [
 ]);
 
 angular.bootstrap(document, [moduleName]);
-
-window.sectionNav = document.querySelector('.docs-section-nav ul');
