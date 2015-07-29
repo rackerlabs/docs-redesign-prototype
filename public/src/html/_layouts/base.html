@@ -1,0 +1,14 @@
+{% extends "_layouts/raw.html" %}
+
+{% block body %}
+    {% block siteHeader %}
+        {% include "_includes/site-header.html" %}
+    {% endblock %}
+    {% block bodyContent %}{% endblock %}
+    {% block siteFooter %}
+        {% include "_includes/site-footer.html" %}
+    {% endblock %}
+    {% block footerScripts %}
+        <script src="public/dist/js/main.js"></script>
+    {% endblock %}
+{% endblock %}

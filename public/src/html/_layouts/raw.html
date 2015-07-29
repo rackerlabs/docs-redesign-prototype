@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block metaTitle %}{% endblock %}</title>
+        <link rel="stylesheet" href="public/src/css/main.css">
+    {% endblock %}
+</head>
+<body class="{% block bodyClass %}{% endblock %}">
+    {% block body %}{% endblock %}
+</body>
+</html>

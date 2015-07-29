@@ -13,7 +13,7 @@
         .header-links-container {
             @gutter-width: 0px;
             .grid(@gutter-width);
-            .centered-container(960px);
+            padding: 0 5%;
 
             .phone-chat-links, .portal-links {
                 .grid-unit(1/2);
@@ -24,6 +24,10 @@
             .portal-links {
                 margin-bottom: 0;
                 text-align: right;
+            }
+
+            @media (min-width: 769px) {
+                padding: 0 35px;
             }
         }
 
@@ -155,9 +159,8 @@
         .header-nav-container {
 
             & > ul {
-                .centered-container(960px);
                 margin-bottom: 0;
-                padding-left: 0;
+                padding: 0;
                 width: 100%;
 
                 & > li {
@@ -170,7 +173,7 @@
                         color: @text-color;
                         display: inline-block;
                         font-size: 12px;
-                        line-height: 48px;
+                        line-height: 56px;
                         padding: 0 0.5em;
                         text-decoration: none;
                         text-transform: uppercase;
@@ -187,7 +190,17 @@
                 }
 
                 .logo {
+                    background: @rax-red;
                     display: block;
+                    .transition(background 0.1s ease-in-out);
+
+                    &:hover {
+                        background: shade(@rax-red, 10%);
+                    }
+
+                    a {
+                        padding: 0 1.5em;
+                    }
 
                     a img {
                         display: inline-block;
@@ -198,9 +211,17 @@
                         width: 140px;
                     }
 
+                    a:hover {
+                        background: transparent;
+                    }
+
                     @media (min-width: 725px) {
                         display: inline-block;
                     }
+                }
+
+                @media (min-width: 769px) {
+                    padding: 0 35px;
                 }
             }
 
@@ -214,12 +235,6 @@
                 & > ul > li > a {
                     font-size: 14px;
                     line-height: 60px;
-                }
-            }
-
-            @media (min-width: 1066px) {
-                & > ul > li:first-of-type a {
-                    padding-left: 0;
                 }
             }
         }
@@ -365,7 +380,7 @@
             padding: 120px 60px 60px 60px;
 
             h2 {
-                padding: 5px;
+                padding: 0;
                 width: auto;
             }
 

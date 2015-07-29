@@ -1,9 +1,12 @@
 {% extends "_layouts/docs.html" %}
 
+{% block bodyClass %}docs{% endblock %}
+
+{% set headline = 'Developer Documentation' %}
+{% set tagline = 'Let’s Build Something Great Together!' %}
+
 {% block leftNav %}
 {% set navTree = '
-
-
   <ul class="simple">
 <li><a class="reference internal" href="overview/index.html#overview"><span>Overview</span></a><ul>
 <li><a class="reference internal" href="index.html#intended-audience"><span>Intended Audience</span></a></li>
