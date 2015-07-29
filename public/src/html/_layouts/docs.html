@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rackspace Developer Documentation</title>
-    <link rel="stylesheet" href="src/css/main.css">
-</head>
-<body class="docs">
-    {% include "_includes/site-header.html" %}
+{% extends "_layouts/base.html" %}
+
+{% block bodyContent %}
     <div class="docs-container">
         <section class="docs-body docs">
             <div class="background">
@@ -26,8 +19,4 @@
             </article>
         </section>
     </div>
-    {% include "_includes/site-footer.html" %}
-    <script src="/dist/js/main.js"></script>
-    <script src="//localhost:35729/livereload.js"></script>
-</body>
-</html>
+{% endblock %}

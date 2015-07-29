@@ -135,9 +135,12 @@
         <div class="header-headline-container">
             <h2>
                 <span class="headline-accent">Rackspace</span>
-                Developers Documentation
+                {{ headline }}
+                {% block headline %}{% endblock %}
             </h2>
-            <p class="tagline">Let’s build something great together!</p>
+            {% if tagline %}
+                <p class="tagline">{{ tagline }}</p>
+            {% endif %}
         </div>
     </div>
 </header>
