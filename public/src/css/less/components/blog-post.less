@@ -1,6 +1,10 @@
 .blog-post {
 
-    .post-title {
+    h1.post-title {
+        font-size: percentage((28/14));
+    }
+
+    h3.post-title {
         font-size: percentage((24/14));
         margin-bottom: 15px;
     }
@@ -21,18 +25,8 @@
             width: 64px;
         }
 
-        &.racker {
-            &:after {
-                background: fadeout(@rax-red, 20%);
-                bottom: 0;
-                color: white;
-                content: 'RACKER';
-                font-size: 10px;
-                line-height: 1.5;
-                position: absolute;
-                text-align: center;
-                width: 100%;
-            }
+        &.racker:after {
+            .avatar-overlay('RACKER', 10px);
         }
     }
 
@@ -63,11 +57,72 @@
         text-transform: uppercase;
     }
 
+
+    .author-bio {
+        .clearfix();
+        border: solid 1px shade(white, 10%);
+        border-width: 1px 0px;
+        margin-top: 40px;
+        padding: 40px 0;
+
+        .avatar {
+            float: left;
+            margin-right: 20px;
+
+            &.racker:after {
+                .avatar-overlay();
+            }
+        }
+
+        .name {
+            display: block;
+            font-size: percentage((18/14));
+            margin-bottom: 0.5em;
+        }
+    }
+
     &.preview {
         padding: 40px 0;
 
         & + .blog-post {
            border-top: solid 1px shade(white, 10%);
        }
+    }
+
+    &.single {
+        padding: 40px 0;
+
+        .post-title {
+            margin-bottom: 15px;
+        }
+
+        .post-info {
+            border-bottom: solid 1px shade(white, 10%);
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+        .right, .left {
+            display: block;
+            height: auto;
+            margin: 0 auto 1.5em auto;
+            max-width: 100%;
+        }
+
+        @media (min-width: 769px) {
+            .right {
+                float: right;
+                height: auto;
+                margin: 0 0 1em 1em;
+                max-width: 50%;
+            }
+
+            .left {
+                float: right;
+                height: auto;
+                margin: 0 1em 1em 0;
+                max-width: 50%;
+            }
+        }
     }
 }
