@@ -2079,7 +2079,10 @@ table {
 .admonition :last-child {
   margin-bottom: 0;
 }
-.blog-post .post-title {
+.blog-post h1.post-title {
+  font-size: 200%;
+}
+.blog-post h3.post-title {
   font-size: 171.42857143%;
   margin-bottom: 15px;
 }
@@ -2138,27 +2141,107 @@ table {
   font-size: 80%;
   text-transform: uppercase;
 }
+.blog-post .author-bio {
+  border: solid 1px #e6e6e6;
+  border-width: 1px 0px;
+  margin-top: 40px;
+  padding: 40px 0;
+}
+.blog-post .author-bio:before,
+.blog-post .author-bio:after {
+  content: " ";
+  display: table;
+}
+.blog-post .author-bio:after {
+  clear: both;
+}
+.blog-post .author-bio .avatar {
+  float: left;
+  margin-right: 20px;
+}
+.blog-post .author-bio .avatar.racker:after {
+  background: rgba(196, 0, 34, 0.8);
+  bottom: 0;
+  color: white;
+  content: "RACKER";
+  font-size: 12px;
+  line-height: 1.5;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.blog-post .author-bio .name {
+  display: block;
+  font-size: 128.57142857%;
+  margin-bottom: 0.5em;
+}
 .blog-post.preview {
   padding: 40px 0;
 }
 .blog-post.preview + .blog-post {
   border-top: solid 1px #e6e6e6;
 }
+.blog-post.single {
+  padding: 40px 0;
+}
+.blog-post.single .post-title {
+  margin-bottom: 15px;
+}
+.blog-post.single .post-info {
+  border-bottom: solid 1px #e6e6e6;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.blog-post.single .right,
+.blog-post.single .left {
+  display: block;
+  height: auto;
+  margin: 0 auto 1.5em auto;
+  max-width: 100%;
+}
+@media (min-width: 769px) {
+  .blog-post.single .right {
+    float: right;
+    height: auto;
+    margin: 0 0 1em 1em;
+    max-width: 50%;
+  }
+  .blog-post.single .left {
+    float: right;
+    height: auto;
+    margin: 0 1em 1em 0;
+    max-width: 50%;
+  }
+}
 .blog-sidebar {
   padding: 0;
 }
-.blog-sidebar h5 {
+.blog-sidebar section {
+  padding: 10px;
+}
+.blog-sidebar section h5 {
   color: #5c5c5c;
-  font-size: 128.57142857%;
-  margin-bottom: 20px;
+  font-size: 114.28571429%;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
+@media (min-width: 880px) {
+  .blog-sidebar section {
+    padding: 20px;
+  }
+  .blog-sidebar section h5 {
+    font-size: 128.57142857%;
+    margin-bottom: 20px;
+  }
+}
+.blog-sidebar section + section {
+  border-top: solid 1px #e0e0e0;
+}
 .blog-sidebar .recent-posts {
-  border-bottom: solid 1px #e0e0e0;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .blog-sidebar .recent-posts h5 {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 .blog-sidebar .recent-posts .tab-links {
   display: block;
@@ -2166,7 +2249,7 @@ table {
   margin-left: 0px;
   overflow: hidden;
   vertical-align: top;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .blog-sidebar .recent-posts .tab-links a {
   box-sizing: border-box;
@@ -2195,13 +2278,21 @@ table {
 .blog-sidebar .recent-posts ol {
   font-size: 13px;
   margin: 0;
-  padding: 0 20px 0 40px;
+  padding: 0 10px 0 30px;
 }
-.blog-sidebar .categories {
-  padding: 20px;
-}
-.blog-sidebar .categories h5 {
-  margin-bottom: 20px;
+@media (min-width: 880px) {
+  .blog-sidebar .recent-posts {
+    padding: 20px 0;
+  }
+  .blog-sidebar .recent-posts h5 {
+    padding: 0 20px;
+  }
+  .blog-sidebar .recent-posts .tab-links {
+    margin-bottom: 20px;
+  }
+  .blog-sidebar .recent-posts ol {
+    padding: 0 20px 0 40px;
+  }
 }
 .blog-sidebar .categories ul {
   font-size: 13px;
@@ -3574,7 +3665,6 @@ dl dd {
   padding: 0;
 }
 .site-footer .footer-container {
-  max-width: 960px;
   display: block;
   width: calc(100% +  0px );
   margin-left: 0px;
@@ -3582,7 +3672,13 @@ dl dd {
   vertical-align: top;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  padding: 0 5%;
+  width: 100%;
+}
+@media (min-width: 769px) {
+  .site-footer .footer-container {
+    padding: 0 35px;
+  }
 }
 .site-footer .about-links,
 .site-footer .blog-links,
@@ -3823,10 +3919,9 @@ body.blog .blog-body .blog-content {
     width: calc( 80%  -  0px );
     font-size: 16px;
     padding: 0 35px;
-    max-width: 50em;
   }
 }
-@media (min-width: 1015px) {
+@media (min-width: 1085px) {
   body.blog .blog-body .blog-content {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -3837,6 +3932,7 @@ body.blog .blog-body .blog-content {
     width: calc( 80%  -  0px );
     padding: 0 0;
     margin: 0 calc(40% - 25em);
+    max-width: 800px;
   }
 }
 body.blog .blog-body .blog-sidebar {
@@ -3853,7 +3949,7 @@ body.blog .blog-body .blog-sidebar {
     width: calc( 20%  -  0px );
   }
 }
-@media (min-width: 1015px) {
+@media (min-width: 1085px) {
   body.blog .blog-body .blog-sidebar {
     margin-left: -0.25em;
   }
