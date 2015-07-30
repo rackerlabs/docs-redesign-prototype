@@ -1,0 +1,21 @@
+{% extends "_layouts/base.html" %}
+
+{% block bodyContent %}
+    <div class="blog-container">
+        <section class="blog-body">
+            <div class="background">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+            </div>
+            <div class="blog-content">
+                {% block blogContent %}{% endblock %}
+            </div>
+            <nav class="blog-sidebar">
+                <div class="blog-sidebar-container">
+                    {% block blogSidebar %}{% endblock %}
+                </div>
+            </nav>
+        </section>
+    </div>
+{% endblock %}

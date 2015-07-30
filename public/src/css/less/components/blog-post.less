@@ -1,0 +1,73 @@
+.blog-post {
+
+    .post-title {
+        font-size: percentage((24/14));
+        margin-bottom: 15px;
+    }
+
+    .post-info {
+        .clearfix();
+        line-height: 2;
+        margin-bottom: 15px;
+    }
+
+    .post-avatar {
+        float: left;
+        margin-right: 10px;
+
+        img {
+            display: block;
+            height: 64px;
+            width: 64px;
+        }
+
+        &.racker {
+            &:after {
+                background: fadeout(@rax-red, 20%);
+                bottom: 0;
+                color: white;
+                content: 'RACKER';
+                font-size: 10px;
+                line-height: 1.5;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+
+    .post-categories {
+        font-size: 12px;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+
+            & + li {
+                margin-left: 0.25em;
+
+                &:before {
+                    content: '/';
+                    margin-right: 0.25em;
+                }
+            }
+        }
+
+    }
+
+    .post-read-more {
+        .open-sans('bold');
+        font-size: 80%;
+        text-transform: uppercase;
+    }
+
+    &.preview {
+        padding: 40px 0;
+
+        & + .blog-post {
+           border-top: solid 1px shade(white, 10%);
+       }
+    }
+}
