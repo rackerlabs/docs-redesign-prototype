@@ -28,12 +28,16 @@
 
     @gutter-width: 20px;
     .footer-container {
-        .centered-container(960px);
         .grid();
 
         margin-left: auto;
         margin-right: auto;
-        width: 90%;
+        padding: 0 5%;
+        width: 100%;
+
+        @media (min-width: 769px) {
+            padding: 0 35px;
+        }
     }
 
     .about-links, .blog-links, .support-links {

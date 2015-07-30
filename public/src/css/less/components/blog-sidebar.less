@@ -1,24 +1,40 @@
 .blog-sidebar {
     padding: 0;
 
-    h5 {
-        color: tint(@text-color, 15%);
-        font-size: percentage((18/14));
-        margin-bottom: 20px;
-        text-transform: uppercase;
+    section {
+        padding: 10px;
+
+        h5 {
+            color: tint(@text-color, 15%);
+            font-size: percentage((16/14));
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        @media (min-width: 880px) {
+            padding: 20px;
+
+            h5 {
+                font-size: percentage((18/14));
+                margin-bottom: 20px;
+            }
+        }
+
+        & + section {
+            border-top: solid 1px shade(white, 12%);
+        }
     }
 
     .recent-posts {
-        border-bottom: solid 1px shade(white, 12%);
-        padding: 20px 0;
+        padding: 10px 0;
 
         h5 {
-            padding: 0 20px;
+            padding: 0 10px;
         }
 
         .tab-links {
             .grid(0px);
-            margin-bottom: 20px;
+            margin-bottom: 10px;
 
             a {
                 .grid-unit(1/2, 0px);
@@ -44,24 +60,36 @@
         ol {
             font-size: 13px;
             margin: 0;
-            padding: 0 20px 0 40px;
+            padding: 0 10px 0 30px;
+        }
+
+        @media (min-width: 880px) {
+            padding: 20px 0;
+
+            h5 {
+                padding: 0 20px;
+            }
+
+            .tab-links {
+                margin-bottom: 20px;
+            }
+
+            ol {
+                padding: 0 20px 0 40px;
+            }
         }
     }
 
+    .related-posts {
+        
+    }
+
     .categories {
-        padding: 20px;
-
-        h5 {
-            margin-bottom: 20px;
-        }
-
         ul {
             font-size: 13px;
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
-
-
     }
 }
