@@ -3419,6 +3419,7 @@ sup {
   display: inline-block;
   list-style-type: none;
   margin: 0;
+  margin-left: -0.25em;
 }
 .site-header .header-nav .header-nav-container > ul > li > a {
   font-family: 'open-sans-bold', arial, sans-serif;
@@ -4369,10 +4370,11 @@ body.home .box.dev-support .comm-platforms .platform {
   }
 }
 body.home .box.quote {
-  background: #f2f2f2;
+  background: #f2f2f2 url('../img/quote-background.jpg') 50% 50% no-repeat;
+  background-size: cover;
 }
 body.home .box.quote blockquote {
-  font-size: 271.42857143%;
+  font-size: 185.71428571%;
   line-height: 1.45;
   margin-bottom: 40px;
 }
@@ -4390,6 +4392,16 @@ body.home .box.quote .author-title {
   font-style: italic;
   font-weight: normal;
   margin-bottom: 40px;
+}
+@media (min-width: 850px) {
+  body.home .box.quote blockquote {
+    font-size: 271.42857143%;
+  }
+}
+@media (min-width: 1067px) {
+  body.home .box.quote {
+    background-size: contain;
+  }
 }
 body.home .box.sign-up {
   border-bottom: solid 1px #f2f2f2;
