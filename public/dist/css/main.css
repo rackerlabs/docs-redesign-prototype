@@ -4330,7 +4330,7 @@ body.docs-home .product-filters li {
 }
 body.docs-home .product-filters li a {
   display: block;
-  padding: 0 24px 0 0;
+  padding: 0 28px 0 0;
 }
 body.docs-home .product-filters li a .label {
   color: #b3b3b3;
@@ -4380,6 +4380,16 @@ body.docs-home .product-filters li.active.network .indicator {
 body.docs-home .product-filters li.active.storage .indicator {
   background: #e74c3c;
   border-color: #e74c3c;
+  color: white;
+}
+body.docs-home .product-filters li.active.data .indicator {
+  background: #efc75e;
+  border-color: #efc75e;
+  color: white;
+}
+body.docs-home .product-filters li.active.infra .indicator {
+  background: #8e708e;
+  border-color: #8e708e;
   color: white;
 }
 body.docs-home .docs-category {
