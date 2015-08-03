@@ -4363,6 +4363,7 @@ body.docs-home .product-filters li.active a {
   font-style: normal;
   font-weight: normal;
   background: transparent;
+  letter-spacing: 0;
 }
 body.docs-home .product-filters li.active a .label {
   color: #404040;
