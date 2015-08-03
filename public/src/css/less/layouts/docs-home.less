@@ -144,7 +144,7 @@ body.docs-home {
             margin-bottom: 20px;
             a {
                 display: block;
-                padding: 0 24px 0 0;
+                padding: 0 28px 0 0;
 
                 .label {
                     color: shade(white, 30%);
@@ -199,6 +199,18 @@ body.docs-home {
                 &.storage .indicator {
                     background: @theme-red;
                     border-color: @theme-red;
+                    color: white;
+                }
+
+                &.data .indicator {
+                    background: @theme-yellow;
+                    border-color: @theme-yellow;
+                    color: white;
+                }
+
+                &.infra .indicator {
+                    background: @theme-purple;
+                    border-color: @theme-purple;
                     color: white;
                 }
             }
