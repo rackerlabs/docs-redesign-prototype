@@ -57,25 +57,7 @@ body.home {
         }
     }
 
-    .promo-card {
-        border: solid 1px shade(white, 5%);
-        border-radius: 2px;
-        box-shadow: 0px 3px 6px fadeout(black, 86%);
-        margin-bottom: 1.5em;
-        width: calc(100% - 6px);
 
-        .promo-card-title {
-            background: shade(white, 25%);
-            border-top-left-radius: 2px;
-            border-top-right-radius: 2px;
-            color: white;
-            padding: 0.5em;
-        }
-
-        .promo-card-body {
-            padding: 1.5em;
-        }
-    }
 
     .box.docs-apis {
 
@@ -97,14 +79,6 @@ body.home {
                     .grid-unit(1/2, 80px);
                 }
             }
-        }
-
-        .promo.sdks .promo-card-title {
-            background: @rax-blue;
-        }
-
-        .promo.apis .promo-card-title {
-            background: @rax-green;
         }
     }
 
@@ -166,6 +140,15 @@ body.home {
         .author-title {
             .open-sans('regular', 'italic');
             margin-bottom: 40px;
+        }
+
+        a {
+            .button('smoke');
+            border: 0;
+
+            &:hover {
+                background: fadeout(black, 40%);
+            }
         }
 
         @media (min-width: 850px) {
