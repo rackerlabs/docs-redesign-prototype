@@ -1,8 +1,11 @@
 .card {
+    background: shade(white, 2%);
     border-top: solid 8px shade(white, 25%);
     border-top-left-radius: 1px;
     border-top-right-radius: 1px;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.25);
     margin-bottom: 1.5em;
+    .transition(all 0.1s ease-out);
     width: calc(100% - 2px);
 
     &.blue {
@@ -30,8 +33,6 @@
         border-bottom-left-radius: 1px;
         border-bottom-right-radius: 1px;
         border-top: 0;
-
-
     }
 
     .card-title {
@@ -42,5 +43,11 @@
 
     .card-body {
         padding: 0 20px 20px 20px;
+    }
+
+    &:hover {
+        background: white;
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.15);
+        .transition(all 0.1s ease-in);
     }
 }
