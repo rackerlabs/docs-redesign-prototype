@@ -12,6 +12,7 @@ angular.module(moduleName, [
     require('./components/scroll-indicator'),
     require('./components/section-nav-toggle'),
     require('./components/sticky'),
+    require('./controllers/blog-sidebar'),
     require('./controllers/docs-home-services'),
     require('./controllers/docs-home-sidebar'),
     require('./services/active-language'),
