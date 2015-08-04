@@ -49763,6 +49763,7 @@ angular.module(moduleName, [
     require('./components/scroll-indicator'),
     require('./components/section-nav-toggle'),
     require('./components/sticky'),
+    require('./controllers/blog-sidebar'),
     require('./controllers/docs-home-services'),
     require('./controllers/docs-home-sidebar'),
     require('./services/active-language'),
@@ -49771,7 +49772,7 @@ angular.module(moduleName, [
 
 angular.bootstrap(document, [moduleName]);
 
-},{"./components/code-sample":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js","./components/copy-code-sample":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/copy-code-sample.js","./components/dropdown-toggle":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/dropdown-toggle.js","./components/flex-height":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/flex-height.js","./components/language-selector":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/language-selector.js","./components/scroll-indicator":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/scroll-indicator.js","./components/section-nav-toggle":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/section-nav-toggle.js","./components/sticky":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/sticky.js","./controllers/docs-home-services":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/controllers/docs-home-services.js","./controllers/docs-home-sidebar":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/controllers/docs-home-sidebar.js","./services/active-language":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/services/active-language.js","./services/filter":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/services/filter.js","angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js":[function(require,module,exports){
+},{"./components/code-sample":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js","./components/copy-code-sample":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/copy-code-sample.js","./components/dropdown-toggle":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/dropdown-toggle.js","./components/flex-height":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/flex-height.js","./components/language-selector":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/language-selector.js","./components/scroll-indicator":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/scroll-indicator.js","./components/section-nav-toggle":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/section-nav-toggle.js","./components/sticky":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/sticky.js","./controllers/blog-sidebar":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/controllers/blog-sidebar.js","./controllers/docs-home-services":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/controllers/docs-home-services.js","./controllers/docs-home-sidebar":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/controllers/docs-home-sidebar.js","./services/active-language":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/services/active-language.js","./services/filter":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/services/filter.js","angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/components/code-sample.js":[function(require,module,exports){
 var $ = require('jquery');
 var angular = require('angular');
 
@@ -50215,7 +50216,35 @@ angular.module(moduleName, [])
     };
 });
 
-},{"angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js","jquery":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/jquery/dist/jquery.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/controllers/docs-home-services.js":[function(require,module,exports){
+},{"angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js","jquery":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/jquery/dist/jquery.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/controllers/blog-sidebar.js":[function(require,module,exports){
+var angular = require('angular');
+
+var moduleName = 'drc.controllers.blog-sidebar';
+module.exports = moduleName;
+
+angular.module(moduleName, [])
+.controller('BlogSidebarCtrl', function($scope, filter) {
+    var COLLECTION = 'blog-popular-posts';
+
+    filter.add(COLLECTION, 'month');
+
+    $scope.clickPostTab = function (value) {
+        filter.clear(COLLECTION);
+        filter.add(COLLECTION, value);
+    };
+
+    $scope.isSectionActive = function (value) {
+        if(filter.get(COLLECTION).length === 0) {
+            return true;
+        }
+
+        return filter.contains(COLLECTION, function (item) {
+            return item === value;
+        });
+    };
+});
+
+},{"angular":"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/node_modules/angular/index.js"}],"/Users/keit8924/Code/rackerlabs/docs-redesign-prototype/public/src/js/controllers/docs-home-services.js":[function(require,module,exports){
 var angular = require('angular');
 
 var moduleName = 'drc.controllers.docs-home-services';
