@@ -1,11 +1,11 @@
-{% extends "_layouts/blog.html" %}
+{% extends "_layouts/sidebar-right.html" %}
 
 {% set headline = 'Developer Blog' %}
 {% set tagline = 'News and Insights from Rackspace Developers' %}
 
 {% set bodyClass = "blog" %}
 
-{% block blogContent %}
+{% block content %}
     {% for i in [1,2,3,4,5,6,7,8,9,10] %}
     <section class="blog-post preview">
         <h3 class="post-title"><a href="blog-single.html">Principles for a Successful Developer Workshop</a></h3>
@@ -27,7 +27,7 @@
     </section>
     {% endfor %}
 {% endblock %}
-{% block blogSidebar %}
+{% block sidebar %}
     <div data-ng-controller="BlogSidebarCtrl">
         <section class="recent-posts">
             <h5>Popular Posts</h5>

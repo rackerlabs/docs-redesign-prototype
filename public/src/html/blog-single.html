@@ -1,11 +1,11 @@
-{% extends "_layouts/blog.html" %}
+{% extends "_layouts/sidebar-right.html" %}
 
 {% set headline = 'Developer Blog' %}
 {% set tagline = 'News and Insights from Rackspace Developers' %}
 
 {% set bodyClass = "blog" %}
 
-{% block blogContent %}
+{% block content %}
     <section class="blog-post single">
         <div>
         <h1 class="post-title">Principles for a Successful Developer Workshop</h1>
@@ -163,7 +163,7 @@
         </div>
     </section>
 {% endblock %}
-{% block blogSidebar %}
+{% block sidebar %}
     <div data-ng-controller="BlogSidebarCtrl">
         <section class="recent-posts">
             <h5>Popular Posts</h5>
