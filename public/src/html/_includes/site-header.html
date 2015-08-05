@@ -32,14 +32,14 @@
     {% include "_includes/header-nav.html" %}
     <div class="header-headline">
         <div class="header-headline-container">
-            <h2>
+            <{{ headlineTag }}>
                 {% if headlineAccent %}
                     <span class="headline-accent">{{ headlineAccent }}</span>
                 {% endif %}
                 {% if headline %}
                     {{ headline }}
                 {% endif %}
-            </h2>
+            </{{ headlineTag }}>
             <br>
             {% if tagline %}
                 <p class="tagline">{{ tagline }}</p>
