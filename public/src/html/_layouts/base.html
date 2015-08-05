@@ -1,5 +1,7 @@
 {% extends "_layouts/raw.html" %}
 
+{% set headlineTag = headlineTag if headlineTag else 'h2' %}
+
 {% block body %}
     {% block siteHeader %}
         {% include "_includes/site-header.html" %}

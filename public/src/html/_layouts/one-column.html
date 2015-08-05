@@ -1,8 +1,11 @@
 {% extends "_layouts/base.html" %}
 
 {% block bodyContent %}
-    <div class="docs-container">
-        <section class="body one-column">
+    <div class="container">
+        <div class="layout one-column">
+            <div class="header">
+                {% block header %}{% endblock %}
+            </div>
             <div class="background">
                 <div class="left"></div>
                 <div class="center"></div>
@@ -11,6 +14,6 @@
             <article class="content">
                 {% block content %}{% endblock %}
             </article>
-        </section>
+        </div>
     </div>
 {% endblock %}
