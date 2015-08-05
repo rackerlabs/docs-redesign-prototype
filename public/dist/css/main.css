@@ -2013,11 +2013,22 @@ table {
   content: "\f23a";
 }
 .admonition {
-  background: #e6e6e6;
+  box-shadow: inset 8px 0px 0px #95a5a6;
+  font-family: 'titillium-light', arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  background: transparent;
+  border: solid 1px #ebebeb;
+  border-left: 0;
   border-radius: 1px;
-  margin-bottom: 1.5em;
+  display: inline-block;
+  margin-bottom: 3em;
   min-height: 48px;
-  padding: 10px 10px 10px 50px;
+  padding: 10px 10px 10px 56px;
+}
+.admonition:before {
+  color: #95a5a6;
+  content: "\f05a";
 }
 .admonition:before {
   display: inline-block;
@@ -2028,13 +2039,13 @@ table {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f05a";
-  font-size: 30px;
-  height: 30px;
-  left: 10px;
+  font-size: 21px;
+  height: 21px;
+  left: 21px;
   position: absolute;
   text-align: center;
-  top: 10px;
-  width: 30px;
+  top: 12px;
+  width: 21px;
 }
 .admonition:before.pull-left {
   margin-right: .3em;
@@ -2043,40 +2054,59 @@ table {
   margin-left: .3em;
 }
 .admonition.note {
-  background: #3498db;
-  color: white;
+  box-shadow: inset 8px 0px 0px #76bcff;
 }
 .admonition.note:before {
+  color: #76bcff;
   content: "\f05a";
 }
-.admonition.tip {
-  background: #0dafcc;
-  color: white;
+.admonition.alert {
+  box-shadow: inset 8px 0px 0px #f1c40f;
 }
-.admonition.tip:before {
+.admonition.alert:before {
+  color: #f1c40f;
+  content: "\f05a";
+}
+.admonition.tip,
+.admonition.hint {
+  box-shadow: inset 8px 0px 0px #2ecc85;
+}
+.admonition.tip:before,
+.admonition.hint:before {
+  color: #2ecc85;
   content: "\f040";
 }
-.admonition.warning {
-  background: #efc75e;
-  color: #404040;
+.admonition.warning,
+.admonition.danger,
+.admonition.caution {
+  box-shadow: inset 8px 0px 0px #e74c3c;
 }
-.admonition.warning:before {
+.admonition.warning:before,
+.admonition.danger:before,
+.admonition.caution:before {
+  color: #e74c3c;
   content: "\f071";
 }
-.admonition.danger {
-  background: #fa7464;
-  color: white;
+.admonition.error {
+  box-shadow: inset 8px 0px 0px #ef9d45;
 }
-.admonition.danger:before {
-  content: "\f057";
+.admonition.error:before {
+  color: #ef9d45;
+  content: "\f05a";
 }
-.admonition.tip a,
-.admonition.note a,
-.admonition.danger a {
-  color: white;
+.admonition.attention {
+  box-shadow: inset 8px 0px 0px #32cdc7;
 }
-.admonition.warning a {
-  color: #404040;
+.admonition.attention:before {
+  color: #32cdc7;
+  content: "\f05a";
+}
+.admonition.important {
+  box-shadow: inset 8px 0px 0px #9b59b6;
+}
+.admonition.important:before {
+  color: #9b59b6;
+  content: "\f05a";
 }
 .admonition .admonition-title {
   display: none;
@@ -2652,6 +2682,15 @@ table {
     line-height: 2;
   }
 }
+.docs-section > .section > .section {
+  margin-top: 80px;
+}
+.docs-section > .section > .section > .section {
+  margin-top: 80px;
+}
+.docs-section > .section > .section > .section:first-of-type {
+  margin-top: 0;
+}
 .docs-section-nav {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2915,7 +2954,7 @@ figure .caption,
   font-weight: normal;
   color: #ffffff ;
   padding: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   line-height: 1.1em;
   font-size: 1.0em;
   border: none;
@@ -3291,50 +3330,62 @@ h1,
   font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 250%;
+  font-size: 257.14285714%;
 }
 h2,
 .h2 {
-  font-family: 'titillium-regular', arial, sans-serif;
+  font-family: 'titillium-bold', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 171.42857143%;
+  font-size: 214.28571429%;
 }
 h3,
 .h3 {
   font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 142.85714286%;
+  font-size: 171.42857143%;
 }
 h4,
 .h4 {
-  font-family: 'titillium-regular', arial, sans-serif;
+  font-family: 'titillium-bold', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 128.57142857%;
-  margin-bottom: 0.25em;
 }
 h5,
 .h5 {
   font-family: 'titillium-bold', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 114.28571429%;
+  font-size: 100%;
+  text-transform: uppercase;
+}
+h6,
+.h6 {
+  font-family: 'titillium-bold', arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #9f9f9f;
+  text-transform: uppercase;
 }
 ol {
   list-style-type: decimal;
   padding-left: 1.4em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 ul {
   list-style-type: disc;
   padding-left: 1.4em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 ol li,
 ul li {
   margin-bottom: 0.5em;
+}
+ol li ul,
+ul li ul {
+  margin-top: 0.5em;
 }
 code {
   background: #f2f2f2;
@@ -4906,6 +4957,20 @@ body.sdks-home .sdk .links {
   margin-left: 35px;
   vertical-align: top;
   width: calc( 33.33333333%  -  35px );
+  border-left: dotted 1px rgba(64, 64, 64, 0.5);
+  padding-left: 35px;
+}
+body.sdks-home .sdk .links h3 {
+  font-family: 'titillium-bold', arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+body.sdks-home .sdk .links ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 body.sdks-home .sdk .installation {
   box-sizing: border-box;
@@ -4915,6 +4980,10 @@ body.sdks-home .sdk .installation {
   margin-left: 35px;
   vertical-align: top;
   width: calc( 66.66666667%  -  35px );
+}
+body.sdks-home .sdk .requirements {
+  background: #f2f2f2;
+  padding: 20px;
 }
 body.sdks-home .sdk .requirements h4 {
   font-family: 'titillium-bold', arial, sans-serif;
