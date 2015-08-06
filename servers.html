@@ -165,17 +165,20 @@
 
     
     
-    <div class="docs-container">
-        <section class="docs-body docs">
-            
-            <div class="background">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+    <div class="container">
+        <div class="layout sidebar-left">
+            <div class="header">
+                
             </div>
-            <nav class="docs-section-nav" data-drc-section-nav-toggle data-parent=".docs-body">
-                <div class="section-nav-container" data-drc-sticky data-offset-top="332" data-drc-flex-height data-flex-bottom="302">
+            <div class="body">
+                <div class="background">
+                    <div class="left"></div>
+                    <div class="center"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="sidebar">
                     
+<div class="sidebar-container" data-drc-sticky data-offset-top="332" data-drc-flex-height data-flex-bottom="412">
 <a href="https://github.com/rackerlabs/docs-quickstart/edit/master/cloud-servers/getting-started/index.rst" target="_blank" class="github-link"><span class="icon fa fa-github"></span>Edit On Github</a>
 <ul>
     <li data-drc-scroll-indicator="list-servers">
@@ -209,11 +212,11 @@
         </ul>
     </li>
 </ul>
+</div>
 
                 </div>
-            </nav>
-            <article class="docs-content">
-                
+                <div class="content">
+                    
 <ul class="language-selector" data-drc-sticky data-offset-top="322.5">
     <li><a href="" data-drc-language-selector="cli"><span>CLI</span></a></li>
     <li><a href="" data-drc-language-selector="curl"><span>cURL</span></a></li>
@@ -313,7 +316,6 @@
     <div class="code">
         <h3>
             API Request
-            <a href="#" class="copy-link" data-drc-copy-code-sample><span class="fa fa-clipboard"></span></a>
         </h3>
         <h5>Request Headers: Summary</h5>
         <div class="highlight"><pre>
@@ -345,7 +347,6 @@ Accept: application/json
     </div>
     <div class="code">
         <h3>API Response
-            <a href="#" class="copy-link" data-drc-copy-code-sample><span class="fa fa-clipboard"></span></a>
         </h3>
         <div class="highlight"><pre><span class="p">{</span>
     <span class="nt">&quot;servers&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -651,7 +652,6 @@ Accept: application/json
         </div>
         <h5>
             Request Body
-            <a href="#" class="copy-link" data-drc-copy-code-sample><span class="fa fa-clipboard"></span></a>
         </h5>
         <div class="highlight"><pre><span class="p">{</span>
     <span class="nt">&quot;server&quot;</span> <span class="p">:</span> <span class="p">{</span>
@@ -765,7 +765,6 @@ Location: https://dfw.servers.api.rackspacecloud.com/010101/servers/ed5c7754-29b
         </div>
         <h5>
             Response Body
-            <a href="#" class="copy-link" data-drc-copy-code-sample><span class="fa fa-clipboard"></span></a>
         </h5>
         <div class="highlight"><pre><span class="p">{</span>
     <span class="nt">&quot;server&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -817,7 +816,6 @@ Accept: application/json
         </div>
         <h5>
             Response Body
-            <a href="#" class="copy-link" data-drc-copy-code-sample><span class="fa fa-clipboard"></span></a>
         </h5>
         <div class="highlight">
             <pre><span class="p">{</span>
@@ -942,8 +940,9 @@ Accept: application/json
     <div class="code"></div>
 </section>
 
-            </article>
-        </section>
+                </div>
+            </div>
+        </div>
     </div>
 
     

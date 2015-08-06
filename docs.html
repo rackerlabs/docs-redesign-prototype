@@ -167,9 +167,10 @@
 
     
     
-    <div class="docs-container">
-        <section class="docs-body docs">
-            
+    <div class="container">
+        <div class="layout sidebar-left">
+            <div class="header">
+                
     <div class="sdk-quickstart-menu">
         <div class="title"><h2>Quickstart Guides:</h2></div>
         <div class="links">
@@ -186,67 +187,69 @@
         </div>
     </div>
 
-            <div class="background">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
             </div>
-            <nav class="docs-section-nav" data-drc-section-nav-toggle data-parent=".docs-body">
-                <div class="section-nav-container" data-drc-sticky data-offset-top="392" data-drc-flex-height data-flex-bottom="302">
+            <div class="body">
+                <div class="background">
+                    <div class="left"></div>
+                    <div class="center"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="sidebar">
                     
-    <h5>Filter by Product:</h5>
-    <ul class="product-filters" data-ng-controller="DocsHomeSidebarCtrl">
-        <li class="all" data-ng-click="clickFilter('*')" data-ng-class="{'active': isFilterActive('*')}">
-            <a href="">
-                <span class="label">All</span>
-                <span class="indicator fa fa-check"></span>
-            </a>
-        </li>
-        <li class="compute" data-ng-click="clickFilter('compute')" data-ng-class="{'active': isFilterActive('compute')}">
-            <a href="">
-                <span class="label">Compute</span>
-                <span class="indicator fa fa-check"></span>
-            </a>
-        </li>
-        <li class="network" data-ng-click="clickFilter('network')" data-ng-class="{'active': isFilterActive('network')}">
-            <a href="">
-                <span class="label">Networking</span>
-                <span class="indicator fa fa-check"></span>
-            </a>
-        </li>
-        <li class="storage" data-ng-click="clickFilter('storage')" data-ng-class="{'active': isFilterActive('storage')}">
-            <a href="">
-                <span class="label">Storage</span>
-                <span class="indicator fa fa-check"></span>
-            </a>
-        </li>
-        <li class="data" data-ng-click="clickFilter('data')" data-ng-class="{'active': isFilterActive('data')}">
-            <a href="">
-                <span class="label">Data</span>
-                <span class="indicator fa fa-check"></span>
-            </a>
-        </li>
-        <li class="infra" data-ng-click="clickFilter('infra')" data-ng-class="{'active': isFilterActive('infra')}">
-            <a href="">
-                <span class="label">Infrastructure &amp; Developer Tools</span>
-                <span class="indicator fa fa-check"></span>
-            </a>
-        </li>
-        <li class="private-cloud" data-ng-click="clickFilter('private-cloud')" data-ng-class="{'active': isFilterActive('private-cloud')}">
-            <a href="">
-                <span class="label">Private Cloud</span>
-                <span class="indicator fa fa-check"></span>
-            </a>
-        </li>
-        <li>
-            <span data-ng-bind="filter"></span>
-        </li>
-    </ul>
+    <div class="sidebar-container" data-drc-sticky data-offset-top="392" data-drc-flex-height data-flex-bottom="302">
+        <h5>Filter by Product:</h5>
+        <ul class="product-filters" data-ng-controller="DocsHomeSidebarCtrl">
+            <li class="all" data-ng-click="clickFilter('*')" data-ng-class="{'active': isFilterActive('*')}">
+                <a href="">
+                    <span class="label">All</span>
+                    <span class="indicator fa fa-check"></span>
+                </a>
+            </li>
+            <li class="compute" data-ng-click="clickFilter('compute')" data-ng-class="{'active': isFilterActive('compute')}">
+                <a href="">
+                    <span class="label">Compute</span>
+                    <span class="indicator fa fa-check"></span>
+                </a>
+            </li>
+            <li class="network" data-ng-click="clickFilter('network')" data-ng-class="{'active': isFilterActive('network')}">
+                <a href="">
+                    <span class="label">Networking</span>
+                    <span class="indicator fa fa-check"></span>
+                </a>
+            </li>
+            <li class="storage" data-ng-click="clickFilter('storage')" data-ng-class="{'active': isFilterActive('storage')}">
+                <a href="">
+                    <span class="label">Storage</span>
+                    <span class="indicator fa fa-check"></span>
+                </a>
+            </li>
+            <li class="data" data-ng-click="clickFilter('data')" data-ng-class="{'active': isFilterActive('data')}">
+                <a href="">
+                    <span class="label">Data</span>
+                    <span class="indicator fa fa-check"></span>
+                </a>
+            </li>
+            <li class="infra" data-ng-click="clickFilter('infra')" data-ng-class="{'active': isFilterActive('infra')}">
+                <a href="">
+                    <span class="label">Infrastructure &amp; Developer Tools</span>
+                    <span class="indicator fa fa-check"></span>
+                </a>
+            </li>
+            <li class="private-cloud" data-ng-click="clickFilter('private-cloud')" data-ng-class="{'active': isFilterActive('private-cloud')}">
+                <a href="">
+                    <span class="label">Private Cloud</span>
+                    <span class="indicator fa fa-check"></span>
+                </a>
+            </li>
+            <li>
+                <span data-ng-bind="filter"></span>
+            </li>
+        </ul>
+    </div>
 
                 </div>
-            </nav>
-            <article class="docs-content">
-                
+                <div class="content">
+                    
     <div data-ng-controller="DocsHomeServicesCtrl">
         <section class="docs-category compute" data-ng-show="isSectionActive('compute')">
             <h2>Compute Services</h2>
@@ -636,8 +639,9 @@
         </section>
     </div>
 
-            </article>
-        </section>
+                </div>
+            </div>
+        </div>
     </div>
 
     

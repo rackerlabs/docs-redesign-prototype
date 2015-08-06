@@ -6,6 +6,7 @@
 {% set stickyNavOffsetTop = 332 %}
 
 {% block sidebar %}
+<div class="sidebar-container" data-drc-sticky data-offset-top="{{ stickyNavOffsetTop }}" data-drc-flex-height data-flex-bottom="302">
 <a href="https://github.com/rackerlabs/docs-quickstart/edit/master/cloud-servers/getting-started/index.rst" target="_blank" class="github-link"><span class="icon fa fa-github"></span>Edit On Github</a>
 {% set navTree = '
   <ul class="simple">
@@ -45,6 +46,7 @@
 ' %}
 
 {{ navTree|onePageLinks|addScrollIndicators }}
+</div>
 {% endblock %}
 {% block content %}
 <header class="docs-intro">
