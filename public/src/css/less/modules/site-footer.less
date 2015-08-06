@@ -1,10 +1,10 @@
-.site-footer {
-    background: black;
+.site-footer, .basement-container {
+    background: @code-background;
     color: white;
     padding: 20px 0;
 
     h5 {
-        .titillium();
+        .titillium('bold');
         margin-bottom: 20px;
         text-transform: uppercase;
     }
@@ -27,7 +27,7 @@
     }
 
     @gutter-width: 20px;
-    .footer-container {
+    .footer-container, .basement-container {
         .grid();
 
         margin-left: auto;
@@ -40,15 +40,42 @@
         }
     }
 
-    .about-links, .blog-links, .support-links {
+    .docs-links, .community-links, .sdk-links {
         display: none;
     }
 
-    .other-links {
+    .partner-links {
         h5, ul {
             display: none;
         }
+    }
 
+    @media (min-width: 551px) {
+        padding: 40px 0;
+
+        .docs-links, .community-links, .sdk-links, .partner-links {
+            .grid-unit(1/2);
+            margin-bottom: 40px;
+        }
+
+        .docs-links {
+            ul {
+                .grid-unit(1/2, 0px);
+            }
+        }
+
+        .partner-links {
+            h5, ul {
+                display: block;
+            }
+        }
+
+        .copyright {
+            display: none;
+        }
+    }
+
+    @media (max-width: 550px) {
         .copyright {
             display: block;
             font-size: 14px;
@@ -56,48 +83,59 @@
         }
     }
 
-    @media (min-width: 551px) {
-        padding: 40px 0;
-
-        .about-links, .blog-links, .support-links, .other-links {
-            .grid-unit(1/2);
-            margin-bottom: 40px;
-        }
-
-        .about-links {
-            ul {
-                .grid-unit(1/2, 0px);
-            }
-        }
-
-        .other-links {
-            h5, ul {
-                display: block;
-            }
-
-            .copyright {
-                font-size: 12px;
-                display: inline-block;
-                margin-top: 40px;
-            }
-        }
-    }
-
     @media (min-width: 901px) {
-        .about-links, .blog-links, .support-links, .other-links {
+        .docs-links, .community-links, .sdk-links, .partner-links {
             margin-bottom: 0;
         }
 
-        .about-links {
+        .docs-links {
             .grid-unit(5/12);
         }
 
-        .blog-links, .support-links {
+        .community-links, .sdk-links {
             .grid-unit(2/12);
         }
 
-        .other-links {
+        .partner-links {
             .grid-unit(3/12);
         }
     }
+}
+
+.basement-container {
+    background: black;
+    padding: 20px;
+    display: none;
+
+    @media (min-width: 551px) {
+        display:block;
+    }
+
+    & > ul {
+        display:inline-block;
+
+        & > li {
+            display:inline-block;
+            line-height: 34px;
+            margin: 0;
+
+            & + .text-link {
+                margin-left: 6px;
+                padding-left: 8px;
+
+                &:before {
+                    background: white;
+                    content: '';
+                    display: block;
+                    height: 12px;
+                    left: 0;
+                    position: absolute;
+                    top: 11px;
+                    width: 1px;
+                }
+            }
+        }
+
+    }
+
 }
