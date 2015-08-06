@@ -1,13 +1,12 @@
 .site-footer, .basement-container {
-    background: #3b3f46;
+    background: @code-background;
     color: white;
     padding: 20px 0;
 
     h5 {
-        .titillium();
+        .titillium('bold');
         margin-bottom: 20px;
         text-transform: uppercase;
-        font-weight: 600;
     }
 
     a {
@@ -113,7 +112,7 @@
     }
 
     & > ul {
-        display:inline;
+        display:inline-block;
 
         & > li {
             display:inline-block;
