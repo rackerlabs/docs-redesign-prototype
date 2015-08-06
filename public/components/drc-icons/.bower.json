@@ -1,0 +1,28 @@
+{
+  "name": "drc-icons",
+  "version": "0.2.2",
+  "homepage": "https://github.com/rackerlabs/drc-icons",
+  "authors": [
+    "Keith Bartholomew <keith.bartholomew@rackspace.com>"
+  ],
+  "description": "Icon font for use on developer.rackspace.com",
+  "license": "MIT",
+  "main": "dist/less/drc-icons.less",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.2.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.2",
+    "commit": "7fd3ce1f51695f3d8147da232da788898fbe4e77"
+  },
+  "_source": "git@github.com:rackerlabs/drc-icons.git",
+  "_target": "v0.2.2",
+  "_originalSource": "git@github.com:rackerlabs/drc-icons.git",
+  "_direct": true
+}

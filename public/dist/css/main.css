@@ -2012,6 +2012,46 @@ table {
 .fa-medium:before {
   content: "\f23a";
 }
+@font-face {
+  font-family: 'drc-icons';
+  src: url(../../components/drc-icons/dist/fonts/drc-icons.eot?72567d612ea5530e75b1fcc92fdeda14);
+  src: url(../../components/drc-icons/dist/fonts/drc-icons.eot?#iefix) format("embedded-opentype"), url(../../components/drc-icons/dist/fonts/drc-icons.woff?72567d612ea5530e75b1fcc92fdeda14) format("woff"), url(../../components/drc-icons/dist/fonts/drc-icons.ttf?72567d612ea5530e75b1fcc92fdeda14) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="drc-icon-"] {
+  display: inline-block;
+  font: normal normal normal 14px/1 'drc-icons';
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+.drc-icon-bolt-circle:before {
+  content: '\f101';
+}
+.drc-icon-coffee-cup-circle:before {
+  content: '\f102';
+}
+.drc-icon-exclamation-circle:before {
+  content: '\f103';
+}
+.drc-icon-letter-i-circle:before {
+  content: '\f104';
+}
+.drc-icon-lightbulb-circle:before {
+  content: '\f105';
+}
+.drc-icon-megaphone-circle:before {
+  content: '\f106';
+}
+.drc-icon-pencil-circle:before {
+  content: '\f107';
+}
+.drc-icon-star-circle:before {
+  content: '\f108';
+}
 .admonition {
   box-shadow: inset 8px 0px 0px #95a5a6;
   font-family: 'titillium-light', arial, sans-serif;
@@ -2032,13 +2072,13 @@ table {
 }
 .admonition:before {
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
+  font: normal normal normal 14px/1 'drc-icons';
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f05a";
+  content: '\f104';
   font-size: 21px;
   height: 21px;
   left: 21px;
@@ -2047,25 +2087,19 @@ table {
   top: 12px;
   width: 21px;
 }
-.admonition:before.pull-left {
-  margin-right: .3em;
-}
-.admonition:before.pull-right {
-  margin-left: .3em;
-}
 .admonition.note {
   box-shadow: inset 8px 0px 0px #76bcff;
 }
 .admonition.note:before {
   color: #76bcff;
-  content: "\f05a";
+  content: '\f107';
 }
 .admonition.alert {
   box-shadow: inset 8px 0px 0px #f1c40f;
 }
 .admonition.alert:before {
   color: #f1c40f;
-  content: "\f05a";
+  content: '\f102';
 }
 .admonition.tip,
 .admonition.hint {
@@ -2074,7 +2108,7 @@ table {
 .admonition.tip:before,
 .admonition.hint:before {
   color: #2ecc85;
-  content: "\f040";
+  content: '\f104';
 }
 .admonition.warning,
 .admonition.danger,
@@ -2085,28 +2119,28 @@ table {
 .admonition.danger:before,
 .admonition.caution:before {
   color: #e74c3c;
-  content: "\f071";
+  content: '\f101';
 }
 .admonition.error {
   box-shadow: inset 8px 0px 0px #ef9d45;
 }
 .admonition.error:before {
   color: #ef9d45;
-  content: "\f05a";
+  content: '\f103';
 }
 .admonition.attention {
   box-shadow: inset 8px 0px 0px #32cdc7;
 }
 .admonition.attention:before {
   color: #32cdc7;
-  content: "\f05a";
+  content: '\f106';
 }
 .admonition.important {
   box-shadow: inset 8px 0px 0px #9b59b6;
 }
 .admonition.important:before {
   color: #9b59b6;
-  content: "\f05a";
+  content: '\f108';
 }
 .admonition .admonition-title {
   display: none;
