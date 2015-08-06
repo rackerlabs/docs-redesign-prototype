@@ -20,8 +20,8 @@
     padding: 10px 10px 10px 56px;
 
     &:before {
-        .fa();
-        content: @fa-var-info-circle;
+        .drc-icon();
+        content: @di-var-letter-i-circle;
         font-size: 21px;
         height: 21px;
         left: 21px;
@@ -32,31 +32,31 @@
     }
 
     &.note {
-        .admonition-style(@admonition-color-note, @fa-var-info-circle);
+        .admonition-style(@admonition-color-note, @di-var-pencil-circle);
     }
 
     &.alert {
-        .admonition-style(@admonition-color-alert, @fa-var-info-circle);
+        .admonition-style(@admonition-color-alert, @di-var-coffee-cup-circle);
     }
 
     &.tip, &.hint {
-        .admonition-style(@admonition-color-tip, @fa-var-pencil);
+        .admonition-style(@admonition-color-tip, @di-var-letter-i-circle);
     }
 
     &.warning, &.danger, &.caution {
-        .admonition-style(@admonition-color-warning, @fa-var-exclamation-triangle);
+        .admonition-style(@admonition-color-warning, @di-var-bolt-circle);
     }
 
     &.error {
-        .admonition-style(@admonition-color-error, @fa-var-info-circle);
+        .admonition-style(@admonition-color-error, @di-var-exclamation-circle);
     }
 
     &.attention {
-        .admonition-style(@admonition-color-attention, @fa-var-info-circle);
+        .admonition-style(@admonition-color-attention, @di-var-megaphone-circle);
     }
 
     &.important {
-        .admonition-style(@admonition-color-important, @fa-var-info-circle);
+        .admonition-style(@admonition-color-important, @di-var-star-circle);
     }
 
     .admonition-title {
