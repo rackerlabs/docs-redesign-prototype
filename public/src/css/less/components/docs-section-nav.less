@@ -1,31 +1,21 @@
-.docs-section-nav {
-    .grid-unit(1/4, 0px);
-    position: absolute;
-    .transform(translate(-100%, 0));
-    .transform(translate3d(-100%, 0, 0));
-    .transition(transform 0.2s ease-in-out);
-    z-index: 1;
+.sidebar-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 15px 15px 0 15px;
 
-    .section-nav-toggle {
-        .fa-icon();
-        background: @rax-blue;
-        color: @code-white;
-        display: block;
-        height: 35px;
-        line-height: 35px;
-        position: absolute;
-        right: -35px;
-        text-align: center;
-        top: 35px;
-        width: 35px;
+    &::-webkit-scrollbar {
+        background: transparent;
+        height: 4px;
+        width: 4px;
+    }
 
-        &:before {
-            content: @fa-var-ellipsis-v;
-        }
+    &::-webkit-scrollbar-track:vertical {
+        background: transparent;
+    }
 
-        @media (min-width: 769px) {
-            display: none;
-        }
+    &::-webkit-scrollbar-thumb:vertical {
+        background: fadeout(black, 75%);
+        border-radius: 1px;
     }
 
     .github-link {
@@ -60,36 +50,6 @@
                 text-align: left;
             }
         }
-    }
-
-    @media (min-width: 769px) {
-        position: relative;
-        .transform(none);
-    }
-
-    @media (min-width: 1025px) {
-        .grid-unit(1/6, 0px);
-    }
-}
-
-.section-nav-container {
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 15px 15px 0 15px;
-
-    &::-webkit-scrollbar {
-        background: transparent;
-        height: 4px;
-        width: 4px;
-    }
-
-    &::-webkit-scrollbar-track:vertical {
-        background: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb:vertical {
-        background: fadeout(black, 75%);
-        border-radius: 1px;
     }
 
     & > ul {
@@ -192,7 +152,7 @@
         padding: 15px 20px 0 35px;
 
         &.sticky {
-            @sticky-width: (1 / 6 * 100);
+            @sticky-width: (1 / 5 * 100);
             width: ~"calc(@{sticky-width}%)";
         }
     }

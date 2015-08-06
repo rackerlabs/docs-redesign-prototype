@@ -1,4 +1,4 @@
-.language-selector {
+ul.language-selector {
     @gutter-width: 0px;
     .grid(@gutter-width);
     background: @code-background-accent;
@@ -11,12 +11,13 @@
     width: 100%;
     z-index: 2;
 
-    li {
+    & > li {
         .grid-unit(1/5);
         line-height: 35px;
+        margin-bottom: 0;
         overflow: hidden;
 
-        a {
+        & > a {
             background: transparent;
             color: fadeout(white, 20%);
             display: block;

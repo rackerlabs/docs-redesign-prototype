@@ -1,24 +1,24 @@
 {% extends "_layouts/base.html" %}
 
-
-
 {% block bodyContent %}
-    <div class="docs-container">
-        <section class="docs-body docs">
-            {% block docsHeader %}{% endblock %}
-            <div class="background">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+    <div class="container">
+        <div class="layout sidebar-left">
+            <div class="header">
+                {% block header %}{% endblock %}
             </div>
-            <nav class="docs-section-nav" data-drc-section-nav-toggle data-parent=".docs-body">
-                <div class="section-nav-container" data-drc-sticky data-offset-top="{{ stickyNavOffsetTop }}" data-drc-flex-height data-flex-bottom="302">
+            <div class="body">
+                <div class="background">
+                    <div class="left"></div>
+                    <div class="center"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="sidebar">
                     {% block sidebar %}{% endblock %}
                 </div>
-            </nav>
-            <article class="docs-content">
-                {% block content %}{% endblock %}
-            </article>
-        </section>
+                <div class="content">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

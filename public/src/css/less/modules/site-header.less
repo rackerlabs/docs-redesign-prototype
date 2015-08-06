@@ -15,8 +15,20 @@
             .grid(@gutter-width);
             padding: 0 5%;
 
-            .phone-chat-links, .portal-links {
+            .phone-chat-links {
                 .grid-unit(1/2);
+
+                @media (min-width: 769px) {
+                    .grid-unit(3/4);
+                }
+            }
+
+            .portal-links {
+                .grid-unit(1/2);
+
+                @media (min-width: 769px) {
+                    .grid-unit(1/4);
+                }
             }
 
             overflow: visible;
