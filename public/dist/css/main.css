@@ -3793,7 +3793,7 @@ sup {
   font-size: 28px;
   display: block;
 }
-@media (min-width: 1250px) {
+@media (min-width: 769px) {
   .site-header .header-headline h1,
   .site-header .header-headline h2 {
     background: transparent;
