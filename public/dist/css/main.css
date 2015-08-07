@@ -4021,63 +4021,77 @@ sup {
   top: 11px;
   width: 1px;
 }
-body.docs .docs-intro {
+body.docs .docs-intro,
+body.docs-samples .docs-intro {
   margin-bottom: 2em;
 }
-body.docs .docs-intro .revision-date {
+body.docs .docs-intro .revision-date,
+body.docs-samples .docs-intro .revision-date {
   font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
 }
-body.docs .docs-intro .tags {
+body.docs .docs-intro .tags,
+body.docs-samples .docs-intro .tags {
   font-size: 12px;
   margin: 10px 0 0 0;
   padding: 0;
 }
-body.docs .docs-intro .tags li {
+body.docs .docs-intro .tags li,
+body.docs-samples .docs-intro .tags li {
   display: inline-block;
   list-style-type: none;
 }
-body.docs .docs-intro .tags li a {
+body.docs .docs-intro .tags li a,
+body.docs-samples .docs-intro .tags li a {
   font-family: 'titillium-regular', arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
 }
-body.docs .docs-intro .tags li a:hover {
+body.docs .docs-intro .tags li a:hover,
+body.docs-samples .docs-intro .tags li a:hover {
   text-decoration: underline;
 }
-body.docs .docs-intro .tags li + li {
+body.docs .docs-intro .tags li + li,
+body.docs-samples .docs-intro .tags li + li {
   border-left: solid 1px #cccccc;
   margin-left: 0.5em;
   padding-left: calc(0.5em + 1px);
 }
-body.docs .docs-intro .contents-summary {
+body.docs .docs-intro .contents-summary,
+body.docs-samples .docs-intro .contents-summary {
   margin-top: 1.5em;
 }
-body.docs .docs-intro .contents-summary h5 {
+body.docs .docs-intro .contents-summary h5,
+body.docs-samples .docs-intro .contents-summary h5 {
   font-size: 13px;
   margin-bottom: 0.5em;
   text-transform: uppercase;
 }
-body.docs .docs-intro .contents-summary ul {
+body.docs .docs-intro .contents-summary ul,
+body.docs-samples .docs-intro .contents-summary ul {
   list-style-type: none;
   padding-left: 0;
 }
-body.docs .docs-intro .contents-summary ul li {
+body.docs .docs-intro .contents-summary ul li,
+body.docs-samples .docs-intro .contents-summary ul li {
   font-size: 14px;
   margin-bottom: 0;
 }
-body.docs .docs-intro .contents-summary ul li a {
+body.docs .docs-intro .contents-summary ul li a,
+body.docs-samples .docs-intro .contents-summary ul li a {
   text-decoration: none;
 }
 @media (min-width: 769px) {
-  body.docs .docs-intro .contents-summary {
+  body.docs .docs-intro .contents-summary,
+  body.docs-samples .docs-intro .contents-summary {
     display: none;
   }
 }
-body.docs .docs-intro .headerlink {
+body.docs .docs-intro .headerlink,
+body.docs-samples .docs-intro .headerlink {
   display: none;
 }
 @media (max-width: 768px) {
