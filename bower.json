@@ -16,6 +16,6 @@
   ],
   "dependencies": {
     "fontawesome": "~4.3.0",
-    "drc-icons": "git@github.com:rackerlabs/drc-icons.git#v0.2.2"
+    "drc-icons": "git@github.com:rackerlabs/drc-icons.git#v0.3.0"
   }
 }
