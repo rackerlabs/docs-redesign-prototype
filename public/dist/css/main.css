@@ -2014,8 +2014,8 @@ table {
 }
 @font-face {
   font-family: 'drc-icons';
-  src: url(../../components/drc-icons/dist/fonts/drc-icons.eot?72567d612ea5530e75b1fcc92fdeda14);
-  src: url(../../components/drc-icons/dist/fonts/drc-icons.eot?#iefix) format("embedded-opentype"), url(../../components/drc-icons/dist/fonts/drc-icons.woff?72567d612ea5530e75b1fcc92fdeda14) format("woff"), url(../../components/drc-icons/dist/fonts/drc-icons.ttf?72567d612ea5530e75b1fcc92fdeda14) format("truetype");
+  src: url(../../components/drc-icons/dist/fonts/drc-icons.eot?8f9f0fe7a4bb487064de0a3d4ba5ecf6);
+  src: url(../../components/drc-icons/dist/fonts/drc-icons.eot?#iefix) format("embedded-opentype"), url(../../components/drc-icons/dist/fonts/drc-icons.woff?8f9f0fe7a4bb487064de0a3d4ba5ecf6) format("woff"), url(../../components/drc-icons/dist/fonts/drc-icons.ttf?8f9f0fe7a4bb487064de0a3d4ba5ecf6) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -2034,23 +2034,47 @@ table {
 .drc-icon-coffee-cup-circle:before {
   content: '\f102';
 }
-.drc-icon-exclamation-circle:before {
+.drc-icon-dot-net:before {
   content: '\f103';
 }
-.drc-icon-letter-i-circle:before {
+.drc-icon-exclamation-circle:before {
   content: '\f104';
 }
-.drc-icon-lightbulb-circle:before {
+.drc-icon-gopher:before {
   content: '\f105';
 }
-.drc-icon-megaphone-circle:before {
+.drc-icon-java:before {
   content: '\f106';
 }
-.drc-icon-pencil-circle:before {
+.drc-icon-js:before {
   content: '\f107';
 }
-.drc-icon-star-circle:before {
+.drc-icon-letter-i-circle:before {
   content: '\f108';
+}
+.drc-icon-lightbulb-circle:before {
+  content: '\f109';
+}
+.drc-icon-megaphone-circle:before {
+  content: '\f10a';
+}
+.drc-icon-pencil-circle:before {
+  content: '\f10b';
+}
+.drc-icon-php:before {
+  content: '\f10c';
+}
+.drc-icon-python:before {
+  content: '\f10d';
+}
+.drc-icon-ruby:before {
+  content: '\f10e';
+}
+.drc-icon-star-circle:before {
+  content: '\f10f';
+}
+.drc-icon-terminal:before {
+  content: '\f110';
 }
 .admonition {
   box-shadow: inset 8px 0px 0px #95a5a6;
@@ -2078,7 +2102,7 @@ table {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: '\f104';
+  content: '\f108';
   font-size: 21px;
   height: 21px;
   left: 21px;
@@ -2092,7 +2116,7 @@ table {
 }
 .admonition.note:before {
   color: #76bcff;
-  content: '\f107';
+  content: '\f10b';
 }
 .admonition.alert {
   box-shadow: inset 8px 0px 0px #f1c40f;
@@ -2108,7 +2132,7 @@ table {
 .admonition.tip:before,
 .admonition.hint:before {
   color: #2ecc85;
-  content: '\f104';
+  content: '\f108';
 }
 .admonition.warning,
 .admonition.danger,
@@ -2126,21 +2150,21 @@ table {
 }
 .admonition.error:before {
   color: #ef9d45;
-  content: '\f103';
+  content: '\f104';
 }
 .admonition.attention {
   box-shadow: inset 8px 0px 0px #32cdc7;
 }
 .admonition.attention:before {
   color: #32cdc7;
-  content: '\f106';
+  content: '\f10a';
 }
 .admonition.important {
   box-shadow: inset 8px 0px 0px #9b59b6;
 }
 .admonition.important:before {
   color: #9b59b6;
-  content: '\f108';
+  content: '\f10f';
 }
 .admonition .admonition-title {
   display: none;
@@ -5113,7 +5137,7 @@ body.sdks-home .sdk-grid .links:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: '\f104';
+  content: '\f108';
   font-size: 21px;
   height: 21px;
   left: 21px;
@@ -5127,7 +5151,7 @@ body.sdks-home .sdk-grid .links.note {
 }
 body.sdks-home .sdk-grid .links.note:before {
   color: #76bcff;
-  content: '\f107';
+  content: '\f10b';
 }
 body.sdks-home .sdk-grid .links.alert {
   box-shadow: inset 8px 0px 0px #f1c40f;
@@ -5143,7 +5167,7 @@ body.sdks-home .sdk-grid .links.hint {
 body.sdks-home .sdk-grid .links.tip:before,
 body.sdks-home .sdk-grid .links.hint:before {
   color: #2ecc85;
-  content: '\f104';
+  content: '\f108';
 }
 body.sdks-home .sdk-grid .links.warning,
 body.sdks-home .sdk-grid .links.danger,
@@ -5161,21 +5185,21 @@ body.sdks-home .sdk-grid .links.error {
 }
 body.sdks-home .sdk-grid .links.error:before {
   color: #ef9d45;
-  content: '\f103';
+  content: '\f104';
 }
 body.sdks-home .sdk-grid .links.attention {
   box-shadow: inset 8px 0px 0px #32cdc7;
 }
 body.sdks-home .sdk-grid .links.attention:before {
   color: #32cdc7;
-  content: '\f106';
+  content: '\f10a';
 }
 body.sdks-home .sdk-grid .links.important {
   box-shadow: inset 8px 0px 0px #9b59b6;
 }
 body.sdks-home .sdk-grid .links.important:before {
   color: #9b59b6;
-  content: '\f108';
+  content: '\f10f';
 }
 body.sdks-home .sdk-grid .links .admonition-title {
   display: none;
@@ -5188,7 +5212,7 @@ body.sdks-home .sdk-grid .links :last-child {
 }
 body.sdks-home .sdk-grid .links:before {
   color: #2ecc85;
-  content: '\f104';
+  content: '\f108';
 }
 body.sdks-home .sdk-grid .links h3 {
   font-family: 'titillium-bold', arial, sans-serif;

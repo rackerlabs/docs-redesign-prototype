@@ -6,25 +6,41 @@
 
 @di-var-coffee-cup-circle: '\f102';
 
-@di-var-exclamation-circle: '\f103';
+@di-var-dot-net: '\f103';
 
-@di-var-letter-i-circle: '\f104';
+@di-var-exclamation-circle: '\f104';
 
-@di-var-lightbulb-circle: '\f105';
+@di-var-gopher: '\f105';
 
-@di-var-megaphone-circle: '\f106';
+@di-var-java: '\f106';
 
-@di-var-pencil-circle: '\f107';
+@di-var-js: '\f107';
 
-@di-var-star-circle: '\f108';
+@di-var-letter-i-circle: '\f108';
+
+@di-var-lightbulb-circle: '\f109';
+
+@di-var-megaphone-circle: '\f10a';
+
+@di-var-pencil-circle: '\f10b';
+
+@di-var-php: '\f10c';
+
+@di-var-python: '\f10d';
+
+@di-var-ruby: '\f10e';
+
+@di-var-star-circle: '\f10f';
+
+@di-var-terminal: '\f110';
 
 
 @font-face {
 	font-family: @di-font-name;
-	src:url(~"@{di-font-path}/drc-icons.eot?72567d612ea5530e75b1fcc92fdeda14");
+	src:url(~"@{di-font-path}/drc-icons.eot?8f9f0fe7a4bb487064de0a3d4ba5ecf6");
 	src:url(~"@{di-font-path}/drc-icons.eot?#iefix") format("embedded-opentype"),
-		url(~"@{di-font-path}/drc-icons.woff?72567d612ea5530e75b1fcc92fdeda14") format("woff"),
-		url(~"@{di-font-path}/drc-icons.ttf?72567d612ea5530e75b1fcc92fdeda14") format("truetype");
+		url(~"@{di-font-path}/drc-icons.woff?8f9f0fe7a4bb487064de0a3d4ba5ecf6") format("woff"),
+		url(~"@{di-font-path}/drc-icons.ttf?8f9f0fe7a4bb487064de0a3d4ba5ecf6") format("truetype");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -55,9 +71,33 @@
     }
 }
 
+.drc-icon-dot-net() {
+    &:before {
+        content: @di-var-dot-net;
+    }
+}
+
 .drc-icon-exclamation-circle() {
     &:before {
         content: @di-var-exclamation-circle;
+    }
+}
+
+.drc-icon-gopher() {
+    &:before {
+        content: @di-var-gopher;
+    }
+}
+
+.drc-icon-java() {
+    &:before {
+        content: @di-var-java;
+    }
+}
+
+.drc-icon-js() {
+    &:before {
+        content: @di-var-js;
     }
 }
 
@@ -85,9 +125,33 @@
     }
 }
 
+.drc-icon-php() {
+    &:before {
+        content: @di-var-php;
+    }
+}
+
+.drc-icon-python() {
+    &:before {
+        content: @di-var-python;
+    }
+}
+
+.drc-icon-ruby() {
+    &:before {
+        content: @di-var-ruby;
+    }
+}
+
 .drc-icon-star-circle() {
     &:before {
         content: @di-var-star-circle;
+    }
+}
+
+.drc-icon-terminal() {
+    &:before {
+        content: @di-var-terminal;
     }
 }
 
@@ -100,8 +164,24 @@
     .drc-icon-coffee-cup-circle();
 }
 
+.drc-icon-dot-net {
+    .drc-icon-dot-net();
+}
+
 .drc-icon-exclamation-circle {
     .drc-icon-exclamation-circle();
+}
+
+.drc-icon-gopher {
+    .drc-icon-gopher();
+}
+
+.drc-icon-java {
+    .drc-icon-java();
+}
+
+.drc-icon-js {
+    .drc-icon-js();
 }
 
 .drc-icon-letter-i-circle {
@@ -120,7 +200,23 @@
     .drc-icon-pencil-circle();
 }
 
+.drc-icon-php {
+    .drc-icon-php();
+}
+
+.drc-icon-python {
+    .drc-icon-python();
+}
+
+.drc-icon-ruby {
+    .drc-icon-ruby();
+}
+
 .drc-icon-star-circle {
     .drc-icon-star-circle();
+}
+
+.drc-icon-terminal {
+    .drc-icon-terminal();
 }
 

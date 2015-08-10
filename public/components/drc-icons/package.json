@@ -1,6 +1,6 @@
 {
   "name": "drc-icons",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Icon font for use on developer.rackspace.com",
   "main": "Gruntfile.js",
   "scripts": {
